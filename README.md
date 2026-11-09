@@ -1,4 +1,4 @@
-##Perch
+Perch
 
 A dedicated social space for books, built like Instagram. Readers discover books through other readers instead of through promotion feeds and marketplace reviews.
 The idea
