@@ -102,5 +102,3 @@ flowchart LR
 |UC11|Distribute books to readers through Perch|Publishing house|
 
 ---
-
-Reader use cases UC1, UC3, UC4, and UC5 are read off "like Instagram": feed, post, follow, save. Edit them if that is not what you meant.
