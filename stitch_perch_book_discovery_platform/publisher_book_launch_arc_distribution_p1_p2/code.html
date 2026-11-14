@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary": "#032517", "on-primary-fixed": "#002113", "inverse-primary": "#abcfb8", "surface-container-lowest": "#ffffff", "on-secondary-container": "#762c0d", "on-tertiary": "#ffffff", "surface-variant": "#e9e1dc", "secondary-fixed": "#ffdbcf", "on-background": "#1e1b18", "on-error-container": "#93000a", "surface-container-low": "#faf2ed", "on-surface": "#1e1b18", "on-secondary": "#ffffff", "on-surface-variant": "#424843", "error": "#ba1a1a", "error-container": "#ffdad6", "outline-variant": "#c1c8c2", "primary-container": "#1b3b2b", "on-tertiary-fixed-variant": "#633f00", "surface-bright": "#fff8f4", "primary-fixed-dim": "#abcfb8", "on-secondary-fixed-variant": "#7a2f10", "surface-tint": "#456553", "primary-fixed": "#c7ebd4", "tertiary-fixed": "#ffddb4", "on-primary-container": "#83a590", "surface-dim": "#e0d9d3", "secondary": "#994626", "secondary-container": "#ff956e", "on-tertiary-fixed": "#291800", "inverse-surface": "#33302c", "on-tertiary-container": "#ce9236", "outline": "#727973", "on-primary-fixed-variant": "#2d4d3c", "surface": "#fff8f4", "tertiary-container": "#4b2f00", "on-error": "#ffffff", "tertiary-fixed-dim": "#fcba5b", "on-primary": "#ffffff", "tertiary": "#2f1c00", "surface-container": "#f4ece7", "background": "#fff8f4", "surface-container-high": "#eee7e1", "inverse-on-surface": "#f7efea", "on-secondary-fixed": "#380d00", "secondary-fixed-dim": "#ffb59b", "surface-container-highest": "#e9e1dc" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-xs": "0.25rem", "space-md": "1rem", "margin": "3rem", "gutter-mobile": "1rem", "space-sm": "0.5rem", "margin-mobile": "1.25rem", "gutter": "1.5rem", "space-lg": "1.5rem", "space-xl": "2.5rem" }, "fontFamily": { "label-sm": ["Plus Jakarta Sans"], "headline-md": ["Newsreader"], "headline-lg": ["Newsreader"], "body-lg": ["Plus Jakarta Sans"], "headline-sm": ["Newsreader"], "label-md": ["Plus Jakarta Sans"], "display-lg": ["Newsreader"], "label-lg": ["Plus Jakarta Sans"], "display-lg-mobile": ["Newsreader"], "quote-editorial": ["Newsreader"], "body-md": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"] }, "fontSize": { "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "700" }], "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "500" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.03em", "fontWeight": "600" }], "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "400" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "display-lg-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.015em", "fontWeight": "400" }], "quote-editorial": ["20px", { "lineHeight": "30px", "fontWeight": "400" }], "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }], "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }] } } } };</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low shadow-[0_1px_8px_rgba(30,27,24,0.04)] z-50 flex flex-col justify-between py-6"><div class="flex flex-col gap-6"><div class="px-6 flex items-center justify-between"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-[28px]">import_contacts</span><div class="flex flex-col"><span class="font-headline-md text-headline-md font-bold tracking-tight text-primary leading-none">Perch</span><span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant mt-1">Salon &amp; Press</span></div></div></div><div class="px-4"><nav class="flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary-container font-semibold"><div class="px-3 pt-3 pb-1 font-label-sm text-label-sm uppercase tracking-wider text-outline">Publishing</div><a aria-current="page" class="flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors bg-primary-container text-on-primary-container font-semibold" data-path="publisher-studio" href="#"><span class="material-symbols-outlined text-[20px]">auto_stories</span><span>Publisher Studio</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant font-label-lg text-label-lg transition-colors hover:bg-surface-container-high hover:text-on-surface" data-path="catalog" href="#"><span class="material-symbols-outlined text-[20px]">collections_bookmark</span><span>Catalog</span></a><div class="px-3 pt-4 pb-1 font-label-sm text-label-sm uppercase tracking-wider text-outline">Writing</div><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant font-label-lg text-label-lg transition-colors hover:bg-surface-container-high hover:text-on-surface" data-path="writer-studio" href="#"><span class="material-symbols-outlined text-[20px]">edit_note</span><span>Writer Studio</span></a><div class="px-3 pt-4 pb-1 font-label-sm text-label-sm uppercase tracking-wider text-outline">Literary Circle</div><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant font-label-lg text-label-lg transition-colors hover:bg-surface-container-high hover:text-on-surface" data-path="marginalia-feed" href="#"><span class="material-symbols-outlined text-[20px]">history_edu</span><span>Marginalia &amp; Reviews</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant font-label-lg text-label-lg transition-colors hover:bg-surface-container-high hover:text-on-surface" data-path="reading-salons" href="#"><span class="material-symbols-outlined text-[20px]">forum</span><span>Salons</span></a></nav></div></div><div class="px-4 flex flex-col gap-3"><div class="p-3 rounded-lg bg-surface-container flex items-center justify-between"><div class="flex flex-col"><span class="font-label-sm text-label-sm text-outline uppercase">Tier</span><span class="font-label-md text-label-md font-semibold text-primary">P1 Fellow Curator</span></div><span class="material-symbols-outlined text-secondary text-[20px]">verified</span></div><nav class="flex flex-col" data-active-classes="bg-primary-container text-on-primary-container"><a class="flex items-center gap-3 px-3 py-2 rounded-lg text-on-surface-variant font-label-md text-label-md transition-colors hover:bg-surface-container-high hover:text-on-surface" data-path="settings" href="#"><span class="material-symbols-outlined text-[18px]">settings</span><span>Preferences</span></a></nav></div></aside><div class="pl-72 flex flex-col min-h-screen"><header class="fixed top-0 left-72 right-0 z-40 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(30,27,24,0.03)]"><div class="h-16 w-full px-8 flex items-center justify-between gap-6"><div class="flex-1 max-w-lg"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-outline text-[18px]">search</span><input class="w-full pl-9 pr-4 py-1.5 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest transition-colors" placeholder="Search archives, editions, marginalia, or curators..." type="text"/></div></div><div class="flex items-center gap-4"><button aria-label="Notifications" class="p-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-lg transition-colors relative" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-secondary"></span></button><button aria-label="Curator Bookmarks" class="p-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-lg transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">bookmark</span></button><div class="h-6 w-[1px] bg-surface-container-high mx-1"></div><div class="flex items-center gap-3 pl-1"><div class="flex flex-col text-right hidden sm:flex"><span class="font-label-md text-label-md font-semibold text-on-surface leading-tight">E. St. Vincent</span><span class="font-label-sm text-label-sm text-on-surface-variant">Archival Lead</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="relative pt-16 bg-surface flex-1 w-full px-8 py-8"><div class="flex flex-col w-full">
+<!-- Top Breadcrumb & Action Banner -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-6 mb-8 bg-surface-container-low p-6 rounded-xl shadow-sm">
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center gap-2 font-label-sm text-label-sm uppercase tracking-wider text-outline">
+<span>Publisher Portal</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span>Catalog Management</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-secondary font-semibold">P1 &amp; P2 Workflow</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight">Launch Book Page &amp; Targeted ARC Distribution</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">
+        Establish public book record, configure expectation contract promises, and allocate digital advance reader copies (ARCs) to matched taste cohorts.
+      </p>
+</div>
+<!-- Quick Milestone Tag & Top Shortcuts -->
+<div class="flex items-center gap-3 self-start lg:self-center">
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container font-label-md text-label-md text-primary">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified_user</span>
+        Press Verified Master
+      </span>
+<button class="px-4 py-2 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-colors flex items-center gap-2 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">history</span>
+        Draft History
+      </button>
+</div>
+</div>
+<!-- Main 12-Column Editorial Grid -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-8 items-start">
+<!-- LEFT & CENTRAL: P1 BOOK CATALOG LISTING & METADATA (Cols 1-7) -->
+<div class="xl:col-span-7 flex flex-col gap-8">
+<!-- Primary Book Record & Cover Suite -->
+<section class="bg-surface-container-low rounded-xl p-7 shadow-sm flex flex-col gap-6">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary text-[22px]">menu_book</span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-outline">Module P1 • Core Bibliographic Record</span>
+</div>
+<span class="px-2.5 py-1 rounded bg-surface-container font-label-sm text-label-sm font-semibold text-primary">Edition Registry #8492</span>
+</div>
+<!-- Cover & Fundamental Bio Section -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Architectural Book Cover Card -->
+<div class="md:col-span-5 flex flex-col gap-3">
+<div class="relative w-full aspect-[2/3] rounded-lg overflow-hidden bg-surface-container shadow-md group">
+<img class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500" data-alt="Editorial book cover of The Cartography of Still Waters by Annika Sörensen. Minimalist textured warm ecru archival paper with deep forest pine linework map contours, debossed bronze typography, moody lake mist, Nordic serene elegance, high tactile fine press quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYzkjcxzj6eMZdb1RoT66SuCGXYC8fXdKg0sUr1CB2yrSu8kKLCtSwtabUbSTVw1UWoNcYX9-BrRKk9BmeuPo-G4WLjRB34mLBPXJNL4DlGtOuH1HlcehgobENsFW5mrGWC9liUlofEaN4AeEDtL1rraZ5_IMnKCb62YzrVEcBCAK8w7ucRcJo_HfMNQ9h1GF9z0I3WwJnL6Cgn-zz0i38mVNBNO1sh7r8-hq5xCk"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent flex flex-col justify-end p-4">
+<span class="font-headline-sm text-headline-sm text-on-primary italic leading-tight">The Cartography of Still Waters</span>
+<span class="font-label-sm text-label-sm text-on-primary/80 uppercase tracking-wider mt-1">Annika Sörensen</span>
+</div>
+<button class="absolute top-3 right-3 p-1.5 rounded-full bg-surface-container-lowest/90 text-on-surface shadow-sm hover:bg-surface-container-lowest transition-colors" title="Replace artwork" type="button">
+<span class="material-symbols-outlined text-[18px]">photo_camera</span>
+</button>
+</div>
+<!-- Spine Token Swatch & Tactile Options -->
+<div class="flex flex-col gap-2 p-3 bg-surface-container rounded-lg">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Cloth Spine &amp; Foil Token</span>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<button class="w-6 h-6 rounded-full bg-primary ring-2 ring-primary ring-offset-2 transition-all" title="Deep Pine" type="button"></button>
+<button class="w-6 h-6 rounded-full bg-secondary transition-all" title="Terracotta Rust" type="button"></button>
+<button class="w-6 h-6 rounded-full bg-[#3c4a5c] transition-all" title="Fjord Slate" type="button"></button>
+<button class="w-6 h-6 rounded-full bg-[#ce9236] transition-all" title="Ochre Gold" type="button"></button>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Buckram Cloth</span>
+</div>
+</div>
+</div>
+<!-- Title, Imprint, Formats, Metadata Fields -->
+<div class="md:col-span-7 flex flex-col justify-between gap-4">
+<div class="flex flex-col gap-3">
+<div>
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-outline block mb-1">Book Title &amp; Subtitle</label>
+<input class="w-full px-3.5 py-2.5 rounded-lg bg-surface-container text-on-surface font-headline-sm text-headline-sm focus:outline-none focus:bg-surface-container-lowest transition-all" type="text" value="The Cartography of Still Waters"/>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<div>
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-outline block mb-1">Author Name</label>
+<input class="w-full px-3 py-2 rounded-lg bg-surface-container text-on-surface font-body-md text-body-md focus:outline-none focus:bg-surface-container-lowest transition-all" type="text" value="Annika Sörensen"/>
+</div>
+<div>
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-outline block mb-1">Press Imprint</label>
+<input class="w-full px-3 py-2 rounded-lg bg-surface-container text-on-surface font-body-md text-body-md focus:outline-none focus:bg-surface-container-lowest transition-all" type="text" value="Riverhead &amp; Birch House"/>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<div>
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-outline block mb-1">ISBN-13 (Trade Ed.)</label>
+<input class="w-full px-3 py-2 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md tracking-wider focus:outline-none focus:bg-surface-container-lowest transition-all" type="text" value="978-0-593-41829-1"/>
+</div>
+<div>
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-outline block mb-1">Publication Date</label>
+<input class="w-full px-3 py-2 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md focus:outline-none focus:bg-surface-container-lowest transition-all" type="date" value="2025-10-18"/>
+</div>
+</div>
+<!-- Format Tags Selection -->
+<div>
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-outline block mb-1.5">Active Catalog Formats</label>
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">done</span> Hardcover (Jacketted)
+                  </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">done</span> Ebook (EPUB3)
+                  </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">headphones</span> Audio (Unabridged)
+                  </span>
+</div>
+</div>
+</div>
+<!-- Genre & Salon Tags -->
+<div class="pt-2">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-outline block mb-1.5">Editorial Taxonomies &amp; Tags</label>
+<div class="flex flex-wrap gap-2">
+<span class="px-2.5 py-1 rounded-md bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Literary Climate Fiction</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Speculative Ecology</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Slow-Burn Mystery</span>
+<button class="px-2.5 py-1 rounded-md bg-surface-container-high text-primary font-label-sm text-label-sm hover:bg-surface-dim transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[14px]">add</span> Add Facet
+                </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- EXPECTATION CONTRACT CONFIGURATION (Signature Perch P1 Feature) -->
+<section class="bg-surface-container-low rounded-xl p-7 shadow-sm flex flex-col gap-6 relative overflow-hidden">
+<!-- Visual Accent -->
+<div class="absolute -right-12 -top-12 w-48 h-48 bg-secondary/5 rounded-full pointer-events-none"></div>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[22px]">tune</span>
+<h2 class="font-headline-md text-headline-md text-primary">Expectation Contract Configuration</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+              Defines the authorial premise promise. Reader reviews are mathematically weighted by concordance against this baseline (R4/P4).
+            </p>
+</div>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm self-start">
+            Fidelity Weight: 1.00
+          </span>
+</div>
+<!-- Interactive Sliders / Facet Spectrum Scales -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 bg-surface-container p-5 rounded-lg">
+<!-- Facet 1: Pacing -->
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-center text-on-surface font-label-md text-label-md">
+<span class="font-semibold text-primary">Narrative Velocity</span>
+<span class="text-secondary font-bold">25% (Meditative / Glacial)</span>
+</div>
+<div class="relative w-full py-1">
+<div class="h-2 w-full bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary" style="width: 25%"></div>
+</div>
+<input class="absolute inset-0 opacity-0 cursor-pointer w-full" max="100" min="0" type="range" value="25"/>
+</div>
+<div class="flex justify-between font-label-sm text-label-sm text-outline">
+<span>Contemplative / Slow-burn</span>
+<span>Propulsive / Kinetic</span>
+</div>
+</div>
+<!-- Facet 2: Prose Style -->
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-center text-on-surface font-label-md text-label-md">
+<span class="font-semibold text-primary">Prose Texture</span>
+<span class="text-secondary font-bold">85% (Heavily Lyrical)</span>
+</div>
+<div class="relative w-full py-1">
+<div class="h-2 w-full bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary" style="width: 85%"></div>
+</div>
+<input class="absolute inset-0 opacity-0 cursor-pointer w-full" max="100" min="0" type="range" value="85"/>
+</div>
+<div class="flex justify-between font-label-sm text-label-sm text-outline">
+<span>Direct / Spare</span>
+<span>Lyrical / Dense Aesthetic</span>
+</div>
+</div>
+<!-- Facet 3: Worldbuilding Depth -->
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-center text-on-surface font-label-md text-label-md">
+<span class="font-semibold text-primary">Ecological / World Depth</span>
+<span class="text-secondary font-bold">70% (Richly Documented)</span>
+</div>
+<div class="relative w-full py-1">
+<div class="h-2 w-full bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary" style="width: 70%"></div>
+</div>
+<input class="absolute inset-0 opacity-0 cursor-pointer w-full" max="100" min="0" type="range" value="70"/>
+</div>
+<div class="flex justify-between font-label-sm text-label-sm text-outline">
+<span>Minimalist Impression</span>
+<span>Extensive Hydrological Lore</span>
+</div>
+</div>
+<!-- Facet 4: Thematic Weight -->
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-center text-on-surface font-label-md text-label-md">
+<span class="font-semibold text-primary">Emotional &amp; Moral Gravity</span>
+<span class="text-secondary font-bold">60% (Elegiac Melancholy)</span>
+</div>
+<div class="relative w-full py-1">
+<div class="h-2 w-full bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary" style="width: 60%"></div>
+</div>
+<input class="absolute inset-0 opacity-0 cursor-pointer w-full" max="100" min="0" type="range" value="60"/>
+</div>
+<div class="flex justify-between font-label-sm text-label-sm text-outline">
+<span>Light Escapist</span>
+<span>Existential / Grievance</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-3 p-3.5 bg-surface rounded-lg">
+<span class="material-symbols-outlined text-outline text-[20px]">info</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+<strong>Publisher Note:</strong> Concordance calibration prevents negative review brigading from readers expecting high-velocity thrillers when your title is quiet literary fiction.
+          </p>
+</div>
+</section>
+<!-- Synopses & Editorial Pitch -->
+<section class="bg-surface-container-low rounded-xl p-7 shadow-sm flex flex-col gap-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]">format_quote</span>
+<h2 class="font-headline-md text-headline-md text-primary">Jacket Copy &amp; Editorial Synopsis</h2>
+</div>
+<div class="flex flex-col gap-4">
+<div>
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-outline block mb-1">Catalog Logline (1-2 Sentences for Salon Feeds)</label>
+<input class="w-full px-3.5 py-2.5 rounded-lg bg-surface-container text-on-surface font-body-md text-body-md italic focus:outline-none focus:bg-surface-container-lowest transition-all" type="text" value="A hydrographer in an unmapped Nordic archipelago unearths submerged survey markers that hint at a vanished sister and an irreversible tide."/>
+</div>
+<div>
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-outline block mb-1">Full Jacket Back-Cover Copy</label>
+<textarea class="w-full p-3.5 rounded-lg bg-surface-container text-on-surface font-body-md text-body-md leading-relaxed focus:outline-none focus:bg-surface-container-lowest transition-all" rows="4">Deep in the brackish shallows of the Kvarken Archipelago, water does not rise; it retreats, leaving centuries-old shoals bare beneath the birch trees. When surveyor Clara Lind returns to calibrate the disappearing beacons, she discovers her late sister's notebooks filled with coordinates that defy maritime law—and physics itself. A quiet triumph of Nordic climate speculative writing that examines what we choose to reclaim before the coastline hardens forever.</textarea>
+</div>
+</div>
+</section>
+<!-- Bookstore & Retailer Outbound Links (R7/P1) -->
+<section class="bg-surface-container-low rounded-xl p-7 shadow-sm flex flex-col gap-6">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]">storefront</span>
+<h2 class="font-headline-md text-headline-md text-primary">Direct Retail &amp; Indie Purchase Outlets (R7)</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Affiliate Sync Enabled</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Bookshop.org -->
+<div class="p-3.5 rounded-lg bg-surface-container flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-semibold text-primary">Bookshop.org (Indie Alliance)</span>
+<span class="material-symbols-outlined text-primary text-[16px]">local_mall</span>
+</div>
+<input class="w-full px-2.5 py-1.5 rounded bg-surface-container-lowest font-body-sm text-body-sm text-on-surface focus:outline-none" type="text" value="https://bookshop.org/a/perch/9780593418291"/>
+</div>
+<!-- Powell's Books -->
+<div class="p-3.5 rounded-lg bg-surface-container flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-semibold text-primary">Powell's City of Books</span>
+<span class="material-symbols-outlined text-secondary text-[16px]">map</span>
+</div>
+<input class="w-full px-2.5 py-1.5 rounded bg-surface-container-lowest font-body-sm text-body-sm text-on-surface focus:outline-none" type="text" value="https://powells.com/biblio/9780593418291"/>
+</div>
+<!-- Barnes & Noble -->
+<div class="p-3.5 rounded-lg bg-surface-container flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-semibold text-primary">Barnes &amp; Noble</span>
+<span class="material-symbols-outlined text-outline text-[16px]">store</span>
+</div>
+<input class="w-full px-2.5 py-1.5 rounded bg-surface-container-lowest font-body-sm text-body-sm text-on-surface focus:outline-none" type="text" value="https://barnesandnoble.com/w/the-cartography-of-still-waters"/>
+</div>
+<!-- Direct Press / Publisher Cart -->
+<div class="p-3.5 rounded-lg bg-surface-container flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-semibold text-primary">Direct Birch House Edition</span>
+<span class="material-symbols-outlined text-primary text-[16px]">auto_stories</span>
+</div>
+<input class="w-full px-2.5 py-1.5 rounded bg-surface-container-lowest font-body-sm text-body-sm text-on-surface focus:outline-none" type="text" value="https://birchhouse.press/titles/sorensen-still-waters"/>
+</div>
+</div>
+</section>
+</div>
+<!-- RIGHT: P2 TARGETED ARC DISTRIBUTION & QUOTA DISPATCHER (Cols 8-12) -->
+<div class="xl:col-span-5 flex flex-col gap-8">
+<!-- ARC Inventory & DRM Protocol Card -->
+<section class="bg-surface-container-low rounded-xl p-7 shadow-sm flex flex-col gap-6">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[22px]">send_time_extension</span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-outline">Module P2 • Advance Proof Dispatch</span>
+</div>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+            Queue Live
+          </span>
+</div>
+<!-- ARC Pool Visualization -->
+<div class="bg-surface-container p-5 rounded-lg flex flex-col gap-4">
+<div class="flex items-baseline justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Advance Copy Pool</span>
+<span class="font-display-lg text-display-lg text-primary leading-none mt-1">142<span class="font-headline-md text-headline-md text-outline"> / 250</span></span>
+</div>
+<div class="text-right">
+<span class="font-label-md text-label-md font-semibold text-secondary">56.8% Claimed</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">108 Proofs Remaining</span>
+</div>
+</div>
+<!-- Progress Bar -->
+<div class="h-3 w-full bg-surface-container-high rounded-full overflow-hidden flex">
+<div class="bg-primary h-full" style="width: 38%" title="Curator Cohorts (96)"></div>
+<div class="bg-secondary h-full" style="width: 19%" title="High-Concordance (46)"></div>
+<div class="bg-outline-variant h-full" style="width: 43%" title="Open Allocation (108)"></div>
+</div>
+<div class="flex items-center justify-between text-outline font-label-sm text-label-sm pt-1">
+<span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-primary"></span> Curators</span>
+<span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-secondary"></span> Taste Match</span>
+<span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-outline-variant"></span> Open Queue</span>
+</div>
+</div>
+<!-- Dynamic DRM Security Protocol Badge -->
+<div class="p-4 rounded-lg bg-surface flex items-start gap-3.5">
+<span class="material-symbols-outlined text-primary text-[24px] mt-0.5">verified</span>
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md font-semibold text-primary">Dynamic Excerpt Watermarking Active</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high font-label-sm text-label-sm font-mono text-outline">SHA-256</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Each reader download embeds invisible cryptographic steganography and individualized margin tags to trace non-embargoed leaks.
+            </p>
+</div>
+</div>
+</section>
+<!-- Cohort Allocation Matrix Table -->
+<section class="bg-surface-container-low rounded-xl p-7 shadow-sm flex flex-col gap-5">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<h3 class="font-headline-md text-headline-md text-primary">Targeted Cohort Allocation</h3>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Algorithmic reader selection based on past rating concordance</span>
+</div>
+<button class="text-secondary hover:text-on-secondary-container font-label-sm text-label-sm flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">tune</span> Adjust Filter
+          </button>
+</div>
+<!-- Cohort 1 -->
+<div class="p-4 rounded-lg bg-surface-container flex flex-col gap-3">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-semibold text-primary">Midwest Salon Curators &amp; Guilds</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Regional specialty in contemporary eco-lit</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm font-semibold">
+              98% Match
+            </span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-4 font-label-sm text-label-sm">
+<span class="text-on-surface"><strong>48</strong> / 60 Claimed</span>
+<span class="text-outline">12 Invites Idle</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-2.5 py-1 rounded bg-surface text-on-surface font-label-sm text-label-sm hover:bg-surface-container-high transition-colors" type="button">
+                Manage List
+              </button>
+</div>
+</div>
+</div>
+<!-- Cohort 2 -->
+<div class="p-4 rounded-lg bg-surface-container flex flex-col gap-3">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-semibold text-primary">High-Concordance Speculative Readers</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">≥ 4.5 Past Expectation Fidelity metric</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm font-semibold">
+              94% Match
+            </span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-4 font-label-sm text-label-sm">
+<span class="text-on-surface"><strong>39</strong> / 45 Claimed</span>
+<span class="text-outline">6 Invites Idle</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-2.5 py-1 rounded bg-surface text-on-surface font-label-sm text-label-sm hover:bg-surface-container-high transition-colors" type="button">
+                Manage List
+              </button>
+</div>
+</div>
+</div>
+<!-- Cohort 3 -->
+<div class="p-4 rounded-lg bg-surface-container flex flex-col gap-3">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-semibold text-primary">Verified Marginators &amp; Essayists</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Top-tier public commentary &amp; chapter annotators</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface text-on-surface-variant font-label-sm text-label-sm font-semibold">
+              89% Match
+            </span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-4 font-label-sm text-label-sm">
+<span class="text-on-surface"><strong>32</strong> / 50 Claimed</span>
+<span class="text-outline">18 Invites Idle</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-2.5 py-1 rounded bg-surface text-on-surface font-label-sm text-label-sm hover:bg-surface-container-high transition-colors" type="button">
+                Manage List
+              </button>
+</div>
+</div>
+</div>
+<!-- Cohort 4 -->
+<div class="p-4 rounded-lg bg-surface-container flex flex-col gap-3">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-semibold text-primary">Open Reader Application Queue</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">95 slots • Taste questionnaire gating required</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">
+              Vetting Active
+            </span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-4 font-label-sm text-label-sm">
+<span class="text-on-surface"><strong>23</strong> Approved</span>
+<span class="text-secondary font-semibold">72 Pending Review</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-2.5 py-1 rounded bg-secondary text-on-secondary font-label-sm text-label-sm hover:opacity-95 transition-opacity" type="button">
+                Review (72)
+              </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Embargo & Review Schedule Accordion -->
+<section class="bg-surface-container-low rounded-xl p-7 shadow-sm flex flex-col gap-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]">event_repeat</span>
+<h3 class="font-headline-md text-headline-md text-primary">Embargo &amp; Review Schedule</h3>
+</div>
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between p-3.5 bg-surface-container rounded-lg">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-primary">Public Review Embargo Lift</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">No excerpts or star ratings published prior</span>
+</div>
+<input class="px-2.5 py-1.5 rounded bg-surface-container-lowest font-label-md text-label-md text-on-surface focus:outline-none" type="date" value="2025-09-25"/>
+</div>
+<div class="flex items-center justify-between p-3.5 bg-surface-container rounded-lg">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-primary">Quote Permission Direct Grant</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Allow reviewers to pre-approve blurb usage</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-high peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="flex items-center justify-between p-3.5 bg-surface-container rounded-lg">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-primary">Salon Discussion Room Unlock</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Opens private reading circle 30 days early</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-high peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+</section>
+<!-- Dispatch Action Command Palette -->
+<div class="flex flex-col gap-3 p-6 bg-surface-container rounded-xl shadow-sm">
+<button class="w-full py-3.5 px-6 rounded-lg bg-primary hover:bg-[#142d21] text-on-primary font-label-lg text-label-lg font-semibold flex items-center justify-center gap-2.5 transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[20px]">rocket_launch</span>
+          Dispatch ARCs &amp; Publish Book Page (P1/P2)
+        </button>
+<div class="grid grid-cols-2 gap-3">
+<button class="py-2.5 px-4 rounded-lg bg-surface-container-lowest text-primary hover:bg-surface-container-high font-label-md text-label-md font-semibold flex items-center justify-center gap-2 transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+            Preview Public Page
+          </button>
+<button class="py-2.5 px-4 rounded-lg bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-label-md text-label-md font-semibold flex items-center justify-center gap-2 transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">save</span>
+            Save Catalog Draft
+          </button>
+</div>
+<p class="font-label-sm text-label-sm text-outline text-center mt-1">
+          Finalizing immediately triggers personalized invitation missives to selected cohort leads.
+        </p>
+</div>
+</div>
+</div>
+</div></main><footer class="w-full bg-surface-container-low py-4 px-8 mt-auto shadow-[0_1px_8px_rgba(30,27,24,0.02)]"><div class="w-full flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm"><span>© 2025 Perch Literary &amp; Press. Hand-typeset layout architecture.</span><div class="flex items-center gap-4"><a class="hover:text-primary transition-colors" data-path="catalog" href="#">Press Archives</a><a class="hover:text-primary transition-colors" data-path="writer-studio" href="#">Editorial Standards</a><span class="text-outline">v2.4 Archival Core</span></div></div></footer></div></body></html>

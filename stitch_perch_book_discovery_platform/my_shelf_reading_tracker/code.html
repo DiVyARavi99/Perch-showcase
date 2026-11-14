@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"primary-container":"#1b3b2b","on-error":"#ffffff","surface-container-lowest":"#ffffff","outline-variant":"#c1c8c2","on-secondary-container":"#762c0d","primary-fixed-dim":"#abcfb8","on-secondary-fixed":"#380d00","surface-container":"#f4ece7","surface-container-high":"#eee7e1","on-error-container":"#93000a","on-tertiary-container":"#ce9236","surface-container-low":"#faf2ed","surface-container-highest":"#e9e1dc","secondary":"#994626","primary":"#032517","tertiary":"#2f1c00","on-secondary":"#ffffff","on-background":"#1e1b18","tertiary-container":"#4b2f00","on-primary-container":"#83a590","inverse-primary":"#abcfb8","error":"#ba1a1a","surface-bright":"#fff8f4","on-tertiary-fixed-variant":"#633f00","tertiary-fixed":"#ffddb4","on-primary":"#ffffff","secondary-fixed":"#ffdbcf","surface":"#fff8f4","on-tertiary-fixed":"#291800","inverse-on-surface":"#f7efea","surface-dim":"#e0d9d3","on-surface":"#1e1b18","on-surface-variant":"#424843","inverse-surface":"#33302c","secondary-container":"#ff956e","background":"#fff8f4","secondary-fixed-dim":"#ffb59b","on-tertiary":"#ffffff","error-container":"#ffdad6","outline":"#727973","surface-variant":"#e9e1dc","primary-fixed":"#c7ebd4","on-primary-fixed":"#002113","surface-tint":"#456553","on-primary-fixed-variant":"#2d4d3c","tertiary-fixed-dim":"#fcba5b","on-secondary-fixed-variant":"#7a2f10"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"gutter-mobile":"1rem","space-xs":"0.25rem","space-lg":"1.5rem","margin-mobile":"1.25rem","space-sm":"0.5rem","gutter":"1.5rem","margin":"3rem","space-xl":"2.5rem","space-md":"1rem"},"fontFamily":{"body-lg":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"],"headline-md":["Newsreader"],"headline-sm":["Newsreader"],"display-lg":["Newsreader"],"label-lg":["Plus Jakarta Sans"],"quote-editorial":["Newsreader"],"label-sm":["Plus Jakarta Sans"],"headline-lg":["Newsreader"],"display-lg-mobile":["Newsreader"],"body-md":["Plus Jakarta Sans"]},"fontSize":{"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],"body-sm":["13px",{"lineHeight":"20px","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.03em","fontWeight":"600"}],"headline-md":["24px",{"lineHeight":"32px","fontWeight":"500"}],"headline-sm":["20px",{"lineHeight":"28px","fontWeight":"600"}],"display-lg":["48px",{"lineHeight":"56px","letterSpacing":"-0.02em","fontWeight":"400"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"600"}],"quote-editorial":["20px",{"lineHeight":"30px","fontWeight":"400"}],"label-sm":["10px",{"lineHeight":"14px","letterSpacing":"0.05em","fontWeight":"700"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.01em","fontWeight":"500"}],"display-lg-mobile":["36px",{"lineHeight":"44px","letterSpacing":"-0.015em","fontWeight":"400"}],"body-md":["15px",{"lineHeight":"24px","fontWeight":"400"}]}}}}</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between py-space-lg px-space-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col gap-space-lg"><div class="px-space-sm pt-space-xs"><div class="flex items-baseline gap-space-xs"><span class="font-headline-lg text-headline-lg tracking-tight text-primary">Perch</span></div><span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant block mt-0.5">Reader Community</span></div><button class="w-full flex items-center justify-center gap-space-sm bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container py-space-sm px-space-md rounded-xl font-label-lg text-label-lg transition-colors duration-150 shadow-[0_2px_8px_rgba(3,37,23,0.15)]" type="button"><span class="material-symbols-outlined text-[20px]">edit_note</span><span>Write Post / Review</span></button><nav class="flex flex-col gap-space-xs" data-active-classes="bg-surface-container-high text-on-surface font-semibold"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-label-lg text-label-lg transition-colors" data-path="feed" href="#"><span class="material-symbols-outlined text-[22px]">auto_stories</span><span>Feed</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-label-lg text-label-lg transition-colors" data-path="discover-taste-match" href="#"><span class="material-symbols-outlined text-[22px]">explore</span><span>Discover &amp; Taste Match</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-label-lg text-label-lg transition-colors" data-path="reading-clubs" href="#"><span class="material-symbols-outlined text-[22px]">forum</span><span>Reading Clubs</span></a><a aria-current="page" class="flex items-center gap-space-md px-space-md py-space-sm rounded-xl transition-colors bg-surface-container-high text-on-surface font-semibold" data-path="my-shelf" href="#"><span class="material-symbols-outlined text-[22px]">shelves</span><span>My Shelf</span></a></nav></div><div class="px-space-sm py-space-sm bg-surface-container rounded-xl flex items-center justify-between"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-secondary text-[20px]">bookmarks</span><span class="font-label-md text-label-md text-on-surface">Salon Curators</span></div><span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider">Active</span></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-20 bg-surface/80 backdrop-blur-xl z-40 flex items-center justify-between px-gutter shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex-1 max-w-2xl"><div class="relative flex items-center w-full"><span class="material-symbols-outlined absolute left-space-md text-on-surface-variant text-[20px] pointer-events-none">search</span><input class="w-full bg-surface-container-low text-on-surface placeholder:text-on-surface-variant font-body-sm text-body-sm pl-11 pr-space-md py-space-sm rounded-xl outline-none focus:bg-surface-container-lowest transition-all" placeholder="Search books, reader reviews, or published writing..." type="search"/></div></div><div class="flex items-center gap-space-md pl-space-lg"><button aria-label="Notifications" class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors relative" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-secondary"></span></button><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 px-gutter bg-background min-h-screen"><div class="flex flex-col w-full pb-margin">
+<!-- Top Curatorial Banner & Metrics -->
+<section class="w-full mb-space-xl pt-space-md">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-lg">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-sm text-secondary">
+<span class="material-symbols-outlined text-[18px]">auto_stories</span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest font-bold">Personal Library &amp; Archives</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight">My Shelf</h1>
+<div class="flex items-center gap-space-md text-on-surface-variant font-label-md text-label-md mt-space-xs">
+<span class="text-primary font-bold">24 <span class="font-normal text-on-surface-variant">Want to Read</span></span>
+<span class="text-outline-variant font-light">/</span>
+<span class="text-secondary font-bold">2 <span class="font-normal text-on-surface-variant">Currently Reading</span></span>
+<span class="text-outline-variant font-light">/</span>
+<span class="text-on-surface font-bold">58 <span class="font-normal text-on-surface-variant">Read</span></span>
+</div>
+</div>
+<!-- Quick Shelf Controls & Batch Action -->
+<div class="flex items-center gap-space-sm">
+<div class="relative inline-flex items-center bg-surface-container rounded-xl px-space-sm py-1 shadow-sm">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant ml-1 mr-2">sort</span>
+<select class="bg-transparent font-label-md text-label-md text-on-surface py-1 pr-4 focus:outline-none cursor-pointer">
+<option>Recently Added</option>
+<option>Highest Taste Match</option>
+<option>Author (A-Z)</option>
+<option>Length (Shortest first)</option>
+</select>
+</div>
+<button class="flex items-center gap-space-xs bg-surface-container hover:bg-surface-container-high text-on-surface px-space-md py-2 rounded-xl font-label-md text-label-md transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+<span>Filter</span>
+</button>
+</div>
+</div>
+<!-- Segmented Shelf Tabs (R6) -->
+<div class="flex items-center gap-space-xs mt-space-lg p-1 bg-surface-container-low rounded-xl w-fit shadow-inner">
+<button class="shelf-tab active-tab px-space-lg py-2 rounded-lg font-label-lg text-label-lg transition-all flex items-center gap-2 bg-surface-container-lowest text-primary shadow-sm font-semibold" id="tab-want" onclick="switchShelfTab('want')" type="button">
+<span>Want to Read</span>
+<span class="px-2 py-0.5 rounded-full text-label-sm font-bold bg-primary-fixed text-on-primary-fixed">24</span>
+</button>
+<button class="shelf-tab px-space-lg py-2 rounded-lg font-label-lg text-label-lg transition-all flex items-center gap-2 text-on-surface-variant hover:text-on-surface" id="tab-reading" onclick="switchShelfTab('reading')" type="button">
+<span>Currently Reading</span>
+<span class="px-2 py-0.5 rounded-full text-label-sm font-bold bg-secondary-fixed text-on-secondary-fixed">2</span>
+</button>
+<button class="shelf-tab px-space-lg py-2 rounded-lg font-label-lg text-label-lg transition-all flex items-center gap-2 text-on-surface-variant hover:text-on-surface" id="tab-read" onclick="switchShelfTab('read')" type="button">
+<span>Read &amp; Rated</span>
+<span class="px-2 py-0.5 rounded-full text-label-sm font-bold bg-surface-container text-on-surface-variant">58</span>
+</button>
+</div>
+</section>
+<!-- TAB CONTENT 1: WANT TO READ (R6, R7, R8) -->
+<div class="flex flex-col gap-space-lg" id="content-want">
+<div class="grid grid-cols-1 xl:grid-cols-2 gap-space-lg">
+<!-- Book Item 1: Drive Your Plow Over the Bones of the Dead -->
+<article class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow relative flex flex-col sm:flex-row gap-space-lg">
+<!-- Visual Book Spine / Cover -->
+<div class="relative w-full sm:w-36 h-52 shrink-0 rounded-lg overflow-hidden shadow-md bg-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="Dark, atmospheric book cover design featuring botanical silhouettes, antler motifs, and moody deep forest green textures for Drive Your Plow Over the Bones of the Dead by Olga Tokarczuk, editorial fine art styling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZ8qDzLm2KoUXIyKp3N0Rx1xlnZ9lQ5_k_unqGKquHmrYI3vLhXQVikDmk2Qyd8tdYk-n1alb7FjmNGtqRGcHF1rU0OjaiRxyMkeurcEDJAoLAI_T6L53pxxyC01PnFCIga7p-xDf9MdJkrTwhWg4HJH__Efj75mcZqqFodGMWd1jmAAhg1esvM5XQU79eHu9G7CXl2jTEBSEeQV6lrNsT58j_Rljr02vH0rg1nOk"/>
+<div class="absolute top-2 left-2 bg-primary/90 text-on-primary px-2 py-0.5 rounded text-label-sm font-bold flex items-center gap-1 backdrop-blur-sm">
+<span class="material-symbols-outlined text-[13px]">grade</span>
+<span>91% Match</span>
+</div>
+</div>
+<!-- Book Meta & Interactive Controls -->
+<div class="flex-1 flex flex-col justify-between">
+<div class="flex flex-col">
+<div class="flex items-center justify-between gap-space-sm mb-1">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold">Fiction / Polish Noir</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">Added Oct 14</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-primary tracking-tight hover:text-secondary cursor-pointer transition-colors">
+              Drive Your Plow Over the Bones of the Dead
+            </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">by <span class="font-medium text-on-surface">Olga Tokarczuk</span></p>
+<!-- Match Verdict Marginalia note -->
+<div class="mt-space-md p-space-sm bg-surface-container-low rounded-lg flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">neurology</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic">
+                “Overlaps heavily with your preference for philosophical mysteries and anti-pastoral prose.”
+              </p>
+</div>
+</div>
+<!-- Actions: Shelf Status & Direct Buy Links (R6, R7) -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pt-space-md mt-space-sm">
+<!-- Shelf Status Dropdown (R6) -->
+<div class="relative inline-block text-left" id="shelf-status-1">
+<button class="flex items-center gap-1.5 bg-surface-container hover:bg-surface-container-high text-on-surface px-space-md py-1.5 rounded-lg font-label-md text-label-md transition-colors shadow-sm" onclick="toggleDropdown('shelf-menu-1')" type="button">
+<span class="material-symbols-outlined text-[16px] text-primary">bookmark_add</span>
+<span>Move Shelf</span>
+<span class="material-symbols-outlined text-[16px]">expand_more</span>
+</button>
+<div class="hidden absolute left-0 bottom-full mb-2 w-48 rounded-xl bg-surface-container-lowest shadow-xl p-1 z-30" id="shelf-menu-1">
+<button class="w-full text-left px-3 py-2 text-label-md font-label-md text-on-surface hover:bg-surface-container rounded-lg flex items-center gap-2" onclick="moveShelf('Klara and the Sun', 'reading')" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">menu_book</span>
+<span>Move to Reading</span>
+</button>
+<button class="w-full text-left px-3 py-2 text-label-md font-label-md text-on-surface hover:bg-surface-container rounded-lg flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px] text-primary">task_alt</span>
+<span>Mark as Read</span>
+</button>
+<button class="w-full text-left px-3 py-2 text-label-md font-label-md text-error hover:bg-error-container/20 rounded-lg flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px]">delete_outline</span>
+<span>Remove from Shelf</span>
+</button>
+</div>
+</div>
+<!-- Direct Buy Dropdown (R7) -->
+<div class="relative inline-block text-left">
+<button class="flex items-center gap-1.5 bg-primary text-on-primary hover:bg-primary-container px-space-md py-1.5 rounded-lg font-label-md text-label-md transition-colors shadow-sm" onclick="toggleDropdown('buy-menu-1')" type="button">
+<span class="material-symbols-outlined text-[16px]">shopping_bag</span>
+<span>Acquire Book</span>
+<span class="material-symbols-outlined text-[16px]">expand_more</span>
+</button>
+<div class="hidden absolute right-0 bottom-full mb-2 w-56 rounded-xl bg-surface-container-lowest shadow-xl p-1 z-30" id="buy-menu-1">
+<a class="w-full text-left px-3 py-2.5 text-label-md font-label-md text-on-surface hover:bg-surface-container rounded-lg flex items-center justify-between" href="#">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary">storefront</span>
+<span>Bookshop.org</span>
+</span>
+<span class="font-label-sm text-secondary font-bold">$16.95</span>
+</a>
+<a class="w-full text-left px-3 py-2.5 text-label-md font-label-md text-on-surface hover:bg-surface-container rounded-lg flex items-center justify-between" href="#">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">shopping_cart</span>
+<span>Buy on Amazon</span>
+</span>
+<span class="font-label-sm text-on-surface-variant font-bold">$14.20</span>
+</a>
+<a class="w-full text-left px-3 py-2.5 text-label-md font-label-md text-on-surface hover:bg-surface-container rounded-lg flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-[18px] text-primary">location_on</span>
+<span>Find Local Bookstore</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- Book Item 2: Klara and the Sun (with R8 Club Shortcut) -->
+<article class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow relative flex flex-col sm:flex-row gap-space-lg">
+<div class="relative w-full sm:w-36 h-52 shrink-0 rounded-lg overflow-hidden shadow-md bg-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="Artistic book cover for Klara and the Sun by Kazuo Ishiguro with stylized geometric yellow solar disc against warm cream paper grain and subtle reflective ink textures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7peTerO53hvTqoUZOQS4CwzTRT2xmnFG51S--qqSU0YFJqey8Yx6D1ZEjfVaSlCFWlkBcXO5wpORF5Fr5t1M5IS_xhx7HRbr53aaEQsthwKtxAxi90f8pKXlTq1gioTwGgC5LPcQwbCpfpPUsH3bv7z6rbjrKRKyoKv405Q5vov2MMgTwHsF31DgiwodV4uZguJLY_yhYMXDZ2KdhiiBwk9CtPLe9BF4OUiBoEp0"/>
+<div class="absolute top-2 left-2 bg-primary/90 text-on-primary px-2 py-0.5 rounded text-label-sm font-bold flex items-center gap-1 backdrop-blur-sm">
+<span class="material-symbols-outlined text-[13px]">grade</span>
+<span>88% Match</span>
+</div>
+</div>
+<div class="flex-1 flex flex-col justify-between">
+<div class="flex flex-col">
+<div class="flex items-center justify-between gap-space-sm mb-1">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold">Speculative / Dystopian</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">Added Sep 28</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-primary tracking-tight hover:text-secondary cursor-pointer transition-colors">
+              Klara and the Sun
+            </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">by <span class="font-medium text-on-surface">Kazuo Ishiguro</span></p>
+<!-- Active Salon / Discussion Shortcut (R8) -->
+<div class="mt-space-md p-space-sm bg-primary-fixed/30 rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">forum</span>
+<span class="font-label-sm text-label-sm font-semibold text-primary">Active Reading Salon</span>
+</div>
+<a class="font-label-sm text-label-sm font-bold text-secondary hover:underline flex items-center gap-0.5" href="#">
+<span>Join Club</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Actions -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pt-space-md mt-space-sm">
+<div class="relative inline-block text-left">
+<button class="flex items-center gap-1.5 bg-surface-container hover:bg-surface-container-high text-on-surface px-space-md py-1.5 rounded-lg font-label-md text-label-md transition-colors shadow-sm" onclick="toggleDropdown('shelf-menu-2')" type="button">
+<span class="material-symbols-outlined text-[16px] text-primary">bookmark_add</span>
+<span>Move Shelf</span>
+<span class="material-symbols-outlined text-[16px]">expand_more</span>
+</button>
+<div class="hidden absolute left-0 bottom-full mb-2 w-48 rounded-xl bg-surface-container-lowest shadow-xl p-1 z-30" id="shelf-menu-2">
+<button class="w-full text-left px-3 py-2 text-label-md font-label-md text-on-surface hover:bg-surface-container rounded-lg flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">menu_book</span>
+<span>Move to Reading</span>
+</button>
+<button class="w-full text-left px-3 py-2 text-label-md font-label-md text-on-surface hover:bg-surface-container rounded-lg flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px] text-primary">task_alt</span>
+<span>Mark as Read</span>
+</button>
+</div>
+</div>
+<!-- Direct Buy Option (R7) -->
+<div class="flex items-center gap-space-xs">
+<a class="flex items-center gap-1 bg-surface-container hover:bg-surface-container-high text-on-surface px-3 py-1.5 rounded-lg font-label-md text-label-md transition-colors shadow-sm" href="#" title="Buy on Amazon">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">shopping_cart</span>
+<span>Amazon</span>
+</a>
+<a class="flex items-center gap-1 bg-primary text-on-primary hover:bg-primary-container px-3 py-1.5 rounded-lg font-label-md text-label-md transition-colors shadow-sm" href="#">
+<span class="material-symbols-outlined text-[16px]">storefront</span>
+<span>Bookshop ($17.00)</span>
+</a>
+</div>
+</div>
+</div>
+</article>
+<!-- Book Item 3: Tomorrow, and Tomorrow, and Tomorrow -->
+<article class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow relative flex flex-col sm:flex-row gap-space-lg">
+<div class="relative w-full sm:w-36 h-52 shrink-0 rounded-lg overflow-hidden shadow-md bg-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="Cover artwork for Tomorrow and Tomorrow and Tomorrow with woodblock Hokusai wave motif, rich deep lapis and burnt terracotta colors, tactile linen finish" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXPnXq5K9HrWdJOSMED7hAmfWnhWuhrIgS1Nc1S4x_Llbbv-n2N6Ydl4drzXY9BEnvNmXxyvmtRn_w1dszrTtSI0EBqBKFLee693THD4t_dflor3U5HATvHJdzzhKb2j6mJTD2jd4a_XoE76MLpUpJjWz73Giwd1BnjI6msMAPzNSgn_dJMYsM7pszO_mARwEyU-gi_cUdiIcRcqOaSRaD7cRfJT9WLUwsnOq_w_0"/>
+<div class="absolute top-2 left-2 bg-primary/90 text-on-primary px-2 py-0.5 rounded text-label-sm font-bold flex items-center gap-1 backdrop-blur-sm">
+<span class="material-symbols-outlined text-[13px]">grade</span>
+<span>94% Match</span>
+</div>
+</div>
+<div class="flex-1 flex flex-col justify-between">
+<div class="flex flex-col">
+<div class="flex items-center justify-between gap-space-sm mb-1">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold">Contemporary Fiction</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">Added Aug 19</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-primary tracking-tight hover:text-secondary cursor-pointer transition-colors">
+              Tomorrow, and Tomorrow, and Tomorrow
+            </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">by <span class="font-medium text-on-surface">Gabrielle Zevin</span></p>
+<div class="mt-space-md p-space-sm bg-surface-container-low rounded-lg flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">thumb_up</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic">
+                “Recommended by 8 readers you follow in the 'Longform Fiction' circle.”
+              </p>
+</div>
+</div>
+<!-- Actions -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pt-space-md mt-space-sm">
+<div class="relative inline-block text-left">
+<button class="flex items-center gap-1.5 bg-surface-container hover:bg-surface-container-high text-on-surface px-space-md py-1.5 rounded-lg font-label-md text-label-md transition-colors shadow-sm" onclick="toggleDropdown('shelf-menu-3')" type="button">
+<span class="material-symbols-outlined text-[16px] text-primary">bookmark_add</span>
+<span>Move Shelf</span>
+<span class="material-symbols-outlined text-[16px]">expand_more</span>
+</button>
+<div class="hidden absolute left-0 bottom-full mb-2 w-48 rounded-xl bg-surface-container-lowest shadow-xl p-1 z-30" id="shelf-menu-3">
+<button class="w-full text-left px-3 py-2 text-label-md font-label-md text-on-surface hover:bg-surface-container rounded-lg flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">menu_book</span>
+<span>Move to Reading</span>
+</button>
+<button class="w-full text-left px-3 py-2 text-label-md font-label-md text-on-surface hover:bg-surface-container rounded-lg flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px] text-primary">task_alt</span>
+<span>Mark as Read</span>
+</button>
+</div>
+</div>
+<!-- Direct Buy Dropdown (R7) -->
+<div class="relative inline-block text-left">
+<button class="flex items-center gap-1.5 bg-primary text-on-primary hover:bg-primary-container px-space-md py-1.5 rounded-lg font-label-md text-label-md transition-colors shadow-sm" onclick="toggleDropdown('buy-menu-3')" type="button">
+<span class="material-symbols-outlined text-[16px]">shopping_bag</span>
+<span>Buy Edition</span>
+<span class="material-symbols-outlined text-[16px]">expand_more</span>
+</button>
+<div class="hidden absolute right-0 bottom-full mb-2 w-56 rounded-xl bg-surface-container-lowest shadow-xl p-1 z-30" id="buy-menu-3">
+<a class="w-full text-left px-3 py-2 text-label-md font-label-md text-on-surface hover:bg-surface-container rounded-lg flex items-center justify-between" href="#">
+<span>Bookshop.org</span>
+<span class="font-bold text-secondary">$18.99</span>
+</a>
+<a class="w-full text-left px-3 py-2 text-label-md font-label-md text-on-surface hover:bg-surface-container rounded-lg flex items-center justify-between" href="#">
+<span>Amazon</span>
+<span class="font-bold text-on-surface-variant">$15.99</span>
+</a>
+<a class="w-full text-left px-3 py-2 text-label-md font-label-md text-on-surface hover:bg-surface-container rounded-lg flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-[16px] text-primary">near_me</span>
+<span>Find Bookstore</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- Book Item 4: Pachinko -->
+<article class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow relative flex flex-col sm:flex-row gap-space-lg">
+<div class="relative w-full sm:w-36 h-52 shrink-0 rounded-lg overflow-hidden shadow-md bg-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="Intricate book cover design of Pachinko by Min Jin Lee showing traditional Korean floral and geometric patterns in rich terracotta and sage tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOCxCgvvJPlAmU014F2pY0qIXJYcosiTJtk9LdQzaXCw_Xx9NW4tlorfmb9qJ9q23i8phPQIksr6_vuvGMMldgN34DIUwphogh-WCeXbYNZm5b53SpCIw1Z-tFjudq9zf3xe4FWZ9r-Ls8OR0CMNvpp6E4CuTz2pmP77yCVAuGMK8snNJf630cNX3yhLZhKTrUpqP8I7pjW4kDCUjA6vrUglXcMUBHDNwh6gNTTV4"/>
+<div class="absolute top-2 left-2 bg-primary/90 text-on-primary px-2 py-0.5 rounded text-label-sm font-bold flex items-center gap-1 backdrop-blur-sm">
+<span class="material-symbols-outlined text-[13px]">grade</span>
+<span>97% Match</span>
+</div>
+</div>
+<div class="flex-1 flex flex-col justify-between">
+<div class="flex flex-col">
+<div class="flex items-center justify-between gap-space-sm mb-1">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold">Historical / Saga</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">Added Jul 11</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-primary tracking-tight hover:text-secondary cursor-pointer transition-colors">
+              Pachinko
+            </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">by <span class="font-medium text-on-surface">Min Jin Lee</span></p>
+<div class="mt-space-md p-space-sm bg-surface-container-low rounded-lg flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">bookmark_heart</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic">
+                “Ranked in Salon Curator Top 10 multigenerational masterworks.”
+              </p>
+</div>
+</div>
+<!-- Actions -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pt-space-md mt-space-sm">
+<div class="relative inline-block text-left">
+<button class="flex items-center gap-1.5 bg-surface-container hover:bg-surface-container-high text-on-surface px-space-md py-1.5 rounded-lg font-label-md text-label-md transition-colors shadow-sm" onclick="toggleDropdown('shelf-menu-4')" type="button">
+<span class="material-symbols-outlined text-[16px] text-primary">bookmark_add</span>
+<span>Move Shelf</span>
+<span class="material-symbols-outlined text-[16px]">expand_more</span>
+</button>
+<div class="hidden absolute left-0 bottom-full mb-2 w-48 rounded-xl bg-surface-container-lowest shadow-xl p-1 z-30" id="shelf-menu-4">
+<button class="w-full text-left px-3 py-2 text-label-md font-label-md text-on-surface hover:bg-surface-container rounded-lg flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">menu_book</span>
+<span>Move to Reading</span>
+</button>
+<button class="w-full text-left px-3 py-2 text-label-md font-label-md text-on-surface hover:bg-surface-container rounded-lg flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px] text-primary">task_alt</span>
+<span>Mark as Read</span>
+</button>
+</div>
+</div>
+<!-- Direct Buy Dropdown (R7) -->
+<div class="relative inline-block text-left">
+<button class="flex items-center gap-1.5 bg-primary text-on-primary hover:bg-primary-container px-space-md py-1.5 rounded-lg font-label-md text-label-md transition-colors shadow-sm" onclick="toggleDropdown('buy-menu-4')" type="button">
+<span class="material-symbols-outlined text-[16px]">shopping_bag</span>
+<span>Buy Edition</span>
+<span class="material-symbols-outlined text-[16px]">expand_more</span>
+</button>
+<div class="hidden absolute right-0 bottom-full mb-2 w-56 rounded-xl bg-surface-container-lowest shadow-xl p-1 z-30" id="buy-menu-4">
+<a class="w-full text-left px-3 py-2 text-label-md font-label-md text-on-surface hover:bg-surface-container rounded-lg flex items-center justify-between" href="#">
+<span>Bookshop.org</span>
+<span class="font-bold text-secondary">$17.99</span>
+</a>
+<a class="w-full text-left px-3 py-2 text-label-md font-label-md text-on-surface hover:bg-surface-container rounded-lg flex items-center justify-between" href="#">
+<span>Amazon</span>
+<span class="font-bold text-on-surface-variant">$13.49</span>
+</a>
+<a class="w-full text-left px-3 py-2 text-label-md font-label-md text-on-surface hover:bg-surface-container rounded-lg flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-[16px] text-primary">pin_drop</span>
+<span>Independent Booksellers</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</article>
+</div>
+</div>
+<!-- SECTION: CURRENTLY READING PREVIEW (R3, R6) -->
+<section class="mt-space-xl pt-space-lg">
+<div class="flex items-center justify-between mb-space-md">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold">Active Folios</span>
+<h2 class="font-headline-md text-headline-md text-primary tracking-tight">Currently Reading</h2>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant">2 volumes open on desk</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-lg">
+<!-- Currently Reading Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+<div class="flex flex-col sm:flex-row gap-space-md">
+<div class="w-24 h-36 shrink-0 rounded-lg overflow-hidden shadow bg-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="Cover of The Overstory by Richard Powers, featuring cross-section tree growth rings in sepia and forest ink on deckle-edged paper" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJyWGj6UaMprlUu0R6lzQv2FJK9NqN81YfKnu_fF6hDniN_ksofDYPWApRoNRH8FxGWXwDZLl5GvjCJsaz-TDyi2hd2RKBDEld3NIHPsmd9XkwGvYYAwvIFp-shif19WBQNmKWumY7bZPUoxyAqcvpUkHAuxp260l-nxYaAKIPfDcLG9Ru4JM1j8UU0nGGp7z4UJy-pTYCYC7RILVFuzLXsxZ_qmnc46dK-Bkr0-A"/>
+</div>
+<div class="flex-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Nature &amp; Philosophy</span>
+<h3 class="font-headline-sm text-headline-sm text-primary tracking-tight">The Overstory</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Richard Powers</p>
+<!-- Reading Progress Visualizer -->
+<div class="mt-space-md flex flex-col gap-1.5">
+<div class="flex justify-between items-center font-label-md text-label-md">
+<span class="text-primary font-bold">p. 142 of 272</span>
+<span class="text-secondary font-bold">52% complete</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 52%;"></div>
+</div>
+<span class="text-on-surface-variant font-label-sm text-label-sm mt-0.5">Estimated 3.4 hrs left at current reading cadence</span>
+</div>
+</div>
+</div>
+<!-- Post Reaction or Update (R3) -->
+<div class="flex items-center justify-between pt-space-md mt-space-md border-t-0 bg-surface-container-low -mx-space-lg -mb-space-lg p-space-md rounded-b-xl">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px] text-primary">edit_note</span>
+<span>Last note: Ch. 4 "Nicholas Hoel"</span>
+</div>
+<button class="flex items-center gap-1.5 bg-primary hover:bg-primary-container text-on-primary px-space-md py-1.5 rounded-lg font-label-md text-label-md transition-colors shadow-sm" onclick="openReactionModal('The Overstory', 142)" type="button">
+<span class="material-symbols-outlined text-[16px]">add_comment</span>
+<span>Post Reaction or Update</span>
+</button>
+</div>
+</div>
+<!-- Currently Reading Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+<div class="flex flex-col sm:flex-row gap-space-md">
+<div class="w-24 h-36 shrink-0 rounded-lg overflow-hidden shadow bg-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="Cover of Invisible Cities by Italo Calvino, minimal architectural linework with golden geometric perspective on textured off-white parchment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHAMSTh4hXdSTxMxPHNl63QxDq4YV86PVkcFoo285i9fZNXbdkXjPMw9-iPH9G3X-mJd7Ru4IzCkPwe3DiQqaplOKeHd0m25WkF_3yaZ4BziPoeTTKIi9hsLUAPTVcLPQGZV7lGd8kgf-RduGo0FH7cwvxhuPfGGg0ZdfUm4B6WKKFgOoObLZBPGJ1dm7Ieu2D95VAXb4L1YOyo2iMvQZHE8I3WFQghcpwtFNobp4"/>
+</div>
+<div class="flex-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Classics / Magical Realism</span>
+<h3 class="font-headline-sm text-headline-sm text-primary tracking-tight">Invisible Cities</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Italo Calvino</p>
+<!-- Progress -->
+<div class="mt-space-md flex flex-col gap-1.5">
+<div class="flex justify-between items-center font-label-md text-label-md">
+<span class="text-primary font-bold">p. 98 of 165</span>
+<span class="text-secondary font-bold">59% complete</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 59%;"></div>
+</div>
+<span class="text-on-surface-variant font-label-sm text-label-sm mt-0.5">Currently reading with 'Archival Cityscapes' Salon</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-md mt-space-md bg-surface-container-low -mx-space-lg -mb-space-lg p-space-md rounded-b-xl">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px] text-secondary">forum</span>
+<span>3 salon members at this chapter</span>
+</div>
+<button class="flex items-center gap-1.5 bg-primary hover:bg-primary-container text-on-primary px-space-md py-1.5 rounded-lg font-label-md text-label-md transition-colors shadow-sm" onclick="openReactionModal('Invisible Cities', 98)" type="button">
+<span class="material-symbols-outlined text-[16px]">add_comment</span>
+<span>Post Reaction or Update</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION: COMPLETED & RATED ARCHIVE (R3, R4) -->
+<section class="mt-space-xl pt-space-lg">
+<div class="flex items-center justify-between mb-space-md">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold">Archive &amp; Critiques</span>
+<h2 class="font-headline-md text-headline-md text-primary tracking-tight">Recently Read &amp; Rated</h2>
+</div>
+<button class="font-label-md text-label-md text-secondary hover:text-on-secondary-container font-semibold flex items-center gap-1" type="button">
+<span>View full archive (58)</span>
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+<!-- Review Log Stack -->
+<div class="flex flex-col gap-space-md">
+<!-- Completed Review Item 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col md:flex-row gap-space-lg">
+<div class="w-20 h-28 shrink-0 rounded-lg overflow-hidden shadow bg-surface-container-high hidden sm:block">
+<img class="w-full h-full object-cover" data-alt="Cover of Sea of Tranquility by Emily St. John Mandel with delicate silver foil celestial accents on midnight navy cloth background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEl9uyQnI_mdu7YC7vzKrT4efvrN-UZQz7EOzJeuaaDAAg6GFiNt9QF3xEE4btK_MK5z6AsI3zpPMQvJBCUQPgKNT_O3EqRb5mu34zjszk69jggt1svzvZvIEYxToA51d8NjDcS4wzuDEcl_mqcxUYOcDJXPsMrQQXP5dZqRMW_85DcWmgSwmYSSdwffBRfWUibW-cNuXK71jONtRtYBJR6vNRba71hC0_J9jzlMs"/>
+</div>
+<div class="flex-1 flex flex-col justify-between">
+<div>
+<div class="flex flex-wrap items-center justify-between gap-space-xs">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary tracking-tight">Sea of Tranquility</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Emily St. John Mandel · Completed Aug 24</p>
+</div>
+<!-- Personal Submitted Expectation Match & Rating (R4) -->
+<div class="flex items-center gap-space-md bg-surface-container-low px-space-md py-1.5 rounded-xl">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-lg text-label-lg text-on-surface font-bold">5.0</span>
+</div>
+<div class="h-4 w-px bg-outline-variant"></div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-[18px]">psychology_alt</span>
+<span class="font-label-md text-label-md text-primary font-semibold">96% Matched Expectation</span>
+</div>
+</div>
+</div>
+<!-- Reader's Submitted Review Snippet (R3) -->
+<p class="font-body-md text-body-md text-on-surface mt-space-md leading-relaxed">
+              “Mandel orchestrates time loops not as gimmicks, but as poignant acoustic echoes of loneliness. The cadence of the pandemic-era violinist section in the woods anchored the entire cosmological scope. Unbearably tender.”
+            </p>
+</div>
+<div class="flex items-center justify-between pt-space-md mt-space-md text-on-surface-variant font-label-sm text-label-sm">
+<div class="flex items-center gap-space-lg">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">favorite</span> 34 appreciates</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">forum</span> 6 margin annotations</span>
+</div>
+<button class="text-secondary hover:underline font-label-md text-label-md font-semibold" type="button">Edit Review</button>
+</div>
+</div>
+</div>
+<!-- Completed Review Item 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col md:flex-row gap-space-lg">
+<div class="w-20 h-28 shrink-0 rounded-lg overflow-hidden shadow bg-surface-container-high hidden sm:block">
+<img class="w-full h-full object-cover" data-alt="Cover of The Remains of the Day by Kazuo Ishiguro with minimalist manor house facade embossed on warm sepia vintage paper" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBf3Nu3XJxemkZmPdzwuYFHPV1oXJ7OpeSZF0JbHyR-rGEm33JaWQMuVILFLVJESUgeT27K7LZVW5R8F7CSCy48_xl9hpCvQvUpnc560FWFFLmTWufhkfQKbRdC4KJELBz-I22VbmKiCDU3chLoVdBTXRmkuST5u3PhMVVxB4ocWTGb9jMvZJ6SnKf_EmH7OmL0i41iowOOpJoOfau0SwJf4VKRVLKIxbkYNh9D1L4"/>
+</div>
+<div class="flex-1 flex flex-col justify-between">
+<div>
+<div class="flex flex-wrap items-center justify-between gap-space-xs">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary tracking-tight">The Remains of the Day</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Kazuo Ishiguro · Completed Jul 30</p>
+</div>
+<!-- Rating (R4) -->
+<div class="flex items-center gap-space-md bg-surface-container-low px-space-md py-1.5 rounded-xl">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-lg text-label-lg text-on-surface font-bold">4.5</span>
+</div>
+<div class="h-4 w-px bg-outline-variant"></div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-[18px]">psychology_alt</span>
+<span class="font-label-md text-label-md text-primary font-semibold">89% Matched Expectation</span>
+</div>
+</div>
+</div>
+<!-- Submitted Review Snippet (R3) -->
+<p class="font-body-md text-body-md text-on-surface mt-space-md leading-relaxed">
+              “The absolute pinnacle of unreliable first-person narration. Stevens justifies an entire lifetime of subservience under the banner of 'dignity.' The final pier conversation in Weymouth broke my heart.”
+            </p>
+</div>
+<div class="flex items-center justify-between pt-space-md mt-space-md text-on-surface-variant font-label-sm text-label-sm">
+<div class="flex items-center gap-space-lg">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">favorite</span> 52 appreciates</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">forum</span> 11 margin annotations</span>
+</div>
+<button class="text-secondary hover:underline font-label-md text-label-md font-semibold" type="button">Edit Review</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Modal: Post Reaction / Reading Update (R3) -->
+<div class="fixed inset-0 z-50 bg-on-surface/40 backdrop-blur-sm hidden items-center justify-center p-space-md" id="reaction-modal">
+<div class="bg-surface-container-lowest rounded-xl max-w-lg w-full p-space-xl shadow-2xl relative">
+<div class="flex items-start justify-between mb-space-md">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold">Reading Journal &amp; Margin Note</span>
+<h3 class="font-headline-md text-headline-md text-primary mt-1" id="modal-book-title">Post Reaction</h3>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface p-1 rounded-full hover:bg-surface-container" onclick="closeReactionModal()" type="button">
+<span class="material-symbols-outlined text-[22px]">close</span>
+</button>
+</div>
+<form class="flex flex-col gap-space-md" onsubmit="handleReactionSubmit(event)">
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-1">Current Page Progress</label>
+<div class="flex items-center gap-2">
+<input class="w-28 bg-surface-container-low px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface focus:outline-none focus:bg-surface-container" id="modal-page-input" type="number"/>
+<span class="font-body-sm text-body-sm text-on-surface-variant">pages reached</span>
+</div>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-1">Passage or Thought Reaction</label>
+<textarea class="w-full bg-surface-container-low px-3 py-2.5 rounded-lg font-body-sm text-body-sm text-on-surface focus:outline-none focus:bg-surface-container resize-none" placeholder="Record a live marginal note, quote, or immediate emotional reaction to this passage..." rows="4"></textarea>
+</div>
+<div class="flex items-center gap-2">
+<input class="rounded text-primary focus:ring-0 cursor-pointer" id="spoiler-toggle" type="checkbox"/>
+<label class="font-body-sm text-body-sm text-on-surface-variant cursor-pointer select-none" for="spoiler-toggle">
+            Tag as containing plot revelations (blur for readers behind this page)
+          </label>
+</div>
+<div class="flex items-center justify-end gap-space-sm pt-space-sm">
+<button class="px-space-md py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container" onclick="closeReactionModal()" type="button">
+            Cancel
+          </button>
+<button class="bg-primary hover:bg-primary-container text-on-primary px-space-lg py-2 rounded-lg font-label-md text-label-md shadow-sm transition-colors" type="submit">
+            Publish Reaction to Salon
+          </button>
+</div>
+</form>
+</div>
+</div>
+<!-- Toast Notification -->
+<div class="fixed bottom-6 right-6 z-50 bg-primary text-on-primary px-space-lg py-space-sm rounded-xl shadow-xl flex items-center gap-2 transition-transform transform translate-y-32" id="shelf-toast">
+<span class="material-symbols-outlined text-[20px] text-primary-fixed">check_circle</span>
+<span class="font-label-md text-label-md" id="toast-message">Shelf updated successfully</span>
+</div>
+</div>
+<script>
+  function switchShelfTab(tabKey) {
+    const tabs = ['want', 'reading', 'read'];
+    tabs.forEach(t => {
+      const btn = document.getElementById('tab-' + t);
+      if (t === tabKey) {
+        btn.classList.add('bg-surface-container-lowest', 'text-primary', 'shadow-sm', 'font-semibold');
+        btn.classList.remove('text-on-surface-variant');
+      } else {
+        btn.classList.remove('bg-surface-container-lowest', 'text-primary', 'shadow-sm', 'font-semibold');
+        btn.classList.add('text-on-surface-variant');
+      }
+    });
+
+    showToast('Viewing ' + (tabKey === 'want' ? 'Want to Read' : tabKey === 'reading' ? 'Currently Reading' : 'Read & Rated') + ' shelf');
+  }
+
+  function toggleDropdown(menuId) {
+    // Close other dropdowns first
+    const openMenus = document.querySelectorAll('[id^="shelf-menu-"], [id^="buy-menu-"]');
+    openMenus.forEach(menu => {
+      if (menu.id !== menuId) {
+        menu.classList.add('hidden');
+      }
+    });
+    const menu = document.getElementById(menuId);
+    if (menu) {
+      menu.classList.toggle('hidden');
+    }
+  }
+
+  // Close menus on outside click
+  window.addEventListener('click', function(e) {
+    if (!e.target.closest('button')) {
+      const openMenus = document.querySelectorAll('[id^="shelf-menu-"], [id^="buy-menu-"]');
+      openMenus.forEach(menu => menu.classList.add('hidden'));
+    }
+  });
+
+  function moveShelf(bookTitle, destination) {
+    showToast('Moved "' + bookTitle + '" to ' + destination);
+    const openMenus = document.querySelectorAll('[id^="shelf-menu-"]');
+    openMenus.forEach(menu => menu.classList.add('hidden'));
+  }
+
+  function openReactionModal(bookTitle, pageNum) {
+    document.getElementById('modal-book-title').innerText = bookTitle;
+    document.getElementById('modal-page-input').value = pageNum;
+    const modal = document.getElementById('reaction-modal');
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+  }
+
+  function closeReactionModal() {
+    const modal = document.getElementById('reaction-modal');
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+  }
+
+  function handleReactionSubmit(e) {
+    e.preventDefault();
+    closeReactionModal();
+    showToast('Reaction logged and shared with salon readers!');
+  }
+
+  function showToast(msg) {
+    const toast = document.getElementById('shelf-toast');
+    const msgEl = document.getElementById('toast-message');
+    msgEl.innerText = msg;
+    toast.classList.remove('translate-y-32');
+    setTimeout(() => {
+      toast.classList.add('translate-y-32');
+    }, 2800);
+  }
+</script></main></div></body></html>

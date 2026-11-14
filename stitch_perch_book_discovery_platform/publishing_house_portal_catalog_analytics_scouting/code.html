@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400;1,6..72,500&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"secondary":"#994626","tertiary-fixed-dim":"#fcba5b","error-container":"#ffdad6","inverse-primary":"#abcfb8","on-primary-fixed":"#002113","on-secondary":"#ffffff","tertiary":"#2f1c00","on-primary-container":"#83a590","inverse-on-surface":"#f7efea","surface-container-low":"#faf2ed","on-surface":"#1e1b18","surface":"#fff8f4","inverse-surface":"#33302c","surface-tint":"#456553","primary-fixed-dim":"#abcfb8","on-tertiary-fixed":"#291800","surface-dim":"#e0d9d3","tertiary-fixed":"#ffddb4","surface-container":"#f4ece7","on-tertiary-fixed-variant":"#633f00","on-secondary-fixed-variant":"#7a2f10","background":"#fff8f4","on-error-container":"#93000a","on-secondary-fixed":"#380d00","surface-bright":"#fff8f4","on-secondary-container":"#762c0d","on-primary-fixed-variant":"#2d4d3c","primary-container":"#1b3b2b","surface-container-high":"#eee7e1","on-background":"#1e1b18","primary":"#032517","surface-variant":"#e9e1dc","secondary-fixed":"#ffdbcf","on-error":"#ffffff","error":"#ba1a1a","on-surface-variant":"#424843","outline-variant":"#c1c8c2","outline":"#727973","tertiary-container":"#4b2f00","secondary-container":"#ff956e","on-tertiary-container":"#ce9236","primary-fixed":"#c7ebd4","on-tertiary":"#ffffff","surface-container-lowest":"#ffffff","secondary-fixed-dim":"#ffb59b","surface-container-highest":"#e9e1dc","on-primary":"#ffffff"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"margin-mobile":"1.25rem","space-md":"1rem","space-xl":"2.5rem","gutter-mobile":"1rem","margin":"3rem","space-sm":"0.5rem","space-lg":"1.5rem","space-xs":"0.25rem","gutter":"1.5rem"},"fontFamily":{"body-sm":["Plus Jakarta Sans"],"display-lg":["Newsreader"],"headline-sm":["Newsreader"],"label-sm":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"headline-md":["Newsreader"],"headline-lg":["Newsreader"],"quote-editorial":["Newsreader"],"body-lg":["Plus Jakarta Sans"],"display-lg-mobile":["Newsreader"],"label-lg":["Plus Jakarta Sans"]},"fontSize":{"body-sm":["13px",{"lineHeight":"20px","fontWeight":"400"}],"display-lg":["48px",{"lineHeight":"56px","letterSpacing":"-0.02em","fontWeight":"400"}],"headline-sm":["20px",{"lineHeight":"28px","fontWeight":"600"}],"label-sm":["10px",{"lineHeight":"14px","letterSpacing":"0.05em","fontWeight":"700"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.03em","fontWeight":"600"}],"body-md":["15px",{"lineHeight":"24px","fontWeight":"400"}],"headline-md":["24px",{"lineHeight":"32px","fontWeight":"500"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.01em","fontWeight":"500"}],"quote-editorial":["20px",{"lineHeight":"30px","fontWeight":"400"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],"display-lg-mobile":["36px",{"lineHeight":"44px","letterSpacing":"-0.015em","fontWeight":"400"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"600"}]}}}}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between py-space-lg shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col gap-space-lg"><div class="px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-primary text-[28px]">menu_book</span><span class="font-headline-md text-headline-md tracking-tight text-primary">Perch</span></div><span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary px-space-xs py-0.5 bg-surface-container rounded">Press</span></div><div class="px-space-md"><div class="p-space-sm rounded-xl bg-surface-container flex items-center justify-between"><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Imprint Room</span><span class="font-headline-sm text-headline-sm text-primary">Riverhead Books</span></div><span class="material-symbols-outlined text-on-surface-variant text-[20px]">unfold_more</span></div></div><nav class="flex flex-col gap-space-xs px-space-md" data-active-classes="bg-primary-container text-on-primary font-label-lg rounded-xl"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="catalog-and-book-pages" href="#"><span class="material-symbols-outlined text-[20px]">auto_stories</span>Catalog &amp; Book Pages</a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="reader-reception-and-analytics" href="#"><span class="material-symbols-outlined text-[20px]">analytics</span>Reader Reception &amp; Analytics</a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="sponsored-promotions" href="#"><span class="material-symbols-outlined text-[20px]">campaign</span>Sponsored Promotions</a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="emerging-writer-scouting" href="#"><span class="material-symbols-outlined text-[20px]">ink_pen</span>Emerging Writer Scouting</a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="distribution-settings" href="#"><span class="material-symbols-outlined text-[20px]">local_shipping</span>Distribution Settings</a></nav></div><div class="px-space-md flex flex-col gap-space-sm"><div class="p-space-md rounded-xl bg-surface-container flex flex-col gap-space-xs"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Curator Circle</span><p class="font-body-sm text-body-sm text-on-surface">Fitzcarraldo &amp; Riverhead Joint Salon invites dispatched.</p></div><div class="flex items-center justify-between px-space-sm pt-space-xs"><div class="flex items-center gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-[18px]">verified</span><span class="font-label-md text-label-md">Verified Salon</span></div><span class="font-label-sm text-label-sm text-outline">v2.4 Editorial</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/80 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs bg-surface-container px-space-sm py-1 rounded-full"><span class="w-2 h-2 rounded-full bg-secondary"></span><span class="font-label-md text-label-md text-on-surface">Riverhead Books · Publisher Partner</span></div></div><div class="flex items-center gap-space-lg"><div class="relative flex items-center w-80 bg-surface-container-low rounded-xl px-space-sm py-1.5 focus-within:ring-1 focus-within:ring-primary"><span class="material-symbols-outlined text-outline text-[18px] mr-space-xs">search</span><input class="w-full bg-transparent font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none" placeholder="Search titles, writers, margin notes..." type="text"/></div><div class="flex items-center gap-space-sm"><button class="w-9 h-9 rounded-xl flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors relative" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-2 right-2 w-1.5 h-1.5 rounded-full bg-secondary"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="relative pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Main Portal Canvas Container -->
+<div class="px-margin py-space-xl flex flex-col gap-space-xl max-w-[1400px] mx-auto w-full">
+<!-- Publisher Header & Identity Hero -->
+<header class="flex flex-col gap-space-lg">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="inline-flex items-center gap-1.5 px-space-sm py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm tracking-wider uppercase">
+<span class="material-symbols-outlined text-[15px] text-secondary" style="font-variation-settings: 'FILL' 1;">verified</span>
+              Verified Publisher Account
+            </span>
+<span class="text-outline text-label-sm font-label-sm uppercase tracking-widest">·</span>
+<span class="text-on-surface-variant font-label-md text-label-md">Perch Literary Partner Suite</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-primary tracking-tight">Riverhead Books</h1>
+<p class="font-quote-editorial text-quote-editorial text-on-surface-variant italic">
+            Penguin Random House Literary Imprint · Portal ID #RH-7740-PRCH
+          </p>
+</div>
+<!-- Primary Action Cluster (P1 & P3) -->
+<div class="flex items-center gap-space-sm flex-wrap">
+<button class="group flex items-center gap-space-xs px-space-lg py-3 rounded-xl bg-primary text-on-primary font-label-lg text-label-lg shadow-sm hover:bg-primary-container transition-all" type="button">
+<span class="material-symbols-outlined text-[20px] transition-transform group-hover:rotate-90">add</span>
+<span>Add Title / Launch Book Page</span>
+<span class="text-on-primary/60 text-xs ml-1 font-mono">(P1)</span>
+</button>
+<button class="group flex items-center gap-space-xs px-space-lg py-3 rounded-xl bg-surface-container-highest text-on-surface font-label-lg text-label-lg shadow-sm hover:bg-secondary hover:text-on-secondary transition-all" type="button">
+<span class="material-symbols-outlined text-[20px] text-secondary group-hover:text-on-secondary">campaign</span>
+<span>Create Sponsored Campaign</span>
+<span class="opacity-60 text-xs ml-1 font-mono">(P3)</span>
+</button>
+</div>
+</div>
+<!-- Quick Summary Stat Strip (P1, P2, P4, P5) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Stat 1: Active Catalog (P1) -->
+<div class="p-space-lg rounded-xl bg-surface-container flex flex-col justify-between gap-space-sm shadow-sm relative overflow-hidden">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Active Catalog</span>
+<span class="material-symbols-outlined text-[20px] text-primary">auto_stories</span>
+</div>
+<div class="flex flex-col">
+<span class="font-display-lg text-headline-lg text-primary font-serif">48 Titles</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Active metadata &amp; editorial book pages (P1)</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden mt-1">
+<div class="bg-primary h-full rounded-full" style="width: 100%;"></div>
+</div>
+</div>
+<!-- Stat 2: Perch Distribution Reach (P2) -->
+<div class="p-space-lg rounded-xl bg-surface-container flex flex-col justify-between gap-space-sm shadow-sm relative overflow-hidden">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Distribution Reach</span>
+<span class="material-symbols-outlined text-[20px] text-secondary">local_shipping</span>
+</div>
+<div class="flex flex-col">
+<span class="font-display-lg text-headline-lg text-primary font-serif">184.2k</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Active Perch readers with direct access (P2)</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden mt-1">
+<div class="bg-secondary h-full rounded-full" style="width: 78%;"></div>
+</div>
+</div>
+<!-- Stat 3: Expectation Concordance (P4) -->
+<div class="p-space-lg rounded-xl bg-surface-container flex flex-col justify-between gap-space-sm shadow-sm relative overflow-hidden">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Blurb Concordance</span>
+<span class="material-symbols-outlined text-[20px] text-surface-tint">verified_user</span>
+</div>
+<div class="flex flex-col">
+<span class="font-display-lg text-headline-lg text-primary font-serif">91.4%</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Avg reader expectation match (P4)</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden mt-1">
+<div class="bg-surface-tint h-full rounded-full" style="width: 91%;"></div>
+</div>
+</div>
+<!-- Stat 4: Scouted Talents (P5) -->
+<div class="p-space-lg rounded-xl bg-surface-container flex flex-col justify-between gap-space-sm shadow-sm relative overflow-hidden">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Scouted Pipeline</span>
+<span class="material-symbols-outlined text-[20px] text-tertiary">ink_pen</span>
+</div>
+<div class="flex flex-col">
+<span class="font-display-lg text-headline-lg text-primary font-serif">8 Authors</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Vetted serialized writers in review (P5)</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden mt-1">
+<div class="bg-tertiary-container h-full rounded-full" style="width: 65%;"></div>
+</div>
+</div>
+</div>
+</header>
+<!-- SECTION 1: P1 & P2 — Catalog Management & Perch Distribution -->
+<section class="flex flex-col gap-space-lg bg-surface-container-low p-space-xl rounded-xl shadow-sm">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-secondary">
+<span class="font-label-sm text-label-sm uppercase tracking-widest">Modules P1 &amp; P2</span>
+<span>·</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Editorial Shelf Control</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary">Catalog Management &amp; Perch Distribution</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+            Administer literary page metadata, reading sample tiers, and direct-to-reader distribution across accredited Perch book salons.
+          </p>
+</div>
+<!-- Distribution Control Quick Trigger Modal/Notice -->
+<div class="p-space-md rounded-xl bg-surface-container flex items-center gap-space-md shadow-sm max-w-md">
+<span class="material-symbols-outlined text-secondary text-[28px] shrink-0">handshake</span>
+<div class="flex flex-col text-left">
+<span class="font-label-md text-label-md text-primary">Direct Distribution Protocol</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Distribute books directly to readers through Perch reading clubs, digital preview tiers, and direct retail fulfillment links.
+            </p>
+</div>
+</div>
+</div>
+<!-- Catalog Table Grid -->
+<div class="flex flex-col gap-space-md">
+<!-- Book Row 1: Olga Tokarczuk -->
+<div class="p-space-lg rounded-xl bg-surface-container hover:bg-surface-container-high transition-all flex flex-col lg:flex-row lg:items-center justify-between gap-space-lg shadow-sm">
+<div class="flex items-start gap-space-md min-w-0">
+<!-- Book Spine/Cover Placeholder -->
+<div class="w-16 h-24 rounded-lg bg-primary-container text-on-primary-container shrink-0 flex flex-col justify-between p-2 shadow-md relative overflow-hidden">
+<span class="font-label-sm text-[8px] uppercase tracking-wider line-clamp-1">Tokarczuk</span>
+<div class="w-full h-8 bg-surface/10 rounded flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px]">menu_book</span>
+</div>
+<span class="font-headline-sm text-[8px] italic leading-tight text-right">Drive Plow</span>
+</div>
+<div class="flex flex-col gap-1 min-w-0">
+<div class="flex items-center gap-space-sm flex-wrap">
+<h3 class="font-headline-md text-headline-md text-primary font-serif truncate">Drive Your Plow Over the Bones of the Dead</h3>
+<span class="px-space-xs py-0.5 rounded bg-surface text-on-surface-variant font-label-sm text-label-sm uppercase">Live on Perch</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                Olga Tokarczuk · Translated by Antonia Lloyd-Jones · <span class="font-label-sm text-label-sm text-outline">Pub Date: Aug 2019</span>
+</p>
+<div class="flex items-center gap-space-sm mt-1 flex-wrap">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface">Hardcover</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface">Paperback</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface">E-book</span>
+<span class="text-outline text-xs">·</span>
+<span class="inline-flex items-center gap-1 font-label-md text-label-md text-primary">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+                  Full digital reading preview + Direct purchase pass-through (Bookshop.org &amp; IndieBound)
+                </span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<button class="px-space-md py-2 rounded-xl bg-surface-container-highest hover:bg-primary hover:text-on-primary text-on-surface font-label-md text-label-md transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">edit_note</span>
+              Manage Book Page (P1)
+            </button>
+<button class="px-space-md py-2 rounded-xl bg-primary text-on-primary font-label-md text-label-md shadow-sm hover:bg-primary-container transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+              Distribution Settings (P2)
+            </button>
+</div>
+</div>
+<!-- Book Row 2: Richard Powers -->
+<div class="p-space-lg rounded-xl bg-surface-container hover:bg-surface-container-high transition-all flex flex-col lg:flex-row lg:items-center justify-between gap-space-lg shadow-sm">
+<div class="flex items-start gap-space-md min-w-0">
+<!-- Book Spine/Cover Placeholder -->
+<div class="w-16 h-24 rounded-lg bg-surface-tint text-on-primary shrink-0 flex flex-col justify-between p-2 shadow-md relative overflow-hidden">
+<span class="font-label-sm text-[8px] uppercase tracking-wider line-clamp-1">Powers</span>
+<div class="w-full h-8 bg-surface/10 rounded flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px]">nature</span>
+</div>
+<span class="font-headline-sm text-[8px] italic leading-tight text-right">The Overstory</span>
+</div>
+<div class="flex flex-col gap-1 min-w-0">
+<div class="flex items-center gap-space-sm flex-wrap">
+<h3 class="font-headline-md text-headline-md text-primary font-serif truncate">The Overstory</h3>
+<span class="px-space-xs py-0.5 rounded bg-surface text-on-surface-variant font-label-sm text-label-sm uppercase">Live on Perch</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                Richard Powers · Winner of the Pulitzer Prize · <span class="font-label-sm text-label-sm text-outline">Pub Date: Apr 2018</span>
+</p>
+<div class="flex items-center gap-space-sm mt-1 flex-wrap">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface">Paperback</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface">Digital</span>
+<span class="text-outline text-xs">·</span>
+<span class="inline-flex items-center gap-1 font-label-md text-label-md text-secondary">
+<span class="material-symbols-outlined text-[16px]">groups</span>
+                  Direct Reader Preview Active (3 chapters accessible in Perch reading clubs)
+                </span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<button class="px-space-md py-2 rounded-xl bg-surface-container-highest hover:bg-primary hover:text-on-primary text-on-surface font-label-md text-label-md transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">edit_note</span>
+              Manage Book Page
+            </button>
+<button class="px-space-md py-2 rounded-xl bg-primary text-on-primary font-label-md text-label-md shadow-sm hover:bg-primary-container transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+              Distribution Settings
+            </button>
+</div>
+</div>
+<!-- Book Row 3: Claudia Piñeiro -->
+<div class="p-space-lg rounded-xl bg-surface-container hover:bg-surface-container-high transition-all flex flex-col lg:flex-row lg:items-center justify-between gap-space-lg shadow-sm">
+<div class="flex items-start gap-space-md min-w-0">
+<!-- Book Spine/Cover Placeholder -->
+<div class="w-16 h-24 rounded-lg bg-secondary text-on-secondary shrink-0 flex flex-col justify-between p-2 shadow-md relative overflow-hidden">
+<span class="font-label-sm text-[8px] uppercase tracking-wider line-clamp-1">Piñeiro</span>
+<div class="w-full h-8 bg-surface/10 rounded flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px]">translate</span>
+</div>
+<span class="font-headline-sm text-[8px] italic leading-tight text-right">Elena Knows</span>
+</div>
+<div class="flex flex-col gap-1 min-w-0">
+<div class="flex items-center gap-space-sm flex-wrap">
+<h3 class="font-headline-md text-headline-md text-primary font-serif truncate">Elena Knows</h3>
+<span class="px-space-xs py-0.5 rounded bg-surface text-on-surface-variant font-label-sm text-label-sm uppercase">Live on Perch</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                Claudia Piñeiro · Shortlisted for International Booker · <span class="font-label-sm text-label-sm text-outline">Pub Date: Jul 2021</span>
+</p>
+<div class="flex items-center gap-space-sm mt-1 flex-wrap">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface">Translated Novella</span>
+<span class="text-outline text-xs">·</span>
+<span class="inline-flex items-center gap-1 font-label-md text-label-md text-tertiary">
+<span class="material-symbols-outlined text-[16px]">auto_stories</span>
+                  Special Perch Reader Edition (Exclusive marginalia commentary unlocked)
+                </span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<button class="px-space-md py-2 rounded-xl bg-surface-container-highest hover:bg-primary hover:text-on-primary text-on-surface font-label-md text-label-md transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">edit_note</span>
+              Manage Book Page
+            </button>
+<button class="px-space-md py-2 rounded-xl bg-primary text-on-primary font-label-md text-label-md shadow-sm hover:bg-primary-container transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+              Distribution Settings
+            </button>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2: P4 — Reader Reception & Expectation-Match Analytics (Leads from P1 & P3) -->
+<section class="flex flex-col gap-space-lg bg-surface-container p-space-xl rounded-xl shadow-sm">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-primary">
+<span class="font-label-sm text-label-sm uppercase tracking-widest">Module P4</span>
+<span>·</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Honest Critical Concordance</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary">Reader Reception &amp; Expectation-Match Analytics</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+            Correlating reader reception back to promotional blurb promises (P1) and sponsored campaigns (P3).
+          </p>
+</div>
+<div class="flex items-center gap-space-sm bg-surface px-space-md py-2 rounded-xl shadow-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary text-[20px]">insights</span>
+<span class="font-label-md text-label-md">Real-Time Reader Signal Feed</span>
+</div>
+</div>
+<!-- Expectation Divergence Alert Box -->
+<div class="p-space-lg rounded-xl bg-surface-container-low shadow-sm flex items-start gap-space-md relative overflow-hidden">
+<div class="w-1.5 absolute left-0 top-0 bottom-0 bg-secondary"></div>
+<span class="material-symbols-outlined text-secondary text-[24px] mt-0.5 shrink-0">warning</span>
+<div class="flex flex-col gap-1">
+<span class="font-label-lg text-label-lg text-secondary uppercase tracking-wider">Reader Expectation Divergence Warning</span>
+<p class="font-body-md text-body-md text-on-surface">
+            “Readers note marketing blurb focuses heavily on ‘whodunit thriller’ while book is meditative philosophy — consider adjusting jacket copy for upcoming paperback release.”
+          </p>
+<span class="font-label-sm text-label-sm text-outline">Detected on: Drive Your Plow Over the Bones of the Dead · 340 margin notes logged</span>
+</div>
+</div>
+<!-- 3-Column Analytics Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-lg">
+<!-- Metric 1: Blurb Integrity Gauge -->
+<div class="p-space-lg rounded-xl bg-surface flex flex-col justify-between gap-space-md shadow-sm">
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Promotional Promise Accuracy</span>
+<div class="flex items-baseline gap-space-xs mt-1">
+<span class="font-display-lg text-display-lg text-primary font-serif">91%</span>
+<span class="font-label-md text-label-md text-surface-tint font-bold">Blurb Integrity</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Drive Your Plow Over the Bones of the Dead</p>
+</div>
+<!-- Micro Breakdown Bars -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-on-surface">Philosophical Satire match</span>
+<span class="font-bold text-primary">94%</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 94%;"></div>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-on-surface">Dark Humour &amp; Irony</span>
+<span class="font-bold text-secondary">89%</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 89%;"></div>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-on-surface">Pacing Reality (Contemplative vs. Rush)</span>
+<span class="font-bold text-tertiary">78%</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-tertiary-container h-full rounded-full" style="width: 78%;"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Metric 2: Perch Reader Engagement Volume -->
+<div class="p-space-lg rounded-xl bg-surface flex flex-col justify-between gap-space-md shadow-sm">
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Perch Community Traction</span>
+<div class="flex items-baseline gap-space-xs mt-1">
+<span class="font-display-lg text-display-lg text-primary font-serif">42,800</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Total Perch Reads</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Active digital readers across verified salons</p>
+</div>
+<!-- Shelf Save Callout -->
+<div class="p-space-md rounded-xl bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary">bookmark_added</span>
+<span class="font-label-md text-label-md text-on-surface">"Want to Read" Saves</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-primary font-serif">12,450</span>
+</div>
+<!-- Inline Sparkline / Velocity Graphic -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center text-xs text-outline">
+<span>Read velocity (Past 30 days)</span>
+<span class="text-primary font-label-sm">+18.4% WoW</span>
+</div>
+<svg class="w-full h-10 text-primary" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 300 40">
+<path d="M0,35 Q40,32 75,26 T150,18 T225,12 T300,4"></path>
+<circle cx="300" cy="4" fill="currentColor" r="3"></circle>
+</svg>
+</div>
+</div>
+<!-- Metric 3: Reader Taste Cohorts -->
+<div class="p-space-lg rounded-xl bg-surface flex flex-col justify-between gap-space-md shadow-sm">
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Taste Cohort Mapping</span>
+<h3 class="font-headline-sm text-headline-sm text-primary font-serif">Central European &amp; Philosophical Noir</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Strongest positive concordance cohort across Perch</p>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Cohort Affinity</span>
+<span class="font-label-md text-label-md text-primary font-bold">96.2% Alignment</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface italic">
+              “Readers in this circle praise the eco-ethical treatise and astronomical horoscope motifs over narrative thriller elements.”
+            </p>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-outline">Affiliated Salons: 14 Clubs</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold hover:underline cursor-pointer">View Cohort Deep-Dive →</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: P3 — Sponsored Promotions (Transparently Labeled) -->
+<section class="flex flex-col gap-space-lg bg-surface-container-low p-space-xl rounded-xl shadow-sm">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-secondary">
+<span class="font-label-sm text-label-sm uppercase tracking-widest">Module P3</span>
+<span>·</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Transparency Protocol</span>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap">
+<h2 class="font-headline-lg text-headline-lg text-primary">Sponsored Promotions</h2>
+<span class="px-space-sm py-1 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm uppercase tracking-wider font-bold">
+              Sponsored Promotion · Perch Transparency Protocol
+            </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+            Promote catalog titles with absolute reader disclosure. All promotional spotlights explicitly declare publisher sponsorship while tracking genuine reader expectation outcomes (P4).
+          </p>
+</div>
+<button class="group flex items-center gap-space-xs px-space-md py-2.5 rounded-xl bg-primary text-on-primary font-label-md text-label-md shadow-sm hover:bg-primary-container transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span>+ Launch New Sponsored Promotion</span>
+</button>
+</div>
+<!-- Active Campaigns Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-lg">
+<!-- Campaign 1: Drive Your Plow Spotlight -->
+<div class="p-space-lg rounded-xl bg-surface-container flex flex-col justify-between gap-space-lg shadow-sm">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between flex-wrap gap-2">
+<span class="px-space-xs py-0.5 rounded bg-primary-container text-on-primary-container font-label-sm text-label-sm uppercase tracking-wider font-bold">
+                SPONSORED BOOK SPOTLIGHT
+              </span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-surface-tint">
+<span class="w-2 h-2 rounded-full bg-surface-tint"></span>
+                Active · 4 days remaining
+              </span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary font-serif">
+              Fall Speculative &amp; Translated Voices Spotlight
+            </h3>
+<p class="font-body-md text-body-md text-on-surface">
+              Promoted Title: <span class="font-headline-sm text-headline-sm italic">Drive Your Plow Over the Bones of the Dead</span>
+</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Targeting: Readers with &gt;85% taste match in speculative philosophical fiction.
+            </p>
+</div>
+<!-- Campaign Performance Grid (Leads to P4) -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-xs p-space-md rounded-xl bg-surface">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-primary font-serif">18,200</span>
+<span class="font-label-sm text-label-sm text-outline">Impressions</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-primary font-serif">3,420</span>
+<span class="font-label-sm text-label-sm text-outline">Shelf Saves</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-secondary font-serif">840</span>
+<span class="font-label-sm text-label-sm text-outline">Purchase Clicks</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-surface-tint font-serif">92%</span>
+<span class="font-label-sm text-label-sm text-outline">P4 Match Score</span>
+</div>
+</div>
+<div class="flex items-center justify-between text-xs text-on-surface-variant pt-1">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">policy</span>
+              Disclosure: Compliant with Perch Sponsored Transparency Codex
+            </span>
+<span class="font-label-md text-label-md text-primary font-semibold hover:underline cursor-pointer">Manage Budget →</span>
+</div>
+</div>
+<!-- Campaign 2: Debut Literary Translation Showcase -->
+<div class="p-space-lg rounded-xl bg-surface-container flex flex-col justify-between gap-space-lg shadow-sm">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between flex-wrap gap-2">
+<span class="px-space-xs py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm uppercase tracking-wider font-bold">
+                SPONSORED READING CLUB FEATURE
+              </span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-surface-tint">
+<span class="w-2 h-2 rounded-full bg-surface-tint"></span>
+                Active · 11 days remaining
+              </span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary font-serif">
+              Debut Literary Translation Showcase
+            </h3>
+<p class="font-body-md text-body-md text-on-surface">
+              Promoted Focus: <span class="font-headline-sm text-headline-sm italic">Latin American &amp; Iberian Voices</span>
+</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Targeting: Accredited Book Clubs &amp; Literary Salon Facilitators.
+            </p>
+</div>
+<!-- Campaign Performance Grid -->
+<div class="p-space-md rounded-xl bg-surface flex items-center justify-between">
+<div class="flex items-center gap-space-md">
+<span class="material-symbols-outlined text-[32px] text-primary">groups</span>
+<div class="flex flex-col">
+<span class="font-display-lg text-headline-lg text-primary font-serif">1,120</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Club members currently reading sponsored sample chapters</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-label-sm text-label-sm text-surface-tint font-bold">88.5%</span>
+<span class="block font-label-sm text-label-sm text-outline">Completion</span>
+</div>
+</div>
+<div class="flex items-center justify-between text-xs text-on-surface-variant pt-1">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+              Transparent disclosure visible on salon title screens
+            </span>
+<span class="font-label-md text-label-md text-primary font-semibold hover:underline cursor-pointer">Manage Budget →</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 4: P5 — Scout Emerging Writers from the Writing Side of Perch -->
+<section class="flex flex-col gap-space-lg bg-surface-container p-space-xl rounded-xl shadow-sm">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-tertiary">
+<span class="font-label-sm text-label-sm uppercase tracking-widest">Module P5</span>
+<span>·</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Writer Studio Scouting Pipeline</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary">Scout Emerging Writers</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+            Direct pipeline connecting publishing acquisition editors to vetted budding writers and serialized authors on Perch (connecting to Writer Studio W1/W5 and Academic Institutions I1/I4).
+          </p>
+</div>
+<!-- Filter Pill Cluster -->
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="px-space-sm py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm">Top Reads</span>
+<span class="px-space-sm py-1 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm">High Save Rate</span>
+<span class="px-space-sm py-1 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm">Institutional Honors</span>
+<span class="px-space-sm py-1 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm">Speculative &amp; Literary</span>
+</div>
+</div>
+<!-- Scouted Writer Cards Mosaic -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-lg">
+<!-- Writer 1: Maya Lin (The Saltwater Greenhouse) -->
+<div class="p-space-lg rounded-xl bg-surface flex flex-col justify-between gap-space-md shadow-sm relative overflow-hidden">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-start justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-full bg-primary-container text-on-primary font-headline-md flex items-center justify-center font-serif shadow-sm">
+                  ML
+                </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<h3 class="font-headline-md text-headline-md text-primary font-serif">Maya Lin</h3>
+<span class="material-symbols-outlined text-[16px] text-surface-tint" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant">
+                    Author of <span class="italic text-primary font-serif font-bold">“The Saltwater Greenhouse”</span>
+</span>
+</div>
+</div>
+<span class="px-space-xs py-1 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm uppercase tracking-wider font-bold">
+                Acquisitions Review · Chapter 4 Manuscript Requested
+              </span>
+</div>
+<!-- Institutional Honor Badge -->
+<div class="p-space-sm rounded-lg bg-surface-container flex items-center gap-space-xs text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[20px]">school</span>
+<span class="font-body-sm text-body-sm">
+<strong>Iowa Writers’ Workshop</strong> Speculative Fellowship Honorable Mention (Midterm score: 92/100)
+              </span>
+</div>
+<!-- Performance Metrics Grid -->
+<div class="grid grid-cols-3 gap-space-xs p-space-sm rounded-lg bg-surface-container-low text-center">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-primary font-serif">18.4k</span>
+<span class="font-label-sm text-label-sm text-outline">Total Reads</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-primary font-serif">2,150</span>
+<span class="font-label-sm text-label-sm text-outline">Reader Saves</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-secondary font-serif">87.4%</span>
+<span class="font-label-sm text-label-sm text-outline">Chapter Velocity</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              1,420 Followers on Perch · 894 Resonant reader marginalia reactions logged across serialized chapters 1–3.
+            </p>
+</div>
+<!-- Actions -->
+<div class="flex items-center gap-space-sm pt-space-xs flex-wrap">
+<button class="px-space-md py-2 rounded-xl bg-surface-container-highest hover:bg-surface-container text-on-surface font-label-md text-label-md transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">menu_book</span>
+              View Serialized Work on Perch
+            </button>
+<button class="px-space-md py-2 rounded-xl bg-primary text-on-primary font-label-md text-label-md shadow-sm hover:bg-primary-container transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">send</span>
+              Initiate Publisher Query
+            </button>
+</div>
+</div>
+<!-- Writer 2: Tariq Vance (Austerlitz Echoes) -->
+<div class="p-space-lg rounded-xl bg-surface flex flex-col justify-between gap-space-md shadow-sm relative overflow-hidden">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-start justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-full bg-surface-variant text-on-surface font-headline-md flex items-center justify-center font-serif shadow-sm">
+                  TV
+                </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<h3 class="font-headline-md text-headline-md text-primary font-serif">Tariq Vance</h3>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant">
+                    Author of <span class="italic text-primary font-serif font-bold">“Austerlitz Echoes”</span>
+</span>
+</div>
+</div>
+<span class="px-space-xs py-1 rounded bg-surface-container-highest text-on-surface font-label-sm text-label-sm uppercase tracking-wider font-bold">
+                Initial Review
+              </span>
+</div>
+<!-- Mentor Accreditation Badge -->
+<div class="p-space-sm rounded-lg bg-surface-container flex items-center gap-space-xs text-on-surface">
+<span class="material-symbols-outlined text-surface-tint text-[20px]">award_star</span>
+<span class="font-body-sm text-body-sm">
+<strong>Accredited Mentor Assessment:</strong> 94% Prose cadence &amp; psychological realism rating
+              </span>
+</div>
+<!-- Performance Metrics Grid -->
+<div class="grid grid-cols-2 gap-space-xs p-space-sm rounded-lg bg-surface-container-low text-center">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-primary font-serif">12,400</span>
+<span class="font-label-sm text-label-sm text-outline">Words Submitted</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-primary font-serif">94%</span>
+<span class="font-label-sm text-label-sm text-outline">Mentor Cadence Score</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Exploring Central European historical memory. High thematic alignment with Riverhead’s European translation list.
+            </p>
+</div>
+<!-- Actions -->
+<div class="flex items-center gap-space-sm pt-space-xs flex-wrap">
+<button class="px-space-md py-2 rounded-xl bg-surface-container-highest hover:bg-surface-container text-on-surface font-label-md text-label-md transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">description</span>
+              Review Writing Sample
+            </button>
+<button class="px-space-md py-2 rounded-xl bg-primary text-on-primary font-label-md text-label-md shadow-sm hover:bg-primary-container transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">bookmark</span>
+              Save to Acquisitions Pipeline
+            </button>
+</div>
+</div>
+</div>
+<!-- Pipeline Summary Footer Strip -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col sm:flex-row sm:items-center justify-between gap-space-md text-on-surface-variant">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[22px]">hub</span>
+<span class="font-body-sm text-body-sm">
+            Direct pipeline connecting publishing acquisition editors to vetted budding writers and serialized authors on Perch.
+          </span>
+</div>
+<span class="font-label-sm text-label-sm text-outline shrink-0">
+          Showing 2 of 8 Emerging Writers in Riverhead Pipeline
+        </span>
+</div>
+</section>
+</div>
+</div></main></div></body></html>

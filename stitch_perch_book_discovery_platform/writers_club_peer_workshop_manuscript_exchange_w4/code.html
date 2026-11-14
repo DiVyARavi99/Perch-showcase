@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-variant":"#e9e1dc","inverse-on-surface":"#f7efea","on-secondary":"#ffffff","primary-fixed-dim":"#abcfb8","surface-bright":"#fff8f4","error":"#ba1a1a","secondary-container":"#ff956e","inverse-primary":"#abcfb8","on-primary-fixed-variant":"#2d4d3c","on-error":"#ffffff","tertiary-container":"#4b2f00","surface-container":"#f4ece7","tertiary":"#2f1c00","on-tertiary-fixed":"#291800","secondary":"#994626","background":"#fff8f4","on-primary-container":"#83a590","surface-container-highest":"#e9e1dc","on-surface-variant":"#424843","primary-container":"#1b3b2b","on-background":"#1e1b18","secondary-fixed-dim":"#ffb59b","on-tertiary-fixed-variant":"#633f00","primary-fixed":"#c7ebd4","error-container":"#ffdad6","tertiary-fixed":"#ffddb4","on-secondary-container":"#762c0d","tertiary-fixed-dim":"#fcba5b","on-tertiary":"#ffffff","surface-container-high":"#eee7e1","on-error-container":"#93000a","surface-tint":"#456553","secondary-fixed":"#ffdbcf","on-tertiary-container":"#ce9236","on-surface":"#1e1b18","on-secondary-fixed":"#380d00","surface":"#fff8f4","on-primary-fixed":"#002113","outline":"#727973","on-secondary-fixed-variant":"#7a2f10","primary":"#032517","surface-container-lowest":"#ffffff","surface-dim":"#e0d9d3","outline-variant":"#c1c8c2","on-primary":"#ffffff","surface-container-low":"#faf2ed","inverse-surface":"#33302c"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{"space-sm":"0.5rem","gutter-mobile":"1rem","space-md":"1rem",margin:"3rem",gutter:"1.5rem","margin-mobile":"1.25rem","space-lg":"1.5rem","space-xl":"2.5rem","space-xs":"0.25rem"},fontFamily:{"body-md":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"label-lg":["Plus Jakarta Sans"],"display-lg-mobile":["Newsreader"],"display-lg":["Newsreader"],"headline-md":["Newsreader"],"headline-sm":["Newsreader"],"body-lg":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"quote-editorial":["Newsreader"],"headline-lg":["Newsreader"]},fontSize:{"body-md":["15px",{lineHeight:"24px",fontWeight:"400"}],"label-md":["12px",{lineHeight:"16px",letterSpacing:"0.03em",fontWeight:"600"}],"label-sm":["10px",{lineHeight:"14px",letterSpacing:"0.05em",fontWeight:"700"}],"label-lg":["14px",{lineHeight:"20px",letterSpacing:"0.01em",fontWeight:"600"}],"display-lg-mobile":["36px",{lineHeight:"44px",letterSpacing:"-0.015em",fontWeight:"400"}],"display-lg":["48px",{lineHeight:"56px",letterSpacing:"-0.02em",fontWeight:"400"}],"headline-md":["24px",{lineHeight:"32px",fontWeight:"500"}],"headline-sm":["20px",{lineHeight:"28px",fontWeight:"600"}],"body-lg":["18px",{lineHeight:"28px",fontWeight:"400"}],"body-sm":["13px",{lineHeight:"20px",fontWeight:"400"}],"quote-editorial":["20px",{lineHeight:"30px",fontWeight:"400"}],"headline-lg":["32px",{lineHeight:"40px",letterSpacing:"-0.01em",fontWeight:"500"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between"><div class="flex flex-col"><div class="h-16 px-gutter flex items-center gap-space-sm"><span class="material-symbols-outlined text-primary text-[26px]">clock_loader_40</span><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight leading-none">Perch</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mt-space-xs">Writer Studio</span></div></div><div class="px-space-md pt-space-md"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-outline">Manuscript &amp; Craft</span></div><nav class="flex flex-col gap-space-xs px-space-md mt-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="dashboard-studio" href="#"><span class="material-symbols-outlined text-[20px]">edit_square</span><span class="font-label-lg text-label-lg">Dashboard / Studio</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="my-works-chapters" href="#"><span class="material-symbols-outlined text-[20px]">menu_book</span><span class="font-label-lg text-label-lg">My Works &amp; Chapters</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="reader-feedback" href="#"><span class="material-symbols-outlined text-[20px]">rate_review</span><span class="font-label-lg text-label-lg">Reader Feedback</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="writers-clubs" href="#"><span class="material-symbols-outlined text-[20px]">groups_2</span><span class="font-label-lg text-label-lg">Writers Clubs</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="submissions-mentorship" href="#"><span class="material-symbols-outlined text-[20px]">school</span><span class="font-label-lg text-label-lg">Submissions &amp; Mentorship</span></a></nav></div><div class="p-space-md mx-space-md mb-space-md rounded-xl bg-surface-container"><div class="flex items-center gap-space-xs text-primary mb-space-xs"><span class="material-symbols-outlined text-[18px]">history_edu</span><span class="font-label-md text-label-md">Ink &amp; Margin</span></div><p class="font-body-sm text-body-sm text-on-surface-variant">Drafting Chapter 4 of <i>The Archivist\'s Garden</i></p></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-margin"><div class="relative w-96"><span class="material-symbols-outlined absolute left-space-md top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span><input class="w-full bg-surface-container-low pl-10 pr-space-md py-space-xs rounded-xl font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:ring-1 focus:ring-primary shadow-inner" placeholder="Search drafts, passages, notes, clubs..." type="text"/></div><div class="flex items-center gap-space-md"><button aria-label="Notifications" class="w-9 h-9 flex items-center justify-center rounded-xl bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span></button><button class="flex items-center gap-space-sm pl-space-xs pr-space-sm py-space-xs rounded-xl hover:bg-surface-container-low transition-colors" type="button"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><span class="font-label-md text-label-md text-on-surface hidden sm:inline-block">L. M. Thornton</span></button></div></header><main class="relative pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Archival Notification Strip -->
+<div class="px-margin py-space-sm bg-surface-container-low flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified</span>
+<span>Peer Review Cycle #14 is underway. Manuscripts lock for final commentary in 72 hours.</span>
+</div>
+<div class="flex items-center gap-space-md font-label-sm text-label-sm text-outline">
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-primary-container inline-block"></span> Reciprocity Ledger Balanced</span>
+<span>•</span>
+<span>Next Circle Gathering: Sunday 17:00 PST via Salon Audio</span>
+</div>
+</div>
+<div class="px-margin py-space-lg max-w-[1400px] w-full mx-auto flex flex-col gap-space-xl">
+<!-- 1. Header, Breadcrumbs & Club Banner -->
+<section class="flex flex-col gap-space-md">
+<!-- Breadcrumb Bar -->
+<nav aria-label="Breadcrumb" class="flex items-center gap-space-xs font-label-md text-label-md text-on-surface-variant">
+<a class="hover:text-primary transition-colors" href="#">Writer Studio</a>
+<span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="#">Writers Clubs</a>
+<span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span>
+<span class="text-primary font-semibold">Pacific Speculative Guild</span>
+<span class="ml-space-sm px-space-xs py-0.5 rounded-lg bg-surface-container-high text-on-surface text-label-sm uppercase tracking-wider font-semibold">Active Circle • 18 Members</span>
+</nav>
+<!-- Guild Overview Hero Banner (Tactile Parchment Canvas) -->
+<div class="relative rounded-xl bg-surface-container p-space-xl shadow-sm overflow-hidden">
+<!-- Ambient decorative editorial corner mark -->
+<div class="absolute -right-12 -top-12 w-64 h-64 rounded-full bg-primary/5 pointer-events-none blur-2xl"></div>
+<div class="absolute right-6 bottom-4 opacity-10 pointer-events-none select-none font-headline-lg text-primary text-[100px] leading-none">
+          §14
+        </div>
+<div class="relative z-10 flex flex-col lg:flex-row lg:items-end justify-between gap-space-lg">
+<div class="flex flex-col gap-space-sm max-w-3xl">
+<div class="flex flex-wrap items-center gap-space-sm">
+<span class="px-space-sm py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm uppercase tracking-widest">
+                Round 2 in Progress
+              </span>
+<span class="px-space-sm py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm uppercase tracking-widest font-semibold">
+                Bi-Weekly 4,000w Cycle
+              </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Established Autumn 2023</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight">
+              Pacific Speculative Guild
+            </h1>
+<p class="font-quote-editorial text-quote-editorial text-on-surface-variant italic max-w-2xl">
+              "A deliberate sanctuary for climate surrealism, speculative eco-fiction, and mythic margins."
+            </p>
+<div class="flex flex-wrap items-center gap-x-space-md gap-y-1 font-body-sm text-body-sm text-on-surface-variant pt-space-xs">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-primary">person</span>
+<span>Co-Hosts: <strong class="font-medium text-on-surface">Maya Lin</strong> &amp; <strong class="font-medium text-on-surface">Marcus Vance</strong></span>
+</div>
+<span>•</span>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-secondary">event_upcoming</span>
+<span>Critique Window: <strong class="font-medium text-on-surface">Nov 10 – Nov 18</strong></span>
+</div>
+<span>•</span>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-primary">fact_check</span>
+<span>Exchange Rate: <strong class="font-medium text-on-surface">14 of 18 Drafts Exchanged</strong></span>
+</div>
+</div>
+</div>
+<!-- Banner Quick Actions -->
+<div class="flex flex-wrap items-center gap-space-sm shrink-0">
+<button class="flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-primary text-on-primary font-label-lg text-label-lg shadow-sm hover:bg-primary-container transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">upload_file</span>
+<span>+ Submit Draft for Review</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-surface-container-lowest text-primary font-label-lg text-label-lg shadow-sm hover:bg-surface-container-high transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">menu_book</span>
+<span>Guild Etiquette</span>
+</button>
+<button aria-label="Circle Settings &amp; Invite" class="w-10 h-10 rounded-lg bg-surface-container-lowest text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors flex items-center justify-center shadow-sm" type="button">
+<span class="material-symbols-outlined text-[20px]">person_add</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- 2. Cycle Pulse Stat Counters -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Stat 1 -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between transition-transform hover:-translate-y-0.5 duration-200">
+<div class="flex items-center justify-between text-outline mb-space-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Active Submissions</span>
+<span class="material-symbols-outlined text-[20px] text-primary">auto_stories</span>
+</div>
+<div>
+<span class="font-headline-lg text-headline-lg text-primary block">14</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Drafts circulating in this round</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-space-md overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 78%"></div>
+</div>
+</div>
+<!-- Stat 2 -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between transition-transform hover:-translate-y-0.5 duration-200">
+<div class="flex items-center justify-between text-outline mb-space-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Critiques Due From You</span>
+<span class="material-symbols-outlined text-[20px] text-secondary">stylus_note</span>
+</div>
+<div>
+<span class="font-headline-lg text-headline-lg text-secondary block">2 Assigned</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Due Friday before midnight (11:59 PM)</span>
+</div>
+<div class="flex items-center gap-2 mt-space-md">
+<span class="px-space-xs py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">1 In-Progress</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">1 Unopened</span>
+</div>
+</div>
+<!-- Stat 3 -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between transition-transform hover:-translate-y-0.5 duration-200">
+<div class="flex items-center justify-between text-outline mb-space-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Feedback on Your Draft</span>
+<span class="material-symbols-outlined text-[20px] text-primary">mark_chat_read</span>
+</div>
+<div>
+<span class="font-headline-lg text-headline-lg text-primary block">6 Notes</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">On Chapter 4: Copper Roots</span>
+</div>
+<div class="flex items-center gap-1.5 mt-space-md text-primary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>Elena Vance &amp; Robin Finch reviewed</span>
+</div>
+</div>
+<!-- Stat 4 -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between transition-transform hover:-translate-y-0.5 duration-200">
+<div class="flex items-center justify-between text-outline mb-space-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Reciprocity Ratio</span>
+<span class="material-symbols-outlined text-[20px] text-primary">balance</span>
+</div>
+<div>
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-lg text-headline-lg text-primary">100%</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">EXCELLENT</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">High Reciprocity Tier writer</span>
+</div>
+<div class="flex items-center gap-1 mt-space-md">
+<span class="w-full bg-primary-container h-1.5 rounded-full"></span>
+<span class="w-full bg-primary-container h-1.5 rounded-full"></span>
+<span class="w-full bg-primary-container h-1.5 rounded-full"></span>
+<span class="w-full bg-primary-container h-1.5 rounded-full"></span>
+</div>
+</div>
+</section>
+<!-- 3. Main Workshop Workspace (2-Column Grid) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- Left Column (8 cols): Peer Queue & Submissions -->
+<main class="lg:col-span-8 flex flex-col gap-space-xl">
+<!-- Queue Section: Needs Your Review -->
+<section class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[22px]">assignment_turned_in</span>
+<h2 class="font-headline-md text-headline-md text-primary">Assigned Peer Critique Queue</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">2 Manuscripts Pending</span>
+</div>
+<!-- Card 1 (Needs Review - Urgent / In Progress) -->
+<article class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-md relative overflow-hidden">
+<!-- Left edge ribbon indicator -->
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-secondary"></div>
+<div class="flex flex-col sm:flex-row sm:items-start justify-between gap-space-sm pl-2">
+<div class="flex flex-col gap-1">
+<div class="flex flex-wrap items-center gap-space-xs mb-1">
+<span class="px-space-xs py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold uppercase">Action Required</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Climate Noir</span>
+<span class="font-label-sm text-label-sm text-outline">18 pages • 4,200 words</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface hover:text-primary transition-colors cursor-pointer">
+                  Ash &amp; Glass (Prologue &amp; Chapter 1)
+                </h3>
+<p class="font-label-md text-label-md text-on-surface-variant">
+                  by <span class="font-semibold text-on-surface">Robin Finch</span> • Submitted Nov 10
+                </p>
+</div>
+<!-- Author Avatar Stamp -->
+<div class="flex items-center gap-2 self-start bg-surface-container-low px-space-sm py-1.5 rounded-lg">
+<div class="w-7 h-7 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm flex items-center justify-center font-bold">
+                  RF
+                </div>
+<span class="font-label-sm text-label-sm text-on-surface">Robin Finch</span>
+</div>
+</div>
+<!-- Author's Specific In-Workshop Prompt -->
+<div class="pl-2">
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col gap-1">
+<div class="flex items-center gap-1.5 text-secondary font-label-sm text-label-sm uppercase tracking-wider font-bold">
+<span class="material-symbols-outlined text-[16px]">priority_high</span>
+<span>Author's Focus Areas for this Draft:</span>
+</div>
+<p class="font-quote-editorial text-body-md text-on-surface italic">
+                  "Looking for specific feedback on the opening tension: does the climate quarantine protocol feel grounded or over-explained? How is the dialogue rhythm in Scene 2 when they break into the dry dock?"
+                </p>
+</div>
+</div>
+<!-- Reading & Annotation Progress Bar -->
+<div class="pl-2 flex flex-col gap-1.5">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant font-medium">Draft read: 45% (8 of 18 pages)</span>
+<span class="text-primary font-semibold">3 margin annotations drafted</span>
+</div>
+<div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full transition-all duration-300" style="width: 45%"></div>
+</div>
+</div>
+<!-- Actions Bar -->
+<div class="pl-2 pt-space-xs flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm text-outline font-label-sm text-label-sm">
+<span class="flex items-center gap-1 text-secondary font-semibold">
+<span class="material-symbols-outlined text-[16px]">alarm</span> Due in 38 Hours
+                </span>
+<span>•</span>
+<span>Requires 300+ word final diagnostic</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="px-space-md py-space-xs rounded-lg bg-surface-container text-on-surface-variant hover:bg-surface-container-high font-label-md text-label-md transition-colors" type="button">
+                  Quick Preview
+                </button>
+<button class="flex items-center gap-1.5 px-space-md py-space-xs rounded-lg bg-primary text-on-primary font-label-md text-label-md shadow-sm hover:bg-primary-container transition-all" type="button">
+<span class="material-symbols-outlined text-[16px]">edit_note</span>
+<span>Open Critique Desk &amp; Annotate</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Card 2 (Needs Review - Not Started) -->
+<article class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-md relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-outline-variant"></div>
+<div class="flex flex-col sm:flex-row sm:items-start justify-between gap-space-sm pl-2">
+<div class="flex flex-col gap-1">
+<div class="flex flex-wrap items-center gap-space-xs mb-1">
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-semibold uppercase">Pending Start</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Mythic Realism</span>
+<span class="font-label-sm text-label-sm text-outline">14 pages • 3,850 words</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface hover:text-primary transition-colors cursor-pointer">
+                  The Cartographer of Lost Canals
+                </h3>
+<p class="font-label-md text-label-md text-on-surface-variant">
+                  by <span class="font-semibold text-on-surface">Tariq Chen</span> • Submitted Nov 11
+                </p>
+</div>
+<div class="flex items-center gap-2 self-start bg-surface-container-low px-space-sm py-1.5 rounded-lg">
+<div class="w-7 h-7 rounded-full bg-primary text-on-primary font-label-sm text-label-sm flex items-center justify-center font-bold">
+                  TC
+                </div>
+<span class="font-label-sm text-label-sm text-on-surface">Tariq Chen</span>
+</div>
+</div>
+<!-- Author's Specific In-Workshop Prompt -->
+<div class="pl-2">
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col gap-1">
+<div class="flex items-center gap-1.5 text-primary font-label-sm text-label-sm uppercase tracking-wider font-bold">
+<span class="material-symbols-outlined text-[16px]">notes</span>
+<span>Author's Focus Areas:</span>
+</div>
+<p class="font-quote-editorial text-body-md text-on-surface italic">
+                  "Pacing check on the canal descent scene; does the historical lore interrupt the character's emotional stakes? Please flag any exposition dumps in Section III."
+                </p>
+</div>
+</div>
+<!-- Actions Bar -->
+<div class="pl-2 pt-space-xs flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm text-outline font-label-sm text-label-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">schedule</span> Due in 3 days (Friday)
+                </span>
+<span>•</span>
+<span>0 of 14 pages read</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="flex items-center gap-1.5 px-space-md py-space-xs rounded-lg bg-surface-container text-primary font-label-md text-label-md hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">menu_book</span>
+<span>Start Peer Review</span>
+</button>
+</div>
+</div>
+</article>
+</section>
+<!-- Section: Your Manuscript in this Cycle -->
+<section class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[22px]">auto_stories</span>
+<h2 class="font-headline-md text-headline-md text-primary">Your Submission in this Cycle</h2>
+</div>
+<span class="px-space-xs py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold uppercase">3 of 3 Reviews Returned</span>
+</div>
+<article class="p-space-xl rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-md">
+<div class="flex flex-col md:flex-row md:items-start justify-between gap-space-md">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant">
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-primary font-semibold">Chapter 4</span>
+<span>•</span>
+<span>4,300 words</span>
+<span>•</span>
+<span>Pacific Speculative Series</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-primary">
+                  The Saltwater Greenhouse: Copper Roots in Winter
+                </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-xl">
+                  Explores the desalination sluices of the drowned terrace and Maeve's discovery of the dormant seed vaults.
+                </p>
+</div>
+<!-- Quick Score / Reaction Badge -->
+<div class="p-space-md rounded-lg bg-surface-container flex flex-col items-center justify-center shrink-0 min-w-[130px]">
+<span class="material-symbols-outlined text-primary text-[28px]">mark_chat_read</span>
+<span class="font-headline-sm text-headline-sm text-primary mt-1">14</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase text-center tracking-wider">Line Notes</span>
+</div>
+</div>
+<!-- Peer Feedback Threads Overview -->
+<div class="flex flex-col gap-space-sm pt-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Peer Critiques Received:</span>
+<!-- Reviewer 1 -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col sm:flex-row sm:items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm flex items-center justify-center font-bold shrink-0">
+                    EV
+                  </div>
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Elena Vance</span>
+<span class="px-1.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm">Senior Guild Fellow</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                      "Comprehensive craft critique provided (1,200 words + 8 line notes) — <strong class="text-on-surface">Rated: Exceptional prose rhythm</strong>"
+                    </p>
+<span class="font-quote-editorial text-body-sm text-outline italic">"The tactile transformation of the copper roots in sub-zero humidity is haunting."</span>
+</div>
+</div>
+<button class="px-space-sm py-1 rounded bg-surface-container-lowest text-primary font-label-sm text-label-sm hover:bg-surface-container shrink-0 transition-colors" type="button">
+                  Read Critique
+                </button>
+</div>
+<!-- Reviewer 2 -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col sm:flex-row sm:items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm flex items-center justify-center font-bold shrink-0">
+                    RF
+                  </div>
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Robin Finch</span>
+<span class="text-label-sm font-label-sm text-outline">Guild Member</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                      "Annotated 6 paragraphs — focused on tide pool dialogue pacing and dialect consistency."
+                    </p>
+</div>
+</div>
+<button class="px-space-sm py-1 rounded bg-surface-container-lowest text-primary font-label-sm text-label-sm hover:bg-surface-container shrink-0 transition-colors" type="button">
+                  Read Critique
+                </button>
+</div>
+<!-- Reviewer 3 -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex items-center justify-between opacity-75">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm flex items-center justify-center font-bold">
+                    JR
+                  </div>
+<div>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Julian Rivera</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Review in progress (estimated completion: today 20:00 PST)</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-medium">In Drafting</span>
+</div>
+</div>
+<!-- Footer CTA on User's Draft -->
+<div class="pt-space-sm flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px] text-primary">forum</span>
+<span>You can draft author rebuttals or thank reviewers directly in the margin desk.</span>
+</div>
+<button class="flex items-center gap-1.5 px-space-md py-space-sm rounded-lg bg-primary text-on-primary font-label-md text-label-md shadow-sm hover:bg-primary-container transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">rate_review</span>
+<span>View All 14 Line Annotations &amp; Author Desk</span>
+</button>
+</div>
+</article>
+</section>
+</main>
+<!-- Right Column (4 cols): Craft Focus, Prompts & Live Marginalia -->
+<aside class="lg:col-span-4 flex flex-col gap-space-lg">
+<!-- Widget 1: Bi-Weekly Craft Focus & Prompt -->
+<section class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="px-space-xs py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold uppercase tracking-wider">
+              Cycle #14 Craft Focus
+            </span>
+<span class="material-symbols-outlined text-outline text-[18px]">lightbulb</span>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="font-headline-sm text-headline-sm text-primary">
+              Sensory Grounding in Speculative Spaces
+            </h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">
+              Facilitated by Maya Lin
+            </p>
+</div>
+<!-- Exercise Box -->
+<div class="p-space-md rounded-lg bg-surface-container flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-primary font-bold uppercase tracking-wider">Workshop Exercise:</span>
+<p class="font-quote-editorial text-body-sm text-on-surface italic leading-relaxed">
+              "Draft a 500-word scene where an unfamiliar ecological phenomenon is experienced exclusively through touch, smell, and temperature — zero visual descriptors allowed."
+            </p>
+</div>
+<!-- Micro Submissions Count & Actions -->
+<div class="flex items-center justify-between text-body-sm text-body-sm text-on-surface-variant pt-space-xs">
+<div class="flex -space-x-2 overflow-hidden">
+<div class="inline-block h-6 w-6 rounded-full ring-2 ring-surface bg-primary text-on-primary text-[10px] flex items-center justify-center font-bold">ML</div>
+<div class="inline-block h-6 w-6 rounded-full ring-2 ring-surface bg-secondary text-on-secondary text-[10px] flex items-center justify-center font-bold">TC</div>
+<div class="inline-block h-6 w-6 rounded-full ring-2 ring-surface bg-surface-container-high text-on-surface text-[10px] flex items-center justify-center font-bold">EV</div>
+</div>
+<span class="font-label-sm text-label-sm font-medium">11 Guild members posted</span>
+</div>
+<div class="grid grid-cols-2 gap-space-xs pt-space-xs">
+<button class="px-space-sm py-space-xs rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-colors" type="button">
+              View All (11)
+            </button>
+<button class="flex items-center justify-center gap-1 px-space-sm py-space-xs rounded-lg bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-all" type="button">
+<span class="material-symbols-outlined text-[16px]">edit</span>
+<span>Post Response</span>
+</button>
+</div>
+</section>
+<!-- Widget 2: Live Workshop Marginalia Stream -->
+<section class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">history_edu</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Live Guild Marginalia</h3>
+</div>
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse" title="Live stream active"></span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Snippet 1 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1.5 transition-colors hover:bg-surface-container">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="font-semibold text-on-surface">Tariq Chen → Robin Finch's draft</span>
+<span class="text-outline">20m ago</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic">
+                "The transition from the seawall to the bunker feels razor sharp here. The copper residue imagery works wonders."
+              </p>
+<div class="flex items-center gap-1 text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">format_quote</span>
+<span>Attached to line 142</span>
+</div>
+</div>
+<!-- Snippet 2 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1.5 transition-colors hover:bg-surface-container">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="font-semibold text-on-surface">Elena Vance → Maya Lin's draft</span>
+<span class="text-outline">2h ago</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic">
+                "The salt-crust metaphor on page 3 elevates the emotional stakes between Maeve and her sister significantly."
+              </p>
+<div class="flex items-center gap-1 text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">format_quote</span>
+<span>Attached to line 88</span>
+</div>
+</div>
+<!-- Snippet 3 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1.5 transition-colors hover:bg-surface-container">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="font-semibold text-on-surface">Marcus Vance → Circle Digest</span>
+<span class="text-outline">4h ago</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                "Reminder: Guild audio critique salon opens Saturday evening. Bring one craft question regarding dialect."
+              </p>
+</div>
+</div>
+</section>
+<!-- Widget 3: Guild Code of Reciprocal Craft -->
+<section class="p-space-lg rounded-xl bg-surface-container flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs text-primary">
+<span class="material-symbols-outlined text-[20px]">gavel</span>
+<h4 class="font-headline-sm text-headline-sm text-primary">Code of Reciprocal Craft</h4>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Perch Writers Clubs operate on mutual literary generosity and diagnostic honesty. Every member pledges:
+          </p>
+<ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface pt-1">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary shrink-0 mt-0.5">check_circle</span>
+<span><strong>Line-level precision:</strong> Point directly to diction, rhythm, and character motivation.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary shrink-0 mt-0.5">check_circle</span>
+<span><strong>Diagnostic depth:</strong> Minimum 300 words of macro feedback per assigned draft.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary shrink-0 mt-0.5">check_circle</span>
+<span><strong>Strict Human Craft:</strong> Zero synthetic critique generation or uncurated bulk comments.</span>
+</li>
+</ul>
+<div class="pt-space-xs">
+<a class="inline-flex items-center gap-1 font-label-md text-label-md text-secondary hover:underline" href="#">
+<span>Read complete Pacific Speculative Charter</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</section>
+</aside>
+</div>
+<!-- 4. Ecosystem Status Anchor Footer -->
+<footer class="mt-space-lg pt-space-md border-t-0 bg-surface-container-low p-space-md rounded-xl flex flex-col sm:flex-row items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-primary text-[18px]">verified_user</span>
+<span>Peer Workshop Desk v2.4 • Syncing annotations with Perch Manuscript Engine</span>
+</div>
+<div class="flex items-center gap-space-md font-label-sm text-label-sm text-outline">
+<a class="hover:text-primary transition-colors" href="#">Export Critique Dossier (PDF)</a>
+<span>•</span>
+<a class="hover:text-primary transition-colors" href="#">Circle Archive</a>
+<span>•</span>
+<a class="hover:text-primary transition-colors" href="#">Help &amp; Workshop Facilitation</a>
+</div>
+</footer>
+</div>
+</div></main></div></body></html>

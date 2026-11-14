@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "secondary-fixed-dim": "#9dd3aa", "on-surface": "#191c1a", "tertiary": "#330b00", "on-tertiary": "#ffffff", "secondary-container": "#b6edc2", "on-secondary-fixed-variant": "#1e5031", "surface-container-lowest": "#ffffff", "primary": "#011e0f", "surface-variant": "#e0e3df", "primary-container": "#163323", "on-tertiary-fixed": "#380d00", "surface-dim": "#d8dbd6", "tertiary-fixed-dim": "#ffb59a", "on-primary-fixed-variant": "#304d3b", "on-tertiary-fixed-variant": "#793112", "background": "#f7faf5", "on-primary-fixed": "#032112", "surface-tint": "#476552", "surface-container-highest": "#e0e3df", "primary-fixed-dim": "#adceb7", "on-secondary-fixed": "#00210e", "surface-container": "#ecefea", "on-primary-container": "#7d9c87", "tertiary-fixed": "#ffdbcf", "surface-bright": "#f7faf5", "on-surface-variant": "#424843", "on-background": "#191c1a", "on-tertiary-container": "#da7c58", "surface-container-high": "#e6e9e4", "surface-container-low": "#f1f4f0", "secondary-fixed": "#b9efc5", "outline": "#727973", "error": "#ba1a1a", "inverse-surface": "#2d312e", "primary-fixed": "#c9ebd3", "on-error": "#ffffff", "tertiary-container": "#561900", "inverse-on-surface": "#eff2ed", "on-error-container": "#93000a", "on-secondary": "#ffffff", "on-secondary-container": "#3b6d4b", "on-primary": "#ffffff", "error-container": "#ffdad6", "secondary": "#376847", "inverse-primary": "#adceb7", "outline-variant": "#c2c8c1", "surface": "#f7faf5" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xs": "0.25rem", "gutter": "1.5rem", "margin": "1.25rem", "gutter-desktop": "2rem", "space-xl": "2.5rem", "space-lg": "1.5rem", "space-md": "1rem", "space-sm": "0.5rem", "margin-desktop": "2.5rem" }, "fontFamily": { "label-md": ["Inter"], "headline-lg": ["Plus Jakarta Sans"], "body-xl": ["Inter"], "headline-md": ["Plus Jakarta Sans"], "label-lg": ["Inter"], "body-md": ["Inter"], "headline-sm": ["Plus Jakarta Sans"], "body-lg": ["Inter"], "headline-xl": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Plus Jakarta Sans"], "label-sm": ["Inter"] }, "fontSize": { "label-md": ["0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.02em", "fontWeight": "500" }], "headline-lg": ["2rem", { "lineHeight": "2.5rem", "letterSpacing": "-0.025em", "fontWeight": "600" }], "body-xl": ["1.125rem", { "lineHeight": "1.875rem", "letterSpacing": "-0.01em", "fontWeight": "400" }], "headline-md": ["1.5rem", { "lineHeight": "2rem", "letterSpacing": "-0.02em", "fontWeight": "500" }], "label-lg": ["0.875rem", { "lineHeight": "1.25rem", "letterSpacing": "0.01em", "fontWeight": "600" }], "body-md": ["0.875rem", { "lineHeight": "1.5rem", "letterSpacing": "0em", "fontWeight": "400" }], "headline-sm": ["1.25rem", { "lineHeight": "1.75rem", "letterSpacing": "-0.015em", "fontWeight": "500" }], "body-lg": ["1rem", { "lineHeight": "1.65rem", "letterSpacing": "-0.005em", "fontWeight": "400" }], "headline-xl": ["2.75rem", { "lineHeight": "3.25rem", "letterSpacing": "-0.03em", "fontWeight": "600" }], "headline-lg-mobile": ["1.5rem", { "lineHeight": "2rem", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-xl-mobile": ["2rem", { "lineHeight": "2.5rem", "letterSpacing": "-0.025em", "fontWeight": "600" }], "label-sm": ["0.6875rem", { "lineHeight": "0.875rem", "letterSpacing": "0.04em", "fontWeight": "600" }] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between py-6 shadow-[0_1px_8px_rgba(0,0,0,0.03)]"><div class="flex flex-col gap-6"><div class="px-6 flex items-center gap-3"><div class="w-9 h-9 rounded-lg bg-primary flex items-center justify-center text-on-primary font-headline-sm font-semibold">P</div><div><span class="font-headline-sm text-headline-sm text-primary tracking-tight block">Perch</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">Publisher House</span></div></div><div class="px-4"><nav class="flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary-container font-semibold"><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container hover:text-on-surface transition-all" data-path="catalog-and-titles" href="#"><span class="material-symbols-outlined text-[20px]">auto_stories</span><span>Catalog &amp; Titles</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container hover:text-on-surface transition-all" data-path="analytics-and-expectation-verdicts" href="#"><span class="material-symbols-outlined text-[20px]">insights</span><span>Analytics &amp; Verdicts</span></a><a aria-current="page" class="flex items-center justify-between px-3 py-2.5 rounded-lg transition-all bg-primary-container text-on-primary-container font-semibold" data-path="sponsored-promotions" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px]">campaign</span><span>Sponsored Promotions</span></div><span class="w-2 h-2 rounded-full bg-secondary"></span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container hover:text-on-surface transition-all" data-path="reader-distribution-and-arcs" href="#"><span class="material-symbols-outlined text-[20px]">local_shipping</span><span>Reader Distribution &amp; ARCs</span></a><a class="flex items-center justify-between px-3 py-2.5 rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container hover:text-on-surface transition-all" data-path="emerging-writer-scouting" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px]">nature_people</span><span>Writer Scouting</span></div><span class="px-1.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold">P5</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container hover:text-on-surface transition-all" data-path="publisher-settings" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span>Publisher Settings</span></a></nav></div></div><div class="px-6 pt-4"><div class="p-4 rounded-xl bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.02)]"><span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold block mb-1">Editorial Sanctuary</span><p class="font-body-md text-label-md text-on-surface-variant">Autumn Review cycles open. 14 critical manuscripts under active peer triage.</p></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-bright/90 backdrop-blur-md z-40 shadow-[0_1px_8px_rgba(0,0,0,0.03)]"><div class="h-16 w-full px-8 flex items-center justify-between gap-6"><div class="flex items-center gap-4 min-w-0"><div class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high transition-colors cursor-pointer"><span class="material-symbols-outlined text-secondary text-[18px]">apartment</span><span class="font-label-lg text-label-lg text-on-surface truncate font-semibold">Farrar, Straus and Giroux / FSG Originals</span><span class="material-symbols-outlined text-on-surface-variant text-[18px]">unfold_more</span></div></div><div class="flex items-center gap-5 flex-1 max-w-md justify-center"><div class="relative w-full"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">search</span><input class="w-full pl-9 pr-4 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface placeholder:text-on-surface-variant font-body-md text-body-md focus:outline-none focus:ring-1 focus:ring-secondary" placeholder="Search catalog, ISBN, critics, or ARC pools..." type="text"/></div></div><div class="flex items-center gap-4"><button aria-label="Notifications" class="relative p-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-secondary ring-2 ring-surface-bright"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-background min-h-screen"><div class="flex flex-col w-full">
+<div class="px-8 py-8 flex flex-col gap-8 max-w-[1600px] mx-auto w-full">
+<!-- Top Context & Header -->
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-2 text-on-surface-variant font-label-md text-label-md">
+<span class="hover:text-primary transition-colors cursor-pointer">Publisher Portal</span>
+<span class="text-outline-variant">/</span>
+<span class="hover:text-primary transition-colors cursor-pointer">Marketing &amp; Visibility</span>
+<span class="text-outline-variant">/</span>
+<span class="text-primary font-semibold">Sponsored Promotions (P3)</span>
+</div>
+<div class="flex flex-col xl:flex-row xl:items-end justify-between gap-6 pb-2">
+<div class="max-w-3xl">
+<div class="flex items-center gap-3 mb-2">
+<span class="px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-fixed-variant font-label-sm text-label-sm tracking-wider uppercase font-semibold">P3 Compliance Protocol</span>
+<span class="flex items-center gap-1.5 text-secondary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+              100% Disclosure Certified
+            </span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight font-semibold">Sponsored Promotions &amp; Taste Placements</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 leading-relaxed">
+            Launch transparent, taste-concordance campaigns. In accordance with Perch community guidelines (P3), all promoted books are explicitly badged with mandatory “Sponsored” disclosure tags across reader feeds and book pages, ensuring organic editorial sanctuary trust.
+          </p>
+</div>
+<div class="flex flex-wrap items-center gap-3">
+<button class="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container transition-all font-label-lg text-label-lg shadow-sm">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span>Compliance Guidelines</span>
+</button>
+<button class="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container transition-all font-label-lg text-label-lg shadow-sm">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>Export Report</span>
+</button>
+<button class="flex items-center gap-2 px-5 py-2.5 rounded-lg bg-primary-container text-on-primary font-label-lg text-label-lg hover:bg-primary transition-all shadow-md">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span>Create New Campaign</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Top KPI Metrics Bar -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<div class="p-5 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-3">
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant font-semibold">Active Campaigns</span>
+<span class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">campaign</span>
+</span>
+</div>
+<div>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg text-primary font-bold">3</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Running Live</span>
+</div>
+<div class="flex items-center gap-2 mt-2 pt-2 text-on-surface-variant font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span>2 scheduled • 1 completed this quarter</span>
+</div>
+</div>
+</div>
+<div class="p-5 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-3">
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant font-semibold">Readers Reached</span>
+<span class="w-8 h-8 rounded-lg bg-secondary-container flex items-center justify-center text-on-secondary-fixed-variant">
+<span class="material-symbols-outlined text-[20px]">group</span>
+</span>
+</div>
+<div>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg text-primary font-bold">48,250</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">+18.4%</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-2">Verified literary readers this month</p>
+</div>
+</div>
+<div class="p-5 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-3">
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant font-semibold">Avg. Shelf Add Rate</span>
+<span class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">bookmark_add</span>
+</span>
+</div>
+<div>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg text-primary font-bold">14.8%</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">2.38x avg</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-2">Benchmark: 6.2% on standard book social ads</p>
+</div>
+</div>
+<div class="p-5 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-3">
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant font-semibold">Expectation Integrity</span>
+<span class="w-8 h-8 rounded-lg bg-primary-container flex items-center justify-center text-on-primary-container">
+<span class="material-symbols-outlined text-[20px]">balance</span>
+</span>
+</div>
+<div>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg text-primary font-bold">92.4%</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Perch Tier 1</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-2">Claim-to-experience agreement rating</p>
+</div>
+</div>
+</div>
+<!-- Two-Column Core Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- LEFT COLUMN (~65% width: 8 cols) -->
+<div class="lg:col-span-8 flex flex-col gap-8 min-w-0">
+<!-- Interactive Launcher & Taste Configuration Panel -->
+<div class="p-6 md:p-8 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-7">
+<div class="flex items-center justify-between flex-wrap gap-4 pb-2">
+<div class="flex items-center gap-3">
+<span class="w-9 h-9 rounded-xl bg-primary-container text-on-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">tune</span>
+</span>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary font-semibold">Campaign Creator &amp; Taste Configuration</h2>
+<p class="font-label-md text-label-md text-on-surface-variant">Configure placement criteria with strict taste-stack concordance</p>
+</div>
+</div>
+<span class="px-3 py-1 rounded-full bg-surface-container text-secondary font-label-md text-label-md font-semibold">Draft Mode: Active</span>
+</div>
+<!-- Section 1: Objective Selector -->
+<div class="flex flex-col gap-2.5">
+<label class="font-label-lg text-label-lg text-primary font-semibold">1. Campaign Objective</label>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3">
+<button class="p-3.5 rounded-xl bg-primary-container text-on-primary text-left transition-all flex flex-col justify-between h-28 shadow-sm">
+<span class="material-symbols-outlined text-[20px] text-on-primary-container">auto_awesome</span>
+<div>
+<span class="font-label-md text-label-md font-semibold block leading-tight">Debut Novel Awareness</span>
+<span class="font-label-sm text-label-sm text-on-primary-container block mt-0.5">Fiction spotlight</span>
+</div>
+</button>
+<button class="p-3.5 rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface text-left transition-all flex flex-col justify-between h-28">
+<span class="material-symbols-outlined text-[20px] text-secondary">trending_up</span>
+<div>
+<span class="font-label-md text-label-md font-semibold block leading-tight">Pre-Order Momentum</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block mt-0.5">30-60d to drop</span>
+</div>
+</button>
+<button class="p-3.5 rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface text-left transition-all flex flex-col justify-between h-28">
+<span class="material-symbols-outlined text-[20px] text-secondary">history_edu</span>
+<div>
+<span class="font-label-md text-label-md font-semibold block leading-tight">Backlist Revival</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block mt-0.5">Renewed relevance</span>
+</div>
+</button>
+<button class="p-3.5 rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface text-left transition-all flex flex-col justify-between h-28">
+<span class="material-symbols-outlined text-[20px] text-secondary">forum</span>
+<div>
+<span class="font-label-md text-label-md font-semibold block leading-tight">ARC Salon Drive</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block mt-0.5">Critical discourse</span>
+</div>
+</button>
+</div>
+</div>
+<!-- Section 2: Book Selection -->
+<div class="flex flex-col gap-2.5">
+<label class="font-label-lg text-label-lg text-primary font-semibold">2. Select Title from FSG Catalog</label>
+<div class="p-4 rounded-xl bg-surface-container-low flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+<div class="flex items-center gap-4">
+<img class="w-14 h-20 rounded-md object-cover shadow-sm bg-surface-container-high" data-alt="Minimalist abstract book cover titled The Glass Orchard featuring soft botanical etchings and sea glass green hues, editorial hardcover design" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC26vedV9Ubw1KN3uV70i81Q4pN8gBS36q_N0koQvGaJ84WYCBIKWUw7Cfc1Re2ZinDjIRBCp0gyskJ2XOehVRzOd_mq4GIn8HTeVYnUiWy5-SZ1SBI6X6rYsww40f4h3hrroVZKicz-xOsNfvA7mPZQ21NY88jJXG4cfEYFVpGzvnTnuCnlrlSzA7Olz2zNCLPqC3bXgrhB7To0wM2Nxw60363284xiaJVT8biFp8"/>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-primary font-semibold leading-snug">The Glass Orchard</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-secondary font-label-sm text-label-sm font-semibold">FSG Originals</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">by Maya Lin • Scheduled Release: Nov 19, 2024</p>
+<div class="flex flex-wrap items-center gap-1.5 mt-2">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-sm text-label-sm">Literary Fiction</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-sm text-label-sm">Speculative</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-sm text-label-sm">Environmental</span>
+</div>
+</div>
+</div>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors flex items-center gap-1.5 self-end sm:self-center">
+<span>Change Title</span>
+<span class="material-symbols-outlined text-[16px]">unfold_more</span>
+</button>
+</div>
+</div>
+<!-- Mandatory Perch Compliance Badge (P3 Spec) -->
+<div class="p-4 rounded-xl bg-surface-container border-l-4 border-secondary flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-[22px] mt-0.5">gavel</span>
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="font-label-lg text-label-lg text-primary font-semibold">Mandatory Transparency Specification (P3)</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold">Immutable Badge</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                Perch Rule P3 requires all promotional placements to carry the unremovable <strong class="text-on-surface font-semibold">“Sponsored”</strong> label. Subliminal algorithmic boosts are prohibited. Readers will be presented with transparent concordance justification:
+                <em class="text-secondary block mt-1 font-serif">“Sponsored • Recommended based on high concordance with Elena Ferrante &amp; Jeff VanderMeer.”</em>
+</p>
+</div>
+</div>
+<!-- Section 3: Reader Cohort & Taste Concordance Targeting -->
+<div class="flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<label class="font-label-lg text-label-lg text-primary font-semibold">3. Reader Cohorts &amp; Taste Concordance targeting</label>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">High Match Quality (94%)</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+<div class="p-3.5 rounded-xl bg-surface-container-low flex flex-col justify-between gap-3">
+<div class="flex items-start justify-between">
+<span class="font-label-md text-label-md text-primary font-semibold">Readers who rated Olga Tokarczuk &gt; 4.5</span>
+<span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>Audience: 8,400</span>
+<span class="text-secondary font-semibold">96% Fit</span>
+</div>
+</div>
+<div class="p-3.5 rounded-xl bg-surface-container-low flex flex-col justify-between gap-3">
+<div class="flex items-start justify-between">
+<span class="font-label-md text-label-md text-primary font-semibold">Atmospheric Fiction Salon Subscribers</span>
+<span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>Audience: 11,200</span>
+<span class="text-secondary font-semibold">93% Fit</span>
+</div>
+</div>
+<div class="p-3.5 rounded-xl bg-surface-container-low flex flex-col justify-between gap-3">
+<div class="flex items-start justify-between">
+<span class="font-label-md text-label-md text-primary font-semibold">Readers with &gt;85% Match to FSG Works</span>
+<span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>Audience: 4,900</span>
+<span class="text-secondary font-semibold">95% Fit</span>
+</div>
+</div>
+</div>
+<!-- Audience Size Meter -->
+<div class="p-4 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col sm:flex-row items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-fixed-variant">
+<span class="material-symbols-outlined text-[20px]">psychology</span>
+</div>
+<div>
+<span class="font-label-lg text-label-lg text-primary font-semibold">Estimated 24,500 High-Concordance Readers</span>
+<span class="font-body-md text-body-md text-on-surface-variant block">Guaranteed zero delivery to casual or mismatched book profiles</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold uppercase tracking-wider">Optimal Density</span>
+</div>
+</div>
+</div>
+<!-- Section 4: Budget & Pacing -->
+<div class="flex flex-col gap-3">
+<label class="font-label-lg text-label-lg text-primary font-semibold">4. Budget, Duration &amp; Expected Adds</label>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+<div class="p-4 rounded-xl bg-surface-container-low">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Daily Cap</span>
+<span class="font-headline-md text-headline-md text-primary font-bold mt-1 block">$150.00 / day</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block mt-1">Pacing: Steady throughout day</span>
+</div>
+<div class="p-4 rounded-xl bg-surface-container-low">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Campaign Duration</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-headline-md text-headline-md text-primary font-bold">14 Days</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">(Nov 1 - Nov 15)</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 mt-2 overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 50%;"></div>
+</div>
+</div>
+<div class="p-4 rounded-xl bg-surface-container-low">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Expected Shelf Additions</span>
+<span class="font-headline-md text-headline-md text-secondary font-bold mt-1 block">1,800 – 2,400</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block mt-1">Projected CPA: $0.88 / add</span>
+</div>
+</div>
+</div>
+<!-- Section 5: Live Placement Preview Card (Reader Feed R1) -->
+<div class="flex flex-col gap-2.5 pt-2">
+<div class="flex items-center justify-between">
+<label class="font-label-lg text-label-lg text-primary font-semibold">5. Live Reader Feed Placement Preview (R1 Feed Simulation)</label>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Exactly as rendered in reader app</span>
+</div>
+<!-- Simulated Reader Feed Card -->
+<div class="p-5 md:p-6 rounded-2xl bg-surface-bright shadow-md flex flex-col gap-4">
+<!-- Feed Header with Mandatory Badging -->
+<div class="flex items-center justify-between gap-4">
+<div class="flex items-center gap-2.5">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-primary font-label-sm text-label-sm uppercase tracking-widest font-bold">SPONSORED</span>
+<span class="text-on-surface-variant text-label-sm font-label-sm">•</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">Promoted by Farrar, Straus and Giroux</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant hover:text-primary cursor-pointer text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-[16px]">info</span>
+<span>Why am I seeing this?</span>
+</div>
+</div>
+<!-- Context Justification Bar -->
+<div class="py-1.5 px-3 rounded-lg bg-surface-container text-on-surface-variant font-label-sm text-label-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-secondary">flare</span>
+<span>Recommended based on your high concordance with <strong>Elena Ferrante</strong> &amp; <strong>Jeff VanderMeer</strong></span>
+</div>
+<!-- Book Showcase -->
+<div class="flex flex-col sm:flex-row gap-5 items-start">
+<img class="w-24 h-36 rounded-lg object-cover shadow-md shrink-0 bg-surface-container-high" data-alt="Refined book cover mockup of The Glass Orchard resting on light linen fabric, rich natural lighting, FSG imprint emblem visible on spine" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2BXNxA0jlEHzY3SZMGJtw_7gG6IH3Bdg8tfnbPAaPdDndmlM4mtJrEENcoJWko8DH2ARYujyfilHcgZzR_8Mfhhq3lWLWj37-HCCpB-O-ljmH2TLZLJ-63n4gcT9Aapb_P-6Rauj5dimhupfEzHRfJnASfLo9z2W3RIAKrkFCJcdPflVzsqU3BGevEdIoFvQP0UfKxEWoNvGj384984WUV6xtB7f9ddfKcQKfIOg"/>
+<div class="flex flex-col justify-between h-full gap-3 flex-1 min-w-0">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-semibold">The Glass Orchard</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">Maya Lin • First Edition • Nov 2024</p>
+<p class="font-body-md text-body-md text-on-surface mt-2 line-clamp-2">
+                      An incandescent meditation on inheritance, coastal memory, and ecological silence. Lin weaves an austere family chronicle set against vanishing wetlands with breathtaking psychological intimacy.
+                    </p>
+</div>
+<div class="flex flex-wrap items-center gap-3 pt-1">
+<button class="px-4 py-2 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md hover:bg-primary transition-all flex items-center gap-2 shadow-sm">
+<span class="material-symbols-outlined text-[18px]">bookmark_add</span>
+<span>Want to Read</span>
+</button>
+<a class="px-3 py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors flex items-center gap-1.5" href="#">
+<span class="material-symbols-outlined text-[16px]">storefront</span>
+<span>Bookshop.org</span>
+</a>
+<a class="px-3 py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors flex items-center gap-1.5" href="#">
+<span class="material-symbols-outlined text-[16px]">shopping_cart</span>
+<span>Amazon (R7)</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Launch Bar -->
+<div class="flex items-center justify-between pt-4">
+<span class="font-label-md text-label-md text-on-surface-variant">Review will be auto-indexed in Perch Transparency Log.</span>
+<div class="flex items-center gap-3">
+<button class="px-4 py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors">Save as Draft</button>
+<button class="px-6 py-2.5 rounded-lg bg-primary-container text-on-primary font-label-lg text-label-lg hover:bg-primary transition-all shadow-md flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">rocket_launch</span>
+<span>Launch Sponsored Campaign</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Active & Recent Sponsored Campaigns Table -->
+<div class="p-6 md:p-8 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-6">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary font-semibold">Active &amp; Recent Sponsored Campaigns</h2>
+<p class="font-label-md text-label-md text-on-surface-variant">Performance metrics, pacing, and expectation concordance tracking</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-3 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-semibold">All Imprints</span>
+<span class="px-3 py-1 rounded-full bg-primary-container text-on-primary font-label-sm text-label-sm font-semibold">FSG Originals</span>
+</div>
+</div>
+<!-- Campaigns Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse min-w-[700px]">
+<thead>
+<tr class="text-on-surface-variant font-label-md text-label-md uppercase tracking-wider">
+<th class="py-3 px-3">Title &amp; Imprint</th>
+<th class="py-3 px-3">Status</th>
+<th class="py-3 px-3">Budget &amp; Spend</th>
+<th class="py-3 px-3">Reach</th>
+<th class="py-3 px-3">Shelf Adds</th>
+<th class="py-3 px-3">Concordance</th>
+<th class="py-3 px-3 text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container font-body-md text-body-md">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-4 px-3">
+<div class="flex items-center gap-3">
+<img class="w-9 h-13 rounded object-cover shadow-xs bg-surface-container-high" data-alt="Cover of The Glass Orchard by Maya Lin in emerald greens and crisp white serif font" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVuHw52SSwsEBrQVgKkmcHdNgMUX0soclkrmUA9n9UtbtyKx8kkPjhbPKy-p9guCpiLDnvVaCmI8qFOTXnM5l-sGqkfYQM4len-2vJJShKsAnLC5ulrCaV3RBrD1ExwBmdrQeI1IZAmu1xof1IPF9tel13aVYe33m4HB05nofe0Gxi2QlvPiLL_jCEOy00IXX3rJdstrFeOPGsPormtLnsQDMawm2vaDW851XEeZM"/>
+<div>
+<span class="font-label-lg text-label-lg text-primary font-semibold block">The Glass Orchard</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Maya Lin • FSG Originals</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-3">
+<span class="px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold inline-flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                      Active
+                    </span>
+</td>
+<td class="py-4 px-3">
+<div>
+<span class="font-label-md text-label-md text-primary font-semibold block">$1,420 spent</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">of $2,100 budget</span>
+</div>
+</td>
+<td class="py-4 px-3">
+<span class="font-label-md text-label-md text-primary font-semibold block">18,400</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Verified lovers</span>
+</td>
+<td class="py-4 px-3">
+<span class="font-label-md text-label-md text-secondary font-bold block">2,740</span>
+<span class="font-label-sm text-label-sm text-secondary block font-semibold">14.9% rate</span>
+</td>
+<td class="py-4 px-3">
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg text-primary font-bold">94%</span>
+<span class="material-symbols-outlined text-secondary text-[16px]">verified</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Eco-fiction fit</span>
+</td>
+<td class="py-4 px-3 text-right">
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-4 px-3">
+<div class="flex items-center gap-3">
+<img class="w-9 h-13 rounded object-cover shadow-xs bg-surface-container-high" data-alt="Cover of Drive Your Plow Over the Bones of the Dead illustrated edition with black and bone white woodcut linocut art" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCswOjpUwbpGRQWVYXG7zeGwz_af-qpVJibuVR2o3dJ19yT0zDt0hkYUKNnpaX4-PoS63CiWnLD1CHqLyTlHrfMYOmtvtQagorBlgVacPiNzV9fYiT2r2GEXLH9WiUy0VWeWE411nr9M2iB9bQY9bmlggJ8P1sWIwiUN1udw_0D0XS6l8hKnZE7FAGuGUOXOYk4yoqowxZzW16YSrh7kP5KpI-IvJBLP3zsTheb_Vk"/>
+<div>
+<span class="font-label-lg text-label-lg text-primary font-semibold block">Drive Your Plow Over Bones...</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Olga Tokarczuk (Special Ed.)</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-3">
+<span class="px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold inline-flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                      Active
+                    </span>
+</td>
+<td class="py-4 px-3">
+<div>
+<span class="font-label-md text-label-md text-primary font-semibold block">$980 spent</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">of $1,500 budget</span>
+</div>
+</td>
+<td class="py-4 px-3">
+<span class="font-label-md text-label-md text-primary font-semibold block">14,200</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Targeted cohort</span>
+</td>
+<td class="py-4 px-3">
+<span class="font-label-md text-label-md text-secondary font-bold block">1,890</span>
+<span class="font-label-sm text-label-sm text-secondary block font-semibold">13.3% rate</span>
+</td>
+<td class="py-4 px-3">
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg text-primary font-bold">91%</span>
+<span class="material-symbols-outlined text-secondary text-[16px]">verified</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Philosophical noir</span>
+</td>
+<td class="py-4 px-3 text-right">
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-4 px-3">
+<div class="flex items-center gap-3">
+<img class="w-9 h-13 rounded object-cover shadow-xs bg-surface-container-high" data-alt="Cover of A Ghost in the Throat with deep warm clay background and elegant typography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5JLh_ss8MSLY605UVGad0j1n_BV5mteTiavBD2QAJY9jcGpivQA1mYEzO8Y8S_71WTio4eqawTKbU-wKZdjhobxZz4acpsmmYrdNxi0YVuIYwz6hhbPhNDeGSwGMOch5yVwLE_LbO8jP51vpTXi402iOgaI1RSYm9KgoBot2YT1TJ45hlM1ovVH17dhkPXTJ6Y5uKQ_1_jZRmBWJ7wn9S-U6tcTP9iHbzukJ8fNY"/>
+<div>
+<span class="font-label-lg text-label-lg text-primary font-semibold block">A Ghost in the Throat</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Doireann Ní Ghríofa • Non-Fiction</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-3">
+<span class="px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-semibold inline-flex items-center gap-1.5">
+                      Completed
+                    </span>
+</td>
+<td class="py-4 px-3">
+<div>
+<span class="font-label-md text-label-md text-primary font-semibold block">$1,200 full</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">100% pacing efficiency</span>
+</div>
+</td>
+<td class="py-4 px-3">
+<span class="font-label-md text-label-md text-primary font-semibold block">15,650</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Completed reach</span>
+</td>
+<td class="py-4 px-3">
+<span class="font-label-md text-label-md text-secondary font-bold block">2,310</span>
+<span class="font-label-sm text-label-sm text-secondary block font-semibold">14.7% rate</span>
+</td>
+<td class="py-4 px-3">
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg text-primary font-bold">89%</span>
+<span class="material-symbols-outlined text-secondary text-[16px]">verified</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Autofiction match</span>
+</td>
+<td class="py-4 px-3 text-right">
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN (Analytics & Compliance Feed, ~35% width: 4 cols) -->
+<div class="lg:col-span-4 flex flex-col gap-8 min-w-0">
+<!-- Expectation vs. Reality Audit (P3 + R4 / P4 Integration) -->
+<div class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-6">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold block">R4 / P4 Integrity Sync</span>
+<h3 class="font-headline-sm text-headline-sm text-primary font-semibold">Expectation vs. Reality Audit</h3>
+</div>
+<div class="w-10 h-10 rounded-xl bg-primary-container text-on-primary-container flex items-center justify-center font-headline-sm font-bold">
+              9.4
+            </div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Perch audits post-reading verdicts to verify whether promotional narrative matches actual reader experience, protecting publisher trust score.
+          </p>
+<!-- Perch Trust Score Box -->
+<div class="p-4 rounded-xl bg-surface-container-low flex items-center justify-between">
+<div>
+<span class="font-label-lg text-label-lg text-primary font-bold block">Perch Trust Score: 9.4 / 10</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold block mt-0.5">Eligible for -15% Concordance Multiplier</span>
+</div>
+<span class="material-symbols-outlined text-secondary text-[28px]">shield</span>
+</div>
+<!-- Claim Breakdown -->
+<div class="flex flex-col gap-4">
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant font-semibold">Reader Verification on Claims</span>
+<!-- Claim 1 -->
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between text-label-md font-label-md">
+<span class="text-primary font-medium truncate">“Atmospheric, slow-burn tension”</span>
+<span class="text-secondary font-bold shrink-0">94% Agree</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-2 overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 94%;"></div>
+</div>
+</div>
+<!-- Claim 2 -->
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between text-label-md font-label-md">
+<span class="text-primary font-medium truncate">“Lyrical prose &amp; ecological themes”</span>
+<span class="text-secondary font-bold shrink-0">96% Agree</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-2 overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 96%;"></div>
+</div>
+</div>
+<!-- Claim 3 (Mismatch Red Alert) -->
+<div class="p-3.5 rounded-xl bg-error-container text-on-error-container flex flex-col gap-2">
+<div class="flex items-center justify-between text-label-md font-label-md">
+<span class="font-semibold truncate">“Fast-paced action thriller”</span>
+<span class="font-bold shrink-0 text-error">12% Agree</span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-2 overflow-hidden">
+<div class="bg-error h-full rounded-full" style="width: 12%;"></div>
+</div>
+<div class="flex items-start gap-2 pt-1 text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-[16px] text-error shrink-0 mt-0.5">warning</span>
+<span><strong>Mismatch Alert:</strong> Audience dissonance detected. Avoid positioning this manuscript as a high-octane thriller to prevent review degradation.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Audience Concordance Heatmap -->
+<div class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-5">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold block">Salon Conversions</span>
+<h3 class="font-headline-sm text-headline-sm text-primary font-semibold">Concordance Heatmap</h3>
+</div>
+<span class="material-symbols-outlined text-secondary text-[22px]">hub</span>
+</div>
+<div class="flex flex-col gap-3">
+<div class="p-3.5 rounded-xl bg-surface-container-low flex items-center justify-between">
+<div class="min-w-0 pr-2">
+<span class="font-label-lg text-label-lg text-primary font-semibold block truncate">Speculative Eco-Literature Circle</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">4,280 salon members</span>
+</div>
+<div class="text-right shrink-0">
+<span class="font-label-lg text-label-lg text-secondary font-bold block">22.4%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Shelf Conversion</span>
+</div>
+</div>
+<div class="p-3.5 rounded-xl bg-surface-container-low flex items-center justify-between">
+<div class="min-w-0 pr-2">
+<span class="font-label-lg text-label-lg text-primary font-semibold block truncate">Winter Salon #14 (Literary Fiction)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">3,120 salon members</span>
+</div>
+<div class="text-right shrink-0">
+<span class="font-label-lg text-label-lg text-secondary font-bold block">19.8%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Shelf Conversion</span>
+</div>
+</div>
+<div class="p-3.5 rounded-xl bg-surface-container-low flex items-center justify-between">
+<div class="min-w-0 pr-2">
+<span class="font-label-lg text-label-lg text-primary font-semibold block truncate">Contemporary Translated Fiction</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">6,800 salon members</span>
+</div>
+<div class="text-right shrink-0">
+<span class="font-label-lg text-label-lg text-secondary font-bold block">16.1%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Shelf Conversion</span>
+</div>
+</div>
+</div>
+<div class="pt-2">
+<button class="w-full py-2.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors flex items-center justify-center gap-1.5">
+<span>View All 18 Target Salons</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Promotional Distribution Channels (P2 / P3) -->
+<div class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-5">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold block">Channel Routing</span>
+<h3 class="font-headline-sm text-headline-sm text-primary font-semibold">Distribution Share</h3>
+</div>
+<span class="material-symbols-outlined text-secondary text-[22px]">pie_chart</span>
+</div>
+<!-- Distribution Stack Visualization -->
+<div class="flex flex-col gap-3">
+<div class="w-full h-4 rounded-full overflow-hidden flex">
+<div class="bg-primary-container h-full" style="width: 64%;" title="Reader Feed Native: 64%"></div>
+<div class="bg-secondary h-full" style="width: 26%;" title="Book Detail Recommendations: 26%"></div>
+<div class="bg-secondary-fixed-dim h-full" style="width: 10%;" title="Salon Prompts: 10%"></div>
+</div>
+<div class="flex flex-col gap-2 pt-2">
+<div class="flex items-center justify-between text-label-md font-label-md">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded bg-primary-container"></span>
+<span class="text-on-surface">Reader Feed Native</span>
+</div>
+<span class="font-semibold text-primary">64%</span>
+</div>
+<div class="flex items-center justify-between text-label-md font-label-md">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded bg-secondary"></span>
+<span class="text-on-surface">Book Detail Recommendations</span>
+</div>
+<span class="font-semibold text-primary">26%</span>
+</div>
+<div class="flex items-center justify-between text-label-md font-label-md">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded bg-secondary-fixed-dim"></span>
+<span class="text-on-surface">Salon Discussion Prompts</span>
+</div>
+<span class="font-semibold text-primary">10%</span>
+</div>
+</div>
+</div>
+<div class="p-3.5 rounded-xl bg-surface-container text-on-surface-variant font-label-sm text-label-sm leading-relaxed">
+            All channels apply identical transparency guidelines. No sponsored placement ever usurps peer-to-peer critical marginalia.
+          </div>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

@@ -1,0 +1,24 @@
+# Phase 2: Writing & Institutional Services (W1–W6, I1–I4)
+
+This region encompasses author publishing workflows, reader feedback loops, cohort management, rubric grading, and mentorship programs across both individual budding writers and partner educational institutions.
+
+### Mapped Use Cases & Artifacts
+
+- **Header Diagrams**:
+  - `Budding Writer Use Case Diagram (W1–W6)`
+  - `Educational Institution Use Case Diagram (I1–I4)`
+
+- **Key Screens & Workspaces**:
+  - `Writer Studio - Publishing & Reader Feedback`
+    - **W1**: Create and publish writing, whole or in serialized chapters
+    - **W2**: Receive direct feedback, margin reactions, and craft notes from readers
+    - **W5**: Build a reader following and author profile
+    - **W6**: Telemetry tracking reader response (reads, saves, reactions, drop-off)
+  - `Institution Overview - Cohorts, Rubrics & Mentorship`
+    - **I1**: Run programs or cohorts for aspiring writers
+    - **I2**: Evaluate submitted manuscripts against structured rubrics
+    - **I3**: Mentor writers with line-level annotations and structured feedback
+    - **I4**: Run showcases, anthologies, competitions, and writer recognitions
+
+---
+*Status: Verified against Phase 2 Writing & Institutional Services specification.*

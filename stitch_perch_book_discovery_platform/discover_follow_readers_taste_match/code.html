@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"primary-container":"#1b3b2b","on-error":"#ffffff","surface-container-lowest":"#ffffff","outline-variant":"#c1c8c2","on-secondary-container":"#762c0d","primary-fixed-dim":"#abcfb8","on-secondary-fixed":"#380d00","surface-container":"#f4ece7","surface-container-high":"#eee7e1","on-error-container":"#93000a","on-tertiary-container":"#ce9236","surface-container-low":"#faf2ed","surface-container-highest":"#e9e1dc","secondary":"#994626","primary":"#032517","tertiary":"#2f1c00","on-secondary":"#ffffff","on-background":"#1e1b18","tertiary-container":"#4b2f00","on-primary-container":"#83a590","inverse-primary":"#abcfb8","error":"#ba1a1a","surface-bright":"#fff8f4","on-tertiary-fixed-variant":"#633f00","tertiary-fixed":"#ffddb4","on-primary":"#ffffff","secondary-fixed":"#ffdbcf","surface":"#fff8f4","on-tertiary-fixed":"#291800","inverse-on-surface":"#f7efea","surface-dim":"#e0d9d3","on-surface":"#1e1b18","on-surface-variant":"#424843","inverse-surface":"#33302c","secondary-container":"#ff956e","background":"#fff8f4","secondary-fixed-dim":"#ffb59b","on-tertiary":"#ffffff","error-container":"#ffdad6","outline":"#727973","surface-variant":"#e9e1dc","primary-fixed":"#c7ebd4","on-primary-fixed":"#002113","surface-tint":"#456553","on-primary-fixed-variant":"#2d4d3c","tertiary-fixed-dim":"#fcba5b","on-secondary-fixed-variant":"#7a2f10"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"gutter-mobile":"1rem","space-xs":"0.25rem","space-lg":"1.5rem","margin-mobile":"1.25rem","space-sm":"0.5rem","gutter":"1.5rem","margin":"3rem","space-xl":"2.5rem","space-md":"1rem"},"fontFamily":{"body-lg":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"],"headline-md":["Newsreader"],"headline-sm":["Newsreader"],"display-lg":["Newsreader"],"label-lg":["Plus Jakarta Sans"],"quote-editorial":["Newsreader"],"label-sm":["Plus Jakarta Sans"],"headline-lg":["Newsreader"],"display-lg-mobile":["Newsreader"],"body-md":["Plus Jakarta Sans"]},"fontSize":{"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],"body-sm":["13px",{"lineHeight":"20px","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.03em","fontWeight":"600"}],"headline-md":["24px",{"lineHeight":"32px","fontWeight":"500"}],"headline-sm":["20px",{"lineHeight":"28px","fontWeight":"600"}],"display-lg":["48px",{"lineHeight":"56px","letterSpacing":"-0.02em","fontWeight":"400"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"600"}],"quote-editorial":["20px",{"lineHeight":"30px","fontWeight":"400"}],"label-sm":["10px",{"lineHeight":"14px","letterSpacing":"0.05em","fontWeight":"700"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.01em","fontWeight":"500"}],"display-lg-mobile":["36px",{"lineHeight":"44px","letterSpacing":"-0.015em","fontWeight":"400"}],"body-md":["15px",{"lineHeight":"24px","fontWeight":"400"}]}}}}</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between py-space-lg px-space-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col gap-space-lg"><div class="px-space-sm pt-space-xs"><div class="flex items-baseline gap-space-xs"><span class="font-headline-lg text-headline-lg tracking-tight text-primary">Perch</span></div><span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant block mt-0.5">Reader Community</span></div><button class="w-full flex items-center justify-center gap-space-sm bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container py-space-sm px-space-md rounded-xl font-label-lg text-label-lg transition-colors duration-150 shadow-[0_2px_8px_rgba(3,37,23,0.15)]" type="button"><span class="material-symbols-outlined text-[20px]">edit_note</span><span>Write Post / Review</span></button><nav class="flex flex-col gap-space-xs" data-active-classes="bg-surface-container-high text-on-surface font-semibold"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-label-lg text-label-lg transition-colors" data-path="feed" href="#"><span class="material-symbols-outlined text-[22px]">auto_stories</span><span>Feed</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-label-lg text-label-lg transition-colors" data-path="discover-taste-match" href="#"><span class="material-symbols-outlined text-[22px]">explore</span><span>Discover &amp; Taste Match</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-label-lg text-label-lg transition-colors" data-path="reading-clubs" href="#"><span class="material-symbols-outlined text-[22px]">forum</span><span>Reading Clubs</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-label-lg text-label-lg transition-colors" data-path="my-shelf" href="#"><span class="material-symbols-outlined text-[22px]">shelves</span><span>My Shelf</span></a></nav></div><div class="px-space-sm py-space-sm bg-surface-container rounded-xl flex items-center justify-between"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-secondary text-[20px]">bookmarks</span><span class="font-label-md text-label-md text-on-surface">Salon Curators</span></div><span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider">Active</span></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-20 bg-surface/80 backdrop-blur-xl z-40 flex items-center justify-between px-gutter shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex-1 max-w-2xl"><div class="relative flex items-center w-full"><span class="material-symbols-outlined absolute left-space-md text-on-surface-variant text-[20px] pointer-events-none">search</span><input class="w-full bg-surface-container-low text-on-surface placeholder:text-on-surface-variant font-body-sm text-body-sm pl-11 pr-space-md py-space-sm rounded-xl outline-none focus:bg-surface-container-lowest transition-all" placeholder="Search books, reader reviews, or published writing..." type="search"/></div></div><div class="flex items-center gap-space-md pl-space-lg"><button aria-label="Notifications" class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors relative" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-secondary"></span></button><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 px-gutter bg-background min-h-screen"><div class="flex flex-col w-full pb-space-xl">
+<!-- Top Editorial Header & Taste Profile Summary Banner -->
+<section class="flex flex-col gap-space-lg mb-space-xl">
+<!-- Header Title Section -->
+<div class="flex flex-col max-w-3xl pt-space-md">
+<div class="flex items-center gap-space-sm mb-space-xs text-secondary font-label-md text-label-md tracking-wider uppercase">
+<span class="material-symbols-outlined text-[18px]">temp_preferences_custom</span>
+<span>Aesthetic Resonance Engine</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight text-balance">
+        Discover Readers with Similar Taste
+      </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-space-xs text-balance">
+        Connect with thoughtful readers whose book preferences, ratings, and expectation verdicts align with yours.
+      </p>
+</div>
+<!-- Taste Profile Summary Banner -->
+<div class="bg-surface-container rounded-full p-space-lg shadow-sm flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-space-lg relative overflow-hidden">
+<!-- Decorative Organic Arc SVG -->
+<div class="absolute right-0 top-0 bottom-0 pointer-events-none opacity-40 mix-blend-multiply w-96 flex items-center justify-end overflow-hidden">
+<svg class="h-full w-auto text-primary" fill="none" viewbox="0 0 200 120">
+<path d="M20 120 C 40 40, 120 10, 200 5" stroke="currentColor" stroke-dasharray="3 3" stroke-width="1.5"></path>
+<path d="M40 120 C 60 60, 140 30, 200 25" opacity="0.6" stroke="currentColor" stroke-width="1"></path>
+<circle cx="160" cy="30" fill="currentColor" r="4"></circle>
+<circle cx="120" cy="50" fill="currentColor" r="3"></circle>
+</svg>
+</div>
+<!-- Left Column: Calibration Index & Shelved Volume Metrics -->
+<div class="flex items-center gap-space-md z-10">
+<div class="relative w-16 h-16 rounded-full bg-surface flex items-center justify-center shadow-inner flex-shrink-0">
+<svg class="w-16 h-16 -rotate-90 transform" viewbox="0 0 44 44">
+<circle class="text-surface-variant" cx="22" cy="22" fill="none" r="18" stroke="currentColor" stroke-width="3"></circle>
+<circle class="text-secondary" cx="22" cy="22" fill="none" r="18" stroke="currentColor" stroke-dasharray="113.097" stroke-dashoffset="18" stroke-linecap="round" stroke-width="3"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="font-headline-sm text-headline-sm text-primary leading-none">94</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant leading-none mt-0.5">%</span>
+</div>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold">Calibration Status</span>
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Harmonized</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-primary mt-0.5">Calibrated from 42 books on your shelf</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Analysis evaluates 5-star resonance, structural ratings, and marginal verdicts.</span>
+</div>
+</div>
+<!-- Right Column: Curated Descriptors & Chips -->
+<div class="flex flex-wrap items-center gap-space-sm z-10 max-w-xl">
+<div class="bg-surface px-space-md py-space-xs rounded-xl flex items-center gap-space-xs shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[16px]">book</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Core:</span>
+<span class="font-label-md text-label-md text-primary font-semibold">Translated Fiction</span>
+</div>
+<div class="bg-surface px-space-md py-space-xs rounded-xl flex items-center gap-space-xs shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[16px]">psychology</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Core:</span>
+<span class="font-label-md text-label-md text-primary font-semibold">Speculative Thought</span>
+</div>
+<div class="bg-surface px-space-md py-space-xs rounded-xl flex items-center gap-space-xs shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[16px]">local_florist</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Mood:</span>
+<span class="font-label-md text-label-md text-primary font-semibold">Solitary Ecology</span>
+</div>
+<div class="bg-surface px-space-md py-space-xs rounded-xl flex items-center gap-space-xs shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[16px]">award_star</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Recent Peak:</span>
+<span class="font-label-md text-label-md text-primary font-semibold">5.0 'Drive Your Plow'</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Section Title & Filter Summary Row -->
+<div class="flex items-baseline justify-between mb-space-lg">
+<div class="flex items-center gap-space-sm">
+<span class="font-headline-sm text-headline-sm text-primary">Taste Affinity Cohort</span>
+<span class="bg-surface-container-high text-on-surface font-label-sm text-label-sm px-space-sm py-0.5 rounded-full">6 Top Curators</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">swap_vert</span>
+<span>Sorted by: Resonance Match (Descending)</span>
+</div>
+</div>
+<!-- Taste-Matched Reader Cards Grid (3 columns on Desktop) -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg">
+<!-- Card 1: Julian Chen (96%) -->
+<article class="bg-surface-container-low rounded-xl p-space-lg flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-200 relative group">
+<!-- Ribbon Accent Bar for Top Tier -->
+<div class="absolute top-0 right-8 w-6 h-3 bg-secondary rounded-b-sm shadow-xs"></div>
+<div>
+<!-- Profile Header & Affinity Seal -->
+<div class="flex items-start justify-between gap-space-md mb-space-md">
+<div class="flex items-center gap-space-md">
+<div class="relative">
+<img class="w-14 h-14 rounded-full object-cover shadow-sm" data-alt="Portrait photo of Julian Chen, a refined reader with glasses looking thoughtfully beside a stack of old clothbound books, warm library lighting, atmospheric grain and amber tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLJsF_hLfmtnTyDgeUtiieBtTEDQxhyWDfzA1xTG5xHzMTEIHCINGH-xi69k4DoEH_r4lKDZVbsj6Qro0aeBWhUUi4mK_39in9a7xlxlykSaT8DGEtFxJiOo4wX6a3zsFAvUl63Rd6BGcCk7FBjJTpO7pcEW_IGL4kmok08wkhM9okcMmtM5ulL76EohY6xXR7bMZzml0ytJbf9AmPzfAsqplNzEtXTGbM80kVgjI"/>
+<span class="absolute -bottom-1 -right-1 bg-primary text-on-primary rounded-full p-0.5 flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors">Julian Chen</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary">location_on</span>
+                Taipei &amp; Edinburgh
+              </span>
+</div>
+</div>
+<!-- Resonance Badge -->
+<div class="flex flex-col items-end">
+<span class="bg-primary text-on-primary font-headline-sm text-headline-sm px-space-sm py-0.5 rounded-xl shadow-xs">
+              96%
+            </span>
+<span class="font-label-sm text-label-sm text-secondary uppercase font-bold tracking-tighter mt-1">Affinity Match</span>
+</div>
+</div>
+<!-- Metric Alignment Ribbon -->
+<div class="bg-surface-container px-space-md py-space-xs rounded-xl flex items-center justify-between text-on-surface mb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[16px]">handshake</span>
+<span class="font-body-sm text-body-sm font-semibold">Agreed on 9 of last 10 book ratings</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">90% verdict sync</span>
+</div>
+<!-- Genres of Devotion -->
+<div class="mb-space-md">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant block mb-1.5 font-bold">Favorite Genres</span>
+<div class="flex flex-wrap gap-1.5">
+<span class="bg-surface-container-high text-on-surface font-body-sm text-body-sm px-space-sm py-0.5 rounded-lg">Translated Fiction</span>
+<span class="bg-surface-container-high text-on-surface font-body-sm text-body-sm px-space-sm py-0.5 rounded-lg">Speculative Philosophy</span>
+</div>
+</div>
+<!-- Shared Books & Marginalia Evidence -->
+<div class="mb-space-lg">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant block mb-1.5 font-bold">Mutual Shelf Concordance (8 books)</span>
+<div class="flex items-center gap-space-sm">
+<div class="bg-surface px-space-sm py-1 rounded-lg flex items-center gap-1 shadow-2xs">
+<span class="material-symbols-outlined text-secondary text-[14px]">menu_book</span>
+<span class="font-quote-editorial text-body-sm italic text-primary">Drive Your Plow</span>
+</div>
+<div class="bg-surface px-space-sm py-1 rounded-lg flex items-center gap-1 shadow-2xs">
+<span class="material-symbols-outlined text-secondary text-[14px]">menu_book</span>
+<span class="font-quote-editorial text-body-sm italic text-primary">Invisible Cities</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Footer -->
+<div class="pt-space-md flex items-center justify-between mt-auto">
+<span class="font-body-sm text-body-sm text-on-surface-variant">142 reviews penned</span>
+<button class="flex items-center gap-space-xs bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container px-space-md py-space-xs rounded-xl font-label-lg text-label-lg transition-all duration-150 shadow-sm active:scale-95" data-following="false" onclick="toggleFollow(this)" type="button">
+<span class="material-symbols-outlined text-[18px]">person_add</span>
+<span>Follow</span>
+</button>
+</div>
+</article>
+<!-- Card 2: Astrid Lind (91%) -->
+<article class="bg-surface-container-low rounded-xl p-space-lg flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-200 relative group">
+<div>
+<!-- Profile Header & Affinity Seal -->
+<div class="flex items-start justify-between gap-space-md mb-space-md">
+<div class="flex items-center gap-space-md">
+<div class="relative">
+<img class="w-14 h-14 rounded-full object-cover shadow-sm" data-alt="Portrait of Astrid Lind, Scandinavian reader outside by a misty pine fjord holding a pocket notebook, soft natural Nordic light, editorial color palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCs7faqGUbwhV6OdLQfE1_w6tOz3mOmYcaTtUvjmD89Y1jah07xX4ZpQcPDQdsn0sti19UUVrnurjCE4SlMX8WhKwW41eWJ50gbmajR-pkAoaMZJHHe2x6HN9-1G-jL486VMMMy2DDBJP_zpZ9R4uoaYSdGUUC9R288zYoIr_fFXux9Jylc-AI0Kd45S5yriIhEgA-xOgyNtJSViT9gMWQ825yXzbQUVUeE1-4evzM"/>
+<span class="absolute -bottom-1 -right-1 bg-surface-container-high text-primary rounded-full p-0.5 flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px]">nature</span>
+</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors">Astrid Lind</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary">location_on</span>
+                Stockholm
+              </span>
+</div>
+</div>
+<!-- Resonance Badge -->
+<div class="flex flex-col items-end">
+<span class="bg-primary text-on-primary font-headline-sm text-headline-sm px-space-sm py-0.5 rounded-xl shadow-xs">
+              91%
+            </span>
+<span class="font-label-sm text-label-sm text-secondary uppercase font-bold tracking-tighter mt-1">Affinity Match</span>
+</div>
+</div>
+<!-- Metric Alignment Ribbon -->
+<div class="bg-surface-container px-space-md py-space-xs rounded-xl flex items-center justify-between text-on-surface mb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[16px]">sync_alt</span>
+<span class="font-body-sm text-body-sm font-semibold">Identical 4.8 avg rating benchmark</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Tone Aligned</span>
+</div>
+<!-- Genres of Devotion -->
+<div class="mb-space-md">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant block mb-1.5 font-bold">Favorite Genres</span>
+<div class="flex flex-wrap gap-1.5">
+<span class="bg-surface-container-high text-on-surface font-body-sm text-body-sm px-space-sm py-0.5 rounded-lg">Nordic Literature</span>
+<span class="bg-surface-container-high text-on-surface font-body-sm text-body-sm px-space-sm py-0.5 rounded-lg">Memoir</span>
+<span class="bg-surface-container-high text-on-surface font-body-sm text-body-sm px-space-sm py-0.5 rounded-lg">Nature Writing</span>
+</div>
+</div>
+<!-- Shared Books & Marginalia Evidence -->
+<div class="mb-space-lg">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant block mb-1.5 font-bold">Common Books on Shelf (6 books)</span>
+<div class="flex items-center gap-space-sm">
+<div class="bg-surface px-space-sm py-1 rounded-lg flex items-center gap-1 shadow-2xs">
+<span class="material-symbols-outlined text-secondary text-[14px]">menu_book</span>
+<span class="font-quote-editorial text-body-sm italic text-primary">The Summer Book</span>
+</div>
+<div class="bg-surface px-space-sm py-1 rounded-lg flex items-center gap-1 shadow-2xs">
+<span class="material-symbols-outlined text-secondary text-[14px]">menu_book</span>
+<span class="font-quote-editorial text-body-sm italic text-primary">The Blue Fox</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Footer -->
+<div class="pt-space-md flex items-center justify-between mt-auto">
+<span class="font-body-sm text-body-sm text-on-surface-variant">98 reviews penned</span>
+<button class="flex items-center gap-space-xs bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container px-space-md py-space-xs rounded-xl font-label-lg text-label-lg transition-all duration-150 shadow-sm active:scale-95" data-following="false" onclick="toggleFollow(this)" type="button">
+<span class="material-symbols-outlined text-[18px]">person_add</span>
+<span>Follow</span>
+</button>
+</div>
+</article>
+<!-- Card 3: Tariq Vance (89%) -->
+<article class="bg-surface-container-low rounded-xl p-space-lg flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-200 relative group">
+<div>
+<!-- Profile Header & Affinity Seal -->
+<div class="flex items-start justify-between gap-space-md mb-space-md">
+<div class="flex items-center gap-space-md">
+<div class="relative">
+<img class="w-14 h-14 rounded-full object-cover shadow-sm" data-alt="Portrait photo of Tariq Vance in a vintage café reading an amber cloth hardback, soft daylight reflecting from wooden table, intelligent warm expression, dark olive tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuACXSeSYUBSp8TpSYfsRgaVWOMI8483tVG2qGRKdkjJ_gWZumhokuCVmRrs9y4qgKH0JjDnMUpvH234A9bD1JCJTEN_7IxGeTlXMIdMf5bO0NDPoBm623dvnnOg-ZZ-17RjVTbZTpS4TjsUeA5WbfLwrg-1VSXky3U49GTOoaZsSpOFPbHjIgXa8EStsy9Qq3mfk1Bky1QAZSXyJ5TqmeJ4q4Tv2ToBJToQ0WVXuJA"/>
+<span class="absolute -bottom-1 -right-1 bg-surface-container-high text-secondary rounded-full p-0.5 flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px]">draw</span>
+</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors">Tariq Vance</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary">location_on</span>
+                Prague &amp; Montreal
+              </span>
+</div>
+</div>
+<!-- Resonance Badge -->
+<div class="flex flex-col items-end">
+<span class="bg-primary text-on-primary font-headline-sm text-headline-sm px-space-sm py-0.5 rounded-xl shadow-xs">
+              89%
+            </span>
+<span class="font-label-sm text-label-sm text-secondary uppercase font-bold tracking-tighter mt-1">Affinity Match</span>
+</div>
+</div>
+<!-- Metric Alignment Ribbon -->
+<div class="bg-surface-container px-space-md py-space-xs rounded-xl flex items-center justify-between text-on-surface mb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[16px]">balance</span>
+<span class="font-body-sm text-body-sm font-semibold">Overlapping prose cadence values</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Stylistic Peer</span>
+</div>
+<!-- Genres of Devotion -->
+<div class="mb-space-md">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant block mb-1.5 font-bold">Favorite Genres</span>
+<div class="flex flex-wrap gap-1.5">
+<span class="bg-surface-container-high text-on-surface font-body-sm text-body-sm px-space-sm py-0.5 rounded-lg">Magical Realism</span>
+<span class="bg-surface-container-high text-on-surface font-body-sm text-body-sm px-space-sm py-0.5 rounded-lg">Central European Fiction</span>
+</div>
+</div>
+<!-- Shared Books & Marginalia Evidence -->
+<div class="mb-space-lg">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant block mb-1.5 font-bold">Common Books (5 books)</span>
+<div class="flex items-center gap-space-sm">
+<div class="bg-surface px-space-sm py-1 rounded-lg flex items-center gap-1 shadow-2xs">
+<span class="material-symbols-outlined text-secondary text-[14px]">menu_book</span>
+<span class="font-quote-editorial text-body-sm italic text-primary">Austerlitz</span>
+</div>
+<div class="bg-surface px-space-sm py-1 rounded-lg flex items-center gap-1 shadow-2xs">
+<span class="material-symbols-outlined text-secondary text-[14px]">menu_book</span>
+<span class="font-quote-editorial text-body-sm italic text-primary">The Wall</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Footer -->
+<div class="pt-space-md flex items-center justify-between mt-auto">
+<span class="font-body-sm text-body-sm text-on-surface-variant">210 reviews penned</span>
+<button class="flex items-center gap-space-xs bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container px-space-md py-space-xs rounded-xl font-label-lg text-label-lg transition-all duration-150 shadow-sm active:scale-95" data-following="false" onclick="toggleFollow(this)" type="button">
+<span class="material-symbols-outlined text-[18px]">person_add</span>
+<span>Follow</span>
+</button>
+</div>
+</article>
+<!-- Card 4: Clara Sol (87%) -->
+<article class="bg-surface-container-low rounded-xl p-space-lg flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-200 relative group">
+<div>
+<!-- Profile Header & Affinity Seal -->
+<div class="flex items-start justify-between gap-space-md mb-space-md">
+<div class="flex items-center gap-space-md">
+<div class="relative">
+<img class="w-14 h-14 rounded-full object-cover shadow-sm" data-alt="Portrait of Clara Sol, an intellectual literary editor with curly dark hair, holding an open notebook in an archival sunlit reading room, muted forest green aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVIudlUFqTycMlS3wpAXCIUZ5kqH8J_DkQUzE28cvASn5Tv0L9mFyv_uVCt4ZkNBuAQYwC8m425cVJNbSVuSg3fO_5RTOvLz4y5c7wTn7do8qJd3_1yfYqtZg7ON9fGKXrkIS5omsWZEV60ap7dqPm1_9S9GxV1ZyzrBT8p7nJFgkiQ9Zfze0aeSTgCx_QLT-hxW6yw4pfv-V51l6bwAl9v5TVPsbWw02j5sRPP5U"/>
+<span class="absolute -bottom-1 -right-1 bg-surface-container-high text-primary rounded-full p-0.5 flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px]">target</span>
+</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors">Clara Sol</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary">location_on</span>
+                Buenos Aires
+              </span>
+</div>
+</div>
+<!-- Resonance Badge -->
+<div class="flex flex-col items-end">
+<span class="bg-primary text-on-primary font-headline-sm text-headline-sm px-space-sm py-0.5 rounded-xl shadow-xs">
+              87%
+            </span>
+<span class="font-label-sm text-label-sm text-secondary uppercase font-bold tracking-tighter mt-1">Affinity Match</span>
+</div>
+</div>
+<!-- Metric Alignment Ribbon -->
+<div class="bg-surface-container px-space-md py-space-xs rounded-xl flex items-center justify-between text-on-surface mb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[16px]">rule_settings</span>
+<span class="font-body-sm text-body-sm font-semibold truncate">High expectation-match rating agreement</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider shrink-0">New Releases</span>
+</div>
+<!-- Genres of Devotion -->
+<div class="mb-space-md">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant block mb-1.5 font-bold">Favorite Genres</span>
+<div class="flex flex-wrap gap-1.5">
+<span class="bg-surface-container-high text-on-surface font-body-sm text-body-sm px-space-sm py-0.5 rounded-lg">Contemporary Essay</span>
+<span class="bg-surface-container-high text-on-surface font-body-sm text-body-sm px-space-sm py-0.5 rounded-lg">Feminist Poetics</span>
+</div>
+</div>
+<!-- Shared Books & Marginalia Evidence -->
+<div class="mb-space-lg">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant block mb-1.5 font-bold">Expectation Precision (4 matches)</span>
+<div class="flex items-center gap-space-sm">
+<div class="bg-surface px-space-sm py-1 rounded-lg flex items-center gap-1 shadow-2xs">
+<span class="material-symbols-outlined text-secondary text-[14px]">verified</span>
+<span class="font-quote-editorial text-body-sm italic text-primary">Solitary Pleasures</span>
+</div>
+<div class="bg-surface px-space-sm py-1 rounded-lg flex items-center gap-1 shadow-2xs">
+<span class="material-symbols-outlined text-secondary text-[14px]">verified</span>
+<span class="font-quote-editorial text-body-sm italic text-primary">On Earth We're Briefly</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Footer -->
+<div class="pt-space-md flex items-center justify-between mt-auto">
+<span class="font-body-sm text-body-sm text-on-surface-variant">74 reviews penned</span>
+<button class="flex items-center gap-space-xs bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container px-space-md py-space-xs rounded-xl font-label-lg text-label-lg transition-all duration-150 shadow-sm active:scale-95" data-following="false" onclick="toggleFollow(this)" type="button">
+<span class="material-symbols-outlined text-[18px]">person_add</span>
+<span>Follow</span>
+</button>
+</div>
+</article>
+<!-- Card 5: Marcus Reed (84%) -->
+<article class="bg-surface-container-low rounded-xl p-space-lg flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-200 relative group">
+<div>
+<!-- Profile Header & Affinity Seal -->
+<div class="flex items-start justify-between gap-space-md mb-space-md">
+<div class="flex items-center gap-space-md">
+<div class="relative">
+<img class="w-14 h-14 rounded-full object-cover shadow-sm" data-alt="Portrait photo of Marcus Reed, thoughtful reader sitting in an antique salon armchair with an open hardbound tome, natural diffused light, warm terracotta and parchment tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcpqzOVfcxyr_6DLjOtJFHUX9AiMLCbC_JE4iKzzQQoXTuxC1qBRz_dQIcW0F37fJXVw70slL3FYd2xaURpH7oKib4aQnCv_aBW0wyB62agMXQHAMyHcfUdA0dhnKz7oUUwTbFOGQ-gFmW0Ux5PUO8YjBSs-6NSV8-Kregj3M20bWiF7BYbK1I4rGuHTcxyW0nKYmoEA968qC1httYutjb2wG2KpW0jJS5LF6CJMU"/>
+<span class="absolute -bottom-1 -right-1 bg-surface-container-high text-secondary rounded-full p-0.5 flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px]">forum</span>
+</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors">Marcus Reed</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary">location_on</span>
+                Oxford &amp; Chicago
+              </span>
+</div>
+</div>
+<!-- Resonance Badge -->
+<div class="flex flex-col items-end">
+<span class="bg-primary text-on-primary font-headline-sm text-headline-sm px-space-sm py-0.5 rounded-xl shadow-xs">
+              84%
+            </span>
+<span class="font-label-sm text-label-sm text-secondary uppercase font-bold tracking-tighter mt-1">Affinity Match</span>
+</div>
+</div>
+<!-- Metric Alignment Ribbon -->
+<div class="bg-surface-container px-space-md py-space-xs rounded-xl flex items-center justify-between text-on-surface mb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[16px]">groups</span>
+<span class="font-body-sm text-body-sm font-semibold truncate">Active reading club contributor</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider shrink-0">Salon Leader</span>
+</div>
+<!-- Genres of Devotion -->
+<div class="mb-space-md">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant block mb-1.5 font-bold">Favorite Genres</span>
+<div class="flex flex-wrap gap-1.5">
+<span class="bg-surface-container-high text-on-surface font-body-sm text-body-sm px-space-sm py-0.5 rounded-lg">Historical Fiction</span>
+<span class="bg-surface-container-high text-on-surface font-body-sm text-body-sm px-space-sm py-0.5 rounded-lg">Literary Biography</span>
+</div>
+</div>
+<!-- Shared Books & Marginalia Evidence -->
+<div class="mb-space-lg">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant block mb-1.5 font-bold">Mutual Readings (7 books)</span>
+<div class="flex items-center gap-space-sm">
+<div class="bg-surface px-space-sm py-1 rounded-lg flex items-center gap-1 shadow-2xs">
+<span class="material-symbols-outlined text-secondary text-[14px]">menu_book</span>
+<span class="font-quote-editorial text-body-sm italic text-primary">Wolf Hall</span>
+</div>
+<div class="bg-surface px-space-sm py-1 rounded-lg flex items-center gap-1 shadow-2xs">
+<span class="material-symbols-outlined text-secondary text-[14px]">menu_book</span>
+<span class="font-quote-editorial text-body-sm italic text-primary">The Rings of Saturn</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Footer -->
+<div class="pt-space-md flex items-center justify-between mt-auto">
+<span class="font-body-sm text-body-sm text-on-surface-variant">319 reviews penned</span>
+<button class="flex items-center gap-space-xs bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container px-space-md py-space-xs rounded-xl font-label-lg text-label-lg transition-all duration-150 shadow-sm active:scale-95" data-following="false" onclick="toggleFollow(this)" type="button">
+<span class="material-symbols-outlined text-[18px]">person_add</span>
+<span>Follow</span>
+</button>
+</div>
+</article>
+<!-- Card 6: Elena Rostova (82%) -->
+<article class="bg-surface-container-low rounded-xl p-space-lg flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-200 relative group">
+<div>
+<!-- Profile Header & Affinity Seal -->
+<div class="flex items-start justify-between gap-space-md mb-space-md">
+<div class="flex items-center gap-space-md">
+<div class="relative">
+<img class="w-14 h-14 rounded-full object-cover shadow-sm" data-alt="Portrait photo of Elena Rostova, curator with dark hair pulled back, standing in front of floor to ceiling wooden shelves filled with small press paperbacks, archival mood." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYBBTp9meLccpidVAUzrYOREcn7G3qkddSQlupSzg9Dyn8S1-yB_gPoxP1ulj-rNNklvsy-ZMDtGMbqXUf9eViW-b_QW3cJqcUA2N9U4rafV65kE4xKe_RvlpuDOmdlUQAkH5_HL-zPtNN3xKT7R_9lm9i_Ypi0hMFbEOYAYimGEv58BiY0DtoEOEaCM2L9pbsnpSxfEuokREXHGkE0VwidkS0QDd1YjgmWI3C7Jw"/>
+<span class="absolute -bottom-1 -right-1 bg-surface-container-high text-primary rounded-full p-0.5 flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px]">auto_stories</span>
+</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors">Elena Rostova</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary">location_on</span>
+                Berlin
+              </span>
+</div>
+</div>
+<!-- Resonance Badge -->
+<div class="flex flex-col items-end">
+<span class="bg-primary text-on-primary font-headline-sm text-headline-sm px-space-sm py-0.5 rounded-xl shadow-xs">
+              82%
+            </span>
+<span class="font-label-sm text-label-sm text-secondary uppercase font-bold tracking-tighter mt-1">Affinity Match</span>
+</div>
+</div>
+<!-- Metric Alignment Ribbon -->
+<div class="bg-surface-container px-space-md py-space-xs rounded-xl flex items-center justify-between text-on-surface mb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[16px]">flare</span>
+<span class="font-body-sm text-body-sm font-semibold truncate">Recommends independent press fiction</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider shrink-0">Indie Press</span>
+</div>
+<!-- Genres of Devotion -->
+<div class="mb-space-md">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant block mb-1.5 font-bold">Favorite Genres</span>
+<div class="flex flex-wrap gap-1.5">
+<span class="bg-surface-container-high text-on-surface font-body-sm text-body-sm px-space-sm py-0.5 rounded-lg">Experimental Novellas</span>
+<span class="bg-surface-container-high text-on-surface font-body-sm text-body-sm px-space-sm py-0.5 rounded-lg">Translations</span>
+</div>
+</div>
+<!-- Shared Books & Marginalia Evidence -->
+<div class="mb-space-lg">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant block mb-1.5 font-bold">Mutual Favorites (5 books)</span>
+<div class="flex items-center gap-space-sm">
+<div class="bg-surface px-space-sm py-1 rounded-lg flex items-center gap-1 shadow-2xs">
+<span class="material-symbols-outlined text-secondary text-[14px]">menu_book</span>
+<span class="font-quote-editorial text-body-sm italic text-primary">Septology</span>
+</div>
+<div class="bg-surface px-space-sm py-1 rounded-lg flex items-center gap-1 shadow-2xs">
+<span class="material-symbols-outlined text-secondary text-[14px]">menu_book</span>
+<span class="font-quote-editorial text-body-sm italic text-primary">Flights</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Footer -->
+<div class="pt-space-md flex items-center justify-between mt-auto">
+<span class="font-body-sm text-body-sm text-on-surface-variant">164 reviews penned</span>
+<button class="flex items-center gap-space-xs bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container px-space-md py-space-xs rounded-xl font-label-lg text-label-lg transition-all duration-150 shadow-sm active:scale-95" data-following="false" onclick="toggleFollow(this)" type="button">
+<span class="material-symbols-outlined text-[18px]">person_add</span>
+<span>Follow</span>
+</button>
+</div>
+</article>
+</div>
+<!-- Bottom Taste Calibration Footnote / Explainer -->
+<div class="mt-space-xl p-space-lg rounded-xl bg-surface-container-high flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<span class="material-symbols-outlined text-secondary text-[28px]">auto_awesome</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-primary font-bold uppercase tracking-wider">How Taste Matching Works</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Affinity percentages compute shared pacing reception, thematic affinities, and historical expectation verifications—never superficial bestseller lists.
+        </p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="px-space-md py-space-xs rounded-xl bg-surface hover:bg-surface-container text-primary font-label-md text-label-md transition-colors shadow-2xs" type="button">
+        Recalibrate Model
+      </button>
+</div>
+</div>
+<script>
+    function toggleFollow(btn) {
+      const isFollowing = btn.getAttribute('data-following') === 'true';
+      if (isFollowing) {
+        btn.setAttribute('data-following', 'false');
+        btn.classList.remove('bg-surface-container', 'text-on-surface', 'hover:bg-surface-container-highest');
+        btn.classList.add('bg-primary', 'hover:bg-primary-container', 'text-on-primary', 'hover:text-on-primary-container');
+        btn.innerHTML = '<span class="material-symbols-outlined text-[18px]">person_add</span><span>Follow</span>';
+      } else {
+        btn.setAttribute('data-following', 'true');
+        btn.classList.remove('bg-primary', 'hover:bg-primary-container', 'text-on-primary', 'hover:text-on-primary-container');
+        btn.classList.add('bg-surface-container', 'text-on-surface', 'hover:bg-surface-container-highest');
+        btn.innerHTML = '<span class="material-symbols-outlined text-secondary text-[18px]">check</span><span>Following</span>';
+      }
+    }
+  </script>
+</div></main></div></body></html>

@@ -1,0 +1,1003 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perch: Live Interactive Flow (W1 Publishing → R9 Reader Experience)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['Newsreader', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            forest: {
+              900: '#0f241a',
+              800: '#163323',
+              700: '#1b3b2b',
+              600: '#28543e',
+              500: '#387356',
+              100: '#e5eee8',
+              50: '#f2f7f4',
+            },
+            parchment: {
+              DEFAULT: '#fffaf5',
+              dim: '#f6ede4',
+              card: '#fcf8f3',
+              border: '#e8dcce',
+            },
+            terracotta: {
+              600: '#b95133',
+              500: '#cf5e3c',
+              100: '#fae8e2',
+            },
+            amberAccent: '#d97706',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @keyframes pulseSoft {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.05); opacity: 0.85; }
+    }
+    @keyframes highlightFlash {
+      0% { background-color: #fef08a; }
+      100% { background-color: #fef9c3; }
+    }
+    .animate-pulse-soft {
+      animation: pulseSoft 2.5s infinite ease-in-out;
+    }
+    .flow-badge-glow {
+      box-shadow: 0 0 15px rgba(27, 59, 43, 0.25);
+    }
+    /* Custom scrollbar for distraction-free reading */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f6ede4;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #d8c7b5;
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #bda894;
+    }
+  </style>
+</head>
+<body class="bg-[#f4efe8] text-[#2c2621] font-sans antialiased min-h-screen flex flex-col">
+
+  <!-- ================= TOP INTERACTIVE PROTOTYPE CONTROLLER ================= -->
+  <header class="sticky top-0 z-50 bg-[#163323] text-white border-b border-[#244933] px-6 py-3 shadow-md">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-4">
+      
+      <!-- Brand & Flow Info -->
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-lg bg-[#e5eee8] text-[#163323] font-serif font-bold text-lg flex items-center justify-center shadow-inner">
+          P
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="font-serif tracking-tight text-lg font-medium text-white">Perch Literary Protocol</span>
+            <span class="bg-[#244933] text-[#a4d4b9] text-[10px] font-mono uppercase px-2 py-0.5 rounded tracking-wider border border-[#356147]">Interactive Flow</span>
+          </div>
+          <p class="text-xs text-[#a4d4b9]/80 font-sans">End-to-End Pipeline: <strong class="text-white font-medium">Writer Desk (W1)</strong> ➔ <strong class="text-emerald-300 font-medium">Publisher ARC &amp; Metadata (P1/P2)</strong> ➔ <strong class="text-white font-medium">Reader Experience (R9)</strong></p>
+        </div>
+      </div>
+
+      <!-- Mode Switcher Tabs (Live Prototype State) -->
+      <div class="flex items-center bg-[#0d1e15] p-1 rounded-xl border border-[#274f37]"><button id="tabBtnW1" onclick="switchView('writer')" class="flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-xs font-semibold tracking-wide transition-all bg-[#1b3b2b] text-white shadow-sm border border-[#387356]"><svg class="w-4 h-4 text-[#7dd3a8] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg><span>Step 1: Writer Desk (W1)</span><span id="writerStatusBadge" class="bg-amber-500/20 text-amber-300 text-[9px] px-1.5 py-0.2 rounded border border-amber-500/40 uppercase">Draft Ready</span></button><button id="tabBtnP1" onclick="switchView('publisher')" class="flex items-center gap-1.5 px-3 py-2 rounded-lg text-xs font-medium tracking-wide transition-all text-[#a3c9b4] hover:text-white"><svg class="w-4 h-4 text-amber-300 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg><span>Step 2: Publisher ARC &amp; Metadata (P1/P2)</span><span id="arcBadgeTop" class="bg-emerald-500/20 text-emerald-300 text-[9px] px-1.5 py-0.2 rounded border border-emerald-500/40 font-mono">142/250 Claimed</span></button><button id="tabBtnR9" onclick="switchView('reader')" class="flex items-center gap-1.5 px-3 py-2 rounded-lg text-xs font-medium tracking-wide transition-all text-[#a3c9b4] hover:text-white"><svg class="w-4 h-4 text-[#7dd3a8] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg><span>Step 3: Reader View (R9)</span><span id="readerNewAlert" class="hidden bg-emerald-500 text-white text-[9px] px-1.5 py-0.2 rounded-full font-bold animate-pulse">NEW</span></button><button id="tabBtnSimPublish" onclick="triggerPublishFlow()" class="flex items-center gap-1 px-2.5 py-2 text-xs font-semibold text-amber-200 hover:text-white bg-[#28543e] hover:bg-[#387356] rounded-lg transition-all mx-1 border border-[#3b7355]"><svg class="w-3.5 h-3.5 text-amber-300" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 0l-3 3a1 1 0 001.414 1.414L9 9.414V13a1 1 0 102 0V9.414l1.293 1.293a1 1 0 001.414-1.414z" clip-rule="evenodd"></path></svg><span>Publish Ch. 2</span></button><button id="tabBtnSplit" onclick="switchView('split')" class="flex items-center gap-1 px-3 py-2 rounded-lg text-xs font-medium tracking-wide transition-all text-[#a3c9b4] hover:text-white"><svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"></path></svg><span>Split</span></button></div>
+
+      <!-- Quick Actions / Reset -->
+      <div class="flex items-center gap-3">
+        <button onclick="resetPrototype()" class="text-xs text-[#a3c9b4] hover:text-white underline underline-offset-4 decoration-[#3b664d] transition-colors">
+          Reset State
+        </button>
+        <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-emerald-950 text-emerald-300 border border-emerald-700/50">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 mr-1.5 animate-ping"></span> Live Perch Sync
+        </span>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ================= NOTIFICATION TOAST ================= -->
+  <div id="toastNotification" class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none max-w-md bg-[#163323] text-white p-4 rounded-xl shadow-2xl border border-[#356147] flex items-start gap-3">
+    <div class="p-2 bg-emerald-600/30 text-emerald-300 rounded-lg shrink-0 mt-0.5">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+      </svg>
+    </div>
+    <div class="flex-1">
+      <h4 id="toastTitle" class="text-sm font-semibold text-white">Chapter Published Successfully!</h4>
+      <p id="toastMessage" class="text-xs text-[#a3c9b4] mt-0.5">Chapter 2: Copper Manifolds has been broadcast to reader feeds and salon subscribers.</p>
+    </div>
+    <button onclick="hideToast()" class="text-[#a3c9b4] hover:text-white text-xs">✕</button>
+  </div>
+
+  <!-- ================= MAIN CONTAINER ================= -->
+  <main class="flex-1 max-w-[1720px] w-full mx-auto p-4 md:p-6 transition-all">
+
+    <!-- VIEW 1: WRITER DRAFTING & PUBLISHING SUITE (W1) -->
+    <div id="writerView" class="space-y-6">
+      
+      <!-- Flow Breadcrumb & Guidance Banner -->
+      <div class="bg-gradient-to-r from-[#1b3b2b] to-[#12281d] text-white p-4 rounded-2xl shadow-sm border border-[#2b5941] flex flex-wrap items-center justify-between gap-4">
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-xl bg-[#28543e] flex items-center justify-center text-emerald-300 font-mono text-sm font-bold border border-[#3b7557]">
+            W1
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <h2 class="text-base font-semibold text-white font-serif tracking-tight">Manuscript Control &amp; Serial Publishing Desk</h2>
+              <span class="bg-emerald-500/20 text-emerald-300 text-[11px] px-2 py-0.5 rounded-full border border-emerald-500/30">Maya Lin (Author)</span>
+            </div>
+            <p class="text-xs text-[#a4d4b9]">Draft chapters, set pinned reader feedback prompts, and publish to Perch serial catalog with 1-click preview.</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <button onclick="toggleAuthorInquiry()" class="px-3.5 py-1.5 rounded-xl bg-[#244b36] hover:bg-[#2d5c43] text-xs text-[#c4e6d2] font-medium transition-all border border-[#3b7355] flex items-center gap-1.5">
+            <svg class="w-3.5 h-3.5 text-amber-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span id="inquiryBtnLabel">Edit Pinned Inquiry (Line 84)</span>
+          </button>
+          <button onclick="triggerPublishFlow()" class="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-medium text-xs shadow-lg shadow-emerald-950/40 transition-all flex items-center gap-2 border border-emerald-400/40">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+            </svg>
+            <span id="publishCtaText">Publish Chapter 2 Now (W1 ➔ R9)</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Main W1 Layout (3-Column Architecture) -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+        
+        <!-- Left: Chapter Sequence Hierarchy & Folio Meta -->
+        <div class="lg:col-span-3 space-y-4">
+          
+          <!-- Manuscript Overview Card -->
+          <div class="bg-[#fffaf5] border border-[#e8dcce] rounded-2xl p-5 shadow-sm">
+            <div class="flex items-start gap-3">
+              <div class="w-12 h-16 bg-[#163323] text-amber-200 rounded-lg flex flex-col items-center justify-center font-serif shadow-sm p-1 text-center shrink-0">
+                <span class="text-[9px] uppercase tracking-widest text-[#a3c9b4]">Folio</span>
+                <span class="text-sm font-bold">VOL. I</span>
+              </div>
+              <div class="flex-1 min-w-0">
+                <span class="text-[10px] font-mono uppercase tracking-wider text-[#796e65]">Serial Speculative Noir</span>
+                <h3 class="font-serif font-bold text-sm text-[#163323] leading-snug truncate">The Saltwater Greenhouse: Copper Roots in Winter</h3>
+                <p class="text-xs text-[#796e65] mt-0.5">Author: <strong class="text-[#163323]">Maya Lin</strong></p>
+                <div class="mt-2 flex items-center gap-2">
+                  <div class="flex-1 bg-[#ede3d8] h-1.5 rounded-full overflow-hidden">
+                    <div id="manuscriptProgress" class="bg-[#1b3b2b] h-full w-[23%] transition-all duration-500"></div>
+                  </div>
+                  <span id="manuscriptPercent" class="text-[10px] font-mono font-medium text-[#163323]">23%</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Stats Bar -->
+            <div class="grid grid-cols-2 gap-2 mt-4 pt-3 border-t border-[#f0e4d7] text-center text-xs">
+              <div class="p-2 bg-[#f9f2ea] rounded-xl">
+                <div class="text-[10px] uppercase text-[#8c7f74]">Total Words</div>
+                <div id="totalWordsCounter" class="font-mono font-bold text-[#163323] text-sm">4,300</div>
+              </div>
+              <div class="p-2 bg-[#f9f2ea] rounded-xl">
+                <div class="text-[10px] uppercase text-[#8c7f74]">Active Readers</div>
+                <div id="activeReadersCounter" class="font-mono font-bold text-[#163323] text-sm">1,420</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Chapters Sequence Navigation -->
+          <div class="bg-[#fffaf5] border border-[#e8dcce] rounded-2xl p-4 shadow-sm space-y-3">
+            <div class="flex items-center justify-between pb-2 border-b border-[#f0e4d7]">
+              <span class="text-xs font-serif font-bold uppercase tracking-wider text-[#163323]">Folio Chapters</span>
+              <span class="text-[11px] font-mono text-[#8c7f74]">4 Parts</span>
+            </div>
+
+            <div class="space-y-2">
+              
+              <!-- Prologue (Published) -->
+              <div class="p-3 bg-[#fdf9f4] border border-[#f0e4d7] rounded-xl hover:border-[#1b3b2b]/40 transition-colors cursor-pointer group">
+                <div class="flex items-center justify-between text-xs">
+                  <span class="font-mono text-[10px] text-[#8c7f74]">PROLOGUE</span>
+                  <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-medium bg-emerald-100 text-emerald-800">
+                    ● Published
+                  </span>
+                </div>
+                <div class="font-serif font-semibold text-sm text-[#163323] mt-1 group-hover:text-emerald-900">Brackish Roots</div>
+                <div class="flex items-center gap-3 mt-1.5 text-[11px] text-[#8c7f74]">
+                  <span>👁 1,120 reads</span>
+                  <span>✍ 48 margin notes</span>
+                </div>
+              </div>
+
+              <!-- Chapter 1 (Published) -->
+              <div class="p-3 bg-[#fdf9f4] border border-[#f0e4d7] rounded-xl hover:border-[#1b3b2b]/40 transition-colors cursor-pointer group">
+                <div class="flex items-center justify-between text-xs">
+                  <span class="font-mono text-[10px] text-[#8c7f74]">CHAPTER 1</span>
+                  <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-medium bg-emerald-100 text-emerald-800">
+                    ● Published
+                  </span>
+                </div>
+                <div class="font-serif font-semibold text-sm text-[#163323] mt-1 group-hover:text-emerald-900">The Sluice Gate</div>
+                <div class="flex items-center gap-3 mt-1.5 text-[11px] text-[#8c7f74]">
+                  <span>👁 940 reads</span>
+                  <span>✍ 34 notes</span>
+                </div>
+              </div>
+
+              <!-- Chapter 2 (Target Draft / Focus of Flow) -->
+              <div id="w1Chapter2Card" class="p-3 bg-[#f3eae0] border-2 border-[#163323] rounded-xl shadow-sm transition-all">
+                <div class="flex items-center justify-between text-xs">
+                  <span class="font-mono text-[10px] font-bold text-[#163323]">CHAPTER 2 • ACTIVE</span>
+                  <span id="ch2StatusBadge" class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-semibold bg-amber-200 text-amber-900 border border-amber-300">
+                    ✎ Active Draft
+                  </span>
+                </div>
+                <div class="font-serif font-bold text-sm text-[#163323] mt-1">Copper Manifolds</div>
+                <div class="flex items-center justify-between mt-2 pt-2 border-t border-[#e2d4c5] text-[11px] text-[#554b42]">
+                  <span>1,840 words</span>
+                  <span id="ch2PublishMeta" class="font-medium text-[#b95133]">Ready for Release</span>
+                </div>
+              </div>
+
+              <!-- Chapter 3 (Outline) -->
+              <div class="p-3 bg-[#faf5ef] border border-dashed border-[#e8dcce] rounded-xl opacity-75">
+                <div class="flex items-center justify-between text-xs">
+                  <span class="font-mono text-[10px] text-[#a09489]">CHAPTER 3</span>
+                  <span class="text-[10px] text-[#a09489]">Outline</span>
+                </div>
+                <div class="font-serif text-sm text-[#796e65] mt-1">Brine &amp; Belladonna</div>
+                <div class="text-[11px] text-[#a09489] mt-1">450 words outline synced</div>
+              </div>
+
+            </div>
+
+            <!-- Add Chapter Button -->
+            <button class="w-full py-2 border border-dashed border-[#d5c3b1] hover:border-[#163323] text-xs font-serif text-[#796e65] hover:text-[#163323] rounded-xl transition-colors flex items-center justify-center gap-1.5">
+              <span>+ Add Chapter to Folio</span>
+            </button>
+          </div>
+
+          <!-- Revisions & Cloud Snapshot -->
+          <div class="p-3 bg-[#f5ede3] rounded-xl border border-[#e8dcce] text-xs text-[#796e65] space-y-1">
+            <div class="flex items-center justify-between font-mono text-[10px]">
+              <span class="flex items-center gap-1 text-emerald-800">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span> Synced to Ledger
+              </span>
+              <span>Rev #14 • 18:24</span>
+            </div>
+            <p class="text-[11px]">Cryptographic author proof verified by Perch Archival Engine v2.4.</p>
+          </div>
+
+        </div>
+
+        <!-- Center: Editorial Prose Drafting Desk -->
+        <div class="lg:col-span-6 bg-[#fffaf5] border border-[#e8dcce] rounded-2xl p-6 md:p-8 shadow-sm space-y-6">
+          
+          <!-- Prose Desk Formatting Header -->
+          <div class="flex flex-wrap items-center justify-between pb-4 border-b border-[#f0e4d7] gap-3">
+            <div class="flex items-center gap-1 bg-[#f4ebe1] p-1 rounded-lg text-xs font-mono text-[#554b42]">
+              <button class="px-2 py-1 rounded bg-white shadow-xs font-serif font-bold text-[#163323]">H2</button>
+              <button class="px-2 py-1 rounded hover:bg-white/60 italic font-serif">I</button>
+              <button class="px-2 py-1 rounded hover:bg-white/60 font-serif">””</button>
+              <button class="px-2 py-1 rounded hover:bg-white/60">⁂</button>
+              <span class="text-[#c8b7a6] mx-1">|</span>
+              <button class="px-2 py-1 rounded hover:bg-white/60 flex items-center gap-1">
+                <span>💬 Anchor Note</span>
+              </button>
+            </div>
+
+            <div class="flex items-center gap-2">
+              <span class="text-xs text-[#796e65]">Margin Rights:</span>
+              <select class="text-xs bg-[#f4ebe1] border border-[#e0d0c0] rounded-lg px-2 py-1 font-serif text-[#163323] focus:outline-none">
+                <option>Public Marginalia (Open)</option>
+                <option>Restricted to Guild (W4)</option>
+                <option>Faculty Rubric Only (I2)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Editorial Header -->
+          <div class="text-center space-y-2 py-4 border-b border-[#f0e4d7]">
+            <span class="text-[11px] font-mono tracking-widest uppercase text-[#96897e]">Book I • Volume Sequence 02</span>
+            <h1 class="font-serif text-3xl md:text-4xl font-normal text-[#163323] tracking-tight">Chapter 2: Copper Manifolds</h1>
+            <p class="font-serif italic text-base text-[#706459] max-w-md mx-auto">“The valves do not forgive the salt; they only postpone its crystallization.”</p>
+          </div>
+
+          <!-- Manuscript Body Text -->
+          <div class="prose font-serif text-base md:text-lg leading-relaxed text-[#2c2621] space-y-5">
+            <p>
+              At dawn, the glass ribs of the greenhouse groaned against the morning frost. Maya adjusted her wool sleeves and gripped the bronze petcock of the desalination feeder. Inside the subterranean culvert, three fathoms below the winter waterline of the estuary, the brine pumps were wheezing like old draft horses.
+            </p>
+
+            <p>
+              The copper manifold was weeping green verdigris where the sea salt had chewed through the leaden washers. Maya tapped the gauge with a fingernail wrapped in vulcanized rubber. 
+              <span class="bg-amber-100/80 px-1 py-0.5 rounded border-b border-amber-400 relative cursor-pointer group" title="Author Pinned Inquiry Target">
+                <strong>Forty pounds of hydrostatic head, and the tidal gate had yet to close for low water.</strong>
+                <span class="absolute -top-3 -right-2 bg-[#b95133] text-white text-[9px] font-sans px-1 rounded-full font-bold">!</span>
+              </span>
+              If the tidal surge spilled over the baffle before the heat coils reached temperature, the winter crop of salt-hardened chicory would drown in cold mud before the bell struck noon.
+            </p>
+
+            <!-- Pinned In-Line Author Inquiry Box (W1 Interactive Feature) -->
+            <div id="pinnedInquiryBox" class="my-6 p-4 bg-[#f9f2ea] border-l-4 border-[#b95133] rounded-r-xl shadow-xs space-y-2 transition-all">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-1.5 text-xs font-semibold text-[#b95133]">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path>
+                  </svg>
+                  <span>Author In-Line Inquiry (Target: Paragraph 2, Line 84)</span>
+                </div>
+                <span class="text-[10px] font-mono text-[#8c7f74] bg-white px-2 py-0.5 rounded border border-[#e8dcce]">Public Prompt</span>
+              </div>
+              <p id="inquiryContentText" class="text-xs font-serif italic text-[#4a4037]">
+                “Ask readers about the pacing at the valve transition in line 84. Does the hydrostatic jargon slow down the character’s internal stakes, or does it heighten the claustrophobic dread?”
+              </p>
+              <div class="pt-2 flex items-center justify-between text-[11px] text-[#796e65]">
+                <span class="flex items-center gap-1 text-emerald-800 font-medium">
+                  ✓ Configured to appear automatically in Reader View (R9)
+                </span>
+                <button onclick="editInquiryPrompt()" class="text-[#b95133] hover:underline">Edit Prompt</button>
+              </div>
+            </div>
+
+            <p class="text-center font-serif text-xl tracking-widest text-[#a89989]">⁂</p>
+
+            <p>
+              “You’re late with the charcoal slag,” she said without looking back toward the bulkhead stairs.
+            </p>
+            <p>
+              Julian didn’t answer right away. He dropped his wooden hod onto the floorboards with a dull wooden thud, showering dry oak embers across the damp cedar duckboards. His apron smelled of sulfur and elderberry wine. When he pulled his gloves free, his fingers were stained with walnut oil—the sign that he had been polishing the optical lenses in the south observation dome rather than tending the boiler flues.
+            </p>
+            <p>
+              “The fog came over the dunes before five,” he murmured, his breath forming small silver plumes in the chilly nave. “The lighthouse keeper claims the channel ice is already four inches thick south of the sand spit. The mail skiff turned back.”
+            </p>
+          </div>
+
+          <!-- Bottom Desk Meta -->
+          <div class="pt-6 border-t border-[#f0e4d7] flex flex-wrap items-center justify-between text-xs text-[#796e65] font-serif">
+            <div>Page 47 of Vol. I • 1,840 words / 10,214 chars</div>
+            <div class="font-mono text-[11px] text-[#163323]">Typesetting: Newsreader Roman • 11.5pt on 17pt</div>
+          </div>
+
+        </div>
+
+        <!-- Right: Publishing Channels & Reader Telemetry Triggers -->
+        <div class="lg:col-span-3 space-y-4"><div id="publisherLaunchCard" class="bg-[#fffaf5] border-2 border-[#163323] rounded-2xl p-4 shadow-sm space-y-3.5"><div class="flex items-center justify-between pb-2 border-b border-[#f0e4d7]"><div class="flex items-center gap-2"><span class="w-6 h-6 rounded bg-[#163323] text-amber-200 text-[10px] font-mono font-bold flex items-center justify-center">P1</span><div><h3 class="font-serif font-bold text-xs text-[#163323] leading-none">Publisher Contract &amp; Launch</h3><span class="text-[9px] font-mono text-[#8c7f74]">Riverhead &amp; Birch Press</span></div></div><span class="text-[9px] font-mono font-semibold bg-emerald-100 text-emerald-800 px-1.5 py-0.5 rounded border border-emerald-200">P1/P2 Sync</span></div><div class="space-y-1.5 bg-[#f8f1e8] p-2.5 rounded-xl border border-[#e6d8cb] text-xs font-mono"><div class="flex justify-between text-[11px]"><span class="text-[#796e65]">Edition Registry:</span><span class="font-bold text-[#163323]">#8492-VOL1</span></div><div class="flex justify-between text-[11px]"><span class="text-[#796e65]">ISBN-13 (Trade):</span><span class="font-semibold text-[#163323]">978-0-593-418</span></div><div class="flex justify-between text-[10px]"><span class="text-[#796e65]">Formats:</span><span class="text-[#163323]">Hardcover, EPUB3, Audio</span></div></div><div class="space-y-2 pt-1"><div class="flex items-center justify-between text-xs"><span class="font-serif font-bold text-[#163323] text-[11px]">Expectation Baseline (W=1.00)</span><span class="text-[10px] font-mono text-emerald-700 bg-emerald-50 px-1.5 py-0.2 rounded border border-emerald-200">P1 Calibrated</span></div><div class="space-y-1.5 text-[10px] font-mono"><div class="flex items-center justify-between"><span class="text-[#63574c]">Narrative Velocity</span><span class="font-bold text-[#163323]">25% (Meditative)</span></div><div class="w-full bg-[#ede3d8] h-1.5 rounded-full overflow-hidden"><div class="bg-[#28543e] h-full w-[25%]"></div></div><div class="flex items-center justify-between"><span class="text-[#63574c]">Prose Texture</span><span class="font-bold text-[#163323]">85% (Lyrical/Dense)</span></div><div class="w-full bg-[#ede3d8] h-1.5 rounded-full overflow-hidden"><div class="bg-[#b95133] h-full w-[85%]"></div></div><div class="flex items-center justify-between"><span class="text-[#63574c]">Ecological Depth</span><span class="font-bold text-[#163323]">70% (Documented)</span></div><div class="w-full bg-[#ede3d8] h-1.5 rounded-full overflow-hidden"><div class="bg-[#1b3b2b] h-full w-[70%]"></div></div></div></div><div class="p-2.5 bg-[#fdf5eb] rounded-xl border border-amber-300/80 space-y-1.5"><div class="flex items-center justify-between text-xs"><span class="font-semibold text-[#163323] text-[11px] flex items-center gap-1"><span class="text-amber-600">●</span> P2 ARC Proof Dispatch</span><span class="font-mono text-[10px] text-amber-900 font-bold bg-amber-100 px-1.5 py-0.2 rounded">142/250 Claimed</span></div><p class="text-[10px] text-[#796e65]">Steganographic proof watermarking active (SHA-256). ARC Cohort matches:</p><div class="flex flex-wrap gap-1 text-[9px] font-mono"><span class="px-1.5 py-0.5 bg-white border border-amber-300 rounded text-emerald-800 font-bold">Midwest Curators 98%</span><span class="px-1.5 py-0.5 bg-white border border-amber-300 rounded text-[#163323]">High-Concordance 94%</span><span class="px-1.5 py-0.5 bg-white border border-amber-300 rounded text-[#163323]">Verified Marginators 89%</span></div></div><div class="pt-1 space-y-1.5"><span class="text-[10px] font-mono uppercase tracking-wider text-[#796e65] block">Retail &amp; Indie Outbound Channels</span><div class="grid grid-cols-3 gap-1 text-[10px] text-center font-serif"><a href="#" onclick="event.preventDefault()" class="p-1.5 bg-white border border-[#d8c7b5] rounded-lg hover:border-[#163323] text-[#163323]">Bookshop</a><a href="#" onclick="event.preventDefault()" class="p-1.5 bg-white border border-[#d8c7b5] rounded-lg hover:border-[#163323] text-[#163323]">Powell's</a><a href="#" onclick="event.preventDefault()" class="p-1.5 bg-[#163323] text-amber-200 border border-[#274f37] rounded-lg">Birch Direct</a></div></div></div>
+          
+          <!-- Publishing Channel Selector -->
+          <div class="bg-[#fffaf5] border border-[#e8dcce] rounded-2xl p-5 shadow-sm space-y-4">
+            <div class="flex items-center justify-between pb-2 border-b border-[#f0e4d7]">
+              <h3 class="font-serif font-bold text-sm text-[#163323]">Release Channels</h3>
+              <span class="text-xs text-emerald-700 font-mono">● Global Ready</span>
+            </div>
+
+            <div class="space-y-2 text-xs">
+              <label class="flex items-start gap-2.5 p-2.5 bg-[#f5ede3] border border-[#1b3b2b]/30 rounded-xl cursor-pointer">
+                <input type="radio" name="releaseChannel" checked="" class="mt-0.5 text-[#1b3b2b] focus:ring-[#1b3b2b]">
+                <div>
+                  <div class="font-semibold text-[#163323]">Public Perch Feed (R1/W1)</div>
+                  <div class="text-[11px] text-[#796e65]">Broadcasts instantly to all reading circles and book feeds.</div>
+                </div>
+              </label>
+
+              <label class="flex items-start gap-2.5 p-2.5 bg-white border border-[#e8dcce] rounded-xl cursor-pointer hover:bg-[#faf5ef]">
+                <input type="radio" name="releaseChannel" class="mt-0.5 text-[#1b3b2b]">
+                <div>
+                  <div class="font-semibold text-[#163323]">Subscribers &amp; Guild (W4)</div>
+                  <div class="text-[11px] text-[#796e65]">Restricted to patron supporters and invited salon circles.</div>
+                </div>
+              </label>
+
+              <label class="flex items-start gap-2.5 p-2.5 bg-white border border-[#e8dcce] rounded-xl cursor-pointer hover:bg-[#faf5ef]">
+                <input type="radio" name="releaseChannel" class="mt-0.5 text-[#1b3b2b]">
+                <div>
+                  <div class="font-semibold text-[#163323]">Private Workshop Peer-Review</div>
+                  <div class="text-[11px] text-[#796e65]">Shared with designated 5 beta readers only.</div>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <!-- Reader Experience Switches (W2 / W6 Controls) -->
+          <div class="bg-[#fffaf5] border border-[#e8dcce] rounded-2xl p-5 shadow-sm space-y-4">
+            <h3 class="font-serif font-bold text-sm text-[#163323]">Reader Experience (W2/W6)</h3>
+            
+            <div class="space-y-3 text-xs">
+              <div class="flex items-center justify-between">
+                <div>
+                  <div class="font-semibold text-[#163323]">Live Inline Marginalia</div>
+                  <div class="text-[10px] text-[#796e65]">Readers leave text-anchored notes</div>
+                </div>
+                <input type="checkbox" checked="" class="w-4 h-4 text-[#1b3b2b] rounded">
+              </div>
+
+              <div class="flex items-center justify-between">
+                <div>
+                  <div class="font-semibold text-[#163323]">Pacing &amp; Drop-off Heatmap</div>
+                  <div class="text-[10px] text-[#796e65]">Visualizes reading dwell time</div>
+                </div>
+                <input type="checkbox" checked="" class="w-4 h-4 text-[#1b3b2b] rounded">
+              </div>
+
+              <div class="flex items-center justify-between">
+                <div>
+                  <div class="font-semibold text-[#163323]">Audio Salon Synthesis</div>
+                  <div class="text-[10px] text-[#796e65]">Generates tactile AI narration</div>
+                </div>
+                <input type="checkbox" class="w-4 h-4 text-[#1b3b2b] rounded">
+              </div>
+            </div>
+          </div>
+
+          <!-- Primary CTA Box -->
+          <div class="bg-gradient-to-b from-[#1b3b2b] to-[#12281d] text-white p-5 rounded-2xl shadow-md border border-[#2b5941] space-y-3">
+            <div class="text-xs text-[#a4d4b9] font-mono">SIMULATION CONTROLLER</div>
+            <h4 class="font-serif font-bold text-base text-white">Ready to Dispatch Chapter 2?</h4>
+            <p class="text-xs text-[#a4d4b9] leading-relaxed">Publishing will update the public Perch catalog, notify 1,420 followers, and immediately open Chapter 2 in the Reader View (R9).</p>
+            
+            <button onclick="triggerPublishFlow()" class="w-full py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-medium text-xs rounded-xl transition-all shadow-md flex items-center justify-center gap-2">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+              </svg>
+              <span>Execute Live Publish Flow (W1 ➔ R9)</span>
+            </button>
+
+            <button onclick="switchView('reader')" class="w-full py-2 bg-transparent hover:bg-white/10 text-xs text-[#a4d4b9] rounded-xl transition-colors">
+              Preview Existing Published Works (R9)
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div><div id="publisherView" class="hidden space-y-6"><div class="bg-gradient-to-r from-[#163323] to-[#0d1e15] text-white p-4 rounded-2xl shadow-sm border border-[#2b5941] flex flex-wrap items-center justify-between gap-4"><div class="flex items-center gap-3"><div class="w-9 h-9 rounded-xl bg-amber-500/20 text-amber-300 border border-amber-500/40 flex items-center justify-center font-mono text-sm font-bold">P1/P2</div><div><div class="flex items-center gap-2"><h2 class="text-base font-semibold text-white font-serif tracking-tight">Publisher Book Launch &amp; ARC Dispatch Protocol</h2><span class="bg-emerald-500/20 text-emerald-300 text-[11px] px-2 py-0.5 rounded-full border border-emerald-500/30">Riverhead &amp; Birch Press Imprint</span></div><p class="text-xs text-[#a4d4b9]">Bibliographic registry, expectation contract baseline calibration, and 250 targeted ARC watermarked proofs.</p></div></div><div class="flex items-center gap-3"><button onclick="switchView('writer')" class="px-3.5 py-1.5 rounded-xl bg-[#244b36] hover:bg-[#2d5c43] text-xs text-[#c4e6d2] font-medium transition-all border border-[#3b7355]">Back to W1 Draft</button><button onclick="triggerPublishFlow()" class="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-medium text-xs shadow-lg shadow-emerald-950/40 transition-all flex items-center gap-2 border border-emerald-400/40"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Authorize Catalog Dispatch (P2 ➔ R9)</span></button></div></div><div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start"><div class="lg:col-span-4 bg-[#fffaf5] border border-[#e8dcce] rounded-2xl p-5 shadow-sm space-y-4"><div class="flex items-center justify-between pb-2 border-b border-[#f0e4d7]"><h3 class="font-serif font-bold text-sm text-[#163323]">P1 Bibliographic Contract Record</h3><span class="text-[10px] font-mono text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded font-bold">Registry Confirmed</span></div><div class="space-y-2 text-xs"><div class="p-3 bg-[#fdf9f4] border border-[#f0e4d7] rounded-xl space-y-1 font-mono text-[11px]"><div class="flex justify-between"><span class="text-[#796e65]">Title:</span><span class="text-[#163323] font-serif font-bold">The Saltwater Greenhouse</span></div><div class="flex justify-between"><span class="text-[#796e65]">Author:</span><span class="text-[#163323]">Maya Lin</span></div><div class="flex justify-between"><span class="text-[#796e65]">Edition Registry ID:</span><span class="text-emerald-800 font-bold">#8492-VOL1</span></div><div class="flex justify-between"><span class="text-[#796e65]">ISBN-13 (Trade Ed.):</span><span class="text-[#163323]">978-0-593-418</span></div><div class="flex justify-between"><span class="text-[#796e65]">Press Imprint:</span><span class="text-[#163323]">Riverhead &amp; Birch Press</span></div><div class="flex justify-between"><span class="text-[#796e65]">Catalog Formats:</span><span class="text-[#163323]">Hardcover, EPUB3, Audio</span></div></div><div class="p-3 bg-[#f5ede3] border border-[#e8dcce] rounded-xl space-y-2"><span class="font-serif font-bold text-[#163323] text-xs block">Verified Retail Links</span><div class="flex flex-col gap-1.5 font-sans text-xs"><div class="flex items-center justify-between p-2 bg-white rounded-lg border border-[#d8c7b5]"><span class="font-semibold text-[#163323]">Bookshop.org</span><span class="font-mono text-[10px] text-emerald-700">Active ($28.00)</span></div><div class="flex items-center justify-between p-2 bg-white rounded-lg border border-[#d8c7b5]"><span class="font-semibold text-[#163323]">Powell's Books</span><span class="font-mono text-[10px] text-emerald-700">Preorder Stocked</span></div><div class="flex items-center justify-between p-2 bg-white rounded-lg border border-[#d8c7b5]"><span class="font-semibold text-[#163323]">Birch House Direct</span><span class="font-mono text-[10px] text-[#b95133] font-bold">Signed First Ed.</span></div></div></div></div></div><div class="lg:col-span-5 bg-[#fffaf5] border border-[#e8dcce] rounded-2xl p-6 shadow-sm space-y-5"><div class="flex items-center justify-between pb-3 border-b border-[#f0e4d7]"><div><h3 class="font-serif font-bold text-base text-[#163323]">Expectation Contract Calibration (P1)</h3><p class="text-xs text-[#796e65]">Defines authorial intent baselines used to compute reader concordance scores.</p></div><span class="text-xs font-mono bg-[#1b3b2b] text-amber-200 px-2.5 py-1 rounded-full font-bold">Weight 1.00</span></div><div class="space-y-4"><div class="p-3.5 bg-[#f9f2ea] border border-[#efe3d6] rounded-xl space-y-2"><div class="flex justify-between text-xs"><span class="font-semibold text-[#163323]">Narrative Velocity</span><span class="font-mono text-[#163323] font-bold">25% (Meditative / Slow-burn)</span></div><div class="w-full bg-[#ede3d8] h-2 rounded-full overflow-hidden"><div class="bg-[#28543e] h-full w-[25%]"></div></div><p class="text-[11px] text-[#796e65]">Promises atmospheric hydraulic pacing; warns action seekers of gradual tension building.</p></div><div class="p-3.5 bg-[#f9f2ea] border border-[#efe3d6] rounded-xl space-y-2"><div class="flex justify-between text-xs"><span class="font-semibold text-[#163323]">Prose Texture</span><span class="font-mono text-[#163323] font-bold">85% (Lyrical / Dense Sensory)</span></div><div class="w-full bg-[#ede3d8] h-2 rounded-full overflow-hidden"><div class="bg-[#b95133] h-full w-[85%]"></div></div><p class="text-[11px] text-[#796e65]">Dense artisanal newsreader prose with rich physical salinity metaphors.</p></div><div class="p-3.5 bg-[#f9f2ea] border border-[#efe3d6] rounded-xl space-y-2"><div class="flex justify-between text-xs"><span class="font-semibold text-[#163323]">Ecological World Depth</span><span class="font-mono text-[#163323] font-bold">70% (Richly Documented)</span></div><div class="w-full bg-[#ede3d8] h-2 rounded-full overflow-hidden"><div class="bg-[#1b3b2b] h-full w-[70%]"></div></div><p class="text-[11px] text-[#796e65]">Grounded climate mechanics, estuaries, culverts, and tidal hydraulics.</p></div><div class="p-3.5 bg-[#f9f2ea] border border-[#efe3d6] rounded-xl space-y-2"><div class="flex justify-between text-xs"><span class="font-semibold text-[#163323]">Emotional Gravity</span><span class="font-mono text-[#163323] font-bold">60% (Elegiac Melancholy)</span></div><div class="w-full bg-[#ede3d8] h-2 rounded-full overflow-hidden"><div class="bg-[#554b42] h-full w-[60%]"></div></div><p class="text-[11px] text-[#796e65]">Subtle character friction without melodrama.</p></div></div></div><div class="lg:col-span-3 bg-[#fffaf5] border border-[#e8dcce] rounded-2xl p-5 shadow-sm space-y-4"><div class="flex items-center justify-between pb-2 border-b border-[#f0e4d7]"><h3 class="font-serif font-bold text-sm text-[#163323]">P2 Targeted ARC Pool</h3><span class="text-[10px] font-mono text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded font-bold">Live Pool</span></div><div class="p-3.5 bg-[#163323] text-white rounded-xl space-y-2"><div class="flex justify-between items-baseline"><span class="text-xs text-[#a4d4b9]">Claimed Proofs:</span><span class="text-lg font-mono font-bold text-amber-200">142 / 250</span></div><div class="w-full bg-[#244933] h-2 rounded-full overflow-hidden"><div class="bg-amber-300 h-full w-[56.8%]"></div></div><div class="flex justify-between text-[10px] text-[#a4d4b9]"><span>56.8% Distributed</span><span>108 Reserve</span></div></div><div class="space-y-2 text-xs"><span class="font-serif font-bold text-[#163323] block text-xs">Steganographic Proof Security</span><div class="p-2.5 bg-[#fdf5eb] border border-amber-300/80 rounded-xl space-y-1 text-[11px]"><div class="text-[#163323] font-bold">SHA-256 Watermarking Active</div><p class="text-[#796e65]">Each ARC carries invisible cryptographic reader hash tied to reviewer salon wallet.</p></div></div><div class="space-y-1.5 text-xs"><span class="font-serif font-bold text-[#163323] block text-xs">Matched Taste Cohorts</span><div class="space-y-1 font-mono text-[11px]"><div class="p-2 bg-[#f9f2ea] rounded-lg border border-[#e8dcce] flex justify-between"><span>Midwest Salon Curators</span><span class="text-emerald-800 font-bold">98% match</span></div><div class="p-2 bg-[#f9f2ea] rounded-lg border border-[#e8dcce] flex justify-between"><span>High-Concordance Readers</span><span class="text-emerald-800 font-bold">94% match</span></div><div class="p-2 bg-[#f9f2ea] rounded-lg border border-[#e8dcce] flex justify-between"><span>Verified Marginators</span><span class="text-emerald-800 font-bold">89% match</span></div></div></div></div></div></div>
+
+    <!-- VIEW 2: READER VIEW OF PERCH PUBLISHED WORKS (R9) -->
+    <div id="readerView" class="hidden space-y-6">
+      
+      <!-- Flow Breadcrumb & Guidance Banner -->
+      <div class="bg-[#fffaf5] border border-[#e8dcce] p-4 rounded-2xl shadow-sm flex flex-wrap items-center justify-between gap-4">
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-xl bg-[#1b3b2b] flex items-center justify-center text-amber-200 font-mono text-sm font-bold shadow-xs">
+            R9
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <h2 class="text-base font-semibold text-[#163323] font-serif tracking-tight">Reader View — Published Works &amp; Live Marginalia</h2>
+              <span id="readerStatusChip" class="bg-emerald-100 text-emerald-800 text-[11px] px-2.5 py-0.5 rounded-full font-medium">Viewing Chapter 2 (Live from W1)</span>
+            </div>
+            <p class="text-xs text-[#796e65]">Distraction-free typography, community margin reactions, and author-anchored dialogue prompts.</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <button onclick="switchView('writer')" class="px-3.5 py-1.5 rounded-xl bg-white hover:bg-[#faf5ef] text-xs text-[#163323] font-medium transition-all border border-[#d8c7b5] flex items-center gap-1.5">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+            </svg>
+            <span>Back to Writer Studio (W1)</span>
+          </button>
+          <button onclick="openAnnotationComposer()" class="px-4 py-2 rounded-xl bg-[#1b3b2b] hover:bg-[#28543e] text-white font-medium text-xs shadow-sm transition-all flex items-center gap-2">
+            <svg class="w-4 h-4 text-amber-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path>
+            </svg>
+            <span>Leave Margin Note</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Main R9 Layout (3-Column Reader Desk) -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+        
+        <!-- Left: Reading Navigation & Telemetry -->
+        <div class="lg:col-span-3 space-y-4">
+          
+          <!-- Table of Contents -->
+          <div class="bg-[#fffaf5] border border-[#e8dcce] rounded-2xl p-4 shadow-sm space-y-3">
+            <div class="flex items-center justify-between pb-2 border-b border-[#f0e4d7]">
+              <span class="text-xs font-serif font-bold uppercase tracking-wider text-[#163323]">Manuscript Contents</span>
+              <span id="readerChapCounter" class="text-[11px] font-mono text-emerald-800 font-bold bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">Ch. 2 of 4</span>
+            </div>
+
+            <div class="space-y-1.5 text-xs font-serif">
+              <div onclick="selectReaderChapter(0)" class="p-2.5 rounded-xl hover:bg-[#faf5ef] transition-colors cursor-pointer flex items-center justify-between text-[#796e65]">
+                <span>1. Brackish Roots</span>
+                <span class="text-[10px] font-mono text-[#a89989]">2.8k</span>
+              </div>
+              <div onclick="selectReaderChapter(1)" class="p-2.5 rounded-xl hover:bg-[#faf5ef] transition-colors cursor-pointer flex items-center justify-between text-[#796e65]">
+                <span>2. The Sluice Gate</span>
+                <span class="text-[10px] font-mono text-[#a89989]">3.1k</span>
+              </div>
+              <div id="readerNavCh2" onclick="selectReaderChapter(2)" class="p-2.5 rounded-xl bg-[#1b3b2b] text-white font-medium transition-all cursor-pointer flex items-center justify-between shadow-xs">
+                <span class="flex items-center gap-1.5">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                  <span>3. Copper Manifolds</span>
+                </span>
+                <span class="text-[10px] font-mono text-emerald-200">1.8k</span>
+              </div>
+              <div class="p-2.5 rounded-xl text-[#b0a498] opacity-60 flex items-center justify-between">
+                <span>4. Brine &amp; Belladonna</span>
+                <span class="text-[10px] font-mono">Draft</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Author Bio & Direct Connection Card -->
+          <div class="bg-[#fffaf5] border border-[#e8dcce] rounded-2xl p-4 shadow-sm space-y-3">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-[#163323] text-white flex items-center justify-center font-serif font-bold text-sm">
+                ML
+              </div>
+              <div>
+                <h4 class="font-serif font-bold text-sm text-[#163323]">Maya Lin</h4>
+                <p class="text-[11px] text-[#796e65]">Perch Resident Fellow • Midwest Cohort</p>
+              </div>
+            </div>
+
+            <div class="p-3 bg-[#f7efe6] rounded-xl border border-[#ede1d3] text-xs space-y-1.5">
+              <div class="font-semibold text-[#163323] text-[11px] flex items-center gap-1">
+                <span class="text-amber-600">★</span> Author Note on Chapter 2:
+              </div>
+              <p class="font-serif italic text-[#554b42] text-[11px]">
+                “Welcome to the high-water sequence. Please pay special attention to paragraph 2. I have anchored an inquiry regarding the hydrostatic pressure pacing.”
+              </p>
+            </div>
+
+            <button class="w-full py-1.5 border border-[#1b3b2b] text-[#1b3b2b] hover:bg-[#1b3b2b] hover:text-white rounded-xl text-xs font-medium transition-colors">
+              + Follow Maya Lin (1,420 readers)
+            </button>
+          </div>
+
+          <!-- Chapter Resonance Counters -->
+          <div class="bg-[#fffaf5] border border-[#e8dcce] rounded-2xl p-4 shadow-sm">
+            <span class="text-xs font-serif font-bold uppercase tracking-wider text-[#163323] block mb-3">Live Chapter Telemetry</span>
+            <div class="grid grid-cols-2 gap-2 text-center text-xs">
+              <div class="p-2.5 bg-[#f9f2ea] rounded-xl border border-[#efe3d6]">
+                <div id="telemetryReads" class="font-mono font-bold text-[#163323] text-base">1,420</div>
+                <div class="text-[10px] text-[#8c7f74] uppercase mt-0.5">Reads</div>
+              </div>
+              <div class="p-2.5 bg-[#f9f2ea] rounded-xl border border-[#efe3d6]">
+                <div id="telemetryNotes" class="font-mono font-bold text-[#b95133] text-base">35</div>
+                <div class="text-[10px] text-[#8c7f74] uppercase mt-0.5">Marginalia</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Center: Reader Typography Canvas -->
+        <div class="lg:col-span-6 bg-[#fffaf5] border border-[#e8dcce] rounded-2xl p-6 md:p-10 shadow-sm space-y-6"><div id="readerPublisherBanner" class="p-4 bg-gradient-to-r from-[#1b3b2b] to-[#163323] text-white rounded-xl border border-[#2b5941] shadow-sm space-y-2.5"><div class="flex flex-wrap items-center justify-between gap-2"><div class="flex items-center gap-2"><span class="px-2 py-0.5 rounded bg-amber-400 text-[#163323] font-mono text-[10px] font-bold uppercase tracking-wider">P1 Official Book Launch</span><span class="text-xs text-[#c4e6d2] font-mono">Registry #8492-VOL1</span><span class="text-xs text-[#a4d4b9]/80 font-mono">ISBN 978-0-593-418</span></div><span class="text-[10px] font-mono text-emerald-300 bg-[#244933] px-2 py-0.5 rounded border border-[#356147]">Riverhead &amp; Birch Press</span></div><div class="grid grid-cols-1 md:grid-cols-3 gap-2 pt-1 border-t border-[#244933] text-xs"><div class="p-2 bg-[#0d1e15]/60 rounded-lg"><span class="text-[10px] text-[#a4d4b9] block font-mono">Expectation Concordance:</span><span class="font-serif font-bold text-amber-200">88% Alignment (Weight 1.00)</span><span class="text-[10px] text-[#c4e6d2] block">Meditative Velocity • Dense Lyrical</span></div><div class="p-2 bg-[#0d1e15]/60 rounded-lg"><span class="text-[10px] text-[#a4d4b9] block font-mono">ARC Proof Distribution:</span><span class="font-serif font-bold text-white">142 / 250 Proofs Claimed</span><span class="text-[10px] text-emerald-300 block">SHA-256 Watermark Active</span></div><div class="p-2 bg-[#0d1e15]/60 rounded-lg flex flex-col justify-between"><span class="text-[10px] text-[#a4d4b9] block font-mono">Acquire Published Edition:</span><div class="flex gap-1.5 mt-1"><a href="#" onclick="event.preventDefault()" class="px-2 py-1 bg-white text-[#163323] hover:bg-emerald-100 rounded text-[10px] font-semibold">Bookshop</a><a href="#" onclick="event.preventDefault()" class="px-2 py-1 bg-white text-[#163323] hover:bg-emerald-100 rounded text-[10px] font-semibold">Powell's</a><a href="#" onclick="event.preventDefault()" class="px-2 py-1 bg-amber-400 text-[#163323] hover:bg-amber-300 rounded text-[10px] font-bold">Birch Direct</a></div></div></div></div>
+          
+          <!-- Reader Top Controls -->
+          <div class="flex items-center justify-between text-xs text-[#796e65] pb-4 border-b border-[#f0e4d7]">
+            <div class="flex items-center gap-3">
+              <span class="font-mono text-[11px] bg-[#f5ede3] px-2 py-0.5 rounded text-[#163323]">Serif 18px</span>
+              <span>12 min read • 1,840 words</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <button onclick="bookmarkPassage()" class="hover:text-[#163323] flex items-center gap-1">
+                <span>🔖 Save Shelf</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Reader Header -->
+          <div class="space-y-2 text-center py-4 border-b border-[#f0e4d7]">
+            <span class="text-xs font-mono tracking-widest uppercase text-[#96897e]">Serialized Folio • Chapter 2</span>
+            <h1 class="font-serif text-3xl md:text-4xl text-[#163323] tracking-tight">Copper Manifolds</h1>
+            <p class="text-xs text-[#796e65]">By <strong class="text-[#163323]">Maya Lin</strong> • Published via Perch Web Ledger</p>
+          </div>
+
+          <!-- Reader Content (Newsreader Serif) -->
+          <div class="prose font-serif text-lg leading-relaxed text-[#2c2621] space-y-6">
+            <p>
+              At dawn, the glass ribs of the greenhouse groaned against the morning frost. Maya adjusted her wool sleeves and gripped the bronze petcock of the desalination feeder. Inside the subterranean culvert, three fathoms below the winter waterline of the estuary, the brine pumps were wheezing like old draft horses.
+            </p>
+
+            <!-- ANCHORED PARAGRAPH CONNECTED DIRECTLY TO W1 INQUIRY -->
+            <div class="relative group p-3 -mx-3 rounded-xl transition-all hover:bg-[#fff5e8] border-l-2 border-transparent hover:border-amber-500">
+              <p>
+                The copper manifold was weeping green verdigris where the sea salt had chewed through the leaden washers. Maya tapped the gauge with a fingernail wrapped in vulcanized rubber. 
+                <mark id="readerHighlightedPassage" class="bg-amber-100 px-1 py-0.5 rounded border-b-2 border-amber-500 text-[#1b3b2b] font-medium">
+                  Forty pounds of hydrostatic head, and the tidal gate had yet to close for low water.
+                </mark>
+                If the tidal surge spilled over the baffle before the heat coils reached temperature, the winter crop of salt-hardened chicory would drown in cold mud before the bell struck noon.
+              </p>
+
+              <!-- Live Author Inquiry Prompt Embedded in Reader View -->
+              <div id="readerInquiryCard" class="mt-4 p-4 bg-[#fbf5ed] border border-[#e2d2c1] rounded-xl shadow-xs space-y-2.5">
+                <div class="flex items-center justify-between text-xs">
+                  <span class="flex items-center gap-1.5 text-[#b95133] font-bold">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <span>Author Craft Inquiry (Maya Lin):</span>
+                  </span>
+                  <span class="text-[10px] font-mono text-[#8c7f74]">Anchored to Paragraph 2</span>
+                </div>
+                
+                <p id="readerPromptText" class="text-xs font-serif italic text-[#4a4037]">
+                  “Ask readers about the pacing at the valve transition in line 84. Does the hydrostatic jargon slow down the character’s internal stakes, or does it heighten the claustrophobic dread?”
+                </p>
+
+                <!-- Reader In-Line Response Form -->
+                <div class="pt-2 flex items-center gap-2">
+                  <input id="readerReplyInput" type="text" placeholder="Add your response to Maya's craft question..." class="flex-1 text-xs bg-white border border-[#d8c7b5] rounded-lg px-3 py-2 font-sans focus:outline-none focus:border-[#163323]">
+                  <button onclick="submitReaderReply()" class="px-3 py-2 bg-[#1b3b2b] hover:bg-[#28543e] text-white text-xs font-medium rounded-lg transition-colors">
+                    Respond
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <p class="text-center font-serif text-2xl text-[#bda894]">⁂</p>
+
+            <p>
+              “You’re late with the charcoal slag,” she said without looking back toward the bulkhead stairs.
+            </p>
+            <p>
+              Julian didn’t answer right away. He dropped his wooden hod onto the floorboards with a dull wooden thud, showering dry oak embers across the damp cedar duckboards. His apron smelled of sulfur and elderberry wine.
+            </p>
+
+            <!-- Community Highlights Container -->
+            <div class="p-4 bg-[#f8f1e8] rounded-xl border border-[#e6d8cb] space-y-3">
+              <div class="flex items-center justify-between text-xs text-[#796e65]">
+                <span class="font-serif font-bold text-[#163323]">Reader Reaction Matrix</span>
+                <span>88% Expectation Concordance</span>
+              </div>
+              <div class="flex flex-wrap gap-2 text-xs">
+                <button onclick="addReaction('Luminous Prose')" class="px-2.5 py-1 rounded-full bg-white border border-[#d8c7b5] hover:border-[#163323] text-[#163323] flex items-center gap-1 transition-all">
+                  <span>✨ Luminous Prose</span>
+                  <span id="reactLuminousCount" class="font-mono text-[10px] text-[#796e65]">48</span>
+                </button>
+                <button onclick="addReaction('Tense Pacing')" class="px-2.5 py-1 rounded-full bg-white border border-[#d8c7b5] hover:border-[#163323] text-[#163323] flex items-center gap-1 transition-all">
+                  <span>⚡ Tense Pacing</span>
+                  <span id="reactPacingCount" class="font-mono text-[10px] text-[#796e65]">36</span>
+                </button>
+                <button onclick="addReaction('Atmospheric')" class="px-2.5 py-1 rounded-full bg-white border border-[#d8c7b5] hover:border-[#163323] text-[#163323] flex items-center gap-1 transition-all">
+                  <span>🌊 Atmospheric</span>
+                  <span id="reactAtmoCount" class="font-mono text-[10px] text-[#796e65]">29</span>
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Bottom Reader Feedback Box -->
+          <div class="pt-6 border-t border-[#f0e4d7] flex items-center justify-between text-xs text-[#796e65]">
+            <span>Next: Chapter 3 (Releases Oct 18, 2025)</span>
+            <button onclick="switchView('writer')" class="text-[#163323] font-semibold hover:underline">
+              Switch back to Maya’s Publishing Suite (W1) ➔
+            </button>
+          </div>
+
+        </div>
+
+        <!-- Right: Live Marginalia Sidebar (Real-time sync) -->
+        <div class="lg:col-span-3 space-y-4">
+          
+          <div class="bg-[#fffaf5] border border-[#e8dcce] rounded-2xl p-4 shadow-sm space-y-4">
+            <div class="flex items-center justify-between pb-2 border-b border-[#f0e4d7]">
+              <div class="flex items-center gap-2">
+                <h3 class="font-serif font-bold text-sm text-[#163323]">Marginalia Reel</h3>
+                <span id="notesCountBadge" class="bg-[#1b3b2b] text-white text-[10px] font-mono px-2 py-0.2 rounded-full">35 Notes</span>
+              </div>
+              <span class="text-[10px] text-emerald-800 font-medium">● Live Sync</span>
+            </div>
+
+            <!-- Notes List -->
+            <div id="marginaliaStream" class="space-y-3 max-h-[580px] overflow-y-auto pr-1">
+              
+              <!-- Pinned Author Note -->
+              <div class="p-3 bg-[#fdf5eb] border border-amber-300/80 rounded-xl space-y-1.5">
+                <div class="flex items-center justify-between text-xs">
+                  <div class="flex items-center gap-1.5">
+                    <span class="font-semibold text-[#163323]">Maya Lin</span>
+                    <span class="bg-amber-100 text-amber-800 text-[9px] font-mono px-1 rounded">AUTHOR</span>
+                  </div>
+                  <span class="text-[10px] text-[#96897e]">Para 2</span>
+                </div>
+                <p class="text-xs font-serif text-[#4a4037]">
+                  “Testing whether Julian’s entrance breaks the dread too abruptly or provides the right release valve.”
+                </p>
+              </div>
+
+              <!-- Reader Annotation 1 -->
+              <div class="p-3 bg-white border border-[#e8dcce] rounded-xl space-y-1.5">
+                <div class="flex items-center justify-between text-xs">
+                  <div class="flex items-center gap-1.5">
+                    <span class="font-semibold text-[#163323]">Julian Rivera</span>
+                    <span class="text-[10px] text-[#8c7f74]">94% Taste</span>
+                  </div>
+                  <span class="text-[10px] text-[#96897e]">Para 2</span>
+                </div>
+                <p class="text-xs font-serif italic text-[#63574c]">“Forty pounds of hydrostatic head...”</p>
+                <p class="text-xs text-[#2c2621]">
+                  The sensory detail here is immaculate. It grounds the climate mechanics into genuine physical jeopardy.
+                </p>
+                <div class="flex items-center gap-3 text-[10px] text-[#96897e] pt-1 border-t border-[#f7efe6]">
+                  <button class="hover:text-[#163323]">👍 14 agrees</button>
+                  <button class="hover:text-[#163323]">Reply</button>
+                </div>
+              </div>
+
+              <!-- Reader Annotation 2 -->
+              <div class="p-3 bg-white border border-[#e8dcce] rounded-xl space-y-1.5">
+                <div class="flex items-center justify-between text-xs">
+                  <div class="flex items-center gap-1.5">
+                    <span class="font-semibold text-[#163323]">Clara Vance</span>
+                    <span class="text-[10px] text-[#8c7f74]">Top Reader</span>
+                  </div>
+                  <span class="text-[10px] text-[#96897e]">Line 11</span>
+                </div>
+                <p class="text-xs text-[#2c2621]">
+                  The pacing doesn't drag at all; the jargon acts as characterization. Maya thinks in pressure and salinity!
+                </p>
+                <div class="flex items-center gap-3 text-[10px] text-[#96897e] pt-1 border-t border-[#f7efe6]">
+                  <button class="hover:text-[#163323]">👍 9 agrees</button>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- New Annotation Form -->
+            <div class="pt-3 border-t border-[#f0e4d7] space-y-2">
+              <span class="text-xs font-semibold text-[#163323] block">Add Reader Marginalia:</span>
+              <textarea id="newNoteTextarea" rows="2" placeholder="Annotate line or answer author prompt..." class="w-full text-xs p-2.5 bg-white border border-[#d8c7b5] rounded-xl focus:outline-none focus:border-[#163323]"></textarea>
+              <div class="flex items-center justify-between">
+                <select id="notePrivacySelect" class="text-[11px] bg-[#f5ede3] border border-[#e0d0c0] rounded-lg px-2 py-1 text-[#163323]">
+                  <option value="Public">Public Note</option>
+                  <option value="Author Only">Author Private</option>
+                </select>
+                <button onclick="postReaderMarginalia()" class="px-3.5 py-1.5 bg-[#1b3b2b] hover:bg-[#28543e] text-white text-xs font-medium rounded-lg transition-colors">
+                  Post to Reel
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- ================= INLINE SCRIPT: LIVE PROTOTYPE FLOW ENGINE ================= -->
+  <script>
+    // State of the interactive prototype flow
+    const flowState = {
+      chapterPublished: false,
+      currentInquiry: "Ask readers about the pacing at the valve transition in line 84. Does the hydrostatic jargon slow down the character’s internal stakes, or does it heighten the claustrophobic dread?",
+      notesCount: 35,
+      readsCount: 1420,
+      activeView: 'writer' // 'writer', 'reader', 'split'
+    };
+
+    function switchView(view) {
+      flowState.activeView = view;
+      const writerView = document.getElementById('writerView');
+      const readerView = document.getElementById('readerView');
+      const tabBtnW1 = document.getElementById('tabBtnW1');
+      const tabBtnR9 = document.getElementById('tabBtnR9');
+      const tabBtnSplit = document.getElementById('tabBtnSplit');
+
+      // Reset tab styling
+      [tabBtnW1, tabBtnR9, tabBtnSplit].forEach(btn => {
+        btn.classList.remove('bg-[#1b3b2b]', 'text-white', 'border', 'border-[#387356]', 'shadow-sm');
+        btn.classList.add('text-[#a3c9b4]');
+      });
+
+      if (view === 'writer') {
+        writerView.classList.remove('hidden', 'lg:w-1/2');
+        readerView.classList.add('hidden');
+        readerView.classList.remove('lg:w-1/2');
+        document.querySelector('main').classList.remove('flex', 'gap-6');
+
+        tabBtnW1.classList.add('bg-[#1b3b2b]', 'text-white', 'border', 'border-[#387356]', 'shadow-sm');
+        tabBtnW1.classList.remove('text-[#a3c9b4]');
+      } else if (view === 'reader') {
+        writerView.classList.add('hidden');
+        writerView.classList.remove('lg:w-1/2');
+        readerView.classList.remove('hidden', 'lg:w-1/2');
+        document.querySelector('main').classList.remove('flex', 'gap-6');
+
+        tabBtnR9.classList.add('bg-[#1b3b2b]', 'text-white', 'border', 'border-[#387356]', 'shadow-sm');
+        tabBtnR9.classList.remove('text-[#a3c9b4]');
+        
+        // Clear alert badge
+        document.getElementById('readerNewAlert').classList.add('hidden');
+      } else if (view === 'split') {
+        writerView.classList.remove('hidden');
+        readerView.classList.remove('hidden');
+        writerView.classList.add('lg:w-1/2');
+        readerView.classList.add('lg:w-1/2');
+        document.querySelector('main').classList.add('flex', 'gap-6');
+
+        tabBtnSplit.classList.add('bg-[#1b3b2b]', 'text-white', 'border', 'border-[#387356]', 'shadow-sm');
+        tabBtnSplit.classList.remove('text-[#a3c9b4]');
+      }
+    }
+
+    // Trigger the End-to-End Live Publishing Simulation from W1 to R9
+    function triggerPublishFlow() {
+      flowState.chapterPublished = true;
+      flowState.readsCount += 12;
+
+      // Update W1 UI indicators
+      document.getElementById('ch2StatusBadge').className = 'inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-semibold bg-emerald-100 text-emerald-800 border border-emerald-300';
+      document.getElementById('ch2StatusBadge').innerHTML = '● Published via W1';
+      document.getElementById('writerStatusBadge').className = 'bg-emerald-500/30 text-emerald-300 text-[9px] px-1.5 py-0.2 rounded border border-emerald-500/50 uppercase';
+      document.getElementById('writerStatusBadge').innerText = 'Published';
+      document.getElementById('ch2PublishMeta').innerText = 'Live in Perch Catalog';
+      document.getElementById('ch2PublishMeta').className = 'font-semibold text-emerald-700';
+      document.getElementById('manuscriptProgress').style.width = '50%';
+      document.getElementById('manuscriptPercent').innerText = '50%';
+      document.getElementById('publishCtaText').innerText = 'Chapter 2 Broadcasted (View in R9)';
+      document.getElementById('activeReadersCounter').innerText = flowState.readsCount.toLocaleString();
+
+      // Show Toast Notification
+      showToast(
+        "Chapter 2 Published to Perch!",
+        "Maya Lin's 'Copper Manifolds' is now live on the public feed (R1) and active in the Reader Workspace (R9)."
+      );
+
+      // Flash reader tab notification badge
+      const alertBadge = document.getElementById('readerNewAlert');
+      alertBadge.classList.remove('hidden');
+
+      // Auto-transition to Reader View after 1.2s to demonstrate the flow
+      setTimeout(() => {
+        switchView('reader');
+        // Visual cue on the reader highlighted passage
+        const mark = document.getElementById('readerHighlightedPassage');
+        mark.classList.add('animate-pulse');
+        setTimeout(() => mark.classList.remove('animate-pulse'), 3000);
+      }, 1200);
+    }
+
+    function editInquiryPrompt() {
+      const current = flowState.currentInquiry;
+      const updated = prompt("Update author pinned inquiry (will sync to Reader View R9 in real-time):", current);
+      if (updated && updated.trim() !== "") {
+        flowState.currentInquiry = updated.trim();
+        document.getElementById('inquiryContentText').innerText = `“${flowState.currentInquiry}”`;
+        document.getElementById('readerPromptText').innerText = `“${flowState.currentInquiry}”`;
+        showToast("Inquiry Updated", "Pinned craft prompt synchronized across both author desk and reader views.");
+      }
+    }
+
+    function toggleAuthorInquiry() {
+      editInquiryPrompt();
+    }
+
+    function submitReaderReply() {
+      const input = document.getElementById('readerReplyInput');
+      const text = input.value.trim();
+      if (!text) return;
+
+      flowState.notesCount += 1;
+      document.getElementById('notesCountBadge').innerText = `${flowState.notesCount} Notes`;
+      document.getElementById('telemetryNotes').innerText = flowState.notesCount;
+
+      // Append to marginalia stream
+      const stream = document.getElementById('marginaliaStream');
+      const card = document.createElement('div');
+      card.className = "p-3 bg-emerald-50 border border-emerald-200 rounded-xl space-y-1.5 animate-fadeIn";
+      card.innerHTML = `
+        <div class="flex items-center justify-between text-xs">
+          <div class="flex items-center gap-1.5">
+            <span class="font-semibold text-emerald-900">You (Reader)</span>
+            <span class="text-[10px] text-emerald-700 bg-emerald-100 px-1 rounded">Author Reply</span>
+          </div>
+          <span class="text-[10px] text-[#96897e]">Just now</span>
+        </div>
+        <p class="text-xs text-[#163323]">${text}</p>
+      `;
+      stream.prepend(card);
+
+      input.value = "";
+      showToast("Response Shared with Maya Lin", "Your reflection has been pinned to Chapter 2 telemetry.");
+    }
+
+    function postReaderMarginalia() {
+      const textarea = document.getElementById('newNoteTextarea');
+      const text = textarea.value.trim();
+      if (!text) return;
+
+      flowState.notesCount += 1;
+      document.getElementById('notesCountBadge').innerText = `${flowState.notesCount} Notes`;
+      document.getElementById('telemetryNotes').innerText = flowState.notesCount;
+
+      const privacy = document.getElementById('notePrivacySelect').value;
+      const stream = document.getElementById('marginaliaStream');
+      const card = document.createElement('div');
+      card.className = "p-3 bg-white border border-[#e8dcce] rounded-xl space-y-1.5";
+      card.innerHTML = `
+        <div class="flex items-center justify-between text-xs">
+          <div class="flex items-center gap-1.5">
+            <span class="font-semibold text-[#163323]">You (Reader)</span>
+            <span class="text-[10px] text-[#8c7f74]">${privacy}</span>
+          </div>
+          <span class="text-[10px] text-[#96897e]">Just now</span>
+        </div>
+        <p class="text-xs text-[#2c2621]">${text}</p>
+      `;
+      stream.prepend(card);
+      textarea.value = "";
+      showToast("Note Added to Marginalia", "Visible to salon fellows and author.");
+    }
+
+    function addReaction(type) {
+      if (type === 'Luminous Prose') {
+        const el = document.getElementById('reactLuminousCount');
+        el.innerText = parseInt(el.innerText) + 1;
+      } else if (type === 'Tense Pacing') {
+        const el = document.getElementById('reactPacingCount');
+        el.innerText = parseInt(el.innerText) + 1;
+      } else if (type === 'Atmospheric') {
+        const el = document.getElementById('reactAtmoCount');
+        el.innerText = parseInt(el.innerText) + 1;
+      }
+      showToast("Reaction Recorded", `Added "${type}" to live chapter sentiment.`);
+    }
+
+    function bookmarkPassage() {
+      showToast("Saved to Reading Shelf", "Chapter 2 added to 'Currently Reading' on your Perch shelf.");
+    }
+
+    function showToast(title, msg) {
+      const toast = document.getElementById('toastNotification');
+      document.getElementById('toastTitle').innerText = title;
+      document.getElementById('toastMessage').innerText = msg;
+      toast.classList.remove('translate-y-24', 'opacity-0', 'pointer-events-none');
+    }
+
+    function hideToast() {
+      const toast = document.getElementById('toastNotification');
+      toast.classList.add('translate-y-24', 'opacity-0', 'pointer-events-none');
+    }
+
+    function resetPrototype() {
+      flowState.chapterPublished = false;
+      flowState.notesCount = 35;
+      flowState.readsCount = 1420;
+
+      document.getElementById('ch2StatusBadge').className = 'inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-semibold bg-amber-200 text-amber-900 border border-amber-300';
+      document.getElementById('ch2StatusBadge').innerHTML = '✎ Active Draft';
+      document.getElementById('writerStatusBadge').className = 'bg-amber-500/20 text-amber-300 text-[9px] px-1.5 py-0.2 rounded border border-amber-500/40 uppercase';
+      document.getElementById('writerStatusBadge').innerText = 'Draft Ready';
+      document.getElementById('ch2PublishMeta').innerText = 'Ready for Release';
+      document.getElementById('ch2PublishMeta').className = 'font-medium text-[#b95133]';
+      document.getElementById('manuscriptProgress').style.width = '23%';
+      document.getElementById('manuscriptPercent').innerText = '23%';
+      document.getElementById('publishCtaText').innerText = 'Publish Chapter 2 Now (W1 ➔ R9)';
+      document.getElementById('activeReadersCounter').innerText = '1,420';
+
+      switchView('writer');
+      showToast("Prototype Reset", "Returned to unreleased draft state.");
+    }
+  </script>
+
+
+
+
+</body></html>

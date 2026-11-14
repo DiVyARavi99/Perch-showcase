@@ -1,0 +1,561 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@500;600&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"secondary-fixed-dim":"#9dd3aa","secondary-fixed":"#b9efc5","on-tertiary":"#ffffff","surface-variant":"#e0e3df","on-error-container":"#93000a","primary":"#011e0f","surface-container-low":"#f1f4f0","secondary":"#376847","on-surface-variant":"#424843","on-primary":"#ffffff","surface-container-highest":"#e0e3df","tertiary-container":"#561900","on-primary-container":"#7d9c87","on-secondary-fixed-variant":"#1e5031","primary-fixed":"#c9ebd3","surface-container":"#ecefea","outline-variant":"#c2c8c1","on-tertiary-fixed-variant":"#793112","on-primary-fixed":"#032112","on-primary-fixed-variant":"#304d3b","surface-container-high":"#e6e9e4","tertiary":"#330b00","secondary-container":"#b6edc2","tertiary-fixed":"#ffdbcf","on-surface":"#191c1a","on-secondary":"#ffffff","surface-bright":"#f7faf5","inverse-primary":"#adceb7","on-secondary-container":"#3b6d4b","surface":"#f7faf5","on-background":"#191c1a","primary-fixed-dim":"#adceb7","primary-container":"#163323","outline":"#727973","on-tertiary-container":"#da7c58","background":"#f7faf5","on-tertiary-fixed":"#380d00","on-secondary-fixed":"#00210e","tertiary-fixed-dim":"#ffb59a","inverse-surface":"#2d312e","inverse-on-surface":"#eff2ed","surface-container-lowest":"#ffffff","error":"#ba1a1a","surface-dim":"#d8dbd6","surface-tint":"#476552","on-error":"#ffffff","error-container":"#ffdad6"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"space-sm":"0.5rem","gutter-desktop":"2rem","space-md":"1rem","space-xs":"0.25rem","space-xl":"2.5rem","space-lg":"1.5rem",gutter:"1.5rem","margin-desktop":"2.5rem",margin:"1.25rem"},fontFamily:{"headline-xl-mobile":["Plus Jakarta Sans"],"body-lg":["Inter"],"label-sm":["Inter"],"body-md":["Inter"],"headline-xl":["Plus Jakarta Sans"],"label-lg":["Inter"],"headline-sm":["Plus Jakarta Sans"],"body-xl":["Inter"],"headline-lg":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"label-md":["Inter"],"headline-lg-mobile":["Plus Jakarta Sans"]},fontSize:{"headline-xl-mobile":["2rem",{lineHeight:"2.5rem",letterSpacing:"-0.025em",fontWeight:"600"}],"body-lg":["1rem",{lineHeight:"1.65rem",letterSpacing:"-0.005em",fontWeight:"400"}],"label-sm":["0.6875rem",{lineHeight:"0.875rem",letterSpacing:"0.04em",fontWeight:"600"}],"body-md":["0.875rem",{lineHeight:"1.5rem",letterSpacing:"0em",fontWeight:"400"}],"headline-xl":["2.75rem",{lineHeight:"3.25rem",letterSpacing:"-0.03em",fontWeight:"600"}],"label-lg":["0.875rem",{lineHeight:"1.25rem",letterSpacing:"0.01em",fontWeight:"600"}],"headline-sm":["1.25rem",{lineHeight:"1.75rem",letterSpacing:"-0.015em",fontWeight:"500"}],"body-xl":["1.125rem",{lineHeight:"1.875rem",letterSpacing:"-0.01em",fontWeight:"400"}],"headline-lg":["2rem",{lineHeight:"2.5rem",letterSpacing:"-0.025em",fontWeight:"600"}],"headline-md":["1.5rem",{lineHeight:"2rem",letterSpacing:"-0.02em",fontWeight:"500"}],"label-md":["0.75rem",{lineHeight:"1rem",letterSpacing:"0.02em",fontWeight:"500"}],"headline-lg-mobile":["1.5rem",{lineHeight:"2rem",letterSpacing:"-0.02em",fontWeight:"600"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between p-space-lg shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col gap-space-lg"><div class="flex items-center gap-space-sm px-space-xs"><img alt="Perch Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrCXCNmAuN7ydCGdYs803HdWIVWm10Zyzzn4Wcq4DKzsh16rpreSUA51cJ2Jhvt2zymmuidRzJ_4ltdhH7rB_YaPc0xO8aBcbVwWslCJDJ8zjeHP9EZpN4tM7QFHpQCBupvoxmNjiA-rfwS3o51h2Ksyh0IZN2qwkNWlHOPqiwovWRWJbsnG1tA1f2LpiksZHZNz_lcNC10eSdfP9_34cpcEBiRZ0zNnYnYs8HElPiQx"><span class="font-headline-sm text-headline-sm text-primary font-semibold tracking-tight">Perch</span></div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary font-semibold"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="feed" href="#"><span class="material-symbols-outlined text-[20px]">auto_stories</span><span class="font-body-md text-body-md">Feed</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="discover-and-circles" href="#"><span class="material-symbols-outlined text-[20px]">diversity_2</span><span class="font-body-md text-body-md">Discover &amp; Circles</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="books-and-marginalia" href="#"><span class="material-symbols-outlined text-[20px]">history_edu</span><span class="font-body-md text-body-md">Books &amp; Marginalia</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="profile-and-stacks" href="#"><span class="material-symbols-outlined text-[20px]">shelves</span><span class="font-body-md text-body-md">Profile &amp; Stacks</span></a></nav><div class="flex flex-col gap-space-md pt-space-xs"><div class="bg-surface-container-lowest p-space-md rounded-xl shadow-[0_1px_8px_rgba(0,0,0,0.02)] flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">Reading Now</span><span class="font-label-sm text-label-sm text-on-surface-variant">Pg 142</span></div><p class="font-headline-sm text-label-lg text-on-surface font-medium truncate">Drive Your Plow Over the Bones of the Dead</p><div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden mt-space-xs"><div class="bg-secondary h-full rounded-full w-[46%]"></div></div></div><button class="w-full flex items-center justify-center gap-space-sm bg-primary-container text-on-primary py-space-sm px-space-md rounded-lg hover:bg-primary transition-colors shadow-[0_1px_8px_rgba(0,0,0,0.04)]" type="button"><span class="material-symbols-outlined text-[18px]">edit_note</span><span class="font-label-lg text-label-lg">New Marginalia</span></button></div></div><div class="pt-space-md bg-surface-container-low"><div class="flex items-center justify-between p-space-sm rounded-xl bg-surface-container-lowest hover:bg-surface-container transition-colors"><div class="flex items-center gap-space-sm"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC15pLmTkabqRycun0_pFJTp5SzlLBOaCorP9RQ8quajIRWB3FBfzjKm8I8vpkBrzadnu7HF-vuTs7yMo7unv0deyH7nF_yynBsWX8r69DsRgBBn1v9pB6Sp3_YPcUMtStRowTqng7vN4ahppSKN5nfJ1KLQfRIXipJVq88mx07x_ahMkwTW5P38jzzNwb9jFbUBEhleocIsAXdslpEHW1cG-DaX_eXSDOYA7JWPRM"><div class="flex flex-col leading-tight"><span class="font-label-lg text-label-lg text-on-surface truncate">Sophie Reads</span><span class="font-label-sm text-label-sm text-on-surface-variant">Founding Curator</span></div></div><div class="flex items-center text-on-surface-variant hover:text-on-surface"><span class="material-symbols-outlined text-[20px]">unfold_more</span></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-xl"><div class="flex items-center gap-space-md w-full max-w-lg"><div class="flex items-center gap-space-sm w-full bg-surface-container-lowest px-space-md py-space-xs rounded-full shadow-[0_1px_8px_rgba(0,0,0,0.02)]"><span class="material-symbols-outlined text-outline text-[20px]">search</span><input class="w-full bg-transparent border-0 outline-none text-on-surface font-body-md text-body-md placeholder:text-outline" placeholder="Search quotes, readers, passages, or titles..." type="text"></div></div><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-surface-container text-on-surface-variant"><span class="material-symbols-outlined text-[18px] text-secondary">menu_book</span><span class="font-label-sm text-label-sm text-on-surface font-medium">Winter Salon #14</span></div><div class="flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-secondary-fixed text-on-secondary-fixed"><span class="material-symbols-outlined text-[16px]">bookmark</span><span class="font-label-sm text-label-sm font-semibold">28 Read</span></div><button class="text-on-surface-variant hover:text-on-surface p-space-xs rounded-full hover:bg-surface-container transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span></button><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC15pLmTkabqRycun0_pFJTp5SzlLBOaCorP9RQ8quajIRWB3FBfzjKm8I8vpkBrzadnu7HF-vuTs7yMo7unv0deyH7nF_yynBsWX8r69DsRgBBn1v9pB6Sp3_YPcUMtStRowTqng7vN4ahppSKN5nfJ1KLQfRIXipJVq88mx07x_ahMkwTW5P38jzzNwb9jFbUBEhleocIsAXdslpEHW1cG-DaX_eXSDOYA7JWPRM"></div></header><main class="relative pt-16 bg-surface min-h-screen px-space-xl py-space-lg"><div class="flex flex-col w-full pb-space-xl">
+<!-- Subtle decorative atmospheric backdrop blur pill -->
+<div class="relative w-full">
+<div class="absolute -top-12 -right-8 w-96 h-96 bg-secondary-fixed/30 rounded-full blur-3xl pointer-events-none -z-10"></div>
+<div class="absolute top-48 left-12 w-80 h-80 bg-tertiary-fixed/20 rounded-full blur-3xl pointer-events-none -z-10"></div>
+<!-- PROFILE DOSSIER HERO CARD -->
+<section class="w-full bg-surface-container-lowest rounded-xl p-space-xl shadow-[0_4px_24px_-4px_rgba(22,51,35,0.05)] transition-all duration-300">
+<div class="flex flex-col lg:flex-row gap-space-xl items-start justify-between"><div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold block">Affiliated Circles &amp; Salons</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed text-label-sm font-semibold">3 Active Affiliations</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight font-semibold mt-1">Reading Clubs &amp; Salons</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">Collective paced reading cohorts, salon discussions, and marginalia circles.</p>
+<div class="inline-flex items-center gap-1.5 p-1 bg-surface-container rounded-full mt-space-sm w-fit border border-surface-container-high/60">
+<button class="px-space-md py-1 rounded-full bg-primary-container text-on-primary font-label-md text-label-md font-semibold shadow-xs flex items-center gap-1.5 transition-all" type="button">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-fixed"></span>
+<span>Active Cohorts (3)</span>
+</button>
+<button class="px-space-md py-1 rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest transition-all font-label-md text-label-md font-medium flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[15px]">history</span>
+<span>Completed Salon Archives (4)</span>
+</button>
+</div>
+</div>
+<div class="flex items-center gap-space-sm self-start sm:self-end mt-space-xs sm:mt-0">
+<a class="flex items-center gap-1 text-label-md font-label-md text-secondary font-semibold hover:text-primary transition-colors" href="#">
+<span>Browse Open Reading Clubs</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div></div>
+</section>
+<!-- CURRENTLY NESTING / READING NOW HERO CARD -->
+<section class="mt-space-xl">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="flex h-2.5 w-2.5 relative">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-secondary"></span>
+</span>
+<h2 class="font-headline-sm text-headline-sm text-primary tracking-tight font-semibold">Currently Nesting</h2>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Desk Journal Entry</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container-low px-space-md py-1 rounded-full">Updated 4 hours ago</span>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-xl shadow-[0_4px_24px_-4px_rgba(22,51,35,0.04)] relative overflow-hidden">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+<!-- Book Core Details & Visual Spine Motif -->
+<div class="lg:col-span-5 flex items-start gap-space-lg">
+<!-- Stylized Book Sleeve -->
+<div class="w-24 sm:w-28 h-36 sm:h-44 rounded-lg bg-primary-container text-on-primary p-space-md flex flex-col justify-between shrink-0 shadow-lg relative overflow-hidden group">
+<div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+<div class="absolute left-1.5 top-0 bottom-0 w-1 bg-secondary-fixed/40"></div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-on-primary-container relative z-10">Penguin Classics</span>
+<div class="relative z-10">
+<span class="font-headline-sm text-label-lg font-bold leading-tight block">The Book of Disquiet</span>
+<span class="font-label-sm text-label-sm text-surface-container block mt-0.5">Fernando Pessoa</span>
+</div>
+</div>
+<!-- Metadata & Progress Details -->
+<div class="flex-1 flex flex-col justify-between h-full py-1">
+<div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold uppercase tracking-wider block">Slow Read in Progress</span>
+<h3 class="font-headline-md text-headline-md text-primary font-semibold mt-1">The Book of Disquiet</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">Fernando Pessoa • <span class="italic text-on-surface">Trans. Richard Zenith</span></p>
+</div>
+<!-- Progress bar & stats -->
+<div class="mt-space-md">
+<div class="flex items-center justify-between text-label-md font-label-md mb-1.5">
+<span class="text-primary font-semibold">62% complete</span>
+<span class="text-on-surface-variant">p. 294 of 472</span>
+</div>
+<div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full transition-all duration-700" style="width: 62%"></div>
+</div>
+<div class="flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant mt-2">
+<span>Pacing: 14 pgs / day</span>
+<span>12 marginalia penned</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Marginalia Fragment Quote Callout -->
+<div class="lg:col-span-7 bg-surface-container-low rounded-xl p-space-lg flex flex-col justify-between gap-space-sm relative">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-tertiary-container">edit_note</span>
+                Latest Marginal Note Fragment
+              </span>
+<span class="font-label-sm text-label-sm text-outline">Page 291 • Ink on cream paper</span>
+</div>
+<div class="pl-space-md py-1 my-1" style="box-shadow: inset 3px 0 0 0 #011e0f;">
+<p class="font-body-xl text-body-xl text-primary italic leading-relaxed font-normal">
+                “My soul is an overture before an orchestra has tuned; a preface to an unwritten folio; a dusk that descends upon an afternoon that never occurred.”
+              </p>
+</div>
+<div class="flex items-center justify-between pt-space-xs text-on-surface-variant text-label-sm font-label-sm">
+<div class="flex items-center gap-space-sm">
+<span class="inline-flex items-center gap-1 text-secondary font-medium">
+<span class="material-symbols-outlined text-[15px]">favorite</span> 19 reader echoes
+                </span>
+<span>•</span>
+<span class="hover:text-on-surface cursor-pointer">4 response threads</span>
+</div>
+<button class="text-primary font-label-md font-semibold hover:text-secondary flex items-center gap-0.5 group" type="button">
+                Open in Margin Viewer
+                <span class="material-symbols-outlined text-[16px] transition-transform group-hover:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- READING CLUBS & SALONS AFFILIATIONS SECTION (USE CASE R8) -->
+<section class="mt-space-xl">
+<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-space-sm mb-space-lg">
+<div>
+<div class="flex items-center gap-space-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold block">Affiliated Circles &amp; Salons</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed text-label-sm font-semibold">3 Active Affiliations</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight font-semibold mt-1">Reading Clubs &amp; Salons</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">Collective paced reading cohorts, salon discussions, and marginalia circles.</p>
+</div>
+<div class="flex items-center gap-space-sm">
+<a class="flex items-center gap-1 text-label-md font-label-md text-secondary font-semibold hover:text-primary transition-colors" href="#">
+<span>Browse Open Reading Clubs</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg">
+<!-- Club Card 1 -->
+<article class="bg-surface-container-lowest rounded-xl p-space-lg shadow-[0_4px_20px_-2px_rgba(45,49,46,0.04)] flex flex-col justify-between hover:shadow-[0_12px_32px_-4px_rgba(22,51,35,0.07)] transition-all duration-300 group border border-surface-container-high/60">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-[18px]">groups</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Discussion Circle</span>
+</div>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-primary-container text-on-primary text-label-sm font-medium">
+<span class="material-symbols-outlined text-[13px] text-secondary-fixed">stars</span>
+Milestone Discussion Lead
+</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-semibold leading-snug group-hover:text-secondary transition-colors">
+Central European &amp; Speculative Fiction Salon
+</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-secondary">verified</span>
+Host: Clara M. &amp; Riverhead Verified Circle · 142 members
+</p>
+<div class="bg-surface-container-low rounded-lg p-space-sm flex flex-col gap-1.5 mt-space-xs">
+<div class="flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-on-surface-variant">Currently Reading</span>
+<span class="text-primary font-medium truncate">Olga Tokarczuk</span>
+</div>
+<p class="font-headline-sm text-label-lg font-semibold text-primary truncate">Drive Your Plow Over the Bones of the Dead</p>
+<div class="mt-1 pt-1 border-t border-surface-container-high/70 flex flex-col gap-1">
+<div class="flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-secondary font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+Week 3 · Ch. 7–10: The Constellation of the Forest
+</span>
+<span class="px-1.5 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-semibold text-[10px]">On Pace</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 68%"></div>
+</div>
+<span class="text-[11px] text-outline text-right">68% club cohort on pace</span>
+</div>
+</div>
+<div class="pl-space-sm py-1 border-l-2 border-secondary bg-surface-container-lowest text-label-sm font-label-sm text-on-surface">
+<p class="italic text-on-surface-variant leading-snug">
+<span class="font-semibold text-primary not-italic">Recent Contribution:</span>
+“Discussion prompt: Janina's Astrological Determinism in Ch. 8 · 19 endorsements · 38 replies”
+</p>
+</div>
+</div>
+<div class="pt-space-md mt-space-md border-t border-surface-container">
+<button class="w-full flex items-center justify-center gap-space-xs py-space-sm px-space-md rounded-lg bg-primary text-on-primary hover:bg-primary-container transition-colors font-label-md text-label-md font-semibold group/btn" type="button">
+<span class="material-symbols-outlined text-[16px] text-secondary-fixed">forum</span>
+<span>Open Salon Discussion</span>
+<span class="material-symbols-outlined text-[16px] transition-transform group-hover/btn:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- Club Card 2 -->
+<article class="bg-surface-container-lowest rounded-xl p-space-lg shadow-[0_4px_20px_-2px_rgba(45,49,46,0.04)] flex flex-col justify-between hover:shadow-[0_12px_32px_-4px_rgba(22,51,35,0.07)] transition-all duration-300 group border border-surface-container-high/60">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-[18px]">location_city</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Local Chapter</span>
+</div>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed text-label-sm font-medium">
+<span class="material-symbols-outlined text-[13px]">military_tech</span>
+Founding Member
+</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-semibold leading-snug group-hover:text-secondary transition-colors">
+Portobello Books Circle
+</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-outline">cottage</span>
+Host: Independent Edinburgh Local Circle · 28 members
+</p>
+<div class="bg-surface-container-low rounded-lg p-space-sm flex flex-col gap-1.5 mt-space-xs">
+<div class="flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-on-surface-variant">Current Reading</span>
+<span class="text-primary font-medium truncate">Fernando Pessoa</span>
+</div>
+<p class="font-headline-sm text-label-lg font-semibold text-primary truncate">The Book of Disquiet</p>
+<div class="mt-1 pt-1 border-t border-surface-container-high/70 flex flex-col gap-1">
+<div class="flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-secondary font-semibold">Paced Slow Read</span>
+<span class="text-on-surface-variant font-medium">p. 294 / 472 (62%)</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 62%"></div>
+</div>
+<span class="text-[11px] text-outline text-right">Bi-weekly Sunday salon meetups</span>
+</div>
+</div>
+<div class="pl-space-sm py-1 border-l-2 border-secondary-fixed-dim bg-surface-container-lowest text-label-sm font-label-sm text-on-surface">
+<p class="italic text-on-surface-variant leading-snug">
+<span class="font-semibold text-primary not-italic">Recent Contribution:</span>
+“Shared 12 marginal note echoes to Chapter 4”
+</p>
+</div>
+</div>
+<div class="pt-space-md mt-space-md border-t border-surface-container">
+<button class="w-full flex items-center justify-center gap-space-xs py-space-sm px-space-md rounded-lg bg-surface-container-low text-primary hover:bg-surface-container transition-colors font-label-md text-label-md font-semibold group/btn" type="button">
+<span class="material-symbols-outlined text-[16px] text-secondary">history_edu</span>
+<span>Open Circle Notes</span>
+<span class="material-symbols-outlined text-[16px] transition-transform group-hover/btn:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- Club Card 3 -->
+<article class="bg-surface-container-lowest rounded-xl p-space-lg shadow-[0_4px_20px_-2px_rgba(45,49,46,0.04)] flex flex-col justify-between hover:shadow-[0_12px_32px_-4px_rgba(22,51,35,0.07)] transition-all duration-300 group border border-surface-container-high/60">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-[18px]">calendar_month</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Quarterly Club</span>
+</div>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container text-on-surface text-label-sm font-medium">
+Contributing Reader
+</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-semibold leading-snug group-hover:text-secondary transition-colors">
+Translated Fiction Quarterly
+</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-secondary">verified</span>
+Host: Europa Editions Verified Circle · 310 members
+</p>
+<div class="bg-surface-container-low rounded-lg p-space-sm flex flex-col gap-1.5 mt-space-xs">
+<div class="flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-on-surface-variant">Upcoming Read</span>
+<span class="text-tertiary-container font-medium">Dec Cohort</span>
+</div>
+<p class="font-headline-sm text-label-lg font-semibold text-primary truncate">Elena Knows by Claudia Piñeiro</p>
+<div class="mt-1 pt-1 border-t border-surface-container-high/70 flex flex-col gap-1">
+<div class="flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-on-surface-variant font-medium">Next Cohort begins Dec 1</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-highest text-on-surface font-semibold text-[10px]">84 RSVPs</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary/40 h-full rounded-full" style="width: 84%"></div>
+</div>
+<span class="text-[11px] text-outline text-right">Registration open for registered members</span>
+</div>
+</div>
+<div class="pl-space-sm py-1 border-l-2 border-outline-variant bg-surface-container-lowest text-label-sm font-label-sm text-on-surface">
+<p class="text-on-surface-variant leading-snug">
+<span class="font-semibold text-primary">Status:</span>
+Next Cohort begins Dec 1 · 84 RSVPs enrolled
+</p>
+</div>
+</div>
+<div class="pt-space-md mt-space-md border-t border-surface-container">
+<button class="w-full flex items-center justify-center gap-space-xs py-space-sm px-space-md rounded-lg bg-surface-container-low text-primary hover:bg-surface-container transition-colors font-label-md text-label-md font-semibold group/btn" type="button">
+<span class="material-symbols-outlined text-[16px] text-secondary">event</span>
+<span>View Reading Schedule</span>
+<span class="material-symbols-outlined text-[16px] transition-transform group-hover/btn:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</article>
+</div>
+</section>
+<!-- CURATED LIVING STACKS (3-COLUMN BESPOKE GRID) -->
+<section class="mt-space-xl">
+<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-space-sm mb-space-lg">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold block">Curatorial Shelves</span>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight font-semibold mt-1">Curated Living Stacks</h2>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="flex items-center gap-1 text-label-md font-label-md text-on-surface-variant px-space-md py-1.5 rounded-full bg-surface-container-low hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">sort</span>
+<span>Recently Revised</span>
+</button>
+<button class="flex items-center gap-1 text-label-md font-label-md bg-secondary-fixed text-on-secondary-fixed px-space-md py-1.5 rounded-full hover:bg-secondary-fixed-dim transition-colors font-semibold" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+<span>Propose Stack Addition</span>
+</button>
+</div>
+</div>
+<!-- 3-Column Responsive Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg">
+<!-- STACK 1: Rain & Solitude -->
+<article class="bg-surface-container-lowest rounded-xl p-space-lg shadow-[0_4px_20px_-2px_rgba(45,49,46,0.04)] flex flex-col justify-between hover:shadow-[0_12px_32px_-4px_rgba(22,51,35,0.07)] transition-all duration-300 group">
+<div>
+<!-- Header Meta -->
+<div class="flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant">
+<span class="inline-flex items-center gap-1 font-semibold text-secondary">
+<span class="material-symbols-outlined text-[15px]">water_drop</span>
+                Stack 01
+              </span>
+<span class="bg-surface-container px-2 py-0.5 rounded text-on-surface font-medium">6 books • 214 followers</span>
+</div>
+<!-- Stack Title -->
+<h3 class="font-headline-sm text-headline-sm text-primary font-semibold mt-space-md group-hover:text-secondary transition-colors leading-snug">
+              Books to read when it is raining without stopping
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-xs leading-relaxed">
+              Quiet prose, fog-dense country houses, damp coats, and melancholic interiors designed for tea that goes cold.
+            </p>
+<!-- Book Spine Graphic Visualization -->
+<div class="mt-space-lg bg-surface-container-low p-space-md rounded-xl flex flex-col gap-1.5">
+<div class="text-label-sm font-label-sm text-outline uppercase tracking-wider mb-1 flex items-center justify-between">
+<span>Stacked Spines</span>
+<span class="material-symbols-outlined text-[14px]">shelves</span>
+</div>
+<!-- Spine 1 -->
+<div class="flex items-center justify-between px-space-sm py-1.5 bg-primary-container text-on-primary rounded text-label-sm font-label-sm shadow-xs transition-transform hover:translate-x-1">
+<span class="font-medium truncate">Winter • Ali Smith</span>
+<span class="text-secondary-fixed text-[10px]">322p</span>
+</div>
+<!-- Spine 2 -->
+<div class="flex items-center justify-between px-space-sm py-1.5 bg-surface-container-high text-on-surface rounded text-label-sm font-label-sm shadow-xs transition-transform hover:translate-x-1">
+<span class="font-medium truncate">Austerlitz • W.G. Sebald</span>
+<span class="text-on-surface-variant text-[10px]">415p</span>
+</div>
+<!-- Spine 3 -->
+<div class="flex items-center justify-between px-space-sm py-1.5 bg-secondary text-on-secondary rounded text-label-sm font-label-sm shadow-xs transition-transform hover:translate-x-1">
+<span class="font-medium truncate">Norwegian Wood • Haruki Murakami</span>
+<span class="text-secondary-fixed text-[10px]">296p</span>
+</div>
+<!-- Spine 4 -->
+<div class="flex items-center justify-between px-space-sm py-1.5 bg-surface-container-lowest text-primary rounded text-label-sm font-label-sm shadow-xs transition-transform hover:translate-x-1">
+<span class="font-medium truncate">Gilead • Marilynne Robinson</span>
+<span class="text-on-surface-variant text-[10px]">247p</span>
+</div>
+<!-- Spine 5 -->
+<div class="flex items-center justify-between px-space-sm py-1.5 bg-tertiary text-on-tertiary rounded text-label-sm font-label-sm shadow-xs transition-transform hover:translate-x-1">
+<span class="font-medium truncate">Drive Your Plow Over the Bones...</span>
+<span class="text-tertiary-fixed text-[10px]">272p</span>
+</div>
+</div>
+</div>
+<!-- Footer Stack Actions -->
+<div class="flex items-center justify-between pt-space-lg mt-space-md border-t-0">
+<div class="flex -space-x-2">
+<span class="w-6 h-6 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-label-sm text-[10px] font-bold">AL</span>
+<span class="w-6 h-6 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center font-label-sm text-[10px] font-bold">MR</span>
+<span class="w-6 h-6 rounded-full bg-surface-container-highest text-on-surface-variant flex items-center justify-center font-label-sm text-[10px] font-bold">+21</span>
+</div>
+<button class="text-label-md font-label-md text-primary font-semibold flex items-center gap-1 hover:text-secondary group/btn" type="button">
+<span>View Full Stack</span>
+<span class="material-symbols-outlined text-[16px] transition-transform group-hover/btn:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- STACK 2: Elderly Protagonists -->
+<article class="bg-surface-container-lowest rounded-xl p-space-lg shadow-[0_4px_20px_-2px_rgba(45,49,46,0.04)] flex flex-col justify-between hover:shadow-[0_12px_32px_-4px_rgba(22,51,35,0.07)] transition-all duration-300 group">
+<div>
+<!-- Header Meta -->
+<div class="flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant">
+<span class="inline-flex items-center gap-1 font-semibold text-secondary">
+<span class="material-symbols-outlined text-[15px]">hourglass_top</span>
+                Stack 02
+              </span>
+<span class="bg-surface-container px-2 py-0.5 rounded text-on-surface font-medium">4 books • 89 followers</span>
+</div>
+<!-- Stack Title -->
+<h3 class="font-headline-sm text-headline-sm text-primary font-semibold mt-space-md group-hover:text-secondary transition-colors leading-snug">
+              Novels with unforgettable elderly protagonists
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-xs leading-relaxed">
+              Stories observing the texture of long memory, regret, domestic stubbornness, and dignity in life’s twilight chapters.
+            </p>
+<!-- Book Spine Graphic Visualization -->
+<div class="mt-space-lg bg-surface-container-low p-space-md rounded-xl flex flex-col gap-1.5">
+<div class="text-label-sm font-label-sm text-outline uppercase tracking-wider mb-1 flex items-center justify-between">
+<span>Stacked Spines</span>
+<span class="material-symbols-outlined text-[14px]">shelves</span>
+</div>
+<!-- Spine 1 -->
+<div class="flex items-center justify-between px-space-sm py-1.5 bg-primary text-on-primary rounded text-label-sm font-label-sm shadow-xs transition-transform hover:translate-x-1">
+<span class="font-medium truncate">The Remains of the Day • Ishiguro</span>
+<span class="text-secondary-fixed text-[10px]">258p</span>
+</div>
+<!-- Spine 2 -->
+<div class="flex items-center justify-between px-space-sm py-1.5 bg-tertiary-fixed text-on-tertiary-fixed rounded text-label-sm font-label-sm shadow-xs transition-transform hover:translate-x-1">
+<span class="font-medium truncate">Olive Kitteridge • Elizabeth Strout</span>
+<span class="text-tertiary text-[10px]">270p</span>
+</div>
+<!-- Spine 3 -->
+<div class="flex items-center justify-between px-space-sm py-1.5 bg-surface-container-high text-on-surface rounded text-label-sm font-label-sm shadow-xs transition-transform hover:translate-x-1">
+<span class="font-medium truncate">A Man Called Ove • Fredrik Backman</span>
+<span class="text-on-surface-variant text-[10px]">337p</span>
+</div>
+<!-- Spine 4 -->
+<div class="flex items-center justify-between px-space-sm py-1.5 bg-secondary-fixed text-on-secondary-fixed rounded text-label-sm font-label-sm shadow-xs transition-transform hover:translate-x-1">
+<span class="font-medium truncate">Gilead • Marilynne Robinson</span>
+<span class="text-primary text-[10px]">247p</span>
+</div>
+<!-- Placeholder slot for fourth discovery -->
+<div class="flex items-center justify-center py-2 rounded border border-dashed border-outline-variant text-label-sm font-label-sm text-outline">
+<span>+ 1 recommendation pending review</span>
+</div>
+</div>
+</div>
+<!-- Footer Stack Actions -->
+<div class="flex items-center justify-between pt-space-lg mt-space-md">
+<div class="flex -space-x-2">
+<span class="w-6 h-6 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center font-label-sm text-[10px] font-bold">EK</span>
+<span class="w-6 h-6 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-label-sm text-[10px] font-bold">CW</span>
+<span class="w-6 h-6 rounded-full bg-surface-container-highest text-on-surface-variant flex items-center justify-center font-label-sm text-[10px] font-bold">+8</span>
+</div>
+<button class="text-label-md font-label-md text-primary font-semibold flex items-center gap-1 hover:text-secondary group/btn" type="button">
+<span>View Full Stack</span>
+<span class="material-symbols-outlined text-[16px] transition-transform group-hover/btn:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- STACK 3: Philosophical Sci-Fi -->
+<article class="bg-surface-container-lowest rounded-xl p-space-lg shadow-[0_4px_20px_-2px_rgba(45,49,46,0.04)] flex flex-col justify-between hover:shadow-[0_12px_32px_-4px_rgba(22,51,35,0.07)] transition-all duration-300 group">
+<div>
+<!-- Header Meta -->
+<div class="flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant">
+<span class="inline-flex items-center gap-1 font-semibold text-secondary">
+<span class="material-symbols-outlined text-[15px]">psychology</span>
+                Stack 03
+              </span>
+<span class="bg-surface-container px-2 py-0.5 rounded text-on-surface font-medium">8 books • 340 followers</span>
+</div>
+<!-- Stack Title -->
+<h3 class="font-headline-sm text-headline-sm text-primary font-semibold mt-space-md group-hover:text-secondary transition-colors leading-snug">
+              Philosophical Sci-Fi that isn’t about space battles
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-xs leading-relaxed">
+              Speculative fiction probing linguistics, consciousness, ecological metaphysics, and what stays human when worlds split.
+            </p>
+<!-- Book Spine Graphic Visualization -->
+<div class="mt-space-lg bg-surface-container-low p-space-md rounded-xl flex flex-col gap-1.5">
+<div class="text-label-sm font-label-sm text-outline uppercase tracking-wider mb-1 flex items-center justify-between">
+<span>Stacked Spines</span>
+<span class="material-symbols-outlined text-[14px]">shelves</span>
+</div>
+<!-- Spine 1 -->
+<div class="flex items-center justify-between px-space-sm py-1.5 bg-primary-container text-on-primary rounded text-label-sm font-label-sm shadow-xs transition-transform hover:translate-x-1">
+<span class="font-medium truncate">Solaris • Stanislaw Lem</span>
+<span class="text-secondary-fixed text-[10px]">224p</span>
+</div>
+<!-- Spine 2 -->
+<div class="flex items-center justify-between px-space-sm py-1.5 bg-secondary text-on-secondary rounded text-label-sm font-label-sm shadow-xs transition-transform hover:translate-x-1">
+<span class="font-medium truncate">The Dispossessed • Ursula K. Le Guin</span>
+<span class="text-secondary-fixed text-[10px]">387p</span>
+</div>
+<!-- Spine 3 -->
+<div class="flex items-center justify-between px-space-sm py-1.5 bg-surface-container-high text-on-surface rounded text-label-sm font-label-sm shadow-xs transition-transform hover:translate-x-1">
+<span class="font-medium truncate">Exhalation • Ted Chiang</span>
+<span class="text-on-surface-variant text-[10px]">352p</span>
+</div>
+<!-- Spine 4 -->
+<div class="flex items-center justify-between px-space-sm py-1.5 bg-tertiary-container text-on-tertiary rounded text-label-sm font-label-sm shadow-xs transition-transform hover:translate-x-1">
+<span class="font-medium truncate">Annihilation • Jeff VanderMeer</span>
+<span class="text-tertiary-fixed text-[10px]">195p</span>
+</div>
+<!-- Spine 5 -->
+<div class="flex items-center justify-between px-space-sm py-1.5 bg-surface-container-lowest text-primary rounded text-label-sm font-label-sm shadow-xs transition-transform hover:translate-x-1">
+<span class="font-medium truncate">Stalker (Roadside Picnic) • Strugatsky</span>
+<span class="text-secondary text-[10px]">208p</span>
+</div>
+</div>
+</div>
+<!-- Footer Stack Actions -->
+<div class="flex items-center justify-between pt-space-lg mt-space-md">
+<div class="flex -space-x-2">
+<span class="w-6 h-6 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-label-sm text-[10px] font-bold">NV</span>
+<span class="w-6 h-6 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center font-label-sm text-[10px] font-bold">TC</span>
+<span class="w-6 h-6 rounded-full bg-surface-container-highest text-on-surface-variant flex items-center justify-center font-label-sm text-[10px] font-bold">+34</span>
+</div>
+<button class="text-label-md font-label-md text-primary font-semibold flex items-center gap-1 hover:text-secondary group/btn" type="button">
+<span>View Full Stack</span>
+<span class="material-symbols-outlined text-[16px] transition-transform group-hover/btn:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</article>
+</div>
+</section>
+<!-- INLINE ANNOTATION CORNER: RECENT MARGINALIA SNIPPETS -->
+<section class="mt-space-xl bg-surface-container-low rounded-xl p-space-xl">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm mb-space-lg">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">Underlines &amp; Inks</span>
+<h2 class="font-headline-sm text-headline-sm text-primary font-semibold mt-0.5">Sophie’s Recent Marginalia Stream</h2>
+</div>
+<a class="font-label-md text-label-md text-secondary font-semibold hover:text-primary flex items-center gap-1" href="#">
+          Explore all 142 notes
+          <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg">
+<!-- Note Card 1 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-xs relative flex flex-col justify-between">
+<div class="pl-space-md" style="box-shadow: inset 3px 0 0 0 #376847;">
+<p class="font-body-md text-body-md text-primary italic">
+              “The eye does not see things but images of things that mean other things.”
+            </p>
+<span class="block font-label-sm text-label-sm text-on-surface-variant mt-space-xs">
+              Italo Calvino • <span class="italic">Invisible Cities</span> • p. 13
+            </span>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant">
+<span class="flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-[14px]">stylus_note</span>
+              Note on semiotics and nostalgia
+            </span>
+<span>2 days ago</span>
+</div>
+</div>
+<!-- Note Card 2 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-xs relative flex flex-col justify-between">
+<div class="pl-space-md" style="box-shadow: inset 3px 0 0 0 #561900;">
+<p class="font-body-md text-body-md text-primary italic">
+              “It is an enormous luxury to be able to talk about nothing for hours with someone who understands.”
+            </p>
+<span class="block font-label-sm text-label-sm text-on-surface-variant mt-space-xs">
+              Marilynne Robinson • <span class="italic">Gilead</span> • p. 119
+            </span>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant">
+<span class="flex items-center gap-1 text-tertiary-container">
+<span class="material-symbols-outlined text-[14px]">stylus_note</span>
+              Marginal note with tea stain mark
+            </span>
+<span>Nov 28</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div></main></div>
+
+</body></html>

@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-lowest": "#ffffff", "primary": "#032517", "surface-container-highest": "#e9e1dc", "surface-container-low": "#faf2ed", "on-secondary-container": "#762c0d", "outline": "#727973", "secondary-fixed-dim": "#ffb59b", "primary-fixed": "#c7ebd4", "inverse-on-surface": "#f7efea", "surface-tint": "#456553", "on-error": "#ffffff", "surface-container-high": "#eee7e1", "surface-dim": "#e0d9d3", "primary-fixed-dim": "#abcfb8", "tertiary-fixed-dim": "#fcba5b", "background": "#fff8f4", "surface-container": "#f4ece7", "secondary-container": "#ff956e", "on-error-container": "#93000a", "on-secondary": "#ffffff", "on-secondary-fixed": "#380d00", "inverse-surface": "#33302c", "on-primary-fixed-variant": "#2d4d3c", "on-tertiary": "#ffffff", "error-container": "#ffdad6", "surface-bright": "#fff8f4", "on-primary": "#ffffff", "tertiary": "#2f1c00", "secondary": "#994626", "primary-container": "#1b3b2b", "on-secondary-fixed-variant": "#7a2f10", "on-background": "#1e1b18", "surface": "#fff8f4", "secondary-fixed": "#ffdbcf", "on-tertiary-fixed": "#291800", "on-primary-fixed": "#002113", "on-tertiary-fixed-variant": "#633f00", "tertiary-container": "#4b2f00", "surface-variant": "#e9e1dc", "on-primary-container": "#83a590", "on-surface": "#1e1b18", "error": "#ba1a1a", "on-surface-variant": "#424843", "tertiary-fixed": "#ffddb4", "outline-variant": "#c1c8c2", "on-tertiary-container": "#ce9236", "inverse-primary": "#abcfb8" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-xs": "0.25rem", "space-md": "1rem", "space-lg": "1.5rem", "margin-mobile": "1.25rem", "gutter-mobile": "1rem", "gutter": "1.5rem", "space-sm": "0.5rem", "margin": "3rem", "space-xl": "2.5rem" }, "fontFamily": { "headline-md": [ "Newsreader" ], "display-lg": [ "Newsreader" ], "label-sm": [ "Plus Jakarta Sans" ], "body-lg": [ "Plus Jakarta Sans" ], "label-md": [ "Plus Jakarta Sans" ], "body-sm": [ "Plus Jakarta Sans" ], "display-lg-mobile": [ "Newsreader" ], "headline-sm": [ "Newsreader" ], "body-md": [ "Plus Jakarta Sans" ], "label-lg": [ "Plus Jakarta Sans" ], "quote-editorial": [ "Newsreader" ], "headline-lg": [ "Newsreader" ] }, "fontSize": { "headline-md": [ "24px", { "lineHeight": "32px", "fontWeight": "500" } ], "display-lg": [ "48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "400" } ], "label-sm": [ "10px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "700" } ], "body-lg": [ "18px", { "lineHeight": "28px", "fontWeight": "400" } ], "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.03em", "fontWeight": "600" } ], "body-sm": [ "13px", { "lineHeight": "20px", "fontWeight": "400" } ], "display-lg-mobile": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.015em", "fontWeight": "400" } ], "headline-sm": [ "20px", { "lineHeight": "28px", "fontWeight": "600" } ], "body-md": [ "15px", { "lineHeight": "24px", "fontWeight": "400" } ], "label-lg": [ "14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" } ], "quote-editorial": [ "20px", { "lineHeight": "30px", "fontWeight": "400" } ], "headline-lg": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "500" } ] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased min-h-screen selection:bg-secondary-fixed selection:text-on-secondary-fixed"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between py-6 px-4 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col gap-6"><div class="flex items-center gap-3 px-3"><div class="w-9 h-9 rounded-xl bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-primary-fixed text-[22px]">local_library</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight font-serif">Perch</span><span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">Partner Edition</span></div></div><div class="px-3 pt-2"><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Workspace Guild</span></div><nav class="flex flex-col gap-1.5" data-active-classes="bg-primary-container text-on-primary font-semibold"><a aria-current="page" class="flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all bg-primary-container text-on-primary font-semibold" data-path="institution-overview" href="#"><span class="material-symbols-outlined text-[20px]">account_balance</span><span class="font-label-lg text-label-lg">Institution Overview</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="cohorts-and-programs" href="#"><span class="material-symbols-outlined text-[20px]">school</span><span class="font-label-lg text-label-lg">Cohorts &amp; Programs</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="rubric-evaluations" href="#"><span class="material-symbols-outlined text-[20px]">rate_review</span><span class="font-label-lg text-label-lg">Rubric Evaluations</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="structured-mentorship" href="#"><span class="material-symbols-outlined text-[20px]">history_edu</span><span class="font-label-lg text-label-lg">Structured Mentorship</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="showcases-and-honors" href="#"><span class="material-symbols-outlined text-[20px]">military_tech</span><span class="font-label-lg text-label-lg">Showcases &amp; Honors</span></a></nav></div><div class="flex flex-col gap-4 px-2"><div class="bg-surface-container p-3 rounded-lg flex items-center justify-between"><div class="flex flex-col"><span class="font-label-sm text-label-sm text-outline">Manuscript Archive</span><span class="font-label-md text-label-md text-on-surface font-serif">Spring '25 Folio</span></div><span class="material-symbols-outlined text-secondary text-[18px]">bookmark</span></div><div class="flex items-center justify-between pt-2 px-1 text-on-surface-variant"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px]">verified</span><span class="font-label-sm text-label-sm uppercase">Accredited Salon</span></div><a class="hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">help_outline</span></a></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)] px-8 flex items-center justify-between"><div class="flex items-center gap-4"><div class="flex items-center gap-2 bg-surface-container-low px-3 py-1.5 rounded-lg hover:bg-surface-container transition-colors cursor-pointer"><span class="material-symbols-outlined text-primary text-[18px]">assured_workload</span><span class="font-label-md text-label-md text-on-surface font-medium">Iowa Writers' Workshop</span><span class="font-label-sm text-label-sm text-secondary bg-surface-container-highest px-1.5 py-0.5 rounded">Partner</span><span class="material-symbols-outlined text-outline text-[16px]">unfold_more</span></div></div><div class="flex-1 max-w-lg mx-6"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-outline text-[18px]">search</span><input class="w-full pl-9 pr-4 py-1.5 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container transition-colors" placeholder="Search submissions, writers, rubrics, cohorts..." type="text"/></div></div><div class="flex items-center gap-3"><button class="w-9 h-9 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors relative" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="w-2 h-2 rounded-full bg-secondary absolute top-2 right-2"></span></button><button class="w-9 h-9 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">auto_stories</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 w-full px-8 pb-12 bg-surface"><div class="flex flex-col w-full">
+<!-- Top Institution Banner & Strategic Badges -->
+<section class="w-full bg-surface-container-low rounded-xl p-8 mb-8 shadow-sm relative overflow-hidden">
+<div class="absolute -right-8 -top-8 w-64 h-64 bg-primary/5 rounded-full pointer-events-none blur-2xl"></div>
+<div class="relative z-10 flex flex-col lg:flex-row lg:items-start justify-between gap-6">
+<div class="space-y-3 max-w-3xl">
+<div class="flex items-center gap-2.5">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container-high text-secondary font-label-sm text-label-sm uppercase tracking-wider font-semibold">
+<span class="material-symbols-outlined text-[14px]">school</span> Educational Institution • Partner Account
+          </span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[13px]">verified</span> Accredited Guild 2024–2025
+          </span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight font-serif">
+          Iowa Writers' Workshop &amp; Literary Fellowship
+        </h1>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          Academic partner console for writer cohorts, standardized rubric assessment, structured mentorship, and annual showcases.
+        </p>
+</div>
+<!-- Quick Actions for Institution Console -->
+<div class="flex flex-wrap lg:flex-col gap-2.5 shrink-0">
+<button class="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-primary-container text-on-primary font-label-lg text-label-lg shadow-sm hover:bg-primary transition-all duration-200" type="button">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span>+ Create New Cohort / Program</span>
+</button>
+<button class="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-surface-container-high text-on-surface hover:bg-surface-container-highest font-label-md text-label-md transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">settings</span>
+<span>Cohort Settings</span>
+</button>
+</div>
+</div>
+<!-- Quick KPI Stats Row (I1, I2, I4) -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8 pt-6 bg-surface-container/60 rounded-lg p-4">
+<div class="flex flex-col gap-1 px-2">
+<div class="flex items-center gap-2 text-outline">
+<span class="material-symbols-outlined text-[18px] text-primary">groups</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Cohort Scope</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-primary font-serif">3 Active Cohorts</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Autumn Term '24 Session</span>
+</div>
+<div class="flex flex-col gap-1 px-2">
+<div class="flex items-center gap-2 text-outline">
+<span class="material-symbols-outlined text-[18px] text-primary">ink_pen</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Talent Registry</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-primary font-serif">48 Aspiring Writers</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Active matriculation</span>
+</div>
+<div class="flex flex-col gap-1 px-2">
+<div class="flex items-center gap-2 text-outline">
+<span class="material-symbols-outlined text-[18px] text-secondary">rate_review</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Pending Review</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-secondary font-serif">14 Rubric Evaluations</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">4 due this academic cycle</span>
+</div>
+<div class="flex flex-col gap-1 px-2">
+<div class="flex items-center gap-2 text-outline">
+<span class="material-symbols-outlined text-[18px] text-tertiary-container">military_tech</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Competition Arc</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-primary font-serif">2 Active Showcases</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Shortlist &amp; Deliberation</span>
+</div>
+</div>
+</section>
+<!-- Main Grid: Cohorts (I1) and Active Workbench (I2, I3, I4) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- LEFT COLUMN: Cohort & Program Management (I1) + Pending Rubric List -->
+<div class="lg:col-span-4 flex flex-col gap-8">
+<!-- I1: Cohort & Program Management -->
+<section class="bg-surface-container-low rounded-xl p-6 shadow-sm flex flex-col gap-5">
+<div class="flex items-center justify-between pb-2">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<h2 class="font-headline-sm text-headline-sm text-primary font-serif">Active Programs &amp; Cohorts</h2>
+</div>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">I1 Registry</span>
+</div>
+<div class="flex flex-col gap-4">
+<!-- Cohort Card 1 (Active Focused) -->
+<div class="p-4 rounded-lg bg-surface-container-lowest shadow-sm flex flex-col gap-3 relative overflow-hidden transition-all hover:shadow-md">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-primary"></div>
+<div class="flex items-start justify-between gap-2">
+<span class="font-label-sm text-label-sm font-semibold uppercase tracking-wider text-secondary">Fiction Masterclass</span>
+<span class="px-2 py-0.5 rounded text-[11px] font-label-sm font-medium bg-primary-fixed text-on-primary-fixed">Week 7 of 12</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-serif leading-snug">
+              Fall 2024 Speculative &amp; Historical Fiction Fellowship
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              18 writers • 12 weeks • 8 manuscripts submitted for midterm review
+            </p>
+<div class="w-full bg-surface-container rounded-full h-1.5 overflow-hidden">
+<div class="bg-primary h-full w-[66%]"></div>
+</div>
+<div class="flex items-center justify-between pt-1 text-on-surface-variant font-label-md text-label-md">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px]">menu_book</span> Midterm Review Stage</span>
+<span class="text-secondary font-semibold">8 Submissions In</span>
+</div>
+</div>
+<!-- Cohort Card 2 -->
+<div class="p-4 rounded-lg bg-surface-container-lowest shadow-sm flex flex-col gap-2.5 transition-all hover:shadow-md">
+<div class="flex items-start justify-between gap-2">
+<span class="font-label-sm text-label-sm font-semibold uppercase tracking-wider text-outline">Creative Non-Fiction</span>
+<span class="px-2 py-0.5 rounded text-[11px] font-label-sm font-medium bg-surface-container text-on-surface-variant">Active Lab</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-serif leading-snug">
+              Emerging Essayists &amp; Non-Fiction Lab
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              16 writers • Mentor: Prof. H. Danvers • 4 evaluations in progress
+            </p>
+<div class="flex items-center justify-between pt-1 font-label-md text-label-md text-outline">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">person</span> Mentor Guided</span>
+<span class="text-on-surface">4 in review</span>
+</div>
+</div>
+<!-- Cohort Card 3 -->
+<div class="p-4 rounded-lg bg-surface-container-lowest shadow-sm flex flex-col gap-2.5 transition-all hover:shadow-md">
+<div class="flex items-start justify-between gap-2">
+<span class="font-label-sm text-label-sm font-semibold uppercase tracking-wider text-outline">Advanced Residency</span>
+<span class="px-2 py-0.5 rounded text-[11px] font-label-sm font-medium bg-surface-container text-on-surface-variant">Round 2</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-serif leading-snug">
+              Postgraduate Novelists Incubator
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              14 writers • Peer &amp; Mentor rounds underway
+            </p>
+<div class="flex items-center justify-between pt-1 font-label-md text-label-md text-outline">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">sync_alt</span> Peer Review Mode</span>
+<span class="text-on-surface">14 Enrolled</span>
+</div>
+</div>
+</div>
+<div class="pt-2">
+<button class="w-full py-2.5 rounded-lg bg-surface-container hover:bg-surface-container-highest text-primary font-label-md text-label-md transition-colors flex items-center justify-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px]">folder_special</span>
+<span>View All Cohort Archives &amp; Syllabi</span>
+</button>
+</div>
+</section>
+<!-- Submissions Awaiting Rubric Queue (I2 Filterable Panel) -->
+<section class="bg-surface-container-low rounded-xl p-6 shadow-sm flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">Evaluation Queue</span>
+<h3 class="font-headline-sm text-headline-sm text-primary font-serif">Awaiting Rubric Scoring</h3>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed text-label-sm font-semibold font-label-sm">
+            14 Pending
+          </span>
+</div>
+<!-- Filter tabs -->
+<div class="flex items-center gap-1.5 p-1 bg-surface-container rounded-lg font-label-sm text-label-sm">
+<button class="flex-1 py-1 px-2 rounded bg-surface-container-lowest text-primary font-semibold shadow-xs text-center" type="button">Urgent (2)</button>
+<button class="flex-1 py-1 px-2 rounded text-outline hover:text-on-surface text-center" type="button">Fellowship</button>
+<button class="flex-1 py-1 px-2 rounded text-outline hover:text-on-surface text-center" type="button">All Unscored</button>
+</div>
+<div class="flex flex-col gap-3">
+<!-- Item 1: Active In Workbench Indicator -->
+<div class="p-3.5 rounded-lg bg-primary text-on-primary shadow-sm flex flex-col gap-1.5 relative">
+<div class="flex items-center justify-between text-primary-fixed font-label-sm text-label-sm uppercase tracking-wider">
+<span>Currently in Evaluation</span>
+<span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-secondary-container"></span> Open</span>
+</div>
+<div class="font-headline-sm text-headline-sm text-on-primary font-serif">The Saltwater Greenhouse</div>
+<div class="font-body-sm text-body-sm text-surface-container-highest flex items-center justify-between">
+<span>Maya Lin (Chapters 1–3)</span>
+<span>Midterm Submission</span>
+</div>
+</div>
+<!-- Item 2: Tariq Chen -->
+<div class="p-3.5 rounded-lg bg-surface-container-lowest shadow-sm flex flex-col gap-2 hover:bg-surface-container-high transition-colors cursor-pointer">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Due Nov 24 • In 2 days</span>
+<span class="text-outline font-label-sm text-label-sm">Novella</span>
+</div>
+<div>
+<div class="font-headline-sm text-headline-sm text-primary font-serif leading-tight">Austerlitz Echoes</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Tariq Chen • 12,400 words</div>
+</div>
+<div class="flex items-center justify-between text-outline font-label-sm text-label-sm pt-1">
+<span>Assigned: Prof. M. Sterling</span>
+<span class="material-symbols-outlined text-[16px] text-primary">arrow_forward</span>
+</div>
+</div>
+<!-- Item 3: Eleanor Vance -->
+<div class="p-3.5 rounded-lg bg-surface-container-lowest shadow-sm flex flex-col gap-2 hover:bg-surface-container-high transition-colors cursor-pointer">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline font-semibold">Due Nov 28</span>
+<span class="text-outline font-label-sm text-label-sm">Draft Submission</span>
+</div>
+<div>
+<div class="font-headline-sm text-headline-sm text-primary font-serif leading-tight">The Desalination Chamber</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Eleanor Vance • 6,100 words</div>
+</div>
+<div class="flex items-center justify-between text-outline font-label-sm text-label-sm pt-1">
+<span>Assigned: Prof. H. Danvers</span>
+<span class="material-symbols-outlined text-[16px] text-primary">arrow_forward</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- RIGHT COLUMN: Active Rubric Evaluation Panel (I2) & Mentor Feedback Timeline (I3) & Showcases (I4) -->
+<div class="lg:col-span-8 flex flex-col gap-8">
+<!-- I2: Rubric Evaluation Panel -->
+<section class="bg-surface-container-low rounded-xl p-8 shadow-sm flex flex-col gap-6">
+<!-- Header of active manuscript evaluation -->
+<div class="flex flex-col md:flex-row md:items-start justify-between gap-4 pb-6 border-b border-surface-container-high">
+<div class="space-y-2">
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2.5 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold uppercase tracking-wider">
+                I2 Standardized Assessment
+              </span>
+<span class="text-outline font-body-sm text-body-sm">•</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Midterm Folio Criterion V3</span>
+</div>
+<h2 class="font-display-lg text-display-lg text-primary font-serif tracking-tight">
+              The Saltwater Greenhouse (Chapters 1–3)
+            </h2>
+<div class="flex flex-wrap items-center gap-4 text-on-surface-variant font-body-sm text-body-sm">
+<span class="font-medium text-on-surface">Candidate: Maya Lin</span>
+<span class="text-outline">•</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-primary">badge</span> Assigned Evaluator: Prof. H. Danvers</span>
+<span class="text-outline">•</span>
+<span>Speculative Fiction Fellowship</span>
+</div>
+</div>
+<!-- Overall Rubric Pass Card -->
+<div class="p-4 rounded-xl bg-primary-container text-on-primary flex flex-col items-center justify-center text-center shrink-0 min-w-[200px] shadow-sm">
+<span class="font-label-sm text-label-sm text-primary-fixed uppercase tracking-wider">Composite Rubric Score</span>
+<div class="flex items-baseline gap-1 my-1">
+<span class="font-display-lg text-display-lg text-on-primary font-serif">92</span>
+<span class="font-headline-sm text-headline-sm text-primary-fixed-dim">/ 100</span>
+</div>
+<span class="px-2 py-0.5 rounded text-[11px] font-label-sm font-semibold bg-primary-fixed text-on-primary-fixed uppercase tracking-tight">
+              Pass with Institutional Distinction
+            </span>
+</div>
+</div>
+<!-- Rubric Matrix Criteria -->
+<div class="space-y-5">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-primary font-serif">Standardized Rubric Matrix</h3>
+<span class="font-body-sm text-body-sm text-outline">Weight: 25% per criteria matrix quadrant</span>
+</div>
+<!-- Criterion 1 -->
+<div class="p-4 rounded-lg bg-surface-container-lowest shadow-sm flex flex-col gap-2.5">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">psychology</span>
+<span class="font-headline-sm text-headline-sm text-primary font-serif">Thematic Depth &amp; Cohesion</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="font-label-sm text-label-sm text-outline">Benchmark: 4.5 / 5.0</span>
+<span class="px-2.5 py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-label-md text-label-md font-bold">
+                  Scored: 4.8 / 5.0
+                </span>
+</div>
+</div>
+<!-- Visual Bar -->
+<div class="w-full bg-surface-container rounded-full h-2 overflow-hidden">
+<div class="bg-primary h-full rounded-full w-[96%] transition-all duration-500"></div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic">
+              "Masterful environmental allegory woven with tactile coastal realism; exceeds department fellowship standard."
+            </p>
+</div>
+<!-- Criterion 2 -->
+<div class="p-4 rounded-lg bg-surface-container-lowest shadow-sm flex flex-col gap-2.5">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">record_voice_over</span>
+<span class="font-headline-sm text-headline-sm text-primary font-serif">Prose Cadence &amp; Stylistic Voice</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="font-label-sm text-label-sm text-outline">Benchmark: 4.0 / 5.0</span>
+<span class="px-2.5 py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-label-md text-label-md font-bold">
+                  Scored: 4.6 / 5.0
+                </span>
+</div>
+</div>
+<div class="w-full bg-surface-container rounded-full h-2 overflow-hidden">
+<div class="bg-primary h-full rounded-full w-[92%] transition-all duration-500"></div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic">
+              "Rhythmic prose and clean syntax. Natural internal monologues mirror early Woolf and Le Guin."
+            </p>
+</div>
+<!-- Criterion 3 (Flagged for Expansion) -->
+<div class="p-4 rounded-lg bg-surface-container-lowest shadow-sm flex flex-col gap-2.5 relative border-l-4 border-secondary">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">timeline</span>
+<span class="font-headline-sm text-headline-sm text-primary font-serif">Narrative Arc &amp; Pacing</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="font-label-sm text-label-sm text-outline">Benchmark: 4.0 / 5.0</span>
+<span class="px-2.5 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-label-md text-label-md font-bold">
+                  Scored: 3.9 / 5.0
+                </span>
+</div>
+</div>
+<div class="w-full bg-surface-container rounded-full h-2 overflow-hidden">
+<div class="bg-secondary h-full rounded-full w-[78%] transition-all duration-500"></div>
+</div>
+<div class="flex items-start gap-2 bg-surface-container p-2.5 rounded text-secondary font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px] shrink-0 mt-0.5">announcement</span>
+<span><strong>Benchmark Action Required:</strong> Needs chapter 3 pacing expansion before entering postgraduate final archive.</span>
+</div>
+</div>
+<!-- Criterion 4 -->
+<div class="p-4 rounded-lg bg-surface-container-lowest shadow-sm flex flex-col gap-2.5">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">public</span>
+<span class="font-headline-sm text-headline-sm text-primary font-serif">Worldbuilding &amp; Structural Plausibility</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="font-label-sm text-label-sm text-outline">Benchmark: 4.2 / 5.0</span>
+<span class="px-2.5 py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-label-md text-label-md font-bold">
+                  Scored: 4.7 / 5.0
+                </span>
+</div>
+</div>
+<div class="w-full bg-surface-container rounded-full h-2 overflow-hidden">
+<div class="bg-primary h-full rounded-full w-[94%] transition-all duration-500"></div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic">
+              "Plausible salinity engineering details ground the coastal agrarian setting seamlessly."
+            </p>
+</div>
+</div>
+<!-- Rubric Workbench Actions -->
+<div class="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-surface-container-high">
+<div class="flex items-center gap-2 text-outline font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px]">history</span>
+<span>Autosaved draft at 11:42 AM by Prof. Danvers</span>
+</div>
+<div class="flex items-center gap-3">
+<button class="px-4 py-2 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-highest font-label-md text-label-md transition-colors" type="button">
+              Save Rubric Draft
+            </button>
+<button class="px-5 py-2.5 rounded-lg bg-primary-container text-on-primary hover:bg-primary font-label-lg text-label-lg shadow-sm flex items-center gap-2 transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">assignment_turned_in</span>
+<span>Finalize &amp; Issue Rubric Scorecard</span>
+</button>
+</div>
+</div>
+</section>
+<!-- I3: Mentor & Structured Feedback Workspace -->
+<section class="bg-surface-container-low rounded-xl p-8 shadow-sm flex flex-col gap-6">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">I3 Mentorship Workspace</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary font-serif">Line-by-Line Structured Feedback Dossier</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Active dialog on Maya Lin's manuscript: 'The Saltwater Greenhouse'</p>
+</div>
+<div class="flex items-center gap-2">
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-primary font-label-md text-label-md transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">calendar_month</span> Schedule Mentor Check-in
+            </button>
+</div>
+</div>
+<!-- Structured Feedback Timeline / Dialog Thread -->
+<div class="p-6 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-6">
+<!-- Annotation Section Metadata Tag -->
+<div class="flex items-center justify-between pb-3 border-b border-surface-container">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">format_quote</span>
+<span class="font-headline-sm text-headline-sm text-primary font-serif">
+                Section: Chapter 2, Scene IV: The Tide Pool Dialogue
+              </span>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-semibold">
+              Category: Character Motivation &amp; Voice
+            </span>
+</div>
+<!-- Manuscript Passage Excerpt -->
+<div class="p-4 rounded-lg bg-surface-container-low text-on-surface italic font-body-md text-body-md relative pl-6">
+<div class="absolute left-2.5 top-3 bottom-3 w-1 bg-secondary rounded-full"></div>
+            "The brine had crept past the root stock before dawn. Neither of us spoke of the harvest failure; to acknowledge the salt was to sign the migration warrant. In her hand, the broken hydrometer felt heavier than an anchor."
+          </div>
+<!-- Structured Mentor Note -->
+<div class="flex items-start gap-4">
+<div class="w-9 h-9 rounded-full bg-primary flex items-center justify-center shrink-0 text-on-primary">
+<span class="font-label-md text-label-md font-serif font-bold">HD</span>
+</div>
+<div class="flex-1 space-y-2">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary font-bold">Prof. H. Danvers <span class="font-normal text-outline">(Faculty Mentor)</span></span>
+<span class="font-label-sm text-label-sm text-outline">Yesterday at 4:15 PM</span>
+</div>
+<div class="p-4 rounded-lg bg-surface-container text-on-surface font-body-md text-body-md leading-relaxed">
+                The transition from botanical grief to quiet defiance in scene 4 anchors the chapter. However, consider slowing down the second conversation so the reader absorbs the ecological subtext. Let the hydrometer detail breathe before introducing the brother's monologue.
+              </div>
+</div>
+</div>
+<!-- Writer Acknowledgment / Follow-up -->
+<div class="flex items-start gap-4 pl-8 sm:pl-12">
+<div class="w-9 h-9 rounded-full bg-secondary flex items-center justify-center shrink-0 text-on-secondary">
+<span class="font-label-md text-label-md font-serif font-bold">ML</span>
+</div>
+<div class="flex-1 space-y-2">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-secondary font-bold">Maya Lin <span class="font-normal text-outline">(Writer Fellow)</span></span>
+<span class="font-label-sm text-label-sm text-outline">Today at 9:08 AM</span>
+</div>
+<div class="p-4 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md leading-relaxed">
+<strong>Maya Lin:</strong> Noted. Revising the dialogue rhythm for the final draft. I am inserting a pause where they measure the soil salinity across the perimeter fence to emphasize the physical stakes.
+              </div>
+</div>
+</div>
+<!-- Mentorship Actions bar -->
+<div class="flex flex-wrap items-center justify-between gap-3 pt-4 border-t border-surface-container">
+<div class="flex items-center gap-2">
+<button class="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-primary font-label-md text-label-md transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">attachment</span> Attach Annotated PDF / Manuscript Notes
+              </button>
+</div>
+<button class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary-container text-on-primary hover:bg-primary font-label-md text-label-md shadow-sm transition-all" type="button">
+<span class="material-symbols-outlined text-[16px]">add_comment</span>
+<span>+ Add Structured Feedback Point</span>
+</button>
+</div>
+</div>
+</section>
+<!-- I4: Showcases, Competitions & Honors Recognition -->
+<section class="bg-surface-container-low rounded-xl p-8 shadow-sm flex flex-col gap-6">
+<div class="flex flex-col md:flex-row md:items-start justify-between gap-4">
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">military_tech</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">I4 Honors &amp; Recognition</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary font-serif">
+              2024 Midwest Speculative Fiction Showcase &amp; Prize
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Category: Best Debut Serial Novel &amp; Structural Worldbuilding
+            </p>
+</div>
+<!-- Deliberation Status Tag -->
+<div class="px-3.5 py-2 rounded-lg bg-surface-container-highest text-primary flex flex-col items-end shrink-0">
+<span class="font-label-sm text-label-sm font-semibold uppercase tracking-wider text-secondary">Stage Status</span>
+<span class="font-label-md text-label-md font-medium text-right">Finalist Deliberation (12 shortlisted manuscripts from 64 submissions)</span>
+</div>
+</div>
+<!-- Shortlist & Awarded Honors Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Winner / First Honor Card -->
+<div class="p-5 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-4 relative overflow-hidden">
+<div class="absolute right-0 top-0 w-24 h-24 bg-primary-fixed/20 rounded-bl-full pointer-events-none"></div>
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<span class="px-2.5 py-1 rounded bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">star</span> First Honor / Winner
+                </span>
+<span class="font-label-sm text-label-sm text-outline font-semibold">Fellowship Medal</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-primary font-serif">Elena Rostova</h4>
+<div class="font-body-md text-body-md text-secondary font-serif italic">The Northern Taiga</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Recognized with 2024 Fellowship Honor. Selected unanimously for narrative architecture and environmental depth.
+              </p>
+</div>
+<div class="pt-2 flex items-center gap-2 text-primary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified</span>
+<span>Badge Minted to Writer Profile</span>
+</div>
+</div>
+<!-- Honorable Mention Card -->
+<div class="p-5 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-4 relative">
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<span class="px-2.5 py-1 rounded bg-surface-container-highest text-primary font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">auto_awesome</span> Honorable Mention
+                </span>
+<span class="font-label-sm text-label-sm text-outline font-semibold">Anthology Select</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-primary font-serif">Maya Lin</h4>
+<div class="font-body-md text-body-md text-secondary font-serif italic">The Saltwater Greenhouse</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Selected for Anthology Feature &amp; Institutional Mentorship Continuation. Recommended for publication imprint.
+              </p>
+</div>
+<div class="pt-2 flex items-center gap-2 text-primary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[16px] text-secondary">bookmark</span>
+<span>Ready for Final Badge Issuance</span>
+</div>
+</div>
+</div>
+<!-- Showcase Console Control Actions -->
+<div class="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-surface-container-high">
+<div class="flex items-center gap-2 text-outline font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span>Official Iowa Writers' Workshop Honor Protocol Active</span>
+</div>
+<div class="flex items-center gap-3">
+<button class="px-4 py-2 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-highest font-label-md text-label-md transition-colors" type="button">
+              Manage Showcase Call for Submissions
+            </button>
+<button class="px-4 py-2 rounded-lg bg-primary-container text-on-primary hover:bg-primary font-label-lg text-label-lg shadow-sm flex items-center gap-2 transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">workspace_premium</span>
+<span>Issue Honors &amp; Badges to Writer Profiles</span>
+</button>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div></main></div></body></html>

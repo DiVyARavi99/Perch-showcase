@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "secondary-fixed": "#ffdbcf", "on-secondary-fixed-variant": "#7a2f10", "inverse-on-surface": "#f7efea", "on-tertiary-container": "#ce9236", "surface-container-high": "#eee7e1", "on-tertiary": "#ffffff", "error": "#ba1a1a", "surface-bright": "#fff8f4", "on-primary-fixed": "#002113", "on-surface": "#1e1b18", "inverse-primary": "#abcfb8", "on-secondary-container": "#762c0d", "secondary-container": "#ff956e", "tertiary": "#2f1c00", "on-error-container": "#93000a", "tertiary-fixed": "#ffddb4", "surface-dim": "#e0d9d3", "outline-variant": "#c1c8c2", "surface-container-lowest": "#ffffff", "primary-fixed": "#c7ebd4", "error-container": "#ffdad6", "tertiary-fixed-dim": "#fcba5b", "on-primary-container": "#83a590", "primary-fixed-dim": "#abcfb8", "surface-container-low": "#faf2ed", "surface-variant": "#e9e1dc", "outline": "#727973", "on-error": "#ffffff", "surface-container-highest": "#e9e1dc", "on-tertiary-fixed-variant": "#633f00", "on-secondary": "#ffffff", "inverse-surface": "#33302c", "on-background": "#1e1b18", "secondary-fixed-dim": "#ffb59b", "on-secondary-fixed": "#380d00", "on-primary": "#ffffff", "secondary": "#994626", "primary-container": "#1b3b2b", "on-primary-fixed-variant": "#2d4d3c", "on-surface-variant": "#424843", "on-tertiary-fixed": "#291800", "surface": "#fff8f4", "surface-tint": "#456553", "background": "#fff8f4", "primary": "#032517", "surface-container": "#f4ece7", "tertiary-container": "#4b2f00" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "space-sm": "0.5rem", "gutter-mobile": "1rem", "gutter": "1.5rem", "space-md": "1rem", "space-xs": "0.25rem", "space-lg": "1.5rem", "margin-mobile": "1.25rem", "margin": "3rem", "space-xl": "2.5rem" }, fontFamily: { "quote-editorial": ["Newsreader"], "headline-md": ["Newsreader"], "body-sm": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "headline-sm": ["Newsreader"], "headline-lg": ["Newsreader"], "display-lg": ["Newsreader"], "display-lg-mobile": ["Newsreader"], "body-md": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"] }, fontSize: { "quote-editorial": ["20px", { "lineHeight": "30px", "fontWeight": "400" }], "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "500" }], "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.03em", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "700" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "400" }], "display-lg-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.015em", "fontWeight": "400" }], "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface antialiased flex flex-col min-h-screen selection:bg-secondary-fixed selection:text-on-secondary-fixed"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(30,27,24,0.03)]"><div class="h-16 px-gutter-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="Perch Literary Logo" class="h-8 w-auto object-contain shrink-0" src="https://lh3.googleusercontent.com/aida/ALJJyrBgXJMZMqyQdmZSfPK7QPbexuXmdB9AWe9NhbVY8oU-CJwS1eiHCL501KZbJKP3UGjCvj8KgCm4iU7H-00GZ8AjsbactWjp9VCeagLatcrKpop2XcM-l-uLQtiXD_tTeW8MhpEd8aOR_9rzVBj109XLXrpTkRVs-Sgi0PEzG2aZDf_0Y_BXGL_-RAyOtNEQclt7pI2ZbTm424SvvmqSMS0cKHkZwU05OPG07sAM9vJp"/><div class="flex flex-col min-w-0"><span class="font-headline-sm text-headline-sm text-primary leading-tight truncate">Perch</span><span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary truncate">Feed</span></div></div><div class="flex items-center gap-space-xs shrink-0"><button aria-label="Notifications" class="w-11 h-11 flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors rounded-full focus:outline-none"><span class="material-symbols-outlined">notifications</span></button><a class="w-11 h-11 flex items-center justify-center rounded-full p-0.5 focus:outline-none" data-path="profile" href="#"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzn418a6cXeQeMcXp2fk4ca79kPoxe4Rxb9ACYQGsH-At6osuY9jfKE5XJ6tMXLJM4n2lR0sgxVU1MkVqFQnm6tRL3VYvOeoagVeCA_i62wApAcR6B3CA-k1MqmkgXZXjTXMemnBQLzC-fJlZr3z5uhP5u6ypvZCTNVBRaaaq_RhPuwOr_5wIAR4PGvMG0oxjaODhDYLp1_WDy_lo8KMtnLEuTEfS1QNSv8nNEuTU"/></a></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-24 bg-surface px-gutter-mobile"><div class="flex flex-col w-full pb-8 space-y-5">
+<!-- View Switcher / Filter Pills -->
+<section class="flex items-center gap-space-xs overflow-x-auto py-1 no-scrollbar shrink-0">
+<button class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-primary text-on-primary font-label-md text-label-md transition-all shadow-sm">
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">diversity_3</span>
+      Inner Circle
+    </button>
+<button class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant hover:text-primary font-label-md text-label-md transition-colors">
+<span class="material-symbols-outlined text-base">edit_note</span>
+      Marginalia
+    </button>
+<button class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant hover:text-primary font-label-md text-label-md transition-colors">
+<span class="material-symbols-outlined text-base">task_alt</span>
+      Finished Recently
+    </button>
+<button class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant hover:text-primary font-label-md text-label-md transition-colors">
+<span class="material-symbols-outlined text-base">bookmarks</span>
+      Echoes
+    </button>
+</section>
+<!-- Feed Card 1: Deep Marginalia Note (Elena Rostova) -->
+<article class="relative flex flex-col bg-surface-container-low rounded-xl p-4 shadow-sm space-y-3 overflow-hidden">
+<!-- Top Decorative Bookmark Ribbon Peak -->
+<div class="absolute -top-1 right-6 w-5 h-6 bg-secondary rounded-b-sm shadow-xs flex items-center justify-center">
+<span class="material-symbols-outlined text-surface text-xs" style="font-variation-settings: 'FILL' 1;">turned_in</span>
+</div>
+<!-- Curator Header -->
+<div class="flex items-start justify-between pr-6">
+<div class="flex items-center gap-2.5">
+<img class="w-10 h-10 rounded-full object-cover shrink-0 shadow-xs" data-alt="Intimate portrait of Elena Rostova, a thoughtful woman in her early thirties sitting in an antiquarian bookstore bathed in warm afternoon sunlight, holding a leather notebook, filmic grain, subtle earth tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHh5PPKR4jjuH5PN89kVAefaac2Rzm6ul10TQvM3zGHZQ37VuJ2OKji2ud_04CxUz71oBbjJc7dgnCho2QxlYXutoyPpb-AumY7abn5uz0sRag-rNe2cP0NdgeI-xW60qIGc9mEsKJccQBozKbqSMqhHbExUjXg0kb2dPc4H_y-vHpnKD26avL2sjDkQNNOWU_4QOo66H1kGugg9WdJR6aRXEBNa2vi0lHri2UZYI"/>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold truncate">Elena Rostova</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">@elena_reads</span>
+</div>
+<div class="flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-xs text-primary" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wide">Curator in Speculative Fiction</span>
+</div>
+</div>
+</div>
+<button aria-label="Card options" class="text-on-surface-variant hover:text-on-surface p-1 rounded-full transition-colors">
+<span class="material-symbols-outlined text-lg">more_horiz</span>
+</button>
+</div>
+<!-- Book Context Tag -->
+<div class="flex items-center gap-2 pt-0.5">
+<span class="material-symbols-outlined text-secondary text-sm">menu_book</span>
+<span class="font-label-md text-label-md text-secondary font-medium">Klara and the Sun</span>
+<span class="text-outline-variant font-label-sm">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container-highest px-2 py-0.5 rounded-full">p. 142 Marginalia</span>
+</div>
+<!-- The Quoted Marginalia Snippet (Book Extract) -->
+<div class="relative bg-surface-container rounded-lg p-3.5 space-y-2">
+<div class="flex items-center justify-between text-on-tertiary-container">
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Underlined in Ochre Pencil</span>
+<span class="material-symbols-outlined text-base">format_quote</span>
+</div>
+<blockquote class="font-quote-editorial text-quote-editorial italic text-on-surface leading-snug">
+        “Do you believe in the human heart? I don’t mean simply the organ, obviously. Do you think there is such a thing? Something that makes each of us special and individual?”
+      </blockquote>
+</div>
+<!-- Elena's Personal Commentary -->
+<div class="pl-2 space-y-1">
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+        Ishiguro dismantles cynicism so quietly you barely realize you’ve been crying. It’s an artificial being asking the only question that still matters to humanity.
+      </p>
+</div>
+<!-- Influence Badge -->
+<div class="inline-flex items-center gap-1.5 self-start px-2.5 py-1 rounded-md bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-sm">spark</span>
+      Prompted 34 readers to pick this up
+    </div>
+<!-- Card Interactions Bar -->
+<div class="flex items-center justify-between pt-2">
+<div class="flex items-center gap-4">
+<button class="flex items-center gap-1.5 text-on-surface-variant hover:text-secondary transition-colors group">
+<span class="material-symbols-outlined text-lg group-hover:scale-110 transition-transform">bookmark_add</span>
+<span class="font-label-md text-label-md">24</span>
+</button>
+<button class="flex items-center gap-1.5 text-on-surface-variant hover:text-primary transition-colors group">
+<span class="material-symbols-outlined text-lg group-hover:scale-110 transition-transform">chat_bubble_outline</span>
+<span class="font-label-md text-label-md">18 responses</span>
+</button>
+</div>
+<button aria-label="Share marginalia" class="text-on-surface-variant hover:text-on-surface p-1 transition-colors">
+<span class="material-symbols-outlined text-lg">share</span>
+</button>
+</div>
+</article>
+<!-- Horizontal Module: Friends Reading Right Now -->
+<section class="flex flex-col space-y-2.5 pt-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<h2 class="font-headline-sm text-headline-sm text-primary">In Hand Right Now</h2>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold cursor-pointer">Live Shelf</span>
+</div>
+<div class="flex gap-3 overflow-x-auto pb-2 no-scrollbar -mx-gutter-mobile px-gutter-mobile">
+<!-- Friend 1: Maya -->
+<div class="flex flex-col w-36 shrink-0 bg-surface-container-low p-2.5 rounded-xl shadow-xs space-y-2">
+<div class="flex items-center gap-1.5">
+<img class="w-5 h-5 rounded-full object-cover" data-alt="Warm micro portrait of Maya smiling gently, natural curly hair, reading near a window in soft morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxR9TWIAuLQBoRWOza_N3Vo3GI4wuxZ_n3hYOdg5gp6Ewh4dtViEXNBlpEwBcrN5BbPrASPDpREXbv90XoZXFC6x6HE9iJCc3yXvCyRlGaqqm-poJsTr_2wNyHZq4dFJjVOVHQOf0xCDNYVtJ_HcivHauwpUOO3M31RVPV9IGJnFJxLCdYf2mcPS4P9nkOq5PpL1-eyMkir1r8rdvB7o2kxpqvDO1THrnLcG8qkhY"/>
+<span class="font-label-sm text-label-sm text-on-surface truncate font-medium">Maya S.</span>
+</div>
+<div class="relative w-full h-24 rounded-md overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Editorial book cover of Demon Copperhead by Barbara Kingsolver, rich denim blues and copper rust tones on artisanal woven paper texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCF0NluMdcgrxtosn_0IBqU6Q3UHhclPHT-5CTXRBqPgrrMMDcw-fSefX-zUF9qeGGJPJ6Zpcg4QXLFLsbtFJMbCEFKiCRTX5WwV__pNjFLG4ubz5-IWQft73-rfes8gFiZYTOvI46vxH_RHHqu8p5ymDmYwT7bECtZP_PVKxfFFvH_XKnZkzbdmWWZhdDPRV-5LwWrqMx-Wijl2-4MqAKo4g8sq0b7-INivFu6NBA"/>
+<div class="absolute bottom-1 right-1 bg-surface-container-lowest/90 px-1.5 py-0.5 rounded text-on-surface font-label-sm text-label-sm font-bold shadow-xs">
+            p. 210
+          </div>
+</div>
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold line-clamp-1">Demon Copperhead</span>
+<div class="w-full bg-surface-container-high rounded-full h-1.5 overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 38%"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block text-right">38%</span>
+</div>
+</div>
+<!-- Friend 2: Julian -->
+<div class="flex flex-col w-36 shrink-0 bg-surface-container-low p-2.5 rounded-xl shadow-xs space-y-2">
+<div class="flex items-center gap-1.5">
+<img class="w-5 h-5 rounded-full object-cover" data-alt="Micro candid portrait of Julian in round tortoiseshell spectacles reading on a sunlit commuter train" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8ODTYMFuw11Z2QXUc-3C-k5txw6Z11cANuBBCCjSHce5PEiVi5AkQLpyaehUugg4Z2Qnf8te1a5zdZSWDrbXz2HNEwNvKgZhlbnVl6hYIQrkoR0HCi9p01TEoQRS2n27HBCXMbt--t9Kx6EAWjk0GR20VQzKrYxDosDQJFfaJTSgEAOuhe_Y8qiRAlWvt3i6h1Sc5MmL5WR3gpQvsymmEumwI-U5enkC5oHINiJw"/>
+<span class="font-label-sm text-label-sm text-on-surface truncate font-medium">Julian K.</span>
+</div>
+<div class="relative w-full h-24 rounded-md overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Artistic cover of Piranesi by Susanna Clarke, marble statuary in misty tides, deep ocean teals and classical engravings" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBa7MMv66_3-7K_p19-QuEuMhcAIcGbu-qa3MdaPaTNIrbtx5NNrM2jXYBqIk8MY2cyILIc3_GRAnkgWexMYfWlEU5H9rFxRRR_cJCY3vMj86BRqUM_LjGjGkqkLFMB_-WJ86fv-jws885bMglQfoDGoMrDvS_wb4NtiGSdXHKzY480j0uSyMsGGAR5YflR9HlcADCBI3Q2XO9Iex8iXb9vccgxpuIZN3QyJw9akJU"/>
+<div class="absolute bottom-1 right-1 bg-surface-container-lowest/90 px-1.5 py-0.5 rounded text-on-surface font-label-sm text-label-sm font-bold shadow-xs">
+            Ch. 4
+          </div>
+</div>
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold line-clamp-1">Piranesi</span>
+<div class="w-full bg-surface-container-high rounded-full h-1.5 overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 22%"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block text-right">22%</span>
+</div>
+</div>
+<!-- Friend 3: Aris -->
+<div class="flex flex-col w-36 shrink-0 bg-surface-container-low p-2.5 rounded-xl shadow-xs space-y-2">
+<div class="flex items-center gap-1.5">
+<img class="w-5 h-5 rounded-full object-cover" data-alt="Micro portrait of Aris resting chin on hand beside an antique wooden lamp in a public library" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD42e-rxUtvR3tsZsnPs02w14vIiS741TNIULxYf1ovFFzqwvZsZwUF1Wc9oQr3OMIRO4kcJersO_MKl-v835Rlh4A-60iwuZuGqKXXYcTYbnCtD0ldMKpzdMXJ5sRkq-4F9wva3F7meW0itLVsGhdf4RXSX63Ah4LK8-eac8d5Y3L4dFY8g7Fo4NLH4UXlQRPDA8-J2vQ0I4n8A1KclpNYtsBVhG5GzV0LUaqz-fg"/>
+<span class="font-label-sm text-label-sm text-on-surface truncate font-medium">Aris Thorne</span>
+</div>
+<div class="relative w-full h-24 rounded-md overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Minimalist book cover of The Overstory by Richard Powers, rings of ancient redwood tree cross-section in forest green and raw paper tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdnVluKH1thD0kw1QUZ7kzck-dKq9m5OFEtBDuWIFHkvKPg9mDmBxLOqcUfLlirEt-6F2OOJKQS6sMBf30uwEuZO21QqxHgNwU10n26KGeYO0nfpBX1_fS8aR_VJH7uoOm-9YV6tGbBybkPcZEv92ahlwH7odvhbZSdIgOuN_OcHPD0oElatPoDBSFXSobe2oMOlVusHKJkcpLx-K5H9LWu61jhAm3e1qK20-XIJg"/>
+<div class="absolute bottom-1 right-1 bg-surface-container-lowest/90 px-1.5 py-0.5 rounded text-on-surface font-label-sm text-label-sm font-bold shadow-xs">
+            p. 488
+          </div>
+</div>
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold line-clamp-1">The Overstory</span>
+<div class="w-full bg-surface-container-high rounded-full h-1.5 overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 82%"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block text-right">82%</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Feed Card 2: Finished Shelf Update (Marcus Vance) -->
+<article class="flex flex-col bg-surface-container-low rounded-xl p-4 shadow-sm space-y-3">
+<!-- Header -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<img class="w-10 h-10 rounded-full object-cover shrink-0 shadow-xs" data-alt="Warm profile portrait of Marcus Vance, mid-forties architect, relaxed expression in a wood-paneled room surrounded by hardcover architecture volumes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbgcoAJSviGzIP_CSqwEb3v-zeA24vtIRkKGUuF5P1Riu-4WJzzQMhqxXkrqT2M2ZzTSBUBwB5K1NBTiWeHCGYRxBvnJ17zP8czrpq0SE1oQuSQJi9snBym49F1eejXFRUH7nQ8chUkFVazmTOa8-fLJ_al82_f6Bd1YJ6XzxpRThct96_wPGEmqc7-NhnrYWBD_OnL0qeJVpwP06zt_qPkTa7HXl4izUqUPFdw7g"/>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold truncate">Marcus Vance</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">@marcusv</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Finished reading yesterday</span>
+</div>
+</div>
+<!-- Finished Stamp Tag -->
+<span class="inline-flex items-center gap-1 bg-primary text-on-primary px-2.5 py-1 rounded-md font-label-sm text-label-sm font-semibold tracking-wider uppercase">
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+        Shelved
+      </span>
+</div>
+<!-- Book Card Split Row -->
+<div class="flex gap-3 bg-surface-container p-3 rounded-lg">
+<img class="w-16 h-24 object-cover rounded shadow-sm shrink-0" data-alt="Artistic cover of Tomorrow, and Tomorrow, and Tomorrow by Gabrielle Zevin, iconic woodblock wave motif in bold primary vermilion, deep navy and cream on heavy book linen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5J_whd4TKEjp3OANQxcfxdVnyJjtJ1UFLQ89UXkLpLqwbFj_2ACqKh7HbUm3Jql3PuWe8rxKcQVUo7EmdtlnZyUZEvkLNovjHeu6OvKavF_nZP8p7c8dsVwIzhREVJxbTAyCCcNMRSFUk9fCqIiMSmCBRT9kas5T817h41JTOUm4mhzXUK32EAZz5azhcGEjxHgS8s68cwIKfSdNWDWLF91ugplskKPdGffgA7Gk"/>
+<div class="flex flex-col justify-between min-w-0 flex-1 py-0.5">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary leading-tight truncate">Tomorrow, and Tomorrow, and Tomorrow</h3>
+<p class="font-label-md text-label-md text-on-surface-variant">Gabrielle Zevin</p>
+</div>
+<!-- Nuanced Verdict & Perch Bird Rating -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-1 text-on-tertiary-container" title="5 Perch Marks">
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">nest_cam_wired_stand</span>
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">nest_cam_wired_stand</span>
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">nest_cam_wired_stand</span>
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">nest_cam_wired_stand</span>
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">nest_cam_wired_stand</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant ml-1 font-bold">Unreserved</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Marcus's Nuanced Verdict Statement -->
+<p class="font-quote-editorial text-quote-editorial text-on-surface italic pl-1 leading-snug">
+      “Heart-wrenching, unpretentious portrait of creative partnership. It treats the act of making things together as the ultimate romance.”
+    </p>
+<!-- Social Provenance Footer -->
+<div class="flex items-center justify-between pt-1 text-on-surface-variant">
+<div class="flex items-center gap-1.5 bg-secondary-fixed/50 text-on-secondary-fixed-variant px-2.5 py-1 rounded-full font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-sm">handshake</span>
+        Passed physical copy to 3 friends
+      </div>
+<div class="flex items-center gap-3">
+<button class="flex items-center gap-1 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-base">forum</span>
+<span class="font-label-sm text-label-sm">12</span>
+</button>
+<button class="flex items-center gap-1 text-on-surface-variant hover:text-secondary transition-colors">
+<span class="material-symbols-outlined text-base">bookmark</span>
+<span class="font-label-sm text-label-sm">31</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Feed Card 3: Comparative Stack Recommendation (Dr. Clara Evans) -->
+<article class="flex flex-col bg-surface-container-low rounded-xl p-4 shadow-sm space-y-3.5">
+<!-- Header -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<img class="w-10 h-10 rounded-full object-cover shrink-0 shadow-xs" data-alt="Portrait of Dr. Clara Evans, professor in her late fifties, silver hair swept up, candid joyful intellectual expression in university faculty lounge" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCozgGkQHgAGfnVEVduBy_N7YMsvDGFUAzqQF3Gzm7rKxplzS-8cY_6islXvN02K-2cvk_Cmb4no6-VDgE2Znm58rgrLnqLek_RP3TUJ55fBJJ1hwtOB9pURUNhvW5OB7oC6nSYwgt762VLEHfFUGhjWQ-W_SE17VFmAI9-NWgSvK4-CGw2nuPJ3bEHaEkcVa19W7GgWC9xZ66PtfHJkc0HJlVfl9RBG-H6nFFicJQ"/>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold truncate">Dr. Clara Evans</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">@clara_lit</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-medium">Comparative Stack • Curated Pair</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-tertiary-container">compare_arrows</span>
+</div>
+<!-- Editorial Comparative Lead-in -->
+<div class="space-y-1">
+<h3 class="font-headline-sm text-headline-sm text-primary leading-snug">
+        “If you loved <span class="italic underline decoration-secondary decoration-2 underline-offset-4">Pachinko</span>, bypass the airport table and pick up this instead.”
+      </h3>
+<p class="font-body-md text-body-md text-on-surface-variant pt-1 leading-relaxed">
+        Lisa See’s account of Jeju Island’s female free-divers shares Min Jin Lee’s sprawling generational grit and quiet endurance without sentimental compromises.
+      </p>
+</div>
+<!-- Visual Book Pair Comparison Module -->
+<div class="grid grid-cols-2 gap-2.5 bg-surface-container p-3 rounded-lg">
+<!-- Reference Book -->
+<div class="flex flex-col items-center text-center space-y-2 p-2 bg-surface-container-lowest rounded-md">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">You Cherished</span>
+<img class="w-16 h-24 object-cover rounded shadow-xs" data-alt="Editorial book cover of Pachinko by Min Jin Lee, intricate mother of pearl and dark floral motifs on deep emerald binding" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7p1SHjl6QJIEwolUA283XEor94lHeknOVGrOqJi7n1bukwq9ppUVNZkbgEFwFGavv821kSX0fkuMU9OG3TtJbe6KKxN21BtG4_LgqLYrqSs1NIJhPludCEc1h59M4cWSX9IH8sRw2lh4vEGx0iV9-59dW9JrJf50uzjjOkvoJlw5Rpgp9Afl8ZocRLMaiEYkHrFNZWA7bc3yptH-KnxDzHPrQS7VjRGuLMI3luOY"/>
+<div>
+<span class="font-label-md text-label-md text-on-surface font-semibold block line-clamp-1">Pachinko</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Min Jin Lee</span>
+</div>
+</div>
+<!-- Recommended Book -->
+<div class="flex flex-col items-center text-center space-y-2 p-2 bg-secondary-fixed/30 rounded-md relative overflow-hidden">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Read Next</span>
+<img class="w-16 h-24 object-cover rounded shadow-xs" data-alt="Editorial book cover of The Island of Sea Women by Lisa See, sea mist, ocean waves, and Jeju island coastline textures on matte art paper" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcX_VM90EK7JBZLWWhAXs_H3DJfws71-a5om54jisz7QHocsP3Ra2ENl9EKFT2CgMNEtHcUc-v4V7b9tPj7QWayTtlno0Q-Ubu_HHRg0vOm_vnaxFXkcFl_y6jcqytklOhhyh9wjVJPrzCUh2D1fUTSUelzwZP4AmPOmDTv9pQZtALyDi8KilVNfJZoXs-QfYbH6UKamJhqsA17vrG3CRqK0U_aBiQoftlSN-s0AM"/>
+<div>
+<span class="font-label-md text-label-md text-on-surface font-semibold block line-clamp-1">The Island of Sea Women</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Lisa See</span>
+</div>
+</div>
+</div>
+<!-- Curator Bottom Actions -->
+<div class="flex items-center justify-between pt-1">
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md transition-opacity hover:opacity-95">
+<span class="material-symbols-outlined text-base">add_to_photos</span>
+        Add Pair to Shelf
+      </button>
+<div class="flex items-center gap-3 text-on-surface-variant">
+<button aria-label="Bookmarked pair" class="flex items-center gap-1 hover:text-secondary transition-colors">
+<span class="material-symbols-outlined text-base">bookmark_added</span>
+<span class="font-label-sm text-label-sm">47</span>
+</button>
+<button aria-label="Share recommendation" class="hover:text-primary transition-colors p-1">
+<span class="material-symbols-outlined text-base">share</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Gentle End-of-Feed Literary Cadence -->
+<div class="flex flex-col items-center justify-center py-6 text-center space-y-2">
+<span class="material-symbols-outlined text-2xl text-on-surface-variant">auto_stories</span>
+<p class="font-quote-editorial text-quote-editorial italic text-on-surface-variant">
+      “A room without books is like a body without a soul.”
+    </p>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-outline">You are fully caught up with your inner circle</span>
+</div>
+</div></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-low/95 backdrop-blur-xl shadow-[0_-2px_12px_rgba(30,27,24,0.04)]" data-active-classes="text-primary font-bold"><div class="flex justify-around items-center h-16 px-space-xs"><a aria-current="page" class="flex flex-col items-center justify-center gap-space-xs min-w-[64px] h-12 transition-all rounded-lg text-primary font-bold" data-path="feed" href="#"><span class="material-symbols-outlined text-2xl">auto_stories</span><span class="font-label-sm text-label-sm">Feed</span></a><a class="flex flex-col items-center justify-center gap-space-xs min-w-[64px] h-12 text-on-surface-variant hover:text-primary transition-all rounded-lg" data-path="discover" href="#"><span class="material-symbols-outlined text-2xl">explore</span><span class="font-label-sm text-label-sm">Discover</span></a><a class="flex flex-col items-center justify-center gap-space-xs min-w-[64px] h-12 text-on-surface-variant hover:text-primary transition-all rounded-lg" data-path="my-stacks" href="#"><span class="material-symbols-outlined text-2xl">library_books</span><span class="font-label-sm text-label-sm">My Stacks</span></a><a class="flex flex-col items-center justify-center gap-space-xs min-w-[64px] h-12 text-on-surface-variant hover:text-primary transition-all rounded-lg" data-path="profile" href="#"><span class="material-symbols-outlined text-2xl">person</span><span class="font-label-sm text-label-sm">Profile</span></a></div></nav></body></html>

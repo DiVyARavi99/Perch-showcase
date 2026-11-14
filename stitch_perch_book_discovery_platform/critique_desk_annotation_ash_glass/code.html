@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-tint": "#456553", "on-tertiary": "#ffffff", "tertiary-fixed-dim": "#fcba5b", "tertiary-fixed": "#ffddb4", "surface-container-high": "#eee7e1", "inverse-primary": "#abcfb8", "primary": "#032517", "on-surface-variant": "#424843", "inverse-on-surface": "#f7efea", "on-tertiary-fixed": "#291800", "surface": "#fff8f4", "on-primary-container": "#83a590", "on-error-container": "#93000a", "on-secondary": "#ffffff", "inverse-surface": "#33302c", "surface-container-lowest": "#ffffff", "tertiary": "#2f1c00", "on-secondary-fixed": "#380d00", "secondary-container": "#ff956e", "surface-container-low": "#faf2ed", "on-tertiary-fixed-variant": "#633f00", "outline": "#727973", "on-secondary-fixed-variant": "#7a2f10", "primary-fixed": "#c7ebd4", "on-tertiary-container": "#ce9236", "on-primary-fixed": "#002113", "secondary-fixed": "#ffdbcf", "on-primary-fixed-variant": "#2d4d3c", "outline-variant": "#c1c8c2", "surface-dim": "#e0d9d3", "error-container": "#ffdad6", "tertiary-container": "#4b2f00", "surface-container-highest": "#e9e1dc", "background": "#fff8f4", "on-surface": "#1e1b18", "primary-fixed-dim": "#abcfb8", "on-primary": "#ffffff", "on-background": "#1e1b18", "primary-container": "#1b3b2b", "secondary": "#994626", "surface-container": "#f4ece7", "surface-variant": "#e9e1dc", "on-secondary-container": "#762c0d", "secondary-fixed-dim": "#ffb59b", "error": "#ba1a1a", "surface-bright": "#fff8f4", "on-error": "#ffffff" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-sm": "0.5rem", "space-md": "1rem", "space-xl": "2.5rem", "margin-mobile": "1.25rem", "gutter": "1.5rem", "space-lg": "1.5rem", "space-xs": "0.25rem", "gutter-mobile": "1rem", "margin": "3rem" }, "fontFamily": { "label-md": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "display-lg-mobile": ["Newsreader"], "headline-sm": ["Newsreader"], "display-lg": ["Newsreader"], "label-sm": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "quote-editorial": ["Newsreader"], "body-lg": ["Plus Jakarta Sans"], "headline-lg": ["Newsreader"], "headline-md": ["Newsreader"] }, "fontSize": { "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.03em", "fontWeight": "600" }], "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "display-lg-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.015em", "fontWeight": "400" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "400" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "700" }], "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }], "quote-editorial": ["20px", { "lineHeight": "30px", "fontWeight": "400" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "500" }] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md min-w-0"><a class="flex items-center gap-space-xs text-on-surface-variant hover:text-on-surface transition-colors py-1 px-2 rounded-lg hover:bg-surface-container" data-path="guild-cohort" href="#"><span class="material-symbols-outlined text-[18px]">arrow_back</span><span class="font-label-md text-label-md uppercase tracking-wider hidden sm:inline">Pacific Speculative Guild (W4)</span></a><div class="h-4 w-px bg-outline-variant hidden sm:block"></div><div class="flex items-center gap-space-sm min-w-0"><span class="font-headline-sm text-headline-sm italic text-on-surface truncate">Ash &amp; Glass</span><span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant hidden md:inline">by Robin Finch</span><span class="px-2 py-0.5 rounded-full bg-surface-container-high font-label-sm text-label-sm text-on-surface-variant hidden lg:inline">Climate Noir</span></div></div><div class="hidden xl:flex items-center gap-space-lg"><div class="flex items-center gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-[16px]">schedule</span><span class="font-label-md text-label-md">Critique Due: 2d 14h</span></div><div class="flex items-center gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-[16px]">history_edu</span><span class="font-label-md text-label-md">4,820 words</span></div><div class="w-24 h-1.5 bg-surface-container-high rounded-full overflow-hidden"><div class="w-3/5 h-full bg-primary-container rounded-full"></div></div></div><div class="flex items-center gap-space-sm flex-shrink-0"><button class="px-3 py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md transition-all shadow-[0_1px_4px_rgba(0,0,0,0.02)] hidden md:inline-flex items-center gap-1.5" type="button"><span class="material-symbols-outlined text-[16px]">save</span>Save Draft</button><button class="px-3.5 py-1.5 rounded-lg bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md transition-all shadow-[0_1px_4px_rgba(0,0,0,0.04)] inline-flex items-center gap-1.5" type="button"><span class="material-symbols-outlined text-[16px]">task_alt</span>Submit Diagnostic</button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0 ml-1"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><aside class="fixed left-0 top-16 bottom-0 w-64 bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.02)] z-40 flex flex-col justify-between py-space-md"><div class="px-space-md flex flex-col gap-space-sm"><div class="px-3 py-2"><span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Manuscript Index</span></div><nav class="flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary font-label-md text-label-md rounded-lg"><a aria-current="page" class="flex items-center px-3 py-2 transition-all bg-primary-container text-on-primary font-label-md text-label-md rounded-lg" data-path="manuscript-workspace" href="#"><span class="material-symbols-outlined mr-2.5 text-[18px]">menu_book</span>Prologue: The Salton Drift</a><a class="flex items-center px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="chapter-one-review" href="#"><span class="material-symbols-outlined mr-2.5 text-[18px]">article</span>Chapter 1: Brackish Air</a><a class="flex items-center px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="diagnostic-matrix" href="#"><span class="material-symbols-outlined mr-2.5 text-[18px]">analytics</span>Diagnostic Matrix</a><a class="flex items-center px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="margin-notes-ledger" href="#"><span class="material-symbols-outlined mr-2.5 text-[18px]">stylus_note</span>Margin Archive (14)</a></nav></div><div class="px-space-md pt-space-sm border-t border-outline-variant/30 flex flex-col gap-space-xs"><div class="p-3 rounded-lg bg-surface-container flex flex-col gap-1"><span class="font-label-sm text-label-sm uppercase text-secondary font-bold">Rubric Progress</span><span class="font-body-sm text-body-sm text-on-surface-variant">4 of 6 diagnostic lenses completed</span></div></div></aside><div class="pl-64"><main class="relative pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Workspace Context Canvas -->
+<section class="w-full bg-surface-container-low px-gutter py-space-md shadow-sm">
+<div class="max-w-7xl mx-auto flex flex-col lg:flex-row lg:items-center lg:justify-between gap-space-md">
+<!-- Left Metadata & Trajectory -->
+<div class="flex flex-col gap-space-xs min-w-0">
+<div class="flex items-center gap-space-sm flex-wrap">
+<a class="inline-flex items-center gap-1 font-label-md text-label-md text-secondary hover:text-on-secondary-container transition-colors" href="#">
+<span class="material-symbols-outlined text-[16px]">west</span>
+            Back to Pacific Speculative Guild
+          </a>
+<span class="text-outline-variant font-label-sm text-label-sm">•</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">
+            Cohort W4 Cycle
+          </span>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed font-label-sm text-label-sm text-on-tertiary-fixed font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container animate-pulse"></span>
+            Peer Critique in Progress
+          </span>
+</div>
+<div class="flex items-baseline gap-space-sm flex-wrap mt-0.5">
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight">Ash &amp; Glass</h1>
+<span class="font-label-md text-label-md text-on-surface-variant">by Robin Finch (Fellow Guildmember)</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline px-2 py-0.5 rounded bg-surface">
+            Climate Noir • 18 Pages • 4,200 Words
+          </span>
+</div>
+</div>
+<!-- Right Progress & Primary Intent Controls -->
+<div class="flex flex-col sm:flex-row items-start sm:items-center gap-space-md lg:self-end">
+<!-- Manuscript Meter -->
+<div class="bg-surface p-2.5 rounded-lg shadow-sm flex flex-col gap-1 min-w-[210px]">
+<div class="flex justify-between items-center text-on-surface-variant">
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold text-secondary">Draft Progression</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">8 / 18 pp. (45%)</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary-container rounded-full transition-all duration-500" style="width: 45%;"></div>
+</div>
+<div class="flex items-center justify-between text-outline text-[11px] font-label-sm">
+<span>3 Annotations logged</span>
+<span class="text-secondary flex items-center gap-0.5 font-semibold">
+<span class="material-symbols-outlined text-[13px]">alarm</span> 38h left
+            </span>
+</div>
+</div>
+<!-- Action Trigger Group -->
+<div class="flex items-center gap-space-xs">
+<button class="px-3 py-2 rounded-lg bg-surface text-on-surface hover:bg-surface-container font-label-md text-label-md transition-all shadow-sm flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[18px]">bookmark_add</span>
+<span class="hidden sm:inline">Save Draft</span>
+</button>
+<button class="px-3 py-2 rounded-lg bg-surface text-on-surface hover:bg-surface-container font-label-md text-label-md transition-all shadow-sm flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[18px]">preview</span>
+<span>Author Digest</span>
+</button>
+<button class="px-3.5 py-2 rounded-lg bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md transition-all shadow-sm flex items-center gap-1.5 group relative" id="submitCritiqueBtn" type="button">
+<span class="material-symbols-outlined text-[18px] group-hover:scale-105 transition-transform">verified</span>
+<span>Submit Diagnostic</span>
+<span class="absolute -top-2 -right-1 px-1.5 py-0.2 rounded-full bg-secondary text-on-secondary text-[9px] font-label-sm font-bold uppercase tracking-wider">
+              55w to unlock
+            </span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Dual Editorial Workspace Body -->
+<div class="max-w-7xl mx-auto w-full px-gutter py-space-md grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT COLUMN: Interactive Manuscript Workdesk (7 Cols) -->
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<!-- Pinned Author Query Deck -->
+<div class="relative p-space-md rounded-xl bg-surface-container-high shadow-sm overflow-hidden">
+<div class="absolute -right-6 -bottom-6 w-24 h-24 rounded-full bg-tertiary-fixed-dim/20 blur-xl pointer-events-none"></div>
+<div class="flex items-start justify-between gap-space-sm mb-2">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">help_center</span>
+<span class="font-label-md text-label-md uppercase tracking-wider text-secondary font-bold">Robin's Critique Priorities (Pinned by Author)</span>
+</div>
+<span class="font-label-sm text-label-sm uppercase bg-surface px-2 py-0.5 rounded text-on-surface-variant font-semibold">Priority Focus</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-sm mt-space-xs">
+<!-- Question 1 -->
+<div class="p-3 bg-surface rounded-lg shadow-sm flex flex-col justify-between gap-2 group hover:bg-surface-bright transition-colors">
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">Inquiry #1 • Pacing &amp; World</span>
+<p class="font-body-sm text-body-sm text-on-surface italic">
+                “Does the opening climate quarantine protocol feel sufficiently grounded or over-explained?”
+              </p>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-surface-tint font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> 1 Note Attached
+              </span>
+<a class="font-label-sm text-label-sm uppercase text-secondary hover:underline font-bold" href="#callout-line-42">Jump to line</a>
+</div>
+</div>
+<!-- Question 2 -->
+<div class="p-3 bg-surface rounded-lg shadow-sm flex flex-col justify-between gap-2 group hover:bg-surface-bright transition-colors">
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">Inquiry #2 • Scene 2 Cadence</span>
+<p class="font-body-sm text-body-sm text-on-surface italic">
+                “How is the dialogue rhythm in Scene 2 when they breach the dry dock?”
+              </p>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-surface-tint font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> 1 Note Attached
+              </span>
+<a class="font-label-sm text-label-sm uppercase text-secondary hover:underline font-bold" href="#callout-line-88">Jump to line</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Literary Manuscript Container -->
+<article class="relative bg-surface p-6 sm:p-10 rounded-xl shadow-md selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<!-- Document Header Decorum -->
+<div class="flex items-center justify-between pb-4 mb-6 border-b-0">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-outline">Working Draft • Pacific Basin Revision #3</span>
+<span class="font-headline-sm text-headline-sm text-primary">Prologue: The Salton Drift</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface" title="Manuscript Settings" type="button">
+<span class="material-symbols-outlined text-[18px]">format_size</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface" title="Full Width View" type="button">
+<span class="material-symbols-outlined text-[18px]">fullscreen</span>
+</button>
+</div>
+</div>
+<!-- Floating Selection Bar Simulation (Hover / Selection Tooltip) -->
+<div class="mb-6 p-2 rounded-lg bg-primary text-on-primary shadow-xl flex items-center justify-between gap-3 text-xs z-20">
+<div class="flex items-center gap-1.5 pl-2">
+<span class="material-symbols-outlined text-secondary-container text-[16px]">stylus_note</span>
+<span class="font-label-sm text-label-sm text-on-primary-container">Selection: <em>“the saline sensors hummed like cicadas...”</em></span>
+</div>
+<div class="flex items-center gap-1">
+<button class="px-2 py-1 rounded bg-primary-container hover:bg-surface-tint font-label-sm text-label-sm text-on-primary transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[14px]">add_comment</span> Margin Note
+            </button>
+<button class="px-2 py-1 rounded hover:bg-primary-container font-label-sm text-label-sm text-on-primary transition-colors" type="button">
+              Flag Dialogue
+            </button>
+<button class="px-2 py-1 rounded hover:bg-primary-container font-label-sm text-label-sm text-on-primary transition-colors" type="button">
+              Praise Line
+            </button>
+</div>
+</div>
+<!-- Manuscript Text Stream with Line Indices & Annotations -->
+<div class="space-y-6 text-on-surface font-headline-md text-quote-editorial leading-loose">
+<!-- Paragraph 1 -->
+<div class="relative group flex items-start gap-4">
+<span class="select-none font-label-sm text-label-sm text-outline-variant w-6 text-right pt-2 font-mono">01</span>
+<p class="flex-1">
+              The fog rolled off the inland basin smelling of brine and boiled plastic. From where Kael perched on the rusted gantry, the southern spillway was nothing more than a yellow slit in the dusk. Even at four hundred yards, the quarantine sensors hummed like angry cicadas inside the conduit sleeves.
+            </p>
+</div>
+<!-- Paragraph 2 with Annotation #1 -->
+<div class="relative flex flex-col gap-3 group bg-surface-container-low/70 -mx-4 px-4 py-3 rounded-lg" id="line-42-anchor">
+<div class="flex items-start gap-4">
+<span class="select-none font-label-sm text-label-sm text-secondary font-bold w-6 text-right pt-2 font-mono">42</span>
+<p class="flex-1">
+                Kael pressed his forearm against the damp concrete. <mark class="bg-secondary-fixed text-on-secondary-fixed px-1 rounded-sm">His filter mask hissed three rapid warnings before the valve sealed against the atmospheric salt spray, but by then the warning strobe had already flickered over the rusted intake housing, casting their silhouettes against the dry dock bulkheads like long, torn flags.</mark>
+</p>
+</div>
+<!-- Inline Margin Callout 1 -->
+<div class="ml-10 p-3 rounded-lg bg-surface shadow-md flex flex-col gap-1.5" id="callout-line-42">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm uppercase font-bold text-secondary">Craft Note • Line 42</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">Pacing Cadence</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">You • 14m ago</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-snug">
+                “Atmospheric grounding is immaculate here, but the 46-word compound sentence structure slows down the pacing right before the alarm sounds. Splitting the warning strobe into its own sharp clause would heighten the peril.”
+              </p>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-primary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">psychology</span> Addressed Robin's Inquiry #1
+                </span>
+<button class="font-label-sm text-label-sm text-secondary hover:underline" type="button">Edit Annotation</button>
+</div>
+</div>
+</div>
+<!-- Paragraph 3 -->
+<div class="relative group flex items-start gap-4">
+<span class="select-none font-label-sm text-label-sm text-outline-variant w-6 text-right pt-2 font-mono">65</span>
+<p class="flex-1">
+              “Step down,” Sula whispered. Her silhouette dropped into the lower catwalk without a click of metal. She held the pneumatic wrench cradled under her shoulder like an infant. “If the pressure sensor trips in Chamber C, we have forty seconds before the deluge system floods the trench with treated graywater.”
+            </p>
+</div>
+<!-- Paragraph 4 with Annotation #2 -->
+<div class="relative flex flex-col gap-3 group bg-surface-container-low/70 -mx-4 px-4 py-3 rounded-lg" id="line-88-anchor">
+<div class="flex items-start gap-4">
+<span class="select-none font-label-sm text-label-sm text-secondary font-bold w-6 text-right pt-2 font-mono">88</span>
+<p class="flex-1">
+                Kael followed her down. “I know the protocol,” he muttered.
+                <br/>
+<mark class="bg-secondary-fixed text-on-secondary-fixed px-1 rounded-sm">“The secondary manifold connects directly into the municipal reservoir bypass, which hasn’t had its mechanical floats recalibrated since the 2041 drought mandate,” Sula retorted,</mark> wedging the carbon wedge between the locking teeth. “Which means unless I bleed this valve first, your forty seconds is closer to twelve.”
+              </p>
+</div>
+<!-- Inline Margin Callout 2 -->
+<div class="ml-10 p-3 rounded-lg bg-surface shadow-md flex flex-col gap-1.5" id="callout-line-88">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm uppercase font-bold text-secondary">Craft Note • Line 88 (Scene 2)</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">Dialogue Rhythm</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">You • 6m ago</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-snug">
+                “Dialogue rhythm works well overall, but Sula’s explanation of the municipal reservoir bypass reads slightly like exposition rather than urgent field speak. She wouldn’t need to remind him of the 2041 mandate while her hands are on a live valve.”
+              </p>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-primary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">psychology</span> Direct response to Author Inquiry #2
+                </span>
+<button class="font-label-sm text-label-sm text-secondary hover:underline" type="button">Edit Annotation</button>
+</div>
+</div>
+</div>
+<!-- Paragraph 5 -->
+<div class="relative group flex items-start gap-4">
+<span class="select-none font-label-sm text-label-sm text-outline-variant w-6 text-right pt-2 font-mono">112</span>
+<p class="flex-1">
+              The hiss subsided into a low, bubbling groan. Behind the iron louvers, something heavy shifted in the basin mud—sluggish, blind, and deliberate. Both froze. Sula’s fingers stayed locked against the cold tubing, her knuckles whitening under the grease.
+            </p>
+</div>
+</div>
+<!-- Manuscript Pagination Jumper -->
+<div class="mt-8 pt-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+<div class="flex items-center gap-2">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface font-label-sm text-label-sm uppercase tracking-wider font-bold" type="button">
+              ← Prev Page
+            </button>
+<span class="font-label-md text-label-md text-on-surface-variant">Page 8 of 18</span>
+<button class="px-3 py-1.5 rounded-lg bg-primary-container text-on-primary font-label-sm text-label-sm uppercase tracking-wider font-bold" type="button">
+              Next Page →
+            </button>
+</div>
+<div class="flex items-center gap-1">
+<button class="px-2.5 py-1 rounded bg-primary-container text-on-primary font-label-sm text-label-sm font-semibold" type="button">Prologue (pp. 1-6)</button>
+<button class="px-2.5 py-1 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-semibold hover:bg-surface-container-high" type="button">Chapter 1 (pp. 7-18)</button>
+</div>
+</div>
+</article>
+</div>
+<!-- RIGHT COLUMN: Critique Desk & Diagnostic Rubric Matrix (5 Cols) -->
+<div class="lg:col-span-5 flex flex-col gap-space-md sticky top-20">
+<!-- Right Desk Tab Toggle -->
+<div class="bg-surface-container-low p-1 rounded-xl flex items-center shadow-sm">
+<button class="flex-1 py-2 px-3 rounded-lg bg-surface shadow-sm font-label-md text-label-md text-primary font-bold flex items-center justify-center gap-2 transition-all" id="tabDiagnosticBtn" type="button">
+<span class="material-symbols-outlined text-[18px]">balance</span>
+<span>Diagnostic Matrix</span>
+</button>
+<button class="flex-1 py-2 px-3 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md font-semibold flex items-center justify-center gap-2 transition-all" id="tabNotesBtn" type="button">
+<span class="material-symbols-outlined text-[18px]">stylus_note</span>
+<span>Margin Archive (3)</span>
+</button>
+</div>
+<!-- MAIN TAB VIEW 1: Diagnostic Matrix Deck -->
+<div class="flex flex-col gap-space-md" id="diagnosticDeck">
+<!-- Guild Rubric Evaluation Cards -->
+<div class="p-space-md bg-surface rounded-xl shadow-md flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-2 border-b-0">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Guild Charter Standard</span>
+<h2 class="font-headline-sm text-headline-sm text-primary">Diagnostic Evaluation</h2>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-high font-label-sm text-label-sm text-on-surface-variant font-mono">
+              Rubric 3/3 Set
+            </span>
+</div>
+<!-- Dimension 1: Tension & Pacing -->
+<div class="flex flex-col gap-1.5 p-3 rounded-lg bg-surface-container-low">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-semibold">1. Tension &amp; Narrative Pacing</span>
+<div class="flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]">star</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface ml-1">4.0</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Tight opening with minor drag in compound exposition during the breach setup.
+            </p>
+</div>
+<!-- Dimension 2: Speculative Grounding -->
+<div class="flex flex-col gap-1.5 p-3 rounded-lg bg-surface-container-low">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md text-on-surface font-semibold">2. Sensory Grounding in Speculative Space</span>
+<span class="px-1.5 py-0.2 rounded bg-secondary text-on-secondary text-[9px] font-label-sm uppercase font-bold">Guild Cycle Focus</span>
+</div>
+<div class="flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface ml-1">5.0</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Immersion is extraordinary; the tactile tang of brine, rust, and plastic residue establishes the noir tone instantly.
+            </p>
+</div>
+<!-- Dimension 3: Dialogue Naturalism -->
+<div class="flex flex-col gap-1.5 p-3 rounded-lg bg-surface-container-low">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-semibold">3. Dialogue Naturalism &amp; Cadence</span>
+<div class="flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]">star_half</span>
+<span class="material-symbols-outlined text-[16px]">star</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface ml-1">3.5</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              High stakes chemistry between Kael and Sula; ensure procedural data is trimmed when danger escalates.
+            </p>
+</div>
+<!-- Diagnostic Radar / Rating Visual Metric (Inline SVG) -->
+<div class="p-3 bg-surface-container rounded-lg flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Guild Benchmark Score</span>
+<span class="font-headline-sm text-headline-sm text-primary">8.3 / 10 Overall Cohesion</span>
+</div>
+<svg class="w-16 h-16 text-primary-container" viewbox="0 0 36 36">
+<path class="text-surface-container-high" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"></path>
+<path class="text-secondary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="83, 100" stroke-linecap="round" stroke-width="3.5"></path>
+<text class="font-label-sm text-[8px] font-bold fill-primary text-anchor-middle" text-anchor="middle" x="18" y="20.5">83%</text>
+</svg>
+</div>
+</div>
+<!-- 300-Word Comprehensive Diagnostic Synthesis Textarea -->
+<div class="p-space-md bg-surface rounded-xl shadow-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md font-bold text-primary flex items-center gap-1.5" for="diagnosticSynthesis">
+<span class="material-symbols-outlined text-[18px] text-secondary">history_edu</span>
+<span>Overall Diagnostic &amp; Craft Synthesis</span>
+</label>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">
+              300w Requirement
+            </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Provide a deep editorial critique covering story engine, narrative voice, and answers to Robin's two pinned inquiries.
+          </p>
+<textarea class="w-full p-3.5 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:ring-1 focus:ring-primary shadow-inner resize-y leading-relaxed" id="diagnosticSynthesis" placeholder="Write your diagnostic breakdown for Robin..." rows="7">Robin, the speculative architecture in 'Ash &amp; Glass' is undeniably compelling. The salt-crusted basin and the claustrophobia of the dry dock establish an immediate visceral world that honors the climate noir tradition without falling into dry didactic sermonizing.
+
+Regarding your first question: the quarantine protocol in the opening section does not feel over-explained—the sensory cues (the cicada-humming sensors, the smell of boiled plastic) do the explanatory heavy lifting organically. My only caution is at Line 42, where the sentence length dilutes the imminent alarm.
+
+For your second question regarding Scene 2: Sula's rhythm is sharp, yet her detour into municipal history during a live valve bleed slightly punctures the scene's acute adrenaline. If she cuts the exposition and speaks in clipped operational fragments, the scene's momentum will match the rising graywater threat.</textarea>
+<!-- Live Progress & Word Counter Meter -->
+<div class="flex flex-col gap-1.5 pt-2">
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1 text-secondary font-semibold">
+<span class="material-symbols-outlined text-[14px]">edit_note</span> Live Counter: <span class="font-bold text-on-surface ml-1" id="wordCountDisplay">245</span> / 300 words
+              </span>
+<span class="text-outline">55 words remaining for Guild ledger parity</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-secondary transition-all duration-300" id="wordCountBar" style="width: 81%;"></div>
+</div>
+</div>
+<!-- Reciprocity Integrity Seal -->
+<div class="mt-2 p-3 rounded-lg bg-surface-container-high/60 flex items-start gap-2.5">
+<span class="material-symbols-outlined text-surface-tint text-[18px] mt-0.5">verified_user</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase font-bold text-primary">Pacific Guild Reciprocity Covenant</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Your diagnostic directly earns credits for your next submission window. Line-level specificity safeguards fellow writers.
+              </p>
+</div>
+</div>
+</div>
+</div>
+<!-- MAIN TAB VIEW 2: Margin Archive / Drafting Pane (Hidden by Default) -->
+<div class="hidden flex flex-col gap-space-md" id="notesDeck">
+<!-- Quick Draft Margin Note Box -->
+<div class="p-space-md bg-surface rounded-xl shadow-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold text-primary flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-secondary">add_circle</span>
+              New Margin Annotation
+            </span>
+<span class="font-label-sm text-label-sm text-outline">Attached to Line 112</span>
+</div>
+<div class="relative">
+<textarea class="w-full p-3 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-primary shadow-inner" placeholder="Draft note on word choice, sensory cue, or rhythm..." rows="3"></textarea>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-1">
+<button class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant text-[11px] font-label-sm font-semibold hover:bg-surface-container-high" type="button">Craft</button>
+<button class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant text-[11px] font-label-sm font-semibold hover:bg-surface-container-high" type="button">Worldbuilding</button>
+<button class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant text-[11px] font-label-sm font-semibold hover:bg-surface-container-high" type="button">Praise</button>
+</div>
+<button class="px-3 py-1.5 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm uppercase tracking-wider font-bold shadow-sm" type="button">
+              Pin Note
+            </button>
+</div>
+</div>
+<!-- Stored Margin Cards -->
+<div class="flex flex-col gap-space-sm">
+<!-- Card 1 -->
+<div class="p-3.5 bg-surface rounded-xl shadow-sm flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase font-bold text-secondary">Line 42 • Prologue</span>
+<span class="font-label-sm text-label-sm text-outline">Pacing Cadence</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface italic">
+              “Atmospheric grounding is immaculate here, but the sentence structure slows down the pacing right before the alarm sounds.”
+            </p>
+<div class="flex items-center justify-between pt-1 border-t-0">
+<span class="font-label-sm text-label-sm text-surface-tint font-semibold">Tied to Inquiry #1</span>
+<div class="flex items-center gap-2">
+<button class="text-on-surface-variant hover:text-on-surface text-[12px] font-label-sm" type="button">Edit</button>
+<button class="text-error hover:underline text-[12px] font-label-sm" type="button">Delete</button>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="p-3.5 bg-surface rounded-xl shadow-sm flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase font-bold text-secondary">Line 88 • Scene 2</span>
+<span class="font-label-sm text-label-sm text-outline">Dialogue Rhythm</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface italic">
+              “Dialogue rhythm works well, but Sula's explanation of the valve protocol sounds like exposition rather than urgent field speak.”
+            </p>
+<div class="flex items-center justify-between pt-1 border-t-0">
+<span class="font-label-sm text-label-sm text-surface-tint font-semibold">Tied to Inquiry #2</span>
+<div class="flex items-center gap-2">
+<button class="text-on-surface-variant hover:text-on-surface text-[12px] font-label-sm" type="button">Edit</button>
+<button class="text-error hover:underline text-[12px] font-label-sm" type="button">Delete</button>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="p-3.5 bg-surface rounded-xl shadow-sm flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase font-bold text-surface-tint">Line 01 • Sensory Craft</span>
+<span class="font-label-sm text-label-sm text-outline">Style Praise</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface italic">
+              “'Smelling of brine and boiled plastic' is a brilliant tonal pairing—instantly anchors the speculative collapse.”
+            </p>
+<div class="flex items-center justify-between pt-1 border-t-0">
+<span class="font-label-sm text-label-sm text-outline">Compliment</span>
+<div class="flex items-center gap-2">
+<button class="text-on-surface-variant hover:text-on-surface text-[12px] font-label-sm" type="button">Edit</button>
+<button class="text-error hover:underline text-[12px] font-label-sm" type="button">Delete</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Client-side Script for Tab Switch & Word Counter -->
+<script>
+    (function initWorkspaceInteractions() {
+      const tabDiag = document.getElementById('tabDiagnosticBtn');
+      const tabNotes = document.getElementById('tabNotesBtn');
+      const deckDiag = document.getElementById('diagnosticDeck');
+      const deckNotes = document.getElementById('notesDeck');
+      const textarea = document.getElementById('diagnosticSynthesis');
+      const countDisplay = document.getElementById('wordCountDisplay');
+      const progressBar = document.getElementById('wordCountBar');
+      const submitBtn = document.getElementById('submitCritiqueBtn');
+
+      if (tabDiag && tabNotes && deckDiag && deckNotes) {
+        tabDiag.addEventListener('click', () => {
+          tabDiag.classList.add('bg-surface', 'shadow-sm', 'text-primary', 'font-bold');
+          tabDiag.classList.remove('text-on-surface-variant');
+          tabNotes.classList.remove('bg-surface', 'shadow-sm', 'text-primary', 'font-bold');
+          tabNotes.classList.add('text-on-surface-variant');
+          deckDiag.classList.remove('hidden');
+          deckNotes.classList.add('hidden');
+        });
+
+        tabNotes.addEventListener('click', () => {
+          tabNotes.classList.add('bg-surface', 'shadow-sm', 'text-primary', 'font-bold');
+          tabNotes.classList.remove('text-on-surface-variant');
+          tabDiag.classList.remove('bg-surface', 'shadow-sm', 'text-primary', 'font-bold');
+          tabDiag.classList.add('text-on-surface-variant');
+          deckNotes.classList.remove('hidden');
+          deckDiag.classList.add('hidden');
+        });
+      }
+
+      if (textarea && countDisplay && progressBar) {
+        const updateWordCount = () => {
+          const text = textarea.value.trim();
+          const words = text ? text.split(/\s+/).length : 0;
+          countDisplay.textContent = words;
+          const percentage = Math.min(100, Math.round((words / 300) * 100));
+          progressBar.style.width = percentage + '%';
+
+          if (words >= 300) {
+            progressBar.classList.remove('bg-secondary');
+            progressBar.classList.add('bg-primary-container');
+            if (submitBtn) {
+              const badge = submitBtn.querySelector('span.absolute');
+              if (badge) {
+                badge.textContent = 'Ready';
+                badge.classList.remove('bg-secondary');
+                badge.classList.add('bg-primary-fixed', 'text-on-primary-fixed');
+              }
+            }
+          } else {
+            progressBar.classList.add('bg-secondary');
+            progressBar.classList.remove('bg-primary-container');
+            if (submitBtn) {
+              const badge = submitBtn.querySelector('span.absolute');
+              if (badge) {
+                const left = 300 - words;
+                badge.textContent = left + 'w to unlock';
+                badge.classList.add('bg-secondary');
+                badge.classList.remove('bg-primary-fixed', 'text-on-primary-fixed');
+              }
+            }
+          }
+        };
+
+        textarea.addEventListener('input', updateWordCount);
+        updateWordCount();
+      }
+    })();
+  </script>
+</div></main></div></body></html>

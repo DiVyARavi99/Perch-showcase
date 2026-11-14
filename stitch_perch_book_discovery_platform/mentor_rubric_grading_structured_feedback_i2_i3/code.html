@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "background": "#fff8f4",
+          "surface-dim": "#e0d9d3",
+          "on-tertiary-fixed": "#291800",
+          "inverse-primary": "#abcfb8",
+          "tertiary-fixed-dim": "#fcba5b",
+          "on-primary-fixed": "#002113",
+          "secondary-fixed": "#ffdbcf",
+          "on-error": "#ffffff",
+          "on-error-container": "#93000a",
+          "surface-bright": "#fff8f4",
+          "inverse-surface": "#33302c",
+          "error": "#ba1a1a",
+          "on-tertiary-fixed-variant": "#633f00",
+          "primary-container": "#1b3b2b",
+          "on-secondary-container": "#762c0d",
+          "surface-container": "#f4ece7",
+          "surface": "#fff8f4",
+          "on-tertiary-container": "#ce9236",
+          "surface-container-high": "#eee7e1",
+          "surface-container-lowest": "#ffffff",
+          "tertiary": "#2f1c00",
+          "on-primary-container": "#83a590",
+          "secondary": "#994626",
+          "surface-container-low": "#faf2ed",
+          "primary": "#032517",
+          "surface-variant": "#e9e1dc",
+          "secondary-container": "#ff956e",
+          "outline-variant": "#c1c8c2",
+          "on-background": "#1e1b18",
+          "on-tertiary": "#ffffff",
+          "on-primary": "#ffffff",
+          "on-secondary-fixed": "#380d00",
+          "on-secondary": "#ffffff",
+          "primary-fixed-dim": "#abcfb8",
+          "tertiary-container": "#4b2f00",
+          "tertiary-fixed": "#ffddb4",
+          "surface-tint": "#456553",
+          "outline": "#727973",
+          "on-surface": "#1e1b18",
+          "primary-fixed": "#c7ebd4",
+          "on-primary-fixed-variant": "#2d4d3c",
+          "secondary-fixed-dim": "#ffb59b",
+          "inverse-on-surface": "#f7efea",
+          "error-container": "#ffdad6",
+          "surface-container-highest": "#e9e1dc",
+          "on-surface-variant": "#424843",
+          "on-secondary-fixed-variant": "#7a2f10"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "0.75rem"
+        },
+        "spacing": {
+          "space-md": "1rem",
+          "space-xl": "2.5rem",
+          "gutter": "1.5rem",
+          "margin": "3rem",
+          "gutter-mobile": "1rem",
+          "margin-mobile": "1.25rem",
+          "space-sm": "0.5rem",
+          "space-lg": "1.5rem",
+          "space-xs": "0.25rem"
+        },
+        "fontFamily": {
+          "headline-lg": [
+            "Newsreader"
+          ],
+          "label-sm": [
+            "Plus Jakarta Sans"
+          ],
+          "display-lg-mobile": [
+            "Newsreader"
+          ],
+          "headline-sm": [
+            "Newsreader"
+          ],
+          "headline-md": [
+            "Newsreader"
+          ],
+          "body-md": [
+            "Plus Jakarta Sans"
+          ],
+          "body-sm": [
+            "Plus Jakarta Sans"
+          ],
+          "quote-editorial": [
+            "Newsreader"
+          ],
+          "label-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "body-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "label-md": [
+            "Plus Jakarta Sans"
+          ],
+          "display-lg": [
+            "Newsreader"
+          ]
+        },
+        "fontSize": {
+          "headline-lg": [
+            "32px",
+            {
+              "lineHeight": "40px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "500"
+            }
+          ],
+          "label-sm": [
+            "10px",
+            {
+              "lineHeight": "14px",
+              "letterSpacing": "0.05em",
+              "fontWeight": "700"
+            }
+          ],
+          "display-lg-mobile": [
+            "36px",
+            {
+              "lineHeight": "44px",
+              "letterSpacing": "-0.015em",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-sm": [
+            "20px",
+            {
+              "lineHeight": "28px",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-md": [
+            "24px",
+            {
+              "lineHeight": "32px",
+              "fontWeight": "500"
+            }
+          ],
+          "body-md": [
+            "15px",
+            {
+              "lineHeight": "24px",
+              "fontWeight": "400"
+            }
+          ],
+          "body-sm": [
+            "13px",
+            {
+              "lineHeight": "20px",
+              "fontWeight": "400"
+            }
+          ],
+          "quote-editorial": [
+            "20px",
+            {
+              "lineHeight": "30px",
+              "fontWeight": "400"
+            }
+          ],
+          "label-lg": [
+            "14px",
+            {
+              "lineHeight": "20px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-lg": [
+            "18px",
+            {
+              "lineHeight": "28px",
+              "fontWeight": "400"
+            }
+          ],
+          "label-md": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.03em",
+              "fontWeight": "600"
+            }
+          ],
+          "display-lg": [
+            "48px",
+            {
+              "lineHeight": "56px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "400"
+            }
+          ]
+        }
+      },
+    },
+  }</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between py-space-lg"><div class="flex flex-col gap-space-lg"><div class="px-space-lg flex items-center gap-space-sm"><div class="w-9 h-9 rounded-xl bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[20px]">auto_stories</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight leading-none">Perch</span><span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold mt-space-xs">Partner Edition</span></div></div><div class="px-space-lg"><div class="bg-surface-container p-space-sm rounded-xl"><span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant block mb-space-xs">Curator Seat</span><p class="font-label-md text-label-md text-on-surface font-semibold">Faculty Board &amp; Mentorship</p></div></div><nav class="flex flex-col px-space-sm gap-space-xs" data-active-classes="bg-primary-container text-on-primary font-semibold shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="institution-overview" href="#"><span class="material-symbols-outlined text-[20px]">account_balance</span><span class="font-label-lg text-label-lg">Institution Overview</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="cohorts-&amp;-programs" href="#"><span class="material-symbols-outlined text-[20px]">school</span><span class="font-label-lg text-label-lg">Cohorts &amp; Programs</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl transition-all bg-primary-container text-on-primary font-semibold shadow-[0_1px_8px_rgba(0,0,0,0.04)]" data-path="rubric-evaluations" href="#"><span class="material-symbols-outlined text-[20px]">fact_check</span><span class="font-label-lg text-label-lg">Rubric Evaluations</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="structured-mentorship" href="#"><span class="material-symbols-outlined text-[20px]">history_edu</span><span class="font-label-lg text-label-lg">Structured Mentorship</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="showcases-&amp;-honors" href="#"><span class="material-symbols-outlined text-[20px]">workspace_premium</span><span class="font-label-lg text-label-lg">Showcases &amp; Honors</span></a></nav></div><div class="px-space-lg flex flex-col gap-space-sm"><div class="p-space-sm rounded-xl bg-surface-container flex items-center gap-space-sm"><span class="material-symbols-outlined text-secondary text-[20px]">bookmark_added</span><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Term Archive</span><span class="font-body-sm text-body-sm text-on-surface font-medium">14 Manuscripts Open</span></div></div><div class="flex items-center justify-between text-on-surface-variant px-space-xs"><span class="font-label-sm text-label-sm">v3.4 Institutional</span><span class="material-symbols-outlined text-[16px]">verified</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-md py-space-xs rounded-xl bg-surface-container hover:bg-surface-container-high transition-colors cursor-pointer"><span class="material-symbols-outlined text-secondary text-[18px]">assured_workload</span><span class="font-label-md text-label-md text-on-surface font-medium">Iowa Writers' Workshop • Fall 2024 Fellowship</span><span class="material-symbols-outlined text-on-surface-variant text-[18px]">expand_more</span></div></div><div class="flex-1 max-w-lg mx-space-md"><div class="relative flex items-center"><span class="material-symbols-outlined text-outline absolute left-space-md text-[18px] pointer-events-none">search</span><input class="w-full bg-surface-container-low pl-10 pr-space-md py-space-xs rounded-xl font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:ring-1 focus:ring-primary shadow-[inset_0_1px_2px_rgba(30,27,24,0.05)]" placeholder="Search fellows, manuscripts, rubrics, annotations..." type="text"/></div></div><div class="flex items-center gap-space-md"><button class="relative p-space-xs rounded-xl text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-secondary"></span></button><div class="flex items-center gap-space-sm pl-space-sm"><div class="text-right"><p class="font-label-md text-label-md text-on-surface font-semibold leading-tight">Prof. Clara Vane</p><p class="font-label-sm text-label-sm text-on-surface-variant">Senior Fellow Advisor</p></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-background px-gutter py-space-lg min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Context & Protocol Banner -->
+<section class="w-full bg-surface-container-low rounded-xl p-space-md shadow-sm mb-space-lg flex flex-col gap-space-sm relative overflow-hidden">
+<div class="absolute -right-12 -top-12 w-48 h-48 bg-primary/5 rounded-full pointer-events-none blur-2xl"></div>
+<div class="flex flex-wrap items-center justify-between gap-space-sm z-10">
+<!-- Breadcrumb Path -->
+<nav aria-label="Manuscript Evaluation Breadcrumbs" class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md">
+<span>Iowa Writers' Workshop</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span>Fall 2024 Fellowship</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-secondary font-semibold">Rubric Evaluations</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-on-surface font-semibold truncate max-w-xs">Maya Lin — The Saltwater Greenhouse (Ch. 1–4)</span>
+</nav>
+<!-- Institutional Badges -->
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="px-2.5 py-1 rounded-full bg-primary-container text-on-primary font-label-sm text-label-sm uppercase tracking-wider flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+          Use Case I2 &amp; I3 • Faculty Evaluation Desk
+        </span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">lock_open</span>
+          Blind Protocol Decrypted: Prof. H. Danvers
+        </span>
+<span class="px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">
+          Midterm Evaluation Cycle (Weight: 35%)
+        </span>
+</div>
+</div>
+<!-- Title & Action Bar -->
+<div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md pt-space-xs border-t-0 z-10">
+<div class="flex items-baseline gap-space-sm">
+<h1 class="font-headline-md text-headline-md text-primary font-medium tracking-tight">Evaluation Desk: <span class="italic font-headline-lg text-headline-lg">The Saltwater Greenhouse</span></h1>
+<span class="font-label-md text-label-md text-on-surface-variant">by Maya Lin • 4,300 words</span>
+</div>
+<!-- Action Buttons -->
+<div class="flex items-center gap-space-xs flex-shrink-0">
+<button class="px-space-md py-space-xs rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center gap-1.5 transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">bookmark</span>
+          Save Draft Scorecard
+        </button>
+<button class="px-space-md py-space-xs rounded-xl bg-surface-container hover:bg-surface-container-high text-secondary font-label-md text-label-md flex items-center gap-1.5 transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">calendar_add_on</span>
+          Request 1:1 Salon Debrief
+        </button>
+<button class="px-space-md py-space-xs rounded-xl bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md font-semibold flex items-center gap-1.5 transition-all shadow-md active:scale-95" id="submitOfficialScorecardBtn" type="button">
+<span class="material-symbols-outlined text-[18px]">workspace_premium</span>
+          Submit Official &amp; Mint Scorecard
+        </button>
+</div>
+</div>
+</section>
+<!-- Main Split Layout (60% Manuscript Desk / 40% Standardized Rubric Matrix & Structured Mentorship) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg w-full items-start">
+<!-- LEFT & CENTER PANE: Manuscript Reading Desk & Line Annotation (7 cols) -->
+<section class="lg:col-span-7 flex flex-col gap-space-md">
+<!-- Pinned Author Inquiries (Submission W3 Integration) -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-sm relative overflow-hidden">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">psychology_alt</span>
+<span class="font-label-md text-label-md uppercase tracking-wider text-secondary font-bold">Author Pre-Review Inquiries (W3 Submission Pass)</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-fixed/50 text-on-secondary-fixed">2 Priority Questions</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-sm pt-space-xs">
+<!-- Inquiry 1 -->
+<div class="p-space-sm bg-surface-container-low rounded-lg flex flex-col justify-between gap-space-xs">
+<div>
+<div class="flex items-center gap-1 mb-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">Pacing &amp; Tonal Transition</span>
+</div>
+<p class="font-quote-editorial text-body-sm text-on-surface italic leading-snug">
+                “Does the transition from botanical grief to quiet defiance in Scene 2 land with sufficient pacing?”
+              </p>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm pt-1">
+<span>Addressed at Line 48</span>
+<span class="text-primary font-medium flex items-center gap-0.5 cursor-pointer hover:underline" onclick="document.getElementById('annotation-line-48').scrollIntoView({behavior: 'smooth'})">
+                View Feedback <span class="material-symbols-outlined text-[14px]">arrow_downward</span>
+</span>
+</div>
+</div>
+<!-- Inquiry 2 -->
+<div class="p-space-sm bg-surface-container-low rounded-lg flex flex-col justify-between gap-space-xs">
+<div>
+<div class="flex items-center gap-1 mb-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">Dialogue Density</span>
+</div>
+<p class="font-quote-editorial text-body-sm text-on-surface italic leading-snug">
+                “Should the salinity engineering dialogue in Chapter 3 be trimmed for dramatic propulsion?”
+              </p>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm pt-1">
+<span>Addressed at Line 164</span>
+<span class="text-primary font-medium flex items-center gap-0.5 cursor-pointer hover:underline" onclick="document.getElementById('annotation-line-164').scrollIntoView({behavior: 'smooth'})">
+                View Feedback <span class="material-symbols-outlined text-[14px]">arrow_downward</span>
+</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Manuscript Floating Quick Annotation Toolbar -->
+<div class="sticky top-20 z-30 bg-surface-container-low/95 backdrop-blur-md px-space-md py-space-xs rounded-xl shadow-sm flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">Annotation Tools:</span>
+<button class="px-2.5 py-1 rounded bg-surface-container hover:bg-surface-container-high text-primary font-label-md text-label-md flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">edit_note</span> Margin Note
+          </button>
+<button class="px-2.5 py-1 rounded bg-surface-container hover:bg-surface-container-high text-secondary font-label-md text-label-md flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">verified</span> Praise Anchor
+          </button>
+<button class="px-2.5 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-tertiary-container font-label-md text-label-md flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">fact_check</span> Attach Criterion
+          </button>
+</div>
+<div class="flex items-center gap-space-sm text-on-surface-variant font-label-sm text-label-sm">
+<span>Display: Standard Deckle</span>
+<span class="w-1 h-1 rounded-full bg-outline"></span>
+<span>Line Numbers: Active</span>
+</div>
+</div>
+<!-- Manuscript Body & Inline Annotations Flow -->
+<div class="bg-surface-container-lowest p-space-xl rounded-xl shadow-md flex flex-col gap-space-lg relative">
+<!-- Header of the Sheet -->
+<div class="flex flex-col items-center text-center pb-space-md">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant">Iowa Writers' Workshop • Manuscript Archive #884</span>
+<h2 class="font-headline-lg text-headline-lg text-primary mt-1">The Saltwater Greenhouse</h2>
+<p class="font-headline-sm text-headline-sm text-secondary italic">I. Copper Roots in Winter</p>
+<div class="w-16 h-0.5 bg-secondary/30 mt-space-sm"></div>
+</div>
+<!-- Section 1 / Lines 1-47 -->
+<div class="flex gap-space-md">
+<div class="w-10 select-none text-right font-label-sm text-label-sm text-outline-variant flex flex-col gap-space-sm pt-1">
+<span>01</span>
+<span>12</span>
+<span>28</span>
+<span>42</span>
+</div>
+<div class="flex-1 font-headline-md text-body-lg text-on-surface leading-relaxed flex flex-col gap-space-md font-normal">
+<p>
+              The tide came up beneath the warped cedar floorboards twice every morning, smelling of boiled oysters and burnt copper solder. Sarah kept her boots tied to the radiator pipes so they wouldn't float off toward the bulkhead while she calibrated the hydro-filters. When her father had designed the greenhouse along the spit, he had made no allowances for the lunar surges; he believed salt could be persuaded by patience and cedar stave barriers.
+            </p>
+<p>
+              He was wrong, of course. Salt possesses no memory of courtesy. By mid-November, the brine had climbed the trellis wire, leaving crystalline scales that peeled like silver leaf under the thumbnail. Inside the pressurized nursery jars, the heirloom runner beans had begun to drown in their own brackish sweat.
+            </p>
+</div>
+</div>
+<!-- ANNOTATION CALLOUT 1: Line 48 (Mentor Diagnosis on Character Agency vs Exposition) -->
+<div class="bg-surface-container-low p-space-md rounded-xl shadow-sm ml-space-md relative overflow-hidden transition-all hover:shadow-md" id="annotation-line-48">
+<div class="flex items-center justify-between gap-space-sm mb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-sm text-label-sm font-bold">HD</span>
+<span class="font-label-md text-label-md font-semibold text-primary">Prof. H. Danvers</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">• Line 48 Annotation</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold">
+              Addressing Author Inquiry #1
+            </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface">
+<strong>Subtle Pacing Mastery:</strong> Maya, this shift works exquisitely. Instead of pausing for an explanatory flashback, you let Sarah's physical motion—unlatching the glass valve with numb fingers—carry the defiance. The transition from bereavement to cold botanical pragmatism doesn't require extra exposition; the rhythmic cadence does the heavy lifting.
+          </p>
+<div class="mt-space-xs flex items-center gap-space-md text-on-surface-variant font-label-sm text-label-sm pt-space-xs">
+<span class="flex items-center gap-1 text-secondary font-medium"><span class="material-symbols-outlined text-[14px]">psychology</span> Rubric Criterion: Narrative Arc (4.8/5.0)</span>
+<span>•</span>
+<button class="hover:text-primary transition-colors">Reply as Mentor</button>
+</div>
+</div>
+<!-- Section 2 / Lines 49-111 -->
+<div class="flex gap-space-md">
+<div class="w-10 select-none text-right font-label-sm text-label-sm text-outline-variant flex flex-col gap-space-sm pt-1">
+<span>56</span>
+<span>74</span>
+<span>98</span>
+<span>110</span>
+</div>
+<div class="flex-1 font-headline-md text-body-lg text-on-surface leading-relaxed flex flex-col gap-space-md font-normal">
+<p>
+              “The intake pump is coughing lime again,” Julian said from the threshold, his wool oilskin dripping onto the flagstones. “If the frost settles inside the manifold before midnight, we lose the third germination rack.”
+            </p>
+<p class="bg-surface-container-high/60 p-space-xs rounded transition-all">
+              Sarah didn't glance up from the pipette. “Then bring the paraffin lanterns from the boathouse. The frost can have the lower stems, Julian, but it doesn't get the crown buds. The crown buds remember sweet water.”
+            </p>
+</div>
+</div>
+<!-- ANNOTATION CALLOUT 2: Line 112 (Sensory Cadence & Salt Metaphor Praise) -->
+<div class="bg-secondary-fixed/40 p-space-md rounded-xl shadow-sm ml-space-md relative overflow-hidden" id="annotation-line-112">
+<div class="flex items-center justify-between gap-space-sm mb-space-xs">
+<div class="flex items-center gap-space-xs text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[18px]">temp_preferences_custom</span>
+<span class="font-label-md text-label-md font-bold uppercase tracking-wider">Faculty Commendation • Line 112</span>
+</div>
+<span class="font-label-sm text-label-sm font-semibold text-on-secondary-fixed-variant bg-surface-container-lowest/80 px-2 py-0.5 rounded">
+              Criterion: Prose Cadence (5.0 / 5.0)
+            </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-snug">
+            “The sensory economy here is remarkable. 'The crown buds remember sweet water' anchors the entire speculative conceit in a single rhythmic sentence. This demonstrates the exact cadence we strive for in the Iowa fellowship.”
+          </p>
+</div>
+<!-- Section 3 / Lines 113-163 -->
+<div class="flex gap-space-md">
+<div class="w-10 select-none text-right font-label-sm text-label-sm text-outline-variant flex flex-col gap-space-sm pt-1">
+<span>124</span>
+<span>142</span>
+<span>158</span>
+</div>
+<div class="flex-1 font-headline-md text-body-lg text-on-surface leading-relaxed flex flex-col gap-space-md font-normal">
+<p>
+              The salt-crust crackled under their soles like eggshells. Together, they strung the lead-sheathed heating cables down the central furrow, burying the wire three inches into the damp pumice. Every five yards, Julian stopped to twist the copper splice tabs, cursing the freezing brine as it seeped into his nailbeds.
+            </p>
+</div>
+</div>
+<!-- ANNOTATION CALLOUT 3: Line 164 (Diagnostic flagged: Dialogue density in Chapter 3) -->
+<div class="bg-surface-container-low p-space-md rounded-xl shadow-sm ml-space-md relative overflow-hidden" id="annotation-line-164">
+<div class="flex items-center justify-between gap-space-sm mb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[18px]">warning</span>
+<span class="font-label-md text-label-md font-semibold text-primary">Prof. H. Danvers</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">• Line 164 Diagnostic</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-secondary/10 text-secondary font-label-sm text-label-sm font-semibold">
+              Addressing Author Inquiry #2
+            </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface">
+<strong>Targeted Revision Recommendation:</strong> In response to your question regarding the salinity engineering dialogue: Yes, prune 30% of the technical jargon between Julian and Sarah here. While the electro-osmotic mechanics are authentic, the verbal exchange slows down the impending hazard of the incoming midnight tide. Condense Julian's three speeches into physical action.
+          </p>
+<div class="mt-space-xs flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm pt-space-xs">
+<span class="text-on-tertiary-container font-medium">Affects Metric: Narrative Arc &amp; Pacing</span>
+<span class="text-primary font-medium cursor-pointer hover:underline">Draft Proposed Edit Inline</span>
+</div>
+</div>
+<!-- Manuscript Footer / Word Count Tracking -->
+<div class="pt-space-md flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>Manuscript Segment: 4,300 of 18,500 total words submitted</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-primary"></span> 3 Faculty Annotations Active</span>
+</div>
+</div>
+</section>
+<!-- RIGHT PANE: Standardized Institutional Rubric Scoring Matrix (I2) & Structured Diagnostic Synthesis (I3) (5 cols) -->
+<section class="lg:col-span-5 flex flex-col gap-space-md">
+<!-- COMPOSITE SCORE CARD (I2) -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-md flex flex-col gap-space-md relative overflow-hidden">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Standardized Fellowship Evaluation (I2)</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Composite Score Matrix</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Calibrated against Iowa Master benchmarks</p>
+</div>
+<div class="text-right">
+<span class="font-headline-lg text-headline-lg text-primary font-bold tracking-tight">92<span class="font-body-md text-body-md text-outline font-normal"> / 100</span></span>
+<div class="px-2 py-0.5 rounded bg-primary-container text-on-primary font-label-sm text-label-sm font-semibold tracking-wide uppercase mt-0.5">
+              Pass w/ Distinction
+            </div>
+</div>
+</div>
+<!-- Calculated Live Breakdown Visual Chart (SVG Spark Gauge) -->
+<div class="bg-surface-container-low p-space-sm rounded-xl flex items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm">
+<!-- Inline Mini Donut Meter -->
+<svg class="w-12 h-12 transform -rotate-90 flex-shrink-0" viewbox="0 0 36 36">
+<path class="text-surface-container-high" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"></path>
+<path class="text-primary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="92, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Percentile Tier: Top 4%</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Midwest Institutional Cohort Index</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-label-sm text-label-sm uppercase text-secondary font-bold tracking-wider">Honor Track</span>
+<p class="font-label-md text-label-md text-primary font-medium">Midterm Qualified</p>
+</div>
+</div>
+<!-- 4 STANDARDIZED RUBRIC CRITERION STEPPERS/SLIDERS -->
+<div class="flex flex-col gap-space-md pt-space-xs">
+<!-- Criterion 1: Thematic Depth & Allegory -->
+<div class="flex flex-col gap-1.5 p-space-sm bg-surface-container-low rounded-lg transition-all hover:bg-surface-container">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg font-semibold text-primary">1. Thematic Depth &amp; Allegory</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">4.8</span>
+<span class="font-label-sm text-label-sm text-outline">/ 5.0</span>
+</div>
+</div>
+<!-- Progress Bar with Benchmark Marker -->
+<div class="w-full bg-surface-container-high h-2 rounded-full relative overflow-hidden">
+<div class="bg-primary h-2 rounded-full transition-all duration-500" style="width: 96%"></div>
+<div class="absolute top-0 bottom-0 left-[90%] w-0.5 bg-secondary" title="Benchmark: 4.5"></div>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant mt-0.5">
+<span>Cohort Benchmark: 4.5</span>
+<span class="text-secondary font-medium">Exceeds Standard (+0.3)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic mt-1 leading-snug">
+              “Exceptional environmental allegory woven with tactile coastal realism.”
+            </p>
+</div>
+<!-- Criterion 2: Prose Cadence & Stylistic Voice -->
+<div class="flex flex-col gap-1.5 p-space-sm bg-surface-container-low rounded-lg transition-all hover:bg-surface-container">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg font-semibold text-primary">2. Prose Cadence &amp; Stylistic Voice</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">4.6</span>
+<span class="font-label-sm text-label-sm text-outline">/ 5.0</span>
+</div>
+</div>
+<div class="w-full bg-surface-container-high h-2 rounded-full relative overflow-hidden">
+<div class="bg-primary h-2 rounded-full transition-all duration-500" style="width: 92%"></div>
+<div class="absolute top-0 bottom-0 left-[80%] w-0.5 bg-secondary" title="Benchmark: 4.0"></div>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant mt-0.5">
+<span>Cohort Benchmark: 4.0</span>
+<span class="text-secondary font-medium">Exceeds Standard (+0.6)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic mt-1 leading-snug">
+              “Rhythmic prose and clean syntax; subtle internal monologues mirror early Woolf.”
+            </p>
+</div>
+<!-- Criterion 3: Narrative Arc & Pacing -->
+<div class="flex flex-col gap-1.5 p-space-sm bg-surface-container-low rounded-lg transition-all hover:bg-surface-container">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg font-semibold text-primary">3. Narrative Arc &amp; Pacing</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-sm text-headline-sm text-secondary font-bold">3.9</span>
+<span class="font-label-sm text-label-sm text-outline">/ 5.0</span>
+</div>
+</div>
+<div class="w-full bg-surface-container-high h-2 rounded-full relative overflow-hidden">
+<div class="bg-secondary h-2 rounded-full transition-all duration-500" style="width: 78%"></div>
+<div class="absolute top-0 bottom-0 left-[80%] w-0.5 bg-outline" title="Benchmark: 4.0"></div>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant mt-0.5">
+<span>Cohort Benchmark: 4.0</span>
+<span class="text-secondary font-semibold">Near Benchmark (-0.1)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic mt-1 leading-snug">
+              “Needs chapter 3 pacing expansion before entering postgraduate final archive.”
+            </p>
+</div>
+<!-- Criterion 4: Worldbuilding & Structural Plausibility -->
+<div class="flex flex-col gap-1.5 p-space-sm bg-surface-container-low rounded-lg transition-all hover:bg-surface-container">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg font-semibold text-primary">4. Worldbuilding &amp; Plausibility</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">4.7</span>
+<span class="font-label-sm text-label-sm text-outline">/ 5.0</span>
+</div>
+</div>
+<div class="w-full bg-surface-container-high h-2 rounded-full relative overflow-hidden">
+<div class="bg-primary h-2 rounded-full transition-all duration-500" style="width: 94%"></div>
+<div class="absolute top-0 bottom-0 left-[84%] w-0.5 bg-secondary" title="Benchmark: 4.2"></div>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant mt-0.5">
+<span>Cohort Benchmark: 4.2</span>
+<span class="text-secondary font-medium">Exceeds Standard (+0.5)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic mt-1 leading-snug">
+              “Plausible salinity engineering details ground the setting seamlessly.”
+            </p>
+</div>
+</div>
+</div>
+<!-- STRUCTURED MENTORSHIP & ACTION SYNTHESIS (I3) -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-md flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[22px]">history_edu</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Structured Mentorship (I3)</h3>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Auto-saved 2m ago</span>
+</div>
+<!-- Faculty Mentorship Synthesis Field -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md font-semibold text-on-surface flex items-center justify-between">
+<span>Faculty Synthesis &amp; Diagnostic Action Plan</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">Markdown Enabled</span>
+</label>
+<div class="relative">
+<textarea class="w-full bg-surface-container-low p-space-md rounded-xl font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-1 focus:ring-primary shadow-[inset_0_1px_2px_rgba(30,27,24,0.05)] resize-y leading-relaxed" rows="7">### Faculty Midterm Synthesis
+Maya, this opening movement establishes an authoritative ecological vision. The tension between Sarah’s quiet reverence for inherited knowledge and the aggressive reality of rising tides provides an unforced emotional engine. 
+
+#### Immediate Developmental Goals:
+1. **Trim Exposition in Ch. 3**: Reduce the mechanical exchange regarding pump salinity. Sarah’s hands already convey the trade's hardship.
+2. **Elevate Julian's Stance**: Currently, Julian functions primarily as a harbinger of procedural panic. Give him one resonant sensory counterpoint before the freeze.
+3. **Pacing Continuity**: Ensure Scene 2’s botanical grief carries directly into the lantern vigil without the episodic dip at Line 130.</textarea>
+</div>
+</div>
+<!-- Next Milestones & Institutional Endorsement Controls -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col gap-space-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">Institutional Pathway Actions</span>
+<!-- Checkbox: Showcase Nomination -->
+<label class="flex items-start gap-space-sm cursor-pointer select-none">
+<input checked="" class="mt-1 w-4 h-4 rounded text-primary accent-primary cursor-pointer" type="checkbox"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-primary">Nominate for 2024 Midwest Speculative Fiction Showcase (I4)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Qualifies candidate for anthology inclusion and public guest reading.</span>
+</div>
+</label>
+<!-- 1:1 Salon Debrief Selector -->
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-xs pt-space-xs border-t-0">
+<span class="font-label-md text-label-md text-on-surface font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">forum</span> Mentorship Salon Format:
+            </span>
+<select class="bg-surface-container-lowest px-space-sm py-1 rounded-lg font-label-sm text-label-sm text-on-surface focus:outline-none focus:ring-1 focus:ring-primary shadow-sm cursor-pointer">
+<option>1:1 Archival Salon (45 Min)</option>
+<option>Joint Faculty Peer Review (60 Min)</option>
+<option>Async Margin Notation Exchange</option>
+</select>
+</div>
+<!-- Re-submission Deadline Anchor -->
+<div class="flex items-center justify-between pt-space-xs text-on-surface">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Milestone Target:</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high font-label-sm text-label-sm font-semibold text-primary">
+              Full Revision by Dec 15, 2024
+            </span>
+</div>
+</div>
+<!-- Faculty Mentor Attestation Block -->
+<div class="p-space-sm bg-surface-container-high/60 rounded-xl flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-on-primary text-[20px]">gesture</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase text-secondary font-bold">Faculty Cryptographic Stamp</span>
+<p class="font-body-sm text-body-sm text-on-surface font-medium">Prof. Helena Danvers • MFA Chair</p>
+</div>
+<span class="ml-auto text-primary material-symbols-outlined text-[20px]">verified</span>
+</div>
+</div>
+</section>
+</div>
+<!-- Micro-interactions Script -->
+<script>
+    document.getElementById('submitOfficialScorecardBtn')?.addEventListener('click', function() {
+      const originalText = this.innerHTML;
+      this.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin">refresh</span> Minting Honor Scorecard...';
+      this.classList.add('opacity-80');
+      
+      setTimeout(() => {
+        this.innerHTML = '<span class="material-symbols-outlined text-[18px]">check_circle</span> Evaluation Sealed &amp; Minted';
+        this.classList.remove('bg-primary');
+        this.classList.add('bg-primary-container');
+        
+        // Show subtle floating toast notification
+        const toast = document.createElement('div');
+        toast.className = 'fixed bottom-6 right-6 bg-primary text-on-primary px-space-md py-space-sm rounded-xl shadow-xl font-label-md text-label-md flex items-center gap-space-xs z-50 animate-bounce';
+        toast.innerHTML = '<span class="material-symbols-outlined text-[18px]">done_all</span> Official Evaluation &amp; I4 Showcase Nomination Recorded.';
+        document.body.appendChild(toast);
+        
+        setTimeout(() => toast.remove(), 4000);
+      }, 1200);
+    });
+  </script>
+</div></main></div></body></html>

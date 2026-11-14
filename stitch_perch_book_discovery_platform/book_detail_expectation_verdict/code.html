@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"primary-container":"#1b3b2b","on-error":"#ffffff","surface-container-lowest":"#ffffff","outline-variant":"#c1c8c2","on-secondary-container":"#762c0d","primary-fixed-dim":"#abcfb8","on-secondary-fixed":"#380d00","surface-container":"#f4ece7","surface-container-high":"#eee7e1","on-error-container":"#93000a","on-tertiary-container":"#ce9236","surface-container-low":"#faf2ed","surface-container-highest":"#e9e1dc","secondary":"#994626","primary":"#032517","tertiary":"#2f1c00","on-secondary":"#ffffff","on-background":"#1e1b18","tertiary-container":"#4b2f00","on-primary-container":"#83a590","inverse-primary":"#abcfb8","error":"#ba1a1a","surface-bright":"#fff8f4","on-tertiary-fixed-variant":"#633f00","tertiary-fixed":"#ffddb4","on-primary":"#ffffff","secondary-fixed":"#ffdbcf","surface":"#fff8f4","on-tertiary-fixed":"#291800","inverse-on-surface":"#f7efea","surface-dim":"#e0d9d3","on-surface":"#1e1b18","on-surface-variant":"#424843","inverse-surface":"#33302c","secondary-container":"#ff956e","background":"#fff8f4","secondary-fixed-dim":"#ffb59b","on-tertiary":"#ffffff","error-container":"#ffdad6","outline":"#727973","surface-variant":"#e9e1dc","primary-fixed":"#c7ebd4","on-primary-fixed":"#002113","surface-tint":"#456553","on-primary-fixed-variant":"#2d4d3c","tertiary-fixed-dim":"#fcba5b","on-secondary-fixed-variant":"#7a2f10"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"gutter-mobile":"1rem","space-xs":"0.25rem","space-lg":"1.5rem","margin-mobile":"1.25rem","space-sm":"0.5rem","gutter":"1.5rem","margin":"3rem","space-xl":"2.5rem","space-md":"1rem"},"fontFamily":{"body-lg":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"],"headline-md":["Newsreader"],"headline-sm":["Newsreader"],"display-lg":["Newsreader"],"label-lg":["Plus Jakarta Sans"],"quote-editorial":["Newsreader"],"label-sm":["Plus Jakarta Sans"],"headline-lg":["Newsreader"],"display-lg-mobile":["Newsreader"],"body-md":["Plus Jakarta Sans"]},"fontSize":{"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],"body-sm":["13px",{"lineHeight":"20px","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.03em","fontWeight":"600"}],"headline-md":["24px",{"lineHeight":"32px","fontWeight":"500"}],"headline-sm":["20px",{"lineHeight":"28px","fontWeight":"600"}],"display-lg":["48px",{"lineHeight":"56px","letterSpacing":"-0.02em","fontWeight":"400"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"600"}],"quote-editorial":["20px",{"lineHeight":"30px","fontWeight":"400"}],"label-sm":["10px",{"lineHeight":"14px","letterSpacing":"0.05em","fontWeight":"700"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.01em","fontWeight":"500"}],"display-lg-mobile":["36px",{"lineHeight":"44px","letterSpacing":"-0.015em","fontWeight":"400"}],"body-md":["15px",{"lineHeight":"24px","fontWeight":"400"}]}}}}</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between py-space-lg px-space-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col gap-space-lg"><div class="px-space-sm pt-space-xs"><div class="flex items-baseline gap-space-xs"><span class="font-headline-lg text-headline-lg tracking-tight text-primary">Perch</span></div><span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant block mt-0.5">Reader Community</span></div><button class="w-full flex items-center justify-center gap-space-sm bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container py-space-sm px-space-md rounded-xl font-label-lg text-label-lg transition-colors duration-150 shadow-[0_2px_8px_rgba(3,37,23,0.15)]" type="button"><span class="material-symbols-outlined text-[20px]">edit_note</span><span>Write Post / Review</span></button><nav class="flex flex-col gap-space-xs" data-active-classes="bg-surface-container-high text-on-surface font-semibold"><a aria-current="page" class="flex items-center gap-space-md px-space-md py-space-sm rounded-xl transition-colors bg-surface-container-high text-on-surface font-semibold" data-path="feed" href="#"><span class="material-symbols-outlined text-[22px]">auto_stories</span><span>Feed</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-label-lg text-label-lg transition-colors" data-path="discover-taste-match" href="#"><span class="material-symbols-outlined text-[22px]">explore</span><span>Discover &amp; Taste Match</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-label-lg text-label-lg transition-colors" data-path="reading-clubs" href="#"><span class="material-symbols-outlined text-[22px]">forum</span><span>Reading Clubs</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-label-lg text-label-lg transition-colors" data-path="my-shelf" href="#"><span class="material-symbols-outlined text-[22px]">shelves</span><span>My Shelf</span></a></nav></div><div class="px-space-sm py-space-sm bg-surface-container rounded-xl flex items-center justify-between"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-secondary text-[20px]">bookmarks</span><span class="font-label-md text-label-md text-on-surface">Salon Curators</span></div><span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider">Active</span></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-20 bg-surface/80 backdrop-blur-xl z-40 flex items-center justify-between px-gutter shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex-1 max-w-2xl"><div class="relative flex items-center w-full"><span class="material-symbols-outlined absolute left-space-md text-on-surface-variant text-[20px] pointer-events-none">search</span><input class="w-full bg-surface-container-low text-on-surface placeholder:text-on-surface-variant font-body-sm text-body-sm pl-11 pr-space-md py-space-sm rounded-xl outline-none focus:bg-surface-container-lowest transition-all" placeholder="Search books, reader reviews, or published writing..." type="search"/></div></div><div class="flex items-center gap-space-md pl-space-lg"><button aria-label="Notifications" class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors relative" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-secondary"></span></button><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 px-gutter bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- Book Header Editorial Canvas -->
+<section class="relative w-full pb-space-xl">
+<div class="max-w-7xl mx-auto pt-space-md">
+<!-- Breadcrumb & Provenance Marker -->
+<div class="flex items-center gap-space-sm mb-space-lg text-on-surface-variant font-label-md text-label-md uppercase tracking-wider">
+<a class="hover:text-primary transition-colors" href="#">Catalog</a>
+<span>/</span>
+<span class="text-secondary font-bold">Literary Noir</span>
+<span>/</span>
+<span class="text-on-surface/60">Olga Tokarczuk</span>
+<span class="ml-auto flex items-center gap-space-xs text-primary bg-primary-fixed/30 px-space-sm py-1 rounded-full text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+          Verified Curated Salon Entry
+        </span>
+</div>
+<!-- Main Masterpiece Bento Grid -->
+<div class="grid grid-cols-12 gap-gutter items-start">
+<!-- Left: Book Spine & Physical Object Module (4 Columns) -->
+<div class="col-span-4 flex flex-col gap-space-md">
+<div class="relative group bg-surface-container-high p-space-md rounded-xl shadow-md">
+<!-- Ribbon bookmark accent -->
+<div class="absolute -top-3 right-8 w-6 h-10 bg-secondary rounded-b-sm shadow-sm flex items-end justify-center pb-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-fixed"></span>
+</div>
+<!-- Heavy Cover Image -->
+<div class="aspect-[2/3] w-full rounded-lg overflow-hidden shadow-xl bg-surface-container-highest relative">
+<img class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500 ease-out" data-alt="Editorial photograph of the book Drive Your Plow Over the Bones of the Dead by Olga Tokarczuk resting upright on a sunlit oak shelf. Archival bookcloth texture, forest green and ochre hues, deckle edges, subtle shadows, highly refined literary aesthetics." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBar8IUyr30ExN2UltVlxc1ZqSZiUfQeZmdZy6CB3Iz0aFUxhPKausesl54HZRIL-2qbDpV1Rz_MPZW1RWwAMtDLXUfoYjiaGDPh13orgGQesFbbzx6Z5UN64mvXbV7DeOvDoHbibKH8qAJyZ-Ohd3s51C-Pz_M0IgRryZTIvS72dWovj5POUyrweyBOh48pMPbmC5JFVJh2FBoc3dmDfaLUkm2RJbFmNQCUbCRGOI"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent opacity-40"></div>
+</div>
+<!-- Page Stacking Metaphor Bar -->
+<div class="mt-space-md pt-space-xs flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">menu_book</span>
+                288 Pages • Archival Deckle
+              </span>
+<span class="font-medium text-on-surface">ISBN: 978-0525541332</span>
+</div>
+</div>
+<!-- Shelf Status Tracker (R6) -->
+<div class="bg-surface-container-low p-space-md rounded-xl shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface uppercase tracking-wider">My Reading Shelf</span>
+<span class="material-symbols-outlined text-secondary text-[18px]">bookmark_added</span>
+</div>
+<div class="grid grid-cols-3 gap-space-xs p-1 bg-surface-container rounded-lg">
+<button class="shelf-btn flex flex-col items-center justify-center py-space-sm px-space-xs rounded font-label-sm text-label-sm transition-all bg-primary text-on-primary shadow-sm" id="btn-want" onclick="setShelf('want')">
+<span class="material-symbols-outlined text-[18px] mb-0.5" style="font-variation-settings: 'FILL' 1;">bookmark</span>
+                Want to Read
+              </button>
+<button class="shelf-btn flex flex-col items-center justify-center py-space-sm px-space-xs rounded font-label-sm text-label-sm transition-all text-on-surface-variant hover:text-on-surface" id="btn-reading" onclick="setShelf('reading')">
+<span class="material-symbols-outlined text-[18px] mb-0.5">auto_stories</span>
+                Reading
+              </button>
+<button class="shelf-btn flex flex-col items-center justify-center py-space-sm px-space-xs rounded font-label-sm text-label-sm transition-all text-on-surface-variant hover:text-on-surface" id="btn-read" onclick="setShelf('read')">
+<span class="material-symbols-outlined text-[18px] mb-0.5">task_alt</span>
+                Read
+              </button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant/80 italic text-center pt-1" id="shelf-status-hint">
+              Placed in your Private Salon Library on Nov 14.
+            </p>
+</div>
+<!-- Commercial Bookstore Purchase Links (R7) -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">local_mall</span>
+<span class="font-label-lg text-label-lg text-primary">Procure Physical Volume</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container px-2 py-0.5 rounded">R7 Channels</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<!-- Bookshop.org -->
+<a class="group flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-all" href="#">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed font-bold font-label-md text-label-md">
+                    B
+                  </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface group-hover:text-secondary transition-colors">Bookshop.org</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px] leading-none">Supports Independent Bookstores</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">$17.95</span>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:translate-x-0.5 transition-transform text-[18px]">arrow_outward</span>
+</div>
+</a>
+<!-- Independent Local Bookstores -->
+<a class="group flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-all" href="#">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed font-bold font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px]">storefront</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface group-hover:text-primary transition-colors">Local Independent</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px] leading-none">Find Stock in 8 Salons Nearby</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">$18.00</span>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:translate-x-0.5 transition-transform text-[18px]">arrow_outward</span>
+</div>
+</a>
+<!-- Amazon -->
+<a class="group flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-all" href="#">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center text-on-surface font-bold font-label-md text-label-md">
+                    a
+                  </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface group-hover:text-secondary transition-colors">Amazon Books</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px] leading-none">Paperback • Prime Overnight</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">$14.39</span>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:translate-x-0.5 transition-transform text-[18px]">arrow_outward</span>
+</div>
+</a>
+</div>
+</div>
+</div>
+<!-- Right: Book Metadata, Synopsis & Deep Reader Alignment (8 Columns) -->
+<div class="col-span-8 flex flex-col gap-space-lg">
+<!-- Title Block -->
+<div class="bg-surface-container-low p-space-xl rounded-2xl shadow-sm relative overflow-hidden">
+<!-- Decorative Subtle Stamp -->
+<div class="absolute -right-8 -bottom-8 w-44 h-44 rounded-full bg-surface-container opacity-40 pointer-events-none"></div>
+<div class="flex flex-wrap items-center gap-space-xs mb-space-sm">
+<span class="px-3 py-1 rounded-full bg-surface-container-highest text-secondary font-label-sm text-label-sm uppercase tracking-wider font-bold">
+                Man Booker International Prize Winner
+              </span>
+<span class="px-3 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+                Nobel Laureate in Literature
+              </span>
+<span class="px-3 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+                Translated by Antonia Lloyd-Jones
+              </span>
+</div>
+<h1 class="font-headline-lg text-headline-lg md:text-[38px] md:leading-[46px] text-primary tracking-tight font-serif mb-space-xs">
+              Drive Your Plow Over the Bones of the Dead
+            </h1>
+<div class="flex items-baseline gap-space-md mb-space-md">
+<span class="font-headline-sm text-headline-sm text-secondary italic font-serif">
+                by Olga Tokarczuk
+              </span>
+<span class="text-on-surface-variant font-body-sm text-body-sm">•</span>
+<span class="text-on-surface-variant font-label-md text-label-md">Riverhead Books (Penguin Random House)</span>
+<span class="text-on-surface-variant font-body-sm text-body-sm">•</span>
+<span class="text-on-surface-variant font-label-md text-label-md">August 2019</span>
+</div>
+<!-- Curated Synopsis -->
+<div class="relative bg-surface-container-lowest/80 p-space-md rounded-xl shadow-inner mb-space-md">
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+                In a remote Polish village, Janina Duszejko—an eccentric recluse who prefers the company of animals and studies astrology—finds herself thrust into a murder investigation when local hunters begin turning up dead under inexplicable circumstances. A subversive, darkly comedic murder mystery that doubles as an existential defense of animal rights and cosmos-bound justice.
+              </p>
+</div>
+<!-- Tags Mosaic -->
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider mr-2">Discourse Tags:</span>
+<span class="bg-surface-container px-2.5 py-1 rounded-full font-label-sm text-label-sm text-on-surface">Astrological Satire</span>
+<span class="bg-surface-container px-2.5 py-1 rounded-full font-label-sm text-label-sm text-on-surface">Eco-Feminism</span>
+<span class="bg-surface-container px-2.5 py-1 rounded-full font-label-sm text-label-sm text-on-surface">Subversive Murder Mystery</span>
+<span class="bg-surface-container px-2.5 py-1 rounded-full font-label-sm text-label-sm text-on-surface">Winter Solitude</span>
+</div>
+</div>
+<!-- Section: EXPECTATION-MATCH & READER VERDICT (R2, R2a, R2b, R4) -->
+<div class="bg-surface-container p-space-lg rounded-2xl shadow-sm flex flex-col gap-space-lg">
+<!-- Section Header Banner with Contrast Badge -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pb-space-xs">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest font-bold">
+                  Pre-Purchase Calibration Engine • R2b, R4
+                </span>
+<h2 class="font-headline-md text-headline-md text-primary font-serif">
+                  Expectation vs. Reality Verdict
+                </h2>
+</div>
+<div class="flex items-center gap-2 bg-primary-fixed/60 text-on-primary-fixed px-3 py-1.5 rounded-full shadow-sm">
+<span class="material-symbols-outlined text-[18px]">balance</span>
+<span class="font-label-md text-label-md font-bold">91% Blurb Integrity Score</span>
+</div>
+</div>
+<!-- Primary Verdict Visual Breakdown (R2b, R4) -->
+<div class="grid grid-cols-12 gap-space-md">
+<!-- Match Percentage Card (4 Cols) -->
+<div class="col-span-12 lg:col-span-5 bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Promotion Truth Ratio</span>
+<span class="text-secondary font-bold font-label-sm text-label-sm">High Concordance</span>
+</div>
+<div class="flex items-baseline gap-space-xs mb-space-xs">
+<span class="font-display-lg text-display-lg font-serif text-primary leading-none">91%</span>
+<span class="font-body-md text-body-md text-on-surface-variant">of 412 salon reviews</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface leading-normal">
+                    Readers confirm this book deliver on its core conceptual thesis, but caution against anticipating an adrenaline-fueled traditional procedural.
+                  </p>
+</div>
+<div class="mt-space-md pt-space-md bg-surface-container-low p-space-sm rounded-lg flex flex-col gap-1.5">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Publisher Promise:</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic pl-4">
+                    "A dark, rollicking, page-turning philosophical whodunit."
+                  </p>
+<div class="flex items-center gap-2 mt-1">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Reader Verification:</span>
+</div>
+<p class="font-body-sm text-body-sm text-primary font-medium pl-4">
+                    Atmospheric, lyrical study of justice and grief with meditative pacing rather than commercial action.
+                  </p>
+</div>
+</div>
+<!-- Detailed Dimension Bars & Inline Gauge (7 Cols) -->
+<div class="col-span-12 lg:col-span-7 bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between gap-space-md">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Dimension Accuracy vs. Publisher Marketing</span>
+<!-- Bar 1: Tone & Philosophical Depth -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="font-medium text-on-surface">Atmospheric Prose &amp; Philosophical Weight</span>
+<span class="text-primary font-semibold">97% matched</span>
+</div>
+<div class="w-full h-3 bg-surface-container rounded-full overflow-hidden flex">
+<div class="h-full bg-primary rounded-full" style="width: 97%"></div>
+</div>
+<span class="text-[11px] text-on-surface-variant italic">Blurb accurately captures Tokarczuk’s visionary cosmic prose.</span>
+</div>
+<!-- Bar 2: Plot Pacing vs Thriller Label -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="font-medium text-on-surface">Pacing: "Page-Turning Whodunit" Claim</span>
+<span class="text-secondary font-semibold">68% matched (Slower Reality)</span>
+</div>
+<div class="w-full h-3 bg-surface-container rounded-full overflow-hidden flex">
+<div class="h-full bg-secondary rounded-full" style="width: 68%"></div>
+<div class="h-full bg-secondary-container/40" style="width: 32%"></div>
+</div>
+<span class="text-[11px] text-on-surface-variant italic">Readers warn: Expect expansive interior monologues, not swift Agatha Christie reveals.</span>
+</div>
+<!-- Bar 3: Satirical & Comedic Edge -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="font-medium text-on-surface">Dark Humor &amp; Satirical Accuracy</span>
+<span class="text-primary font-semibold">89% matched</span>
+</div>
+<div class="w-full h-3 bg-surface-container rounded-full overflow-hidden flex">
+<div class="h-full bg-primary rounded-full" style="width: 89%"></div>
+</div>
+<span class="text-[11px] text-on-surface-variant italic">Deadpan, bitter, and eccentric Polish winter comedy confirmed.</span>
+</div>
+<!-- Summary Badge -->
+<div class="flex items-center justify-between bg-surface-container-low px-space-md py-space-sm rounded-lg mt-1">
+<div class="flex items-center gap-space-xs text-on-surface-variant text-body-sm">
+<span class="material-symbols-outlined text-[18px] text-secondary">info</span>
+<span>Best for: Lovers of W.G. Sebald &amp; Shirley Jackson</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider">Tone Approved</span>
+</div>
+</div>
+</div>
+<!-- Taste Affinity Verdict Module (R2a) -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm pb-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-primary-fixed-dim/40 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">diversity_3</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-serif">
+                      Verdict from Readers with Similar Taste
+                    </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                      Custom cohort filtered to your profile (preference for contemplative European fiction &amp; morally complex narrators).
+                    </p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm bg-surface-container px-space-md py-space-xs rounded-xl">
+<div class="flex flex-col text-right">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Taste Match 85%+</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">4.7 / 5.0</span>
+</div>
+<span class="material-symbols-outlined text-secondary text-[28px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<!-- Reader Quotes Mosaic Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md pt-space-xs">
+<!-- Match Quote 1 -->
+<div class="bg-surface-container-low p-space-md rounded-xl relative flex flex-col justify-between">
+<div class="mb-space-sm">
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-primary text-on-primary font-label-sm text-[10px] flex items-center justify-center font-bold">
+                          EL
+                        </div>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Elena Lindqvist</span>
+<span class="text-on-surface-variant font-label-sm text-[11px]">• 94% Taste Match</span>
+</div>
+<span class="text-secondary font-label-sm text-label-sm font-bold bg-secondary-fixed/50 px-2 py-0.5 rounded">
+                        Loved It
+                      </span>
+</div>
+<blockquote class="font-quote-editorial text-quote-editorial text-on-surface italic leading-snug">
+                      "If you adored Bernhard or Krasznahorkai, ignore the thriller moniker. Duszejko is one of the most vividly realized obsessives in modern world literature."
+                    </blockquote>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant pt-2">
+                    Verified Purchase • Read in 4 evenings
+                  </span>
+</div>
+<!-- Match Quote 2 -->
+<div class="bg-surface-container-low p-space-md rounded-xl relative flex flex-col justify-between">
+<div class="mb-space-sm">
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-secondary text-on-secondary font-label-sm text-[10px] flex items-center justify-center font-bold">
+                          MA
+                        </div>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Marcus Vance</span>
+<span class="text-on-surface-variant font-label-sm text-[11px]">• 88% Taste Match</span>
+</div>
+<span class="text-primary font-label-sm text-label-sm font-bold bg-primary-fixed/50 px-2 py-0.5 rounded">
+                        Expectation Surpassed
+                      </span>
+</div>
+<blockquote class="font-quote-editorial text-quote-editorial text-on-surface italic leading-snug">
+                      "The publisher blurb makes it sound like a standard Scandinavian crime caper. In reality, it's a profound, biting treatise on animal suffering disguised as an astrological noir."
+                    </blockquote>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant pt-2">
+                    Salon Curator • Warsaw Circle
+                  </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Section: COMMUNITY READER REVIEWS & WRITE CTA (R2, R3, R4) -->
+<div class="bg-surface-container-low p-space-lg rounded-2xl shadow-sm flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pb-space-xs">
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest font-bold">
+                  Marginalia &amp; Critical Discourse • R2, R3
+                </span>
+<h3 class="font-headline-md text-headline-md text-primary font-serif">
+                  Salon Reader Reviews
+                </h3>
+</div>
+<!-- Write Review & Rate Promotion Match CTA (R3, R4) -->
+<button class="flex items-center justify-center gap-space-sm bg-primary hover:bg-primary-container text-on-primary py-space-sm px-space-lg rounded-xl font-label-lg text-label-lg transition-all shadow-md group" onclick="toggleReviewModal()">
+<span class="material-symbols-outlined text-[20px] group-hover:rotate-12 transition-transform">rate_review</span>
+<span>Write Review &amp; Rate Expectation-Match</span>
+</button>
+</div>
+<!-- Review Filter Row -->
+<div class="flex flex-wrap items-center gap-space-xs py-space-xs font-label-sm text-label-sm text-on-surface-variant">
+<span class="font-semibold text-on-surface">Filter By:</span>
+<button class="bg-surface-container-highest px-3 py-1 rounded-full text-on-surface font-semibold">All (412)</button>
+<button class="bg-surface-container px-3 py-1 rounded-full hover:bg-surface-container-high transition-colors">High Promotion Match (375)</button>
+<button class="bg-surface-container px-3 py-1 rounded-full hover:bg-surface-container-high transition-colors">Expectation Divergence (37)</button>
+<button class="bg-surface-container px-3 py-1 rounded-full hover:bg-surface-container-high transition-colors">With Margin Notes (142)</button>
+</div>
+<!-- Reviews Feed -->
+<div class="flex flex-col gap-space-md">
+<!-- Review 1 -->
+<article class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary font-bold font-label-lg">
+                      S
+                    </div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Sofia Thorne</span>
+<span class="bg-primary/10 text-primary px-2 py-0.5 rounded text-label-sm font-label-sm font-medium">Curator Fellow</span>
+</div>
+<span class="text-on-surface-variant font-body-sm text-body-sm">Reviewed on October 28 • Verified Reader</span>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<div class="flex items-center text-secondary">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<!-- Expectation match badge -->
+<span class="mt-1 bg-surface-container-low text-primary text-[11px] font-label-sm px-2 py-0.5 rounded font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">check_circle</span>
+                      Matched Pitch: Philosophical Murder Mystery
+                    </span>
+</div>
+</div>
+<div class="font-body-md text-body-md text-on-surface leading-relaxed pl-1 pt-1">
+<p class="mb-space-xs">
+                    "Tokarczuk gives us an elderly woman who translates William Blake, reads horoscopes for dead neighbors, and screams at forestry officials. The translation by Lloyd-Jones is utterly luminous—each sentence carries that unmistakable, slightly frost-bitten Middle European bite."
+                  </p>
+<!-- Marginalia callout -->
+<div class="my-space-sm p-space-sm bg-surface-container-low rounded-lg flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[20px] mt-0.5">format_quote</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary uppercase font-bold">Key Marginalia Reflection</span>
+<p class="font-quote-editorial text-body-md text-on-surface italic">
+                        "Its pacing slows down considerably around page 120 when Duszejko details the ephemeris tables. Don't skim—this is the real engine of the novel, not the police sirens."
+                      </p>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<div class="flex items-center gap-space-md">
+<button class="flex items-center gap-1 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[16px]">thumb_up</span>
+<span>84 Salon Readers found this illuminating</span>
+</button>
+<button class="flex items-center gap-1 hover:text-secondary transition-colors">
+<span class="material-symbols-outlined text-[16px]">chat_bubble_outline</span>
+<span>16 Marginal Comments</span>
+</button>
+</div>
+<span class="text-on-surface/40">Shared to Eastern European Salon</span>
+</div>
+</article>
+<!-- Review 2: Constructive Expectation Divergence -->
+<article class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-bold font-label-lg">
+                      JH
+                    </div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Julian Hayes</span>
+<span class="bg-surface-container text-on-surface-variant px-2 py-0.5 rounded text-label-sm font-label-sm">Novelist</span>
+</div>
+<span class="text-on-surface-variant font-body-sm text-body-sm">Reviewed on September 14 • Verified Reader</span>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<div class="flex items-center text-secondary">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px] text-surface-container-highest" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<!-- Expectation match divergence badge -->
+<span class="mt-1 bg-surface-container-highest text-secondary text-[11px] font-label-sm px-2 py-0.5 rounded font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">warning</span>
+                      Pacing Warning: Not a High-Speed Thriller
+                    </span>
+</div>
+</div>
+<div class="font-body-md text-body-md text-on-surface leading-relaxed pl-1 pt-1">
+<p>
+                    "I give this four stars for Tokarczuk’s undeniable prose mastery, but I deduct one star strictly against the US jacket copy. The back of the book promises a 'rollicking whodunit with unexpected twists at every turn.' If that is what you are buying, you may be frustrated. This is closer to Thomas Mann's reflective monologues in the snow."
+                  </p>
+</div>
+<div class="flex items-center justify-between pt-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<div class="flex items-center gap-space-md">
+<button class="flex items-center gap-1 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[16px]">thumb_up</span>
+<span>132 found this helpful</span>
+</button>
+<button class="flex items-center gap-1 hover:text-secondary transition-colors">
+<span class="material-symbols-outlined text-[16px]">chat_bubble_outline</span>
+<span>28 Responses</span>
+</button>
+</div>
+<span class="text-on-surface/40">Tagged: #PromotionCalibrated</span>
+</div>
+</article>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Modal / Slide-Over: Write Review & Rate Promotion Match (R3, R4) -->
+<div class="fixed inset-0 z-50 flex items-center justify-center bg-primary/40 backdrop-blur-sm transition-opacity duration-300 opacity-0 pointer-events-none" id="review-modal">
+<div class="w-full max-w-2xl bg-surface-container-lowest rounded-2xl shadow-2xl p-space-xl flex flex-col gap-space-lg mx-space-md max-h-[921px] overflow-y-auto">
+<!-- Modal Header -->
+<div class="flex items-start justify-between pb-space-xs">
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest font-bold">
+            Editorial Submission • R3, R4
+          </span>
+<h3 class="font-headline-md text-headline-md text-primary font-serif">
+            Rate Promotion vs. Reality &amp; Submit Review
+          </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+            Drive Your Plow Over the Bones of the Dead • Olga Tokarczuk
+          </p>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface hover:bg-surface-container-high transition-colors" onclick="toggleReviewModal()">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Form Core -->
+<form class="flex flex-col gap-space-md" onsubmit="handleReviewSubmit(event)">
+<!-- Overall Star Rating -->
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface uppercase tracking-wider">Literary Quality Rating</label>
+<div class="flex items-center gap-2 text-secondary py-1 cursor-pointer">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[28px] text-surface-container-high" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant ml-2">4.0 / 5.0</span>
+</div>
+</div>
+<!-- Promotion Match Evaluation (R2b, R4) -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary font-bold">Did the book match the publisher's promise?</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Promotion Integrity</span>
+</div>
+<div class="grid grid-cols-3 gap-space-xs">
+<label class="cursor-pointer">
+<input checked="" class="peer sr-only" name="match-radio" type="radio" value="high"/>
+<div class="p-space-sm rounded-lg bg-surface-container-lowest text-center peer-checked:bg-primary peer-checked:text-on-primary transition-all">
+<span class="block font-label-sm text-label-sm font-bold">Accurate Match</span>
+<span class="block font-body-sm text-[11px] opacity-80 mt-0.5">Matched description</span>
+</div>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="match-radio" type="radio" value="slower"/>
+<div class="p-space-sm rounded-lg bg-surface-container-lowest text-center peer-checked:bg-primary peer-checked:text-on-primary transition-all">
+<span class="block font-label-sm text-label-sm font-bold">Slower / Heavier</span>
+<span class="block font-body-sm text-[11px] opacity-80 mt-0.5">Less thriller, more prose</span>
+</div>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="match-radio" type="radio" value="mismatch"/>
+<div class="p-space-sm rounded-lg bg-surface-container-lowest text-center peer-checked:bg-primary peer-checked:text-on-primary transition-all">
+<span class="block font-label-sm text-label-sm font-bold">Misleading Pitch</span>
+<span class="block font-body-sm text-[11px] opacity-80 mt-0.5">Dramatically different</span>
+</div>
+</label>
+</div>
+</div>
+<!-- Written Review Body -->
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface uppercase tracking-wider">Your Critical Review &amp; Marginalia</label>
+<textarea class="w-full bg-surface-container-low text-on-surface placeholder:text-on-surface-variant font-body-md text-body-md p-space-md rounded-xl outline-none focus:bg-surface-container-lowest shadow-inner transition-colors" placeholder="Focus on prose texture, structural balance, and who you would recommend this to..." rows="4"></textarea>
+</div>
+<!-- Taste Affinity Tags -->
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface uppercase tracking-wider">Recommended for Readers of</label>
+<input class="w-full bg-surface-container-low text-on-surface placeholder:text-on-surface-variant font-body-sm text-body-sm px-space-md py-space-sm rounded-xl outline-none focus:bg-surface-container-lowest shadow-inner transition-colors" placeholder="e.g. Shirley Jackson, Sebald, Han Kang" type="text"/>
+</div>
+<!-- Actions -->
+<div class="flex items-center justify-end gap-space-sm pt-space-xs">
+<button class="px-space-md py-space-sm rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" onclick="toggleReviewModal()" type="button">
+            Cancel
+          </button>
+<button class="bg-primary hover:bg-primary-container text-on-primary py-space-sm px-space-lg rounded-xl font-label-lg text-label-lg transition-colors shadow-md" type="submit">
+            Publish to Community Shelf
+          </button>
+</div>
+</form>
+</div>
+</div>
+<!-- Inline Micro-Interactions Script -->
+<script>
+    function setShelf(state) {
+      const wantBtn = document.getElementById('btn-want');
+      const readingBtn = document.getElementById('btn-reading');
+      const readBtn = document.getElementById('btn-read');
+      const hint = document.getElementById('shelf-status-hint');
+
+      // Reset styles
+      [wantBtn, readingBtn, readBtn].forEach(btn => {
+        btn.className = "shelf-btn flex flex-col items-center justify-center py-space-sm px-space-xs rounded font-label-sm text-label-sm transition-all text-on-surface-variant hover:text-on-surface";
+      });
+
+      if (state === 'want') {
+        wantBtn.className = "shelf-btn flex flex-col items-center justify-center py-space-sm px-space-xs rounded font-label-sm text-label-sm transition-all bg-primary text-on-primary shadow-sm";
+        hint.innerText = "Placed in your Private Salon Library on Nov 14.";
+      } else if (state === 'reading') {
+        readingBtn.className = "shelf-btn flex flex-col items-center justify-center py-space-sm px-space-xs rounded font-label-sm text-label-sm transition-all bg-primary text-on-primary shadow-sm";
+        hint.innerText = "Current Active Read &bull; Tracked in your Morning Journal.";
+      } else if (state === 'read') {
+        readBtn.className = "shelf-btn flex flex-col items-center justify-center py-space-sm px-space-xs rounded font-label-sm text-label-sm transition-all bg-secondary text-on-secondary shadow-sm";
+        hint.innerText = "Archived to Finished Volumes &bull; Rate promotion match now.";
+      }
+    }
+
+    function toggleReviewModal() {
+      const modal = document.getElementById('review-modal');
+      const isHidden = modal.classList.contains('pointer-events-none');
+      if (isHidden) {
+        modal.classList.remove('opacity-0', 'pointer-events-none');
+        modal.classList.add('opacity-100', 'pointer-events-auto');
+      } else {
+        modal.classList.add('opacity-0', 'pointer-events-none');
+        modal.classList.remove('opacity-100', 'pointer-events-auto');
+      }
+    }
+
+    function handleReviewSubmit(e) {
+      e.preventDefault();
+      toggleReviewModal();
+      alert('Your review and promotion concordance rating have been archived to the Perch Salon.');
+    }
+  </script>
+</div></main></div></body></html>

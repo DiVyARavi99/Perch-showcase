@@ -1,0 +1,21 @@
+# Phase 3: Distribution & Publisher Portal (P1–P5)
+
+This region encompasses publisher catalog management, book page launching, community-governed promotional campaigns, compliance transparency, reader reception analytics, and emerging author talent scouting.
+
+### Mapped Use Cases & Artifacts
+
+- **Header Diagram**: `Publishing House Use Case Diagram (P1–P5)`
+
+- **Key Screens & Workspaces**:
+  - `Publishing House Portal - Catalog, Analytics & Scouting`
+    - **P1**: List imprint catalog, upload metadata, launch book pages & ARCs
+    - **P2**: Distribute digital review copies directly to calibrated taste cohorts
+    - **P4**: Review reader reception, expectation concordance ratings, reads & shelf adds
+    - **P5**: Scout emerging writers from the self-publishing side of Perch
+  - `Publisher Query & Acquisition - Maya Lin`
+    - **P5 Deep Dive**: Manuscript acquisition query, team consensus, contract draft & royalty modeling
+  - `Sponsored Promotions Launcher & Analytics (P3)`
+    - **P3**: Configure reader promotions strictly labeled with mandatory "Sponsored" badges, taste-concordance matching, and expectation-reality audit integrity
+
+---
+*Status: Verified against Phase 3 Distribution & Publisher Portal specification.*

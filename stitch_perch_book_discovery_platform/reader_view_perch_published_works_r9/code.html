@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"secondary-fixed-dim":"#9dd3aa","secondary-fixed":"#b9efc5","on-tertiary":"#ffffff","surface-variant":"#e0e3df","on-error-container":"#93000a","primary":"#011e0f","surface-container-low":"#f1f4f0","secondary":"#376847","on-surface-variant":"#424843","on-primary":"#ffffff","surface-container-highest":"#e0e3df","tertiary-container":"#561900","on-primary-container":"#7d9c87","on-secondary-fixed-variant":"#1e5031","primary-fixed":"#c9ebd3","surface-container":"#ecefea","outline-variant":"#c2c8c1","on-tertiary-fixed-variant":"#793112","on-primary-fixed":"#032112","on-primary-fixed-variant":"#304d3b","surface-container-high":"#e6e9e4","tertiary":"#330b00","secondary-container":"#b6edc2","tertiary-fixed":"#ffdbcf","on-surface":"#191c1a","on-secondary":"#ffffff","surface-bright":"#f7faf5","inverse-primary":"#adceb7","on-secondary-container":"#3b6d4b","surface":"#f7faf5","on-background":"#191c1a","primary-fixed-dim":"#adceb7","primary-container":"#163323","outline":"#727973","on-tertiary-container":"#da7c58","background":"#f7faf5","on-tertiary-fixed":"#380d00","on-secondary-fixed":"#00210e","tertiary-fixed-dim":"#ffb59a","inverse-surface":"#2d312e","inverse-on-surface":"#eff2ed","surface-container-lowest":"#ffffff","error":"#ba1a1a","surface-dim":"#d8dbd6","surface-tint":"#476552","on-error":"#ffffff","error-container":"#ffdad6"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"space-sm":"0.5rem","gutter-desktop":"2rem","space-md":"1rem","space-xs":"0.25rem","space-xl":"2.5rem","space-lg":"1.5rem",gutter:"1.5rem","margin-desktop":"2.5rem",margin:"1.25rem"},fontFamily:{"headline-xl-mobile":["Plus Jakarta Sans"],"body-lg":["Inter"],"label-sm":["Inter"],"body-md":["Inter"],"headline-xl":["Plus Jakarta Sans"],"label-lg":["Inter"],"headline-sm":["Plus Jakarta Sans"],"body-xl":["Inter"],"headline-lg":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"label-md":["Inter"],"headline-lg-mobile":["Plus Jakarta Sans"]},fontSize:{"headline-xl-mobile":["2rem",{lineHeight:"2.5rem",letterSpacing:"-0.025em",fontWeight:"600"}],"body-lg":["1rem",{lineHeight:"1.65rem",letterSpacing:"-0.005em",fontWeight:"400"}],"label-sm":["0.6875rem",{lineHeight:"0.875rem",letterSpacing:"0.04em",fontWeight:"600"}],"body-md":["0.875rem",{lineHeight:"1.5rem",letterSpacing:"0em",fontWeight:"400"}],"headline-xl":["2.75rem",{lineHeight:"3.25rem",letterSpacing:"-0.03em",fontWeight:"600"}],"label-lg":["0.875rem",{lineHeight:"1.25rem",letterSpacing:"0.01em",fontWeight:"600"}],"headline-sm":["1.25rem",{lineHeight:"1.75rem",letterSpacing:"-0.015em",fontWeight:"500"}],"body-xl":["1.125rem",{lineHeight:"1.875rem",letterSpacing:"-0.01em",fontWeight:"400"}],"headline-lg":["2rem",{lineHeight:"2.5rem",letterSpacing:"-0.025em",fontWeight:"600"}],"headline-md":["1.5rem",{lineHeight:"2rem",letterSpacing:"-0.02em",fontWeight:"500"}],"label-md":["0.75rem",{lineHeight:"1rem",letterSpacing:"0.02em",fontWeight:"500"}],"headline-lg-mobile":["1.5rem",{lineHeight:"2rem",letterSpacing:"-0.02em",fontWeight:"600"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between p-space-lg shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col gap-space-lg"><div class="flex items-center gap-space-sm px-space-xs"><img alt="Perch Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrCXCNmAuN7ydCGdYs803HdWIVWm10Zyzzn4Wcq4DKzsh16rpreSUA51cJ2Jhvt2zymmuidRzJ_4ltdhH7rB_YaPc0xO8aBcbVwWslCJDJ8zjeHP9EZpN4tM7QFHpQCBupvoxmNjiA-rfwS3o51h2Ksyh0IZN2qwkNWlHOPqiwovWRWJbsnG1tA1f2LpiksZHZNz_lcNC10eSdfP9_34cpcEBiRZ0zNnYnYs8HElPiQx"/><span class="font-headline-sm text-headline-sm text-primary font-semibold tracking-tight">Perch</span></div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary font-semibold"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="feed" href="#"><span class="material-symbols-outlined text-[20px]">auto_stories</span><span class="font-body-md text-body-md">Feed</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="discover-and-circles" href="#"><span class="material-symbols-outlined text-[20px]">diversity_2</span><span class="font-body-md text-body-md">Discover &amp; Circles</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="books-and-marginalia" href="#"><span class="material-symbols-outlined text-[20px]">history_edu</span><span class="font-body-md text-body-md">Books &amp; Marginalia</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="profile-and-stacks" href="#"><span class="material-symbols-outlined text-[20px]">shelves</span><span class="font-body-md text-body-md">Profile &amp; Stacks</span></a></nav><div class="flex flex-col gap-space-md pt-space-xs"><div class="bg-surface-container-lowest p-space-md rounded-xl shadow-[0_1px_8px_rgba(0,0,0,0.02)] flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">Reading Now</span><span class="font-label-sm text-label-sm text-on-surface-variant">Pg 142</span></div><p class="font-headline-sm text-label-lg text-on-surface font-medium truncate">Drive Your Plow Over the Bones of the Dead</p><div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden mt-space-xs"><div class="bg-secondary h-full rounded-full w-[46%]"></div></div></div><button class="w-full flex items-center justify-center gap-space-sm bg-primary-container text-on-primary py-space-sm px-space-md rounded-lg hover:bg-primary transition-colors shadow-[0_1px_8px_rgba(0,0,0,0.04)]" type="button"><span class="material-symbols-outlined text-[18px]">edit_note</span><span class="font-label-lg text-label-lg">New Marginalia</span></button></div></div><div class="pt-space-md bg-surface-container-low"><div class="flex items-center justify-between p-space-sm rounded-xl bg-surface-container-lowest hover:bg-surface-container transition-colors"><div class="flex items-center gap-space-sm"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC15pLmTkabqRycun0_pFJTp5SzlLBOaCorP9RQ8quajIRWB3FBfzjKm8I8vpkBrzadnu7HF-vuTs7yMo7unv0deyH7nF_yynBsWX8r69DsRgBBn1v9pB6Sp3_YPcUMtStRowTqng7vN4ahppSKN5nfJ1KLQfRIXipJVq88mx07x_ahMkwTW5P38jzzNwb9jFbUBEhleocIsAXdslpEHW1cG-DaX_eXSDOYA7JWPRM"/><div class="flex flex-col leading-tight"><span class="font-label-lg text-label-lg text-on-surface truncate">Sophie Reads</span><span class="font-label-sm text-label-sm text-on-surface-variant">Founding Curator</span></div></div><div class="flex items-center text-on-surface-variant hover:text-on-surface"><span class="material-symbols-outlined text-[20px]">unfold_more</span></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-xl"><div class="flex items-center gap-space-md w-full max-w-lg"><div class="flex items-center gap-space-sm w-full bg-surface-container-lowest px-space-md py-space-xs rounded-full shadow-[0_1px_8px_rgba(0,0,0,0.02)]"><span class="material-symbols-outlined text-outline text-[20px]">search</span><input class="w-full bg-transparent border-0 outline-none text-on-surface font-body-md text-body-md placeholder:text-outline" placeholder="Search quotes, readers, passages, or titles..." type="text"/></div></div><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-surface-container text-on-surface-variant"><span class="material-symbols-outlined text-[18px] text-secondary">menu_book</span><span class="font-label-sm text-label-sm text-on-surface font-medium">Winter Salon #14</span></div><div class="flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-secondary-fixed text-on-secondary-fixed"><span class="material-symbols-outlined text-[16px]">bookmark</span><span class="font-label-sm text-label-sm font-semibold">28 Read</span></div><button class="text-on-surface-variant hover:text-on-surface p-space-xs rounded-full hover:bg-surface-container transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span></button><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC15pLmTkabqRycun0_pFJTp5SzlLBOaCorP9RQ8quajIRWB3FBfzjKm8I8vpkBrzadnu7HF-vuTs7yMo7unv0deyH7nF_yynBsWX8r69DsRgBBn1v9pB6Sp3_YPcUMtStRowTqng7vN4ahppSKN5nfJ1KLQfRIXipJVq88mx07x_ahMkwTW5P38jzzNwb9jFbUBEhleocIsAXdslpEHW1cG-DaX_eXSDOYA7JWPRM"/></div></header><main class="relative pt-16 bg-surface min-h-screen px-space-xl py-space-lg"><div class="flex flex-col w-full">
+<!-- Sticky Reader Context Bar (Top of Content) -->
+<header class="sticky top-0 z-30 flex flex-wrap items-center justify-between gap-space-md py-space-sm px-space-lg bg-surface/90 backdrop-blur-md rounded-xl shadow-[0_4px_20px_-2px_rgba(45,49,46,0.04)] mb-space-lg">
+<!-- Breadcrumb & Metadata -->
+<div class="flex items-center gap-space-xs text-on-surface-variant min-w-0">
+<a class="font-label-md text-label-md hover:text-primary transition-colors" href="#">Perch Works</a>
+<span class="material-symbols-outlined text-[16px] text-outline">chevron_right</span>
+<a class="font-label-md text-label-md hover:text-primary transition-colors" href="#">Fiction &amp; Essays</a>
+<span class="material-symbols-outlined text-[16px] text-outline">chevron_right</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">The Glass Orchard • Maya Lin</span>
+<span class="hidden md:inline-flex items-center ml-space-xs px-space-xs py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">Ch. 4 of 8</span>
+</div>
+<!-- Reading Settings & Actions Hub -->
+<div class="flex items-center gap-space-md flex-shrink-0">
+<!-- Typography / Settings Segmented Pill -->
+<div class="hidden sm:flex items-center gap-space-xs bg-surface-container-low p-1 rounded-full shadow-[0_1px_3px_0_rgba(45,49,46,0.02)]">
+<button class="px-space-sm py-0.5 rounded-full bg-surface-container-lowest text-on-surface font-label-sm text-label-sm font-medium shadow-sm transition-all" id="font-serif-toggle" onclick="document.getElementById('reading-body').classList.remove('font-sans'); document.getElementById('reading-body').classList.add('font-serif'); this.classList.add('bg-surface-container-lowest','text-on-surface','shadow-sm'); document.getElementById('font-sans-toggle').classList.remove('bg-surface-container-lowest','text-on-surface','shadow-sm'); document.getElementById('font-sans-toggle').classList.add('text-on-surface-variant');" type="button">Serif</button>
+<button class="px-space-sm py-0.5 rounded-full text-on-surface-variant font-label-sm text-label-sm font-medium transition-all" id="font-sans-toggle" onclick="document.getElementById('reading-body').classList.remove('font-serif'); document.getElementById('reading-body').classList.add('font-sans'); this.classList.add('bg-surface-container-lowest','text-on-surface','shadow-sm'); document.getElementById('font-serif-toggle').classList.remove('bg-surface-container-lowest','text-on-surface','shadow-sm'); document.getElementById('font-serif-toggle').classList.add('text-on-surface-variant');" type="button">Sans</button>
+<div class="h-3 w-px bg-outline-variant mx-1"></div>
+<button class="px-space-xs py-0.5 text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm" onclick="adjustSize(-1)" title="Decrease font size" type="button">A-</button>
+<button class="px-space-xs py-0.5 text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm font-semibold" onclick="adjustSize(1)" title="Increase font size" type="button">A+</button>
+</div>
+<!-- Time estimate -->
+<div class="hidden lg:flex items-center gap-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span class="font-label-sm text-label-sm">14 min • 3,420 words</span>
+</div>
+<!-- Distraction-Free Toggle -->
+<button class="p-space-xs rounded-full hover:bg-surface-container-high text-on-surface-variant transition-colors" id="zen-toggle" onclick="toggleDistractionFree()" title="Toggle Distraction-free Mode" type="button">
+<span class="material-symbols-outlined text-[20px]">fullscreen</span>
+</button>
+<!-- Primary Action Buttons -->
+<div class="flex items-center gap-space-xs">
+<button class="flex items-center gap-space-xs px-space-md py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md transition-all shadow-[0_1px_3px_0_rgba(45,49,46,0.02)]" type="button">
+<span class="material-symbols-outlined text-[16px]">bookmark_add</span>
+<span>Save Shelf</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-1.5 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md hover:bg-primary transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">person_add</span>
+<span>Follow Maya</span>
+</button>
+</div>
+</div>
+</header>
+<!-- 3-Column Editorial Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
+<!-- LEFT COLUMN: Manuscript Structure & Author's Inquiry (W1/W2/W6 context) -->
+<aside class="lg:col-span-3 flex flex-col gap-space-lg transition-all duration-300" id="left-sidebar">
+<!-- Manuscript Progress & TOC Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-[0_4px_20px_-2px_rgba(45,49,46,0.04)] flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">Manuscript Chapters</span>
+<h3 class="font-headline-sm text-headline-sm text-primary font-semibold">The Glass Orchard</h3>
+</div>
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-semibold">4 / 8</span>
+</div>
+<!-- Serial Chapter Flow -->
+<nav class="flex flex-col gap-space-xs mt-space-xs">
+<a class="flex items-center justify-between p-space-xs rounded-lg hover:bg-surface-container-low transition-colors text-on-surface-variant group" href="#">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-[18px] text-secondary">check_circle</span>
+<span class="font-body-md text-body-md truncate group-hover:text-primary">1. The Salt Line</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline flex-shrink-0">2.8k</span>
+</a>
+<a class="flex items-center justify-between p-space-xs rounded-lg hover:bg-surface-container-low transition-colors text-on-surface-variant group" href="#">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-[18px] text-secondary">check_circle</span>
+<span class="font-body-md text-body-md truncate group-hover:text-primary">2. Orchard at Low Tide</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline flex-shrink-0">3.1k</span>
+</a>
+<a class="flex items-center justify-between p-space-xs rounded-lg hover:bg-surface-container-low transition-colors text-on-surface-variant group" href="#">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-[18px] text-secondary">check_circle</span>
+<span class="font-body-md text-body-md truncate group-hover:text-primary">3. The Copper Bell</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline flex-shrink-0">4.0k</span>
+</a>
+<!-- Active Chapter 4 -->
+<div class="flex items-center justify-between p-space-xs rounded-lg bg-surface-container text-primary font-semibold shadow-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-[18px] text-secondary" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+<span class="font-body-md text-body-md truncate">4. The Salt Cellar</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary flex-shrink-0">3.4k</span>
+</div>
+<div class="flex items-center justify-between p-space-xs rounded-lg text-outline opacity-75">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-[18px]">lock_clock</span>
+<span class="font-body-md text-body-md truncate">5. The Rising Tide</span>
+</div>
+<span class="font-label-sm text-label-sm flex-shrink-0">Oct 18</span>
+</div>
+<div class="flex items-center justify-between p-space-xs rounded-lg text-outline opacity-60">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-[18px]">radio_button_unchecked</span>
+<span class="font-body-md text-body-md truncate">6. Glaze &amp; Ash</span>
+</div>
+<span class="font-label-sm text-label-sm flex-shrink-0">Draft</span>
+</div>
+</nav>
+</div>
+<!-- Author's Feedback Prompt (W1/W2 Focus) -->
+<div class="bg-surface-container-low rounded-xl p-space-lg flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<img class="w-10 h-10 rounded-full object-cover shadow-sm" data-alt="Close up portrait photograph of Maya Lin, author, soft ambient studio natural light, neutral beige tones, contemplative expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbQSdEinGx2QW_e2xBiorG2p2v3vHpFiZSIdbE-BaWLoojKZzq37BOpsVXfVYPd0vYyNxkKjzvpHSUIJwSWijMt1xREJkaRYAeJ6BFKFOG3bLYzmPtYh8xQUOtNLTM1wOoOzvM6jUvF6EnlLE41FE05srk-Z5nlN93zFGgCsfgFdSVYzyXa26lcQfWIkcqy0vFE4ouiIY7XH4PW1DIfH_W4fe-QDi6gSqX6vBl35w"/>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Maya Lin</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Author Note on Draft</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant italic mt-space-xs leading-relaxed">
+          “For readers following Rowan’s descent: I’m especially testing the pacing of the cellar confrontation on paragraph 11. Does the dread build naturally, or does the salt metaphor overpower the emotional stakes? Leave margin markers!”
+        </p>
+<div class="pt-space-xs flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline">Updated 2 days ago</span>
+<a class="font-label-sm text-label-sm text-secondary hover:text-primary font-semibold flex items-center gap-0.5" href="#author-prompt">
+            Reply to Prompt <span class="material-symbols-outlined text-[14px]">arrow_downward</span>
+</a>
+</div>
+</div>
+<!-- Live Chapter Pulse & Engagement Metrics -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-[0_4px_20px_-2px_rgba(45,49,46,0.04)] flex flex-col gap-space-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Chapter Resonance</span>
+<div class="grid grid-cols-2 gap-space-sm pt-space-xs">
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col">
+<span class="font-headline-md text-headline-md text-primary font-bold">1,420</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Completed Reads</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col">
+<span class="font-headline-md text-headline-md text-primary font-bold">284</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Saved to Shelf</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col">
+<span class="font-headline-md text-headline-md text-secondary font-bold">92</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Reactions</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col">
+<span class="font-headline-md text-headline-md text-on-tertiary-container font-bold">34</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Margin Notes</span>
+</div>
+</div>
+</div>
+</aside>
+<!-- CENTER COLUMN: Primary Reading Room (Strictly editorial max-w-2xl style) -->
+<main class="lg:col-span-6 flex flex-col items-center" id="center-reading-col">
+<!-- Reading Surface Card -->
+<article class="w-full max-w-2xl bg-surface-container-lowest rounded-2xl p-space-lg md:p-space-xl shadow-[0_4px_20px_-2px_rgba(45,49,46,0.04)] relative">
+<!-- Floating Inline Annotation Toolbar (Appears on paragraph highlight) -->
+<div class="hidden absolute left-1/2 -translate-x-1/2 top-48 z-40 bg-inverse-surface text-inverse-on-surface px-space-md py-space-xs rounded-full shadow-xl flex items-center gap-space-sm transition-all animate-bounce" id="selection-toolbar">
+<button class="flex items-center gap-1 font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">add_comment</span>
+<span>Annotate</span>
+</button>
+<div class="h-3 w-px bg-outline"></div>
+<button class="flex items-center gap-1 font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">format_quote</span>
+<span>Quote</span>
+</button>
+<div class="h-3 w-px bg-outline"></div>
+<button class="flex items-center gap-1 font-label-sm text-label-sm hover:text-secondary-fixed transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">bookmark</span>
+<span>Save</span>
+</button>
+</div>
+<!-- Chapter Title & Overline -->
+<div class="flex flex-col gap-space-xs mb-space-xl pb-space-lg">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">Manuscript Serial • Part I</span>
+<span class="font-label-sm text-label-sm text-outline">Published Oct 11, 2024</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-primary font-bold tracking-tight mt-space-xs">Chapter 4: The Salt Cellar</h1>
+<p class="font-label-lg text-label-lg text-on-surface-variant font-medium">By Maya Lin • Featuring 34 community reader reflections</p>
+</div>
+<!-- Editorial Reading Body -->
+<div class="flex flex-col gap-space-lg text-on-surface leading-loose text-body-xl transition-all" id="reading-body">
+<p class="first-letter:font-headline-xl first-letter:text-headline-xl first-letter:font-bold first-letter:text-primary first-letter:float-left first-letter:mr-3 first-letter:leading-none">
+            The low tide had receded beyond the reef, uncovering pale limestone ribbons that hadn’t felt daylight since the late equinox. Rowan paused at the threshold of the subterranean hatch, holding the brass storm-lantern against the damp northwest wind. Everything smelled of iodine and chilled lichen.
+          </p>
+<p>
+            Inside, the cellar stairs descended in seven shallow turns carved directly into the bedrock. With every three paces, the ambient roar of the coastal surf muffled, until the stillness became heavy enough to taste. The floor here was not stone, but fine maritime salt, packed dense like hard winter snow.
+          </p>
+<!-- Interactive Highlighted Paragraph (Paragraph 6) with Margin Badge -->
+<div class="relative group cursor-pointer p-space-sm -mx-space-sm rounded-xl bg-surface-container-low transition-colors" onclick="highlightMarginCard('margin-card-1')">
+<div class="absolute -right-3 top-2 flex items-center gap-1 bg-surface-container-highest px-2 py-0.5 rounded-full shadow-sm text-secondary font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">comment</span>
+<span>12</span>
+</div>
+<p class="italic text-primary font-medium">
+              “We don’t preserve the orchard to resist time,” Rowan remembered his grandfather muttering through the cold drafts of winter. “We preserve it in salt because salt holds memory without grief. It freezes the blossom at the exact moment before rot understands it has won.”
+            </p>
+<span class="font-label-sm text-label-sm text-secondary font-medium block mt-space-xs">12 readers highlighted this passage • Click to view conversation</span>
+</div>
+<p>
+            He knelt by the third vat, dusting away the coarse crust that had sealed the oak barrel. Beneath lay last autumn’s russets, submerged in pale brine, their taut skins translucent as lantern horn. When he lifted one to the candlelight, the veins of the pulp were still visible, crystallized into amber constellations.
+          </p>
+<p>
+            The keeper stood waiting at the subterranean archway. He had not carried a lamp; his eyes had learned the dim cadence of the cellar four decades ago. His hands rested on the iron hoop of a stave-knife.
+          </p>
+<!-- Paragraph 11: Under Review for Pacing (W1/W2 author note tie-in) -->
+<div class="relative p-space-md rounded-xl bg-surface-container transition-all" onclick="highlightMarginCard('margin-card-2')">
+<div class="flex items-center gap-space-xs mb-space-xs">
+<span class="material-symbols-outlined text-[16px] text-tertiary-fixed-dim">rate_review</span>
+<span class="font-label-sm text-label-sm font-semibold text-primary">Author Focus Area • Feedback Requested</span>
+</div>
+<p>
+              “You came back for the graftings,” the keeper said. It was neither an accusation nor a greeting. The sound of his breath seemed to come from the cellar floor itself. Rowan did not drop the knife. He stepped forward until the cold air of the lowest pit brushed his collarbones, feeling the weight of the tide turning on the stone roof fifty cubits overhead.
+            </p>
+<div class="flex items-center justify-between mt-space-sm pt-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant">5 reader margin critiques on pacing</span>
+<button class="font-label-sm text-label-sm text-primary font-semibold hover:underline" type="button">Add Note Here</button>
+</div>
+</div>
+<p>
+            Outside, above the subterranean ceiling, the first heavy swell of the incoming flood slapped against the headland. Rowan looked down at the preserved branch in his leather pouch. There was no going back up through the hatch once the tide reached the third tier of the limestone steps.
+          </p>
+</div>
+<!-- End of Chapter Flourish -->
+<div class="flex items-center justify-center py-space-xl text-outline">
+<span class="material-symbols-outlined text-[24px]">flare</span>
+</div>
+<!-- CHAPTER COMPLETION: Reader Reactions (R9 Requirement) -->
+<section class="flex flex-col gap-space-lg pt-space-md">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">Reader Impressions &amp; Critique</span>
+<h3 class="font-headline-md text-headline-md text-primary font-semibold">How did Chapter 4 resonate?</h3>
+</div>
+<!-- Emotional Resonance Chips -->
+<div class="flex flex-wrap gap-space-xs">
+<button class="flex items-center gap-space-xs px-space-md py-2 rounded-full bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md transition-all shadow-sm" type="button">
+<span>✨ Luminous Prose</span>
+<span class="px-1.5 py-0.5 rounded-full bg-surface-container-lowest text-primary font-bold text-label-sm">48</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-2 rounded-full bg-primary-container text-on-primary font-label-md text-label-md transition-all shadow-sm" type="button">
+<span>⚡ Tense Pacing</span>
+<span class="px-1.5 py-0.5 rounded-full bg-primary text-on-primary font-bold text-label-sm">36</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-2 rounded-full bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md transition-all shadow-sm" type="button">
+<span>🥀 Heart-wrenching</span>
+<span class="px-1.5 py-0.5 rounded-full bg-surface-container-lowest text-primary font-bold text-label-sm">22</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-2 rounded-full bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md transition-all shadow-sm" type="button">
+<span>🌊 World-building</span>
+<span class="px-1.5 py-0.5 rounded-full bg-surface-container-lowest text-primary font-bold text-label-sm">19</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-2 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-label-md text-label-md transition-all" type="button">
+<span class="material-symbols-outlined text-[16px]">add_reaction</span>
+<span>Add Custom Reaction</span>
+</button>
+</div>
+<!-- Serial Trajectory Metric Bar -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-medium">Trajectory &amp; Tone Consistency</span>
+<span class="font-label-md text-label-md text-secondary font-bold">96% On Track</span>
+</div>
+<div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full w-[96%]"></div>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Based on 148 serialized manuscript ratings for The Glass Orchard</span>
+</div>
+<!-- Direct Feedback Card to Author Maya Lin (W1/W2/W6 integration) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md" id="author-prompt">
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[24px]">rate_review</span>
+<div class="flex flex-col">
+<h4 class="font-headline-sm text-headline-sm text-primary font-semibold">Author Feedback Request</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                  “Did the dialogue between Rowan and the keeper feel authentic in paragraph 11? Leave an encouraging margin note or critique.”
+                </p>
+</div>
+</div>
+<!-- Composer input box -->
+<div class="flex flex-col gap-space-xs">
+<textarea class="w-full p-space-md rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md placeholder:text-outline outline-none resize-none" placeholder="Share your direct impression with Maya Lin..." rows="3"></textarea>
+<div class="flex items-center justify-between pt-space-xs">
+<label class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm cursor-pointer">
+<input checked="" class="rounded accent-primary" type="checkbox"/>
+<span>Visible to author and community readers</span>
+</label>
+<button class="px-space-md py-1.5 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md hover:bg-primary transition-colors" type="button">
+                  Send to Author
+                </button>
+</div>
+</div>
+</div>
+<!-- Next Serial Chapter Teaser -->
+<div class="flex flex-col sm:flex-row items-center justify-between p-space-lg rounded-xl bg-surface-container-low gap-space-md mt-space-md">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">Up Next</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">Chapter 5: The Rising Tide</span>
+<span class="font-label-sm text-label-sm text-outline">Draft locks • Releases Friday, Oct 18</span>
+</div>
+<div class="flex items-center gap-space-xs w-full sm:w-auto">
+<button class="flex-1 sm:flex-none px-space-md py-2 rounded-lg bg-surface-container-lowest text-primary font-label-md text-label-md hover:bg-surface-container transition-colors shadow-sm" type="button">
+                Read Draft Excerpt
+              </button>
+<button class="flex-1 sm:flex-none flex items-center justify-center gap-1 px-space-md py-2 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md hover:bg-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">notifications</span>
+<span>Notify Me</span>
+</button>
+</div>
+</div>
+</section>
+</article>
+</main>
+<!-- RIGHT COLUMN: Reader Marginalia & Reaction Stream (R9 / R2a) -->
+<aside class="lg:col-span-3 flex flex-col gap-space-md sticky top-20" id="right-sidebar">
+<!-- Marginalia Header & Filter Tabs -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-[0_4px_20px_-2px_rgba(45,49,46,0.04)] flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">history_edu</span>
+<h3 class="font-headline-sm text-headline-sm text-primary font-semibold">Marginalia</h3>
+<span class="px-space-xs py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm font-bold">34</span>
+</div>
+<button class="text-on-surface-variant hover:text-primary p-1 rounded-full" type="button">
+<span class="material-symbols-outlined text-[18px]">filter_list</span>
+</button>
+</div>
+<!-- Sub-filter Pills -->
+<div class="flex items-center gap-1 overflow-x-auto pb-1">
+<button class="px-space-sm py-1 rounded-full bg-primary-container text-on-primary font-label-sm text-label-sm whitespace-nowrap" type="button">All Notes</button>
+<button class="px-space-sm py-1 rounded-full bg-surface-container-low text-on-surface-variant hover:bg-surface-container font-label-sm text-label-sm whitespace-nowrap" type="button">Taste Matches (R2a)</button>
+<button class="px-space-sm py-1 rounded-full bg-surface-container-low text-on-surface-variant hover:bg-surface-container font-label-sm text-label-sm whitespace-nowrap" type="button">Author Replies</button>
+</div>
+</div>
+<!-- Quick Margin Note Composer Form -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-[0_4px_20px_-2px_rgba(45,49,46,0.04)] flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm font-semibold text-primary">Annotate Current Paragraph</span>
+<textarea class="w-full p-space-sm rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md placeholder:text-outline outline-none resize-none" placeholder="Leave a reflection or literary critique..." rows="2"></textarea>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">public</span>
+<span>Public</span>
+</div>
+<button class="px-space-md py-1 rounded-lg bg-secondary text-on-secondary font-label-sm text-label-sm hover:bg-primary transition-colors" type="button">
+            Post Note
+          </button>
+</div>
+</div>
+<!-- Pinned Marginalia Stream Cards -->
+<div class="flex flex-col gap-space-sm">
+<!-- Marginalia Card 1: Julian Rivera (Taste Match R2a) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-[0_4px_20px_-2px_rgba(45,49,46,0.04)] flex flex-col gap-space-xs transition-all duration-300" id="margin-card-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<img class="w-7 h-7 rounded-full object-cover" data-alt="Portrait of Julian Rivera, aesthetic editorial headshot, bespectacled male reader, warm parchment background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBn2jsaKAQ5HF1j4h0UE65UUDws3DeFPaAvYYZuyU2ktU9JLh3EvBFI7eSB4Vqe4i2CUqzcw9wMzPJDdQsxVEPMc8XTrB2Ef0BQY_crHF5sHkE6XcMIB5MPsZ-ihkf6SggJYB6LV7NFLuRTitprapjmxfYQBEAhK6hj1XA6gcS5FUzVM1ztjpJV3RgaJUQz4oRj5Fj-38R1MkgLAqoWe9jKldE1Vf5LcS5OGGDmygU"/>
+<div class="flex flex-col leading-tight">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Julian Rivera</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">94% Taste Match</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Para 6</span>
+</div>
+<div class="pl-2 py-1 my-1 bg-surface-container-low rounded font-body-md text-label-sm text-on-surface-variant italic truncate">
+            “We don't preserve the orchard to resist time...”
+          </div>
+<p class="font-body-md text-body-md text-on-surface">
+            The imagery of salt preservation as memory preservation is breathtaking. It reframes the whole opening trilogy.
+          </p>
+<!-- Author reply thread badge -->
+<div class="p-space-xs rounded-lg bg-surface-container-low flex items-start gap-space-xs mt-space-xs">
+<span class="material-symbols-outlined text-[16px] text-secondary">subdirectory_arrow_right</span>
+<div class="flex flex-col leading-snug">
+<span class="font-label-sm text-label-sm text-primary font-semibold">Maya Lin (Author)</span>
+<span class="font-body-md text-label-sm text-on-surface-variant">“Thank you Julian, exactly what I hoped would resonate.”</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs text-outline">
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm">
+<button class="flex items-center gap-0.5 hover:text-primary" type="button">
+<span class="material-symbols-outlined text-[14px]">thumb_up</span>
+<span>14</span>
+</button>
+<button class="hover:text-primary" type="button">Reply</button>
+</div>
+<span class="font-label-sm text-label-sm">3h ago</span>
+</div>
+</div>
+<!-- Marginalia Card 2: Clara Vance (Pacing Critique on Para 11) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-[0_4px_20px_-2px_rgba(45,49,46,0.04)] flex flex-col gap-space-xs transition-all duration-300" id="margin-card-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<img class="w-7 h-7 rounded-full object-cover" data-alt="Portrait of Clara Vance, thoughtful critic with short hair, cozy studio ambient light, editorial portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGJ3hpIn1APA0XtENiDsc1J5MvXyVoxUuOooPvLgtSnY8TKb0HlyjJLcH037AfJT7fSpSVgqmqda4guSdQnYdq1ssD6eBHKB1qedJ1Cn6_n14EWsFJU0szeku1PyYf3ijCVJxMcxAb4PirTVo_KV5UQW9e3h71QYzizHqjPosfYwnGa1MXyAtQOmK5OUFSlpgcGe3BedlObIRzn2aPvEcdg3_9iX5dYR6PuJEbrQk"/>
+<div class="flex flex-col leading-tight">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Clara Vance</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Top Speculative Reader</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Para 11</span>
+</div>
+<div class="pl-2 py-1 my-1 bg-surface-container-low rounded font-body-md text-label-sm text-on-surface-variant italic truncate">
+            “You came back for the graftings, the keeper said...”
+          </div>
+<p class="font-body-md text-body-md text-on-surface">
+            The pacing shifts abruptly here — felt the transition between the shoreline and the cellar needed one more beat of atmospheric description before the keeper speaks.
+          </p>
+<div class="flex items-center justify-between pt-space-xs text-outline">
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm">
+<button class="flex items-center gap-0.5 hover:text-primary" type="button">
+<span class="material-symbols-outlined text-[14px]">thumb_up</span>
+<span>9</span>
+</button>
+<button class="hover:text-primary" type="button">Reply</button>
+</div>
+<span class="font-label-sm text-label-sm">6h ago</span>
+</div>
+</div>
+<!-- Marginalia Card 3: Aris Thorne -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-[0_4px_20px_-2px_rgba(45,49,46,0.04)] flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<img class="w-7 h-7 rounded-full object-cover" data-alt="Portrait headshot of Aris Thorne, young essayist in a library setting, warm sunlight, muted tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4VGXQzpYBrqw05N3eJkVtEOtVgs5_U70yDI8BY1cSVG0oHYssJuMyKqPk-tqkzSjTwUVVqM0bwMRPzcX_pwQu0fN2Vz7T7WtPLwUocxh_hGlTBGmfMXsMDN5a1ojqGmWsDI70oK2y7rImpcfxDwbJdP0F_DQTAsl5cTIYsheZherv8aSlpAusdcxSxC-fBShOMXlwcigwzGkbFIWdgFSwA_Ed5sRNpZIqgyeO4FE"/>
+<div class="flex flex-col leading-tight">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Aris Thorne</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Winter Salon Curator</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Para 2</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface">
+            “Seven shallow turns carved into the bedrock.” Maya’s architectural awareness gives this fictional space tangible weight.
+          </p>
+<div class="flex items-center justify-between pt-space-xs text-outline">
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm">
+<button class="flex items-center gap-0.5 hover:text-primary" type="button">
+<span class="material-symbols-outlined text-[14px]">thumb_up</span>
+<span>21</span>
+</button>
+<button class="hover:text-primary" type="button">Reply</button>
+</div>
+<span class="font-label-sm text-label-sm">Yesterday</span>
+</div>
+</div>
+</div>
+<!-- Sticky Reading Progress Indicator -->
+<div class="p-space-sm rounded-xl bg-surface-container-low flex items-center justify-between mt-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Chapter Progress</span>
+<div class="flex items-center gap-2">
+<div class="w-24 bg-surface-container-highest h-1.5 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full w-[65%]"></div>
+</div>
+<span class="font-label-sm text-label-sm font-semibold text-primary">65%</span>
+</div>
+</div>
+</aside>
+</div>
+</div>
+<script>
+  let currentFontSize = 1.125; // default 1.125rem (body-xl)
+  
+  function adjustSize(direction) {
+    const reader = document.getElementById('reading-body');
+    if (!reader) return;
+    currentFontSize += direction * 0.125;
+    if (currentFontSize < 0.875) currentFontSize = 0.875;
+    if (currentFontSize > 1.625) currentFontSize = 1.625;
+    reader.style.fontSize = currentFontSize + 'rem';
+    reader.style.lineHeight = (currentFontSize * 1.8) + 'rem';
+  }
+
+  function toggleDistractionFree() {
+    const left = document.getElementById('left-sidebar');
+    const right = document.getElementById('right-sidebar');
+    const center = document.getElementById('center-reading-col');
+    
+    if (left.classList.contains('hidden')) {
+      left.classList.remove('hidden');
+      right.classList.remove('hidden');
+      center.classList.remove('lg:col-span-12');
+      center.classList.add('lg:col-span-6');
+    } else {
+      left.classList.add('hidden');
+      right.classList.add('hidden');
+      center.classList.remove('lg:col-span-6');
+      center.classList.add('lg:col-span-12');
+    }
+  }
+
+  function highlightMarginCard(cardId) {
+    const card = document.getElementById(cardId);
+    if (!card) return;
+    card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    card.classList.add('ring-2', 'ring-secondary', 'bg-surface-container-high');
+    setTimeout(() => {
+      card.classList.remove('ring-2', 'ring-secondary', 'bg-surface-container-high');
+    }, 2000);
+  }
+</script></main></div></body></html>

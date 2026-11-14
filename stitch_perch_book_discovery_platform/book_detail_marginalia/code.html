@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "secondary-fixed": "#ffdbcf", "on-secondary-fixed-variant": "#7a2f10", "inverse-on-surface": "#f7efea", "on-tertiary-container": "#ce9236", "surface-container-high": "#eee7e1", "on-tertiary": "#ffffff", "error": "#ba1a1a", "surface-bright": "#fff8f4", "on-primary-fixed": "#002113", "on-surface": "#1e1b18", "inverse-primary": "#abcfb8", "on-secondary-container": "#762c0d", "secondary-container": "#ff956e", "tertiary": "#2f1c00", "on-error-container": "#93000a", "tertiary-fixed": "#ffddb4", "surface-dim": "#e0d9d3", "outline-variant": "#c1c8c2", "surface-container-lowest": "#ffffff", "primary-fixed": "#c7ebd4", "error-container": "#ffdad6", "tertiary-fixed-dim": "#fcba5b", "on-primary-container": "#83a590", "primary-fixed-dim": "#abcfb8", "surface-container-low": "#faf2ed", "surface-variant": "#e9e1dc", "outline": "#727973", "on-error": "#ffffff", "surface-container-highest": "#e9e1dc", "on-tertiary-fixed-variant": "#633f00", "on-secondary": "#ffffff", "inverse-surface": "#33302c", "on-background": "#1e1b18", "secondary-fixed-dim": "#ffb59b", "on-secondary-fixed": "#380d00", "on-primary": "#ffffff", "secondary": "#994626", "primary-container": "#1b3b2b", "on-primary-fixed-variant": "#2d4d3c", "on-surface-variant": "#424843", "on-tertiary-fixed": "#291800", "surface": "#fff8f4", "surface-tint": "#456553", "background": "#fff8f4", "primary": "#032517", "surface-container": "#f4ece7", "tertiary-container": "#4b2f00" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "space-sm": "0.5rem", "gutter-mobile": "1rem", "gutter": "1.5rem", "space-md": "1rem", "space-xs": "0.25rem", "space-lg": "1.5rem", "margin-mobile": "1.25rem", "margin": "3rem", "space-xl": "2.5rem" }, fontFamily: { "quote-editorial": ["Newsreader"], "headline-md": ["Newsreader"], "body-sm": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "headline-sm": ["Newsreader"], "headline-lg": ["Newsreader"], "display-lg": ["Newsreader"], "display-lg-mobile": ["Newsreader"], "body-md": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"] }, fontSize: { "quote-editorial": ["20px", { "lineHeight": "30px", "fontWeight": "400" }], "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "500" }], "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.03em", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "700" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "400" }], "display-lg-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.015em", "fontWeight": "400" }], "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface antialiased flex flex-col min-h-screen selection:bg-secondary-fixed selection:text-on-secondary-fixed"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(30,27,24,0.03)]"><div class="h-16 px-gutter-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs min-w-0"><button aria-label="Go Back" class="w-11 h-11 flex items-center justify-center text-on-surface hover:text-primary transition-colors rounded-full focus:outline-none" onclick="history.back()"><span class="material-symbols-outlined text-2xl">arrow_back_ios_new</span></button><img alt="Perch Literary Logo" class="h-7 w-auto object-contain shrink-0" src="https://lh3.googleusercontent.com/aida/ALJJyrBgXJMZMqyQdmZSfPK7QPbexuXmdB9AWe9NhbVY8oU-CJwS1eiHCL501KZbJKP3UGjCvj8KgCm4iU7H-00GZ8AjsbactWjp9VCeagLatcrKpop2XcM-l-uLQtiXD_tTeW8MhpEd8aOR_9rzVBj109XLXrpTkRVs-Sgi0PEzG2aZDf_0Y_BXGL_-RAyOtNEQclt7pI2ZbTm424SvvmqSMS0cKHkZwU05OPG07sAM9vJp"/><div class="flex flex-col min-w-0 pl-space-xs"><span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Perch</span><h1 class="font-headline-sm text-headline-sm text-on-surface truncate">Book Details</h1></div></div><div class="flex items-center gap-space-xs shrink-0"><button aria-label="Bookmark" class="w-11 h-11 flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors rounded-full focus:outline-none"><span class="material-symbols-outlined">bookmark</span></button><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzn418a6cXeQeMcXp2fk4ca79kPoxe4Rxb9ACYQGsH-At6osuY9jfKE5XJ6tMXLJM4n2lR0sgxVU1MkVqFQnm6tRL3VYvOeoagVeCA_i62wApAcR6B3CA-k1MqmkgXZXjTXMemnBQLzC-fJlZr3z5uhP5u6ypvZCTNVBRaaaq_RhPuwOr_5wIAR4PGvMG0oxjaODhDYLp1_WDy_lo8KMtnLEuTEfS1QNSv8nNEuTU"/></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-safe bg-surface px-gutter-mobile"><div class="flex flex-col w-full pb-8">
+<!-- Book Header Card / Hero -->
+<div class="relative bg-surface-container-low rounded-xl p-space-md shadow-sm overflow-hidden mb-space-md">
+<!-- Tactile background corner motif -->
+<div class="absolute -right-12 -top-12 w-40 h-40 bg-secondary-fixed/20 rounded-full blur-2xl pointer-events-none"></div>
+<div class="absolute -left-10 -bottom-10 w-36 h-36 bg-primary-fixed/20 rounded-full blur-2xl pointer-events-none"></div>
+<div class="flex gap-space-md items-start relative z-10">
+<!-- Book Cover with deckled-edge layering -->
+<div class="relative shrink-0 w-28 group">
+<div class="absolute inset-0 bg-surface-container-highest rounded-lg translate-x-1.5 translate-y-1.5 shadow-sm"></div>
+<div class="relative rounded-lg overflow-hidden shadow-md aspect-[2/3] bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Book cover for Drive Your Plow Over the Bones of the Dead by Olga Tokarczuk, showing a subtle dark forest silhouette with golden astrological constellations against deep olive green archival cloth texture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbrxPQXIY-71L-Kfhd1hhasetC_EAnEnU7AphRY3lSlvRhuAH4-OEMQ22zGxX12uTJxhybF2-0UNbR8kCM48NtBcZIHWz4WF5czSZUq8DCSZx9jhy2zIrU4SQr-bPCBtxJHn6Lz5lPOvrMlpBb1C7PQ6Ds2cUKG8I7NsjnLlBeXprL2_oHXjUu6KxdFD9HfUs-jdzcFD0RNUREd08-dJtG_-H7LUqQuOQm3GUOij4"/>
+<!-- Bookmark Ribbon Accent -->
+<div class="absolute top-0 right-3 w-3 h-5 bg-secondary rounded-b-sm shadow-sm flex items-end justify-center pb-0.5">
+<span class="w-1 h-1 bg-surface rounded-full opacity-60"></span>
+</div>
+</div>
+</div>
+<!-- Book Main Metadata -->
+<div class="flex-1 min-w-0 flex flex-col pt-space-xs">
+<div class="inline-flex items-center gap-1 self-start px-2 py-0.5 bg-surface-container-high rounded-full text-secondary mb-1.5">
+<span class="material-symbols-outlined text-[13px]">translate</span>
+<span class="font-label-sm text-label-sm">Trans. Antonia Lloyd-Jones</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface leading-tight tracking-tight mb-1">
+          Drive Your Plow Over the Bones of the Dead
+        </h2>
+<p class="font-label-lg text-label-lg uppercase tracking-wider text-secondary mb-2">
+          Olga Tokarczuk
+        </p>
+<!-- Edition stamp indicator -->
+<div class="flex items-center gap-1.5 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-sm text-surface-tint">menu_book</span>
+<span>Fitzcarraldo Editions • 272 pages</span>
+</div>
+</div>
+</div>
+<!-- Thematic Badges / Micro Tags -->
+<div class="flex flex-wrap gap-1.5 mt-space-md pt-space-sm">
+<span class="px-2.5 py-1 bg-surface-container-highest text-on-surface-variant rounded-full font-label-md text-label-md">
+        Eco-noir
+      </span>
+<span class="px-2.5 py-1 bg-surface-container-highest text-on-surface-variant rounded-full font-label-md text-label-md">
+        Philosophical Mystery
+      </span>
+<span class="px-2.5 py-1 bg-surface-container-highest text-on-surface-variant rounded-full font-label-md text-label-md">
+        Central European Lit
+      </span>
+<span class="px-2.5 py-1 bg-secondary-fixed text-on-secondary-fixed-variant rounded-full font-label-md text-label-md flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">auto_awesome</span>
+        Nobel Laureate
+      </span>
+</div>
+<!-- Editorial Synopsis Dropdown -->
+<div class="mt-space-sm pt-space-xs">
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-3" id="book-synopsis">
+        In a remote Polish village, eccentric recluse Janina Duszejko spends winter surveying summer homes and casting horoscopes. When members of the local hunting club turn up dead under bizarre circumstances, Janina involves herself in the investigation, convinced the wildlife is seeking retribution.
+      </p>
+<button class="mt-1 font-label-md text-label-md text-secondary hover:text-on-secondary-container transition-colors focus:outline-none" onclick="document.getElementById('book-synopsis').classList.toggle('line-clamp-3'); this.innerText = this.innerText === 'Read synopsis' ? 'Close synopsis' : 'Read synopsis';">
+        Read synopsis
+      </button>
+</div>
+</div>
+<!-- Trusted Network Consensus (Replacing Generic Stars) -->
+<section class="bg-surface-container rounded-xl p-space-md shadow-sm mb-space-md relative overflow-hidden">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-base">verified</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Circle Consensus</h3>
+</div>
+<span class="font-label-sm text-label-sm text-secondary bg-surface-container-high px-2 py-0.5 rounded-full">
+        Taste Match: 96%
+      </span>
+</div>
+<!-- Readers Avatar Row & Metascore -->
+<div class="flex items-center justify-between bg-surface-container-lowest p-space-sm rounded-lg mb-space-sm shadow-sm">
+<div class="flex items-center gap-2 min-w-0">
+<div class="flex -space-x-2 shrink-0">
+<img class="w-7 h-7 rounded-full object-cover" data-alt="Portrait of literary reader Julian, soft natural daylight, wearing spectacles and woolen sweater in warm earth tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCL-_T38u6digm5FxgQ6cOD0SPk13G5oFDgb-2GeGJo-nBNF6RTGjLtQVCmvvFHCBmtdwaZUtttJldsPmzR1psPtR2Q_Bof8tQI7VS9V00bZoXsvU9pkMEm4SlZYA_YYw_tRfxim1inxUsoEuOPKNJYrqpXobNN60-M56Adz0TMHNTpQMylvHIYjcIuIRdbyKr3MHWX3K55HFJVllE_dzWmBgEh4e_e_2Swjq2SiGE"/>
+<img class="w-7 h-7 rounded-full object-cover" data-alt="Portrait of reader Maya reading by a sunlit cottage window, serene warm film photography style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCayNJv0710NDDxxCgW8WgL3OWl7aBJK1MXEK6ERhdtv2KWhDEgj4lPXQ6u4iN8s-tqBzTTsf-qJYllLEm1PpPiD79O0qmKPwW0a_CR6kg22-AQEI2Z8cnOsFclMU__B5GbyxsO4ARWGTyqKG36PmgbVp6PMU5iTQdW7F_c-7qKPA8kDqgNKILC1vNi6dRZ0XAhygL3tgfcQAB1nipdPTycHNPw1wy2GLH2qXnqf-U"/>
+<img class="w-7 h-7 rounded-full object-cover" data-alt="Portrait of reader Daniel holding a vintage Penguin paperback, artistic monochrome with warm sepia grading" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZ8PC0u8YE1CUpJZ1_Axvt4Ce-ChWenrPjoaipn6nM4APnxWTdckJWuOly9cGhxYDndn6RTTf7p1eLL1anwb-Fd5Y_EfKRnfua4Le18QvNvYQMoP2EKussXW7DUqq4_r0SVOnDXVooLjTj4O0jLLMMFEIhIPoNGHof76founUynsiACIaextNRe5GxXSnXpoQAgFXhQvjR4yQSJBZ3zs4cJW-fO4ZcEGbOkfY3JYE"/>
+<div class="w-7 h-7 rounded-full bg-surface-container-highest flex items-center justify-center text-[10px] font-bold text-on-surface-variant">
+            +4
+          </div>
+</div>
+<p class="font-label-md text-label-md text-on-surface truncate">
+<strong class="font-semibold text-primary">7 of your trusted circle</strong> read this
+        </p>
+</div>
+<!-- Subtle Taste Meter Visual -->
+<div class="shrink-0 flex items-center gap-1.5 pl-2">
+<svg class="w-6 h-6 transform -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-variant" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="4"></path>
+<path class="text-primary-container" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="92, 100" stroke-linecap="round" stroke-width="4"></path>
+</svg>
+<span class="font-headline-sm text-headline-sm text-primary-container font-semibold">92%</span>
+</div>
+</div>
+<!-- Sentiment Statement -->
+<div class="bg-surface-container-low px-space-sm py-2 rounded-lg mb-space-sm flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-base shrink-0 mt-0.5">psychology_alt</span>
+<p class="font-body-sm text-body-sm text-on-surface">
+<span class="font-semibold text-on-surface">92% of readers you follow</span> found this narrative <em class="font-quote-editorial text-secondary">transformative and darkly hilarious</em>.
+      </p>
+</div>
+<!-- Reader Editorial Marginalia Advice Note -->
+<div class="relative bg-surface-container-lowest p-space-sm rounded-lg shadow-sm">
+<div class="absolute left-0 top-2 bottom-2 w-1 bg-secondary rounded-r"></div>
+<div class="pl-2">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Curator Tip • Julian Finch</span>
+<span class="font-label-sm text-label-sm text-tertiary-fixed-dim bg-tertiary-container px-1.5 py-0.2 rounded">Fellow Book Club</span>
+</div>
+<p class="font-quote-editorial text-quote-editorial text-on-surface italic leading-snug">
+          “Read during deep autumn fog. Don’t rush Duszejko’s astrological musings—they form the spine of the entire moral riddle.”
+        </p>
+</div>
+</div>
+</section>
+<!-- Community Marginalia Feed Section -->
+<section class="flex flex-col w-full">
+<!-- Section Header & Filter Toggle -->
+<div class="flex items-center justify-between mb-space-sm">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Community Marginalia</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">42 shared reader notes in margins</p>
+</div>
+<!-- Scope Switcher Pill -->
+<div class="bg-surface-container-high p-0.5 rounded-full flex items-center" id="scope-toggle">
+<button class="px-2.5 py-1 rounded-full text-label-sm font-label-sm bg-primary text-on-primary shadow-sm transition-all flex items-center gap-1" id="btn-circle" onclick="setScope('circle')">
+<span class="material-symbols-outlined text-xs">group</span>
+<span>My Circle</span>
+</button>
+<button class="px-2.5 py-1 rounded-full text-label-sm font-label-sm text-on-surface-variant hover:text-on-surface transition-all flex items-center gap-1" id="btn-all" onclick="setScope('all')">
+<span class="material-symbols-outlined text-xs">public</span>
+<span>All Perch</span>
+</button>
+</div>
+</div>
+<!-- Marginalia Feed List -->
+<div class="space-y-space-sm" id="marginalia-feed">
+<!-- Page 48 Note Card -->
+<article class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm relative overflow-hidden transition-all hover:shadow-md">
+<!-- Archival marginal bookmark indicator -->
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 bg-primary-fixed text-on-primary-fixed font-label-md text-label-md rounded font-mono font-bold">
+              PAGE 48
+            </span>
+<span class="text-outline text-xs">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Chapter 4: “Night Visitors”</span>
+</div>
+<button aria-label="More options" class="text-on-surface-variant hover:text-primary transition-colors p-1">
+<span class="material-symbols-outlined text-base">more_horiz</span>
+</button>
+</div>
+<!-- Referenced Book Passage -->
+<blockquote class="bg-surface-container-low px-space-sm py-2 rounded-lg font-quote-editorial text-body-md text-on-surface-variant italic mb-space-sm">
+          “The soul of an animal is like a light bulb that burns with a quiet, steady glow... we commit murders every day and pretend it is nutrition.”
+        </blockquote>
+<!-- Annotation Author + Comment -->
+<div class="flex gap-2.5 items-start">
+<img class="w-8 h-8 rounded-full object-cover shrink-0 mt-0.5" data-alt="Portrait photo of Elena Rostova, European reader in an oversized knit scarf, surrounded by towering antique bookshelves, natural window light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCR7a0HX0vxxdRZ2JZJsbMkIOpBBsIAHptQ-mg8FdnR3HEGhR_Z6R4VMb9Vkxlm-bNB03L646w_2UqiKYR6JhZ5v7DbSS2Oa_2AwabAD_dtDaVyLQqRDIPCH9Yun3gZHXN8uH-mL4JicK3WxExo6vmq_4MvccpyrhIP2N9FbTVw6AYptPtd451biCGJapgTDDhwdo-MK9o5fsd_UtFurlJtc05BwP5M-JsDsbRpbu8"/>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="font-label-md text-label-md text-on-surface">Elena Rostova</span>
+<span class="font-label-sm text-label-sm text-secondary bg-secondary-fixed/50 px-1.5 rounded">Top Annotator</span>
+<span class="text-outline text-[11px] ml-auto">2d ago</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface mt-1">
+              This paragraph encapsulates Tokarczuk’s animism beautifully. She doesn’t treat the wild as scenery, but as an active moral juror observing human vanity.
+            </p>
+<!-- Marginalia Engagement Micro-actions -->
+<div class="flex items-center gap-4 mt-space-sm pt-space-xs">
+<button class="flex items-center gap-1 text-on-surface-variant hover:text-secondary transition-colors focus:outline-none group">
+<span class="material-symbols-outlined text-sm text-secondary group-hover:scale-110 transition-transform" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span class="font-label-sm text-label-sm">14</span>
+</button>
+<button class="flex items-center gap-1 text-on-surface-variant hover:text-primary transition-colors focus:outline-none">
+<span class="material-symbols-outlined text-sm">chat_bubble_outline</span>
+<span class="font-label-sm text-label-sm">3 replies</span>
+</button>
+<button class="flex items-center gap-1 text-on-surface-variant hover:text-primary transition-colors focus:outline-none ml-auto">
+<span class="material-symbols-outlined text-sm">edit_note</span>
+<span class="font-label-sm text-label-sm">Branch note</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Page 112 Note Card -->
+<article class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm relative overflow-hidden transition-all hover:shadow-md">
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 bg-secondary-fixed text-on-secondary-fixed font-label-md text-label-md rounded font-mono font-bold">
+              PAGE 112
+            </span>
+<span class="text-outline text-xs">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Chapter 8</span>
+</div>
+<button aria-label="More options" class="text-on-surface-variant hover:text-primary transition-colors p-1">
+<span class="material-symbols-outlined text-base">more_horiz</span>
+</button>
+</div>
+<!-- Highlighted Line by Reader -->
+<blockquote class="bg-surface-container-low px-space-sm py-2 rounded-lg font-quote-editorial text-body-md text-on-surface italic mb-space-sm">
+          “Its madness is the madness of the universe itself.”
+        </blockquote>
+<!-- Reader Commentary -->
+<div class="flex gap-2.5 items-start">
+<img class="w-8 h-8 rounded-full object-cover shrink-0 mt-0.5" data-alt="Candid portrait of Marcus Vance, thoughtful young man drinking coffee in a sunlit corner library, wearing navy turtleneck, warm editorial mood" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0fR4LIUpQ_9SUtsTphmUCJTIebwWrBmvv7RYPQa_a-6pqDa5wt2JCKdP_Fw8hg1OKkZnHAdjeAWtKba3rxRHCOcfF3hyuMgxv79gHGQIgvIw6oUO5B5poodPXl5wZ3giNgmQwU5uw5oC11hL3Duo8xNQqqUmwn1zuMkqPqej6rk-Vl-0wJx1MlaFyquhjllH27WBiwpHgv7QCWYX5PrXQNM8A4jXlmXfTLjgFBYM"/>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="font-label-md text-label-md text-on-surface">Marcus Vance</span>
+<span class="text-outline text-[11px] ml-auto">5d ago</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface mt-1">
+              William Blake’s epigraphs echoing throughout here. The translation maintains that exact feverish, celestial pitch.
+            </p>
+<!-- Marginalia Engagement Micro-actions -->
+<div class="flex items-center gap-4 mt-space-sm pt-space-xs">
+<button class="flex items-center gap-1 text-on-surface-variant hover:text-secondary transition-colors focus:outline-none">
+<span class="material-symbols-outlined text-sm">favorite_border</span>
+<span class="font-label-sm text-label-sm">8</span>
+</button>
+<button class="flex items-center gap-1 text-on-surface-variant hover:text-primary transition-colors focus:outline-none">
+<span class="material-symbols-outlined text-sm">chat_bubble_outline</span>
+<span class="font-label-sm text-label-sm">Reply</span>
+</button>
+<button class="flex items-center gap-1 text-on-surface-variant hover:text-primary transition-colors focus:outline-none ml-auto">
+<span class="material-symbols-outlined text-sm">bookmark_add</span>
+<span class="font-label-sm text-label-sm">Clip quote</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Page 189 Community Note (Additional Depth) -->
+<article class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm relative overflow-hidden transition-all hover:shadow-md">
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 bg-surface-container-high text-on-surface font-label-md text-label-md rounded font-mono font-bold">
+              PAGE 189
+            </span>
+<span class="text-outline text-xs">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Chapter 14: “The Solstice”</span>
+</div>
+<button aria-label="More options" class="text-on-surface-variant hover:text-primary transition-colors p-1">
+<span class="material-symbols-outlined text-base">more_horiz</span>
+</button>
+</div>
+<div class="flex gap-2.5 items-start">
+<img class="w-8 h-8 rounded-full object-cover shrink-0 mt-0.5" data-alt="Editorial headshot of Siobhan, reader smiling serenely in autumn knit cardigan with green tea mug in cozy library cafe" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjEl7PTZ3_cAjfpWo9Jo6eY8hrVpyVkNzhGt3EyoDDk1vu6PEmwyOkzCUoL6dSVwGh4KLBen7TDRApAzpD4dPhbmj1nVFf2-fcqOSvbaN1nUfCcTW9223877dFfcuVyd2eIvi81CQCiyLElNDAzslyefQs-WpT15PRO40GLKCHIxutzFVqSTAAf5p77HsklocN9bqVzif2SJU0KSUkO56iga6Yyj8XkeKwDo8XbTY"/>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="font-label-md text-label-md text-on-surface">Siobhan Kelly</span>
+<span class="font-label-sm text-label-sm text-primary bg-primary-fixed/40 px-1.5 rounded">Reading now (p. 210)</span>
+<span class="text-outline text-[11px] ml-auto">Yesterday</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface mt-1">
+              Notice how the weather reports directly invert the townspeople’s emotional stability. Pure masterclass in atmospheric subtext.
+            </p>
+<div class="flex items-center gap-4 mt-space-sm pt-space-xs">
+<button class="flex items-center gap-1 text-on-surface-variant hover:text-secondary transition-colors focus:outline-none">
+<span class="material-symbols-outlined text-sm">favorite_border</span>
+<span class="font-label-sm text-label-sm">19</span>
+</button>
+<button class="flex items-center gap-1 text-on-surface-variant hover:text-primary transition-colors focus:outline-none">
+<span class="material-symbols-outlined text-sm">chat_bubble_outline</span>
+<span class="font-label-sm text-label-sm">5 replies</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- Sticky Tactical Action Bar at Bottom of Book Page -->
+<div class="sticky bottom-0 z-40 -mx-gutter-mobile px-gutter-mobile pt-3 pb-safe bg-surface/95 backdrop-blur-md shadow-[0_-4px_16px_rgba(30,27,24,0.06)] mt-space-lg">
+<div class="flex items-center gap-space-sm">
+<!-- 'Add to Stack' Dropdown Trigger Button -->
+<div class="relative shrink-0 flex-1">
+<button class="w-full h-12 px-space-sm bg-surface-container-high hover:bg-surface-container-highest text-on-surface rounded-xl flex items-center justify-between font-label-lg text-label-lg transition-colors shadow-sm focus:outline-none" id="stack-button" onclick="toggleStackMenu()">
+<span class="flex items-center gap-1.5 min-w-0">
+<span class="material-symbols-outlined text-secondary text-lg shrink-0" id="stack-status-icon">auto_stories</span>
+<span class="truncate" id="stack-status-label">Currently Reading</span>
+</span>
+<span class="material-symbols-outlined text-on-surface-variant text-base shrink-0 ml-1">expand_more</span>
+</button>
+<!-- Dropdown Selection Menu -->
+<div class="hidden absolute bottom-14 left-0 w-60 bg-surface-container-lowest rounded-xl shadow-xl p-1.5 z-50 transition-all flex flex-col gap-1" id="stack-menu">
+<button class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-left hover:bg-surface-container font-label-md text-label-md text-on-surface transition-colors" onclick="selectStackStatus('Currently Reading', 'auto_stories')">
+<span class="material-symbols-outlined text-base text-secondary">auto_stories</span>
+<span>Currently Reading</span>
+</button>
+<button class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-left hover:bg-surface-container font-label-md text-label-md text-on-surface transition-colors" onclick="selectStackStatus('Want to Read', 'bookmark')">
+<span class="material-symbols-outlined text-base text-on-surface-variant">bookmark</span>
+<span>Want to Read</span>
+</button>
+<button class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-left hover:bg-surface-container font-label-md text-label-md text-on-surface transition-colors" onclick="selectStackStatus('Lent Out to Friend', 'share_location')">
+<span class="material-symbols-outlined text-base text-on-surface-variant">share_location</span>
+<span>Lent out to someone</span>
+</button>
+<button class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-left hover:bg-surface-container font-label-md text-label-md text-on-surface transition-colors" onclick="selectStackStatus('Finished &amp; Archived', 'check_circle')">
+<span class="material-symbols-outlined text-base text-primary">check_circle</span>
+<span>Finished &amp; Archived</span>
+</button>
+</div>
+</div>
+<!-- Primary Action: 'Leave Marginalia' in Deep Forest Green -->
+<button class="h-12 px-space-md bg-primary-container hover:bg-primary text-on-primary rounded-xl flex items-center justify-center gap-2 font-label-lg text-label-lg shadow-sm active:scale-95 transition-all shrink-0 focus:outline-none" onclick="openMarginaliaModal()">
+<span class="material-symbols-outlined text-lg">edit_note</span>
+<span>Leave Marginalia</span>
+</button>
+</div>
+</div>
+<!-- Interactive Modal / Slide-up for Leaving Marginalia -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/40 backdrop-blur-sm hidden flex items-end justify-center" id="marginalia-modal">
+<div class="bg-surface-container-lowest w-full max-w-lg rounded-t-2xl p-space-md shadow-2xl flex flex-col gap-space-sm animate-in slide-in-from-bottom duration-200">
+<div class="flex items-center justify-between pb-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">stylus_note</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Annotate in Margins</h4>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant focus:outline-none" onclick="closeMarginaliaModal()">
+<span class="material-symbols-outlined text-sm">close</span>
+</button>
+</div>
+<div class="flex gap-2">
+<div class="w-28 shrink-0">
+<label class="font-label-sm text-label-sm text-on-surface-variant block mb-1">Page Ref</label>
+<div class="flex items-center bg-surface-container px-2.5 py-2 rounded-lg">
+<span class="font-mono text-xs text-on-surface-variant mr-1">p.</span>
+<input class="w-full bg-transparent font-mono text-on-surface text-sm focus:outline-none" placeholder="124" type="number"/>
+</div>
+</div>
+<div class="flex-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant block mb-1">Passage (Optional)</label>
+<input class="w-full bg-surface-container px-2.5 py-2 rounded-lg text-body-sm font-body-sm text-on-surface focus:outline-none" placeholder="Short quote from book..." type="text"/>
+</div>
+</div>
+<div>
+<label class="font-label-sm text-label-sm text-on-surface-variant block mb-1">Your Reading Thought</label>
+<textarea class="w-full bg-surface-container p-2.5 rounded-lg text-body-md font-body-md text-on-surface focus:outline-none resize-none" placeholder="What does this paragraph summon? What pattern did you uncover?" rows="3"></textarea>
+</div>
+<div class="flex items-center justify-between pt-1">
+<label class="flex items-center gap-2 cursor-pointer">
+<input checked="" class="accent-primary-container rounded" type="checkbox"/>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Visible to my circle only</span>
+</label>
+<button class="px-4 py-2 bg-primary-container text-on-primary rounded-lg font-label-md text-label-md flex items-center gap-1 shadow-sm" onclick="publishMarginalia()">
+<span>Inscribe</span>
+<span class="material-symbols-outlined text-sm">draw</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function setScope(scope) {
+    const btnCircle = document.getElementById('btn-circle');
+    const btnAll = document.getElementById('btn-all');
+    if (scope === 'circle') {
+      btnCircle.className = "px-2.5 py-1 rounded-full text-label-sm font-label-sm bg-primary text-on-primary shadow-sm transition-all flex items-center gap-1";
+      btnAll.className = "px-2.5 py-1 rounded-full text-label-sm font-label-sm text-on-surface-variant hover:text-on-surface transition-all flex items-center gap-1";
+    } else {
+      btnAll.className = "px-2.5 py-1 rounded-full text-label-sm font-label-sm bg-primary text-on-primary shadow-sm transition-all flex items-center gap-1";
+      btnCircle.className = "px-2.5 py-1 rounded-full text-label-sm font-label-sm text-on-surface-variant hover:text-on-surface transition-all flex items-center gap-1";
+    }
+  }
+
+  function toggleStackMenu() {
+    const menu = document.getElementById('stack-menu');
+    menu.classList.toggle('hidden');
+  }
+
+  function selectStackStatus(label, iconName) {
+    document.getElementById('stack-status-label').innerText = label;
+    document.getElementById('stack-status-icon').innerText = iconName;
+    document.getElementById('stack-menu').classList.add('hidden');
+  }
+
+  function openMarginaliaModal() {
+    document.getElementById('marginalia-modal').classList.remove('hidden');
+  }
+
+  function closeMarginaliaModal() {
+    document.getElementById('marginalia-modal').classList.add('hidden');
+  }
+
+  function publishMarginalia() {
+    closeMarginaliaModal();
+  }
+
+  // Dismiss dropdown when tapping outside
+  document.addEventListener('click', function(e) {
+    const stackBtn = document.getElementById('stack-button');
+    const stackMenu = document.getElementById('stack-menu');
+    if (stackBtn && stackMenu && !stackBtn.contains(e.target) && !stackMenu.contains(e.target)) {
+      stackMenu.classList.add('hidden');
+    }
+  });
+</script></main></body></html>
