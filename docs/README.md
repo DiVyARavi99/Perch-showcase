@@ -10,7 +10,7 @@ A dedicated social space for books, built like Instagram. Readers discover books
 - Discovery through readers you trust, not through paid promotion or anonymous marketplace reviews.
 - Easy creation and publishing support for writers, so new voices reach readers directly.
 - A club for budding writers, with outreach to educational institutions for support and evaluation of aspiring writers.
-- Tie-ups with publishing houses for distribution. Not against Amazon; buying can still happen there.
+- Tie-ups with publishing houses for distribution. Buying can still happen there.
 
 ### Where it came from
 
