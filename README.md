@@ -1,6 +1,6 @@
 # Perch
 
-**Status: concept. No code yet. User research in planning.**
+**Status: ER diagram and PRD done. User research and Prototype in progress.**
 
 A dedicated social space for books, built like Instagram. Readers discover books through other readers instead of through promotion feeds and marketplace reviews.
 
