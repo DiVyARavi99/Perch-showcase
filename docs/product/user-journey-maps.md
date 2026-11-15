@@ -1,94 +1,146 @@
-# Perch — User Journey Maps
+# Perch — Phase 1 User Journey Maps
 
-**Status:** Draft for validation  
-**Scope:** Phase 1 reader MVP  
-**Audience:** Product, UX, engineering, research
+**Platform:** Desktop-first responsive web application.
 
-## Purpose
+## Journey 1: New Reader Onboarding and First Discovery
 
-These journeys describe the reader experience Perch is intended to support. They are product hypotheses, not validated findings. Use research and prototype testing to confirm or revise them.
+**Goal:** Help a new reader discover relevant books and reader perspectives without requiring them to follow anyone first.
 
-## Journey 1 — New reader onboarding and first discovery
+| Stage | User action | Potential friction | Product opportunity |
+|---|---|---|---|
+| Landing | Opens Perch in a browser | Doesn't understand the value proposition | Explain reader-led discovery with a sample feed |
+| Sign up | Creates an account | Long registration process | Keep registration minimal |
+| Taste setup | Selects genres, favourite books or preferences | Too many questions | Make preference setup short and skippable |
+| First feed | Views the Home feed | Empty or irrelevant content | Seed discovery using selected interests |
+| Explore | Opens a book or reader post | Doesn't understand why it was recommended | Show reader context and recommendation source |
+| Return | Saves a book or follows a reader | Actions are difficult to locate | Make save and follow actions visible |
 
-**User goal:** Find books that fit their interests without having to build a network first.
+**Web experience considerations**
+- Landing page should communicate Perch's purpose immediately.
+- On desktop, use persistent left navigation and a central feed.
+- An optional right sidebar can display suggested readers or genres.
+- The feed must be useful even when the user follows nobody.
 
-| Stage | User action | User question / thought | Potential friction | Product opportunity |
-|---|---|---|---|---|
-| Entry | Opens Perch and creates an account | “What is this, and is it useful to me?” | Value proposition unclear | Explain reader-led discovery in onboarding |
-| Preferences | Selects favourite genres and a few books/authors they like | “Will this help personalize what I see?” | Too many onboarding questions | Ask only for high-value optional signals |
-| First feed | Views a starter discovery feed | “Are these books relevant?” | Empty or generic feed | Use selected genres and curated starter content |
-| Book exploration | Opens a book page | “What do readers actually think?” | Book page lacks useful context | Show reviews, reader profiles and rating counts |
-| Decision | Saves book to Want to Read or opens a retailer link | “Should I remember this or buy it?” | Purchase link unclear or unavailable | Make save and external purchase actions distinct |
-| Return | Comes back to browse | “Is there anything new for me?” | Repetitive feed | Refresh discovery based on explicit interactions |
+**Success signals**
+- Sign-up completion.
+- First book-detail visit.
+- First shelf addition.
+- First reader follow.
 
-**Success signals:** onboarding completion, first book detail view, first shelf addition, return visit.
+**Research questions**
+- What makes a reader trust a recommendation?
+- Which onboarding preferences are useful?
+- Does a sample feed communicate the product's value?
+- What is the most natural first action?
 
-## Journey 2 — Evaluate a book before buying
+---
 
-**User goal:** Decide whether a promoted or recommended book is likely to meet expectations.
+## Journey 2: Evaluate a Book Before Buying
 
-| Stage | User action | User question / thought | Potential friction | Product opportunity |
-|---|---|---|---|---|
-| Trigger | Sees a book on social media, hears about it from a friend, or encounters it in Perch | “Is this book worth my time and money?” | Promotion may overstate the experience | Make it easy to search the catalog |
-| Search | Searches for the title or author | “Am I looking at the right edition/book?” | Duplicate or incomplete catalog records | Canonical book identity and clear metadata |
-| Review scan | Reads posts from other readers | “What did people like or dislike?” | Reviews are unstructured or too brief | Show review context and reader identity |
-| Taste check | Looks for opinions from readers with similar tastes | “Do people who like what I like recommend it?” | Similarity score may be opaque | Explain shared genres/books where possible |
-| Expectation check | Reviews expectation-match feedback | “Did it deliver what its promotion promised?” | Users confuse expectation match with enjoyment | Label these as separate questions and signals |
-| Decision | Saves the book or follows an external purchase link | “Do I want to read or buy it?” | Too much friction between evaluation and action | Clear Want to Read and retailer handoff |
+**Goal:** Help a reader decide whether a book is worth buying through opinions from other readers.
 
-**Success signals:** search-to-book-view rate, review engagement, expectation-rating views, save rate, retailer-link clicks.
+| Stage | User action | Potential friction | Product opportunity |
+|---|---|---|---|
+| Discover | Finds a book through the feed or search | Doesn't know why the book appeared | Show who shared it |
+| Open detail | Visits the book page | Generic metadata dominates | Prioritise reader opinions |
+| Compare opinions | Reads reviews and ratings | Enjoyment and expectation match are confused | Keep these ratings separate |
+| Check taste relevance | Looks at opinions from similar readers | Similarity feels arbitrary | Explain why readers are considered similar |
+| Decide | Saves the book or opens a retailer link | External purchase destination is unclear | Clearly label external purchase links |
 
-## Journey 3 — Publish a book post or review
+**Web experience considerations**
+- Use a dedicated, shareable book-detail page.
+- Display book information and shelf actions prominently.
+- Prioritise reader reviews over generic promotional descriptions.
+- Keep enjoyment and expectation-match ratings visually distinct.
+- Clearly identify links that take users to external retailers.
 
-**User goal:** Share a reading experience that helps other readers.
+**Success signals**
+- Book-detail engagement.
+- Review interactions.
+- Shelf additions.
+- External purchase clicks.
 
-| Stage | User action | User question / thought | Potential friction | Product opportunity |
-|---|---|---|---|---|
-| Start | Selects Create from navigation or a book page | “Can I share this quickly?” | Unclear post types | Offer clear Review, Recommendation and Reaction choices |
-| Compose | Selects a book and writes their post | “What should I include?” | Blank-page anxiety | Lightweight prompts; optional image |
-| Rate | Answers the expectation-match question for a review | “What exactly am I rating?” | Confusion with star rating or enjoyment | Explain the scale and keep it distinct |
-| Preview | Reviews the post | “Will readers understand my point?” | Missing book context | Preview book card and review together |
-| Publish | Publishes the post | “Where will this appear?” | Unclear visibility | Explain feed and book-page placement |
-| Engage | Receives reactions or comments | “Did this help anyone?” | Low early engagement | Relevant distribution and respectful notifications |
+**Research questions**
+- Which reader signals influence purchase decisions?
+- Do users understand the difference between enjoyment and expectation match?
+- What makes a taste match credible?
+- How many reviews are needed before a book page feels useful?
 
-**Success signals:** post-start-to-publish conversion, review completion rate, expectation-rating completion, useful interactions per post.
+---
 
-## Journey 4 — Build a trusted reader network
+## Journey 3: Publish a Book Post or Review
 
-**User goal:** Follow readers whose preferences make their recommendations useful.
+**Goal:** Allow readers to share opinions that help other readers make better discovery decisions.
 
-| Stage | User action | User question / thought | Potential friction | Product opportunity |
-|---|---|---|---|---|
-| Discovery | Opens suggested readers | “Why am I seeing this person?” | Recommendations feel arbitrary | Show shared genres or books |
-| Evaluation | Visits a reader profile | “Do we have similar taste?” | Profile lacks enough reading context | Show public shelves and recent book posts |
-| Follow | Follows the reader | “Will their posts improve my feed?” | No clear consequence | Confirm follow and explain feed effect |
-| Feed | Sees posts from followed readers | “Is this more relevant?” | Too many posts or repeated content | Ranking, controls and feed diversity |
-| Refinement | Follows or unfollows more readers | “Can I shape my discovery?” | Recommendations don't adapt | Use explicit follow and feedback signals |
+| Stage | User action | Potential friction | Product opportunity |
+|---|---|---|---|
+| Start | Selects Create from the sidebar | Unclear difference between a post and review | Offer clear post types or a unified composer |
+| Attach book | Searches for a book | Duplicate or incomplete book metadata | Provide a searchable book picker |
+| Write | Adds a reaction or review | Writing feels like a form-filling exercise | Keep free text central and prompts optional |
+| Rate | Adds ratings | Rating concepts are confusing | Explain enjoyment and expectation match separately |
+| Preview | Reviews the post | Formatting or visibility surprises | Provide a preview and spoiler controls |
+| Publish | Publishes the post | No confirmation or next step | Show confirmation and published-post link |
+| Engage | Responds to comments | Notification overload | Provide useful notification preferences |
 
-**Success signals:** suggested-reader profile visits, follow conversion, followed-feed engagement, unfollow rate.
+**Web experience considerations**
+- Prefer a dedicated compose page for longer reviews.
+- Consider a two-column editor and preview layout on desktop.
+- Provide draft-saving feedback.
+- Make spoiler and visibility controls explicit.
+- Keep the composer focused and uncluttered.
 
-## Cross-journey product requirements to validate
+**Success signals**
+- Composer starts.
+- Draft completion.
+- Publish completion.
+- Meaningful comments and interactions.
 
-1. A new user must receive useful discovery before following anyone.
-2. A book page must make reader opinions easy to scan.
-3. Expectation match and enjoyment must not be conflated.
-4. The product must show rating counts and avoid implying confidence from tiny samples.
-5. Users should understand why a reader or book is recommended.
-6. External purchase is a handoff; Perch does not own checkout or fulfilment in Phase 1.
+**Research questions**
+- Do readers distinguish reactions from reviews?
+- Which fields should be optional?
+- Is a live preview useful?
+- What spoiler controls do readers expect?
 
-## Research questions
+---
 
-- Where do readers currently discover books?
-- What makes a book recommendation credible?
-- How do readers decide whether an online review is useful?
-- Would readers answer an expectation-match question when posting?
-- Would readers use other readers' taste profiles to decide what to read?
-- What would make readers return to a dedicated book platform?
+## Journey 4: Build a Trusted Reader Network
 
-## Open decisions
+**Goal:** Help readers discover and follow people whose opinions and reading preferences they find valuable.
 
-- Is the first feed primarily followed-reader content, discovery content, or a blend?
-- Is the expectation-match question required for every review, or only for a specific review type?
-- Is an enjoyment rating also needed?
-- Are public shelves visible by default?
-- Are reading clubs in the first MVP or a later Phase 1 release?
+| Stage | User action | Potential friction | Product opportunity |
+|---|---|---|---|
+| Notice reader | Sees a reader on a post | Reader identity is too limited | Provide a profile preview |
+| Visit profile | Opens the reader's profile | Profile focuses on follower counts | Highlight shelves, reviews and genres |
+| Assess fit | Browses reading history | Similarity claims lack evidence | Show shared books and genre overlap |
+| Follow | Selects Follow | Follow state is unclear | Provide immediate visual feedback |
+| Return | Goes back to Home | Followed content isn't reflected | Incorporate followed-reader posts into the feed |
+
+**Web experience considerations**
+- Profiles should have shareable URLs.
+- Use clear sections for Posts/Reviews, Shelves and Activity.
+- Keep follow actions visible.
+- Do not make follower count the primary measure of trust.
+
+**Success signals**
+- Profile visits.
+- Follow conversions.
+- Engagement with followed-reader posts.
+- Repeat visits.
+
+**Research questions**
+- What makes a reader worth following?
+- Are shared books or shared genres stronger taste indicators?
+- Which profile sections are most useful?
+- How should Perch explain similarity without suggesting certainty?
+
+---
+
+## Cross-Journey Principles
+
+1. The feed must provide value before a user follows anyone.
+2. Reader context should appear wherever a recommendation appears.
+3. Enjoyment and expectation match are separate concepts.
+4. Taste similarity should be explainable and appropriately qualified.
+5. External purchase links must be clearly identified.
+6. Useful discovery and trust matter more than vanity engagement.
+7. Core journeys should support keyboard navigation and accessible focus states.
