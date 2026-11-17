@@ -6,7 +6,7 @@ Perch is being designed as a **desktop-first responsive web application**. The p
 
 | Document | Description |
 |---|---|
-| [PRD](docs/prd.md) | Product vision, requirements, scope and success metrics |
+| [PRD](docs/PRD.md) | Product vision, requirements, scope and success metrics |
 | [User Journey Maps](docs/product/user-journey-maps.md) | Phase 1 reader journeys |
 | [Information Architecture](docs/product/information-architecture.md) | Web navigation, sitemap and page structure |
 | [Web Experience Principles](docs/product/web-experience-principles.md) | Layout, interaction and responsive design principles |
