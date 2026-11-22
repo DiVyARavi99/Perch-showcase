@@ -13,7 +13,7 @@ Perch is being designed as a **desktop-first responsive web application**. The p
 | [Use Case Diagram](docs/architecture/use-case-diagram.md) | Actor interactions and use cases |
 | [Component Diagram](docs/architecture/component-diagram.md) | High-level component responsibilities |
 | [Domain Model](docs/architecture/domain-model.md) | Conceptual product entities and relationships |
-| [Prototype](https://stitch.google.com/preview/17195054762970482385?node-id=8cc2e9b145024f77bffd98efc94ebb06) | Phase 1 preview |
+| [Prototype](https://stitch.google.com/preview/10868614761554171048?node-id=eb8f708d58824d6aaf71099cf6b8c437) | Phase 1 and 2 |
 
 ## Platform Scope
 
